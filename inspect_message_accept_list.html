@@ -1,0 +1,18 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Message.Accept.List</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Message.Accept.List">Inspect.Message.Accept.List</a> </h2>
+    <p><i></i> Retrieves the list of accepted message types and identifiers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>accepts</i> = Inspect.Message.Accept.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>accepts</i></td><td>result</td><td><i>table</i></td><td>List of all accepted message types. Takes the form of a key/value table. The key is a table containing {type, identifier}, where either element may be nil to indicate a wildcard. The value is the number of times this type has been accepted.</td></tr>
+    </table>
+    <dl>
+    </dl>

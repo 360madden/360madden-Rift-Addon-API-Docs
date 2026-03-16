@@ -1,0 +1,21 @@
+<html>
+  <head><title>API Docs (live) -- Utility.Message.Size</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Utility.Message.Size">Utility.Message.Size</a> </h2>
+    <p><i></i> Returns the size of a message, as used for bandwidth control.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>size</i> = Utility.Message.Size(<i>to</i>, <i>identifier</i>, <i>data</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>string</i></td><td>The data to send. This parameter is binary-safe.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string</i></td><td>The identifier type of the message. Used for the receiver to filter accepted messages via the Command.Message.Accept() function. Must be at least three characters long.</td></tr>
+      <tr><td><i>to</i></td><td>parameter</td><td><i>string/nil</i></td><td>The name of the player or channel to send to. nil if this is not targeted at a specific player or channel.</td></tr>
+      <tr><td><i>size</i></td><td>result</td><td><i>number</i></td><td>The calculated size of the message.</td></tr>
+    </table>
+    <dl>
+    </dl>

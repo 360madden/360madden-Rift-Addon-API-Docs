@@ -1,0 +1,121 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Event.Pvp.History.Favor">Event.Pvp.History.Favor</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals your historical favor changing.</td></tr>
+      <tr><td><a href="#Event.Pvp.History.Kill.Today">Event.Pvp.History.Kill.Today</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals your daily kill count changing.</td></tr>
+      <tr><td><a href="#Event.Pvp.Prestige.Accumulated">Event.Pvp.Prestige.Accumulated</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals your accumulated prestige changing.</td></tr>
+      <tr><td><a href="#Event.Pvp.Prestige.Rank">Event.Pvp.Prestige.Rank</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals your prestige rank changing.</td></tr>
+      <tr><td><a href="#Inspect.Pvp.History">Inspect.Pvp.History</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns information on your PVP history.</td></tr>
+      <tr><td><a href="#Inspect.Pvp.Prestige">Inspect.Pvp.Prestige</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns information on your PVP prestige.</td></tr>
+    </table>
+    <h2><a name="Event.Pvp.History.Favor">Event.Pvp.History.Favor</a></h2>
+    <p><i></i> Signals your historical favor changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Pvp.History.Favor(<i>favor</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>favor</i></td><td>parameter</td><td><i>variant</i></td><td>Amount of lifetime favor accumulated.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Pvp.History.Kill.Today">Event.Pvp.History.Kill.Today</a></h2>
+    <p><i></i> Signals your daily kill count changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Pvp.History.Kill.Today(<i>kill</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>kill</i></td><td>parameter</td><td><i>variant</i></td><td>Amount of kills made in this time period.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Pvp.Prestige.Accumulated">Event.Pvp.Prestige.Accumulated</a></h2>
+    <p><i></i> Signals your accumulated prestige changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Pvp.Prestige.Accumulated(<i>accumulated</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>accumulated</i></td><td>parameter</td><td><i>variant</i></td><td>Total quantity of accumulated prestige in this rank.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Pvp.Prestige.Rank">Event.Pvp.Prestige.Rank</a></h2>
+    <p><i></i> Signals your prestige rank changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Pvp.Prestige.Rank(<i>rank</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>rank</i></td><td>parameter</td><td><i>variant</i></td><td>Current prestige rank.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Pvp.History">Inspect.Pvp.History</a></h2>
+    <p><i></i> Returns information on your PVP history.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>result</i> = Inspect.Pvp.History()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>result</i></td><td>result</td><td><i>table</i></td><td>Table containing information on PVP history.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>favorLifetime</th>
+            <td>Amount of lifetime favor accumulated.</th>
+          </tr>
+          <tr>
+            <th>killLifetime</th>
+            <td>Amount of kills made on this character.</th>
+          </tr>
+          <tr>
+            <th>killMonth</th>
+            <td>Amount of kills made on this character within the last month.</th>
+          </tr>
+          <tr>
+            <th>killToday</th>
+            <td>Amount of kills made on this character within the last day.</th>
+          </tr>
+          <tr>
+            <th>killWeek</th>
+            <td>Amount of kills made on this character within the last week.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Pvp.Prestige">Inspect.Pvp.Prestige</a></h2>
+    <p><i></i> Returns information on your PVP prestige.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>result</i> = Inspect.Pvp.Prestige()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>result</i></td><td>result</td><td><i>table</i></td><td>Table containing information on prestige.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>accumulated</th>
+            <td>Prestige accumulated so far in this rank.</th>
+          </tr>
+          <tr>
+            <th>needed</th>
+            <td>Quantity of prestige needed to gain a rank.</th>
+          </tr>
+          <tr>
+            <th>rank</th>
+            <td>Current prestige rank.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

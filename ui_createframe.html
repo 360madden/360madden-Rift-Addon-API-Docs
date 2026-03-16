@@ -1,0 +1,21 @@
+<html>
+  <head><title>API Docs (live) -- UI.CreateFrame</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="UI.CreateFrame">UI.CreateFrame</a> </h2>
+    <p><i></i> Creates a new frame. Frames are the blocks that all addon UIs are made out of. Since all frames must have a parent, you'll need to create a Context before any frames. See UI.CreateContext.<br/>List of valid frame types:<br/>Frame: The base type. No special capabilities. Useful for spacing, organization, input handling, and solid color squares.<br/>Mask: Obscures the contents of child frames that do not fall within the mask boundaries.<br/>Text: Displays text.<br/>Texture: Displays a static texture image.<br/>RiftButton: A standard Rift button widget.<br/>RiftCheckbox: A standard Rift checkbox widget.<br/>RiftScrollbar: A standard Rift scrollbar widget.<br/>RiftSlider: A standard Rift slider widget.<br/>RiftTextfield: A standard Rift textfield widget.<br/>RiftWindow: A standard Rift window widget.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>frame</i> = UI.CreateFrame(<i>type</i>, <i>name</i>, <i>parent</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>name</i></td><td>parameter</td><td><i>string</i></td><td>A descriptive name for this element. Used for error reports and performance information. May be shown to end-users.</td></tr>
+      <tr><td><i>parent</i></td><td>parameter</td><td><i>Element</i></td><td>The new parent for this frame.</td></tr>
+      <tr><td><i>type</i></td><td>parameter</td><td><i>string</i></td><td>The type of your new frame. Current supported types: Frame, Text, Texture.</td></tr>
+      <tr><td><i>frame</i></td><td>result</td><td><i>Frame</i></td><td>Your new frame.</td></tr>
+    </table>
+    <dl>
+    </dl>

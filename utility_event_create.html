@@ -1,0 +1,21 @@
+<html>
+  <head><title>API Docs (live) -- Utility.Event.Create</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Utility.Event.Create">Utility.Event.Create</a> </h2>
+    <p><i></i> Creates a custom event. Takes an identifier and an event path as parameters. Called with Create("Identifier", "The.Event.Path") the event table will end up at Event.Identifier.The.Event.Path, and will behave like a standard Rift event table in every way. Undefined behavior if given an identifier or a path that conflicts with a built-in Rift event or an existing addon event.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>caller, handle</i> = Utility.Event.Create(<i>identifier</i>, <i>event</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>event</i></td><td>parameter</td><td><i>string</i></td><td>The event's name. "." characters will be treated as hierarchy delimeters.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string</i></td><td>The identifier of the addon creating this event.</td></tr>
+      <tr><td><i>caller</i></td><td>result</td><td><i>function</i></td><td>A function used to trigger the event. Called with any selection of parameters, it will pass those parameters through to properly registered event handlers in order. Any errors caused by those event handlers will be caught and handled.</td></tr>
+      <tr><td><i>handle</i></td><td>result</td><td><i>table</i></td><td>The resulting event handle.</td></tr>
+    </table>
+    <dl>
+    </dl>

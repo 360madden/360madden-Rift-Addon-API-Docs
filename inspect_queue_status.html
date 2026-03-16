@@ -1,0 +1,23 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Queue.Status</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Queue.Status">Inspect.Queue.Status</a> </h2>
+    <p><i></i> Inspects the current queue status. Omit the first parameter to get a table containing information on all queues.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>results</i> = Inspect.Queue.Status()</td></tr>
+      <tr><td colspan=4><i>result</i> = Inspect.Queue.Status(<i>queue</i>)</td></tr>
+      <tr><td colspan=4><i>results</i> = Inspect.Queue.Status(<i>queue</i>, <i>size</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>queue</i></td><td>parameter</td><td><i>string</i></td><td>Optional identifier of the queue to query. Valid values include "global" and "auctionfullscan".</td></tr>
+      <tr><td><i>size</i></td><td>parameter</td><td><i>number</i></td><td>The size of the element to test in this queue. Defaults to 1 if no size is provided.</td></tr>
+      <tr><td><i>result</i></td><td>result</td><td><i>boolean</i></td><td>false if this queue is throttled, non-false otherwise.</td></tr>
+      <tr><td><i>results</i></td><td>result</td><td><i>table</i></td><td>A key/value table. The first parameter is the name of the queue. The second parameter is false if the queue is throttled, or a number representing the queue size available otherwise.</td></tr>
+    </table>
+    <dl>
+    </dl>

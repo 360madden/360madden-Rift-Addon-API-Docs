@@ -1,0 +1,52 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Inspect.Setting.Detail">Inspect.Setting.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about a setting.</td></tr>
+      <tr><td><a href="#Inspect.Setting.List">Inspect.Setting.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists the player's current settings.</td></tr>
+    </table>
+    <h2><a name="Inspect.Setting.Detail">Inspect.Setting.Detail</a></h2>
+    <p><i></i> Provides detailed information about a setting.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Setting.Detail(<i>setting</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Setting.Detail(<i>settings</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>setting</i></td><td>parameter</td><td><i>string</i></td><td>The setting to retrieve detail for.</td></tr>
+      <tr><td><i>settings</i></td><td>parameter</td><td><i>table</i></td><td>A table of settings to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single setting.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested settings.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>value</th>
+            <td>The value of the requested element.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Setting.List">Inspect.Setting.List</a></h2>
+    <p><i></i> Lists the player's current settings.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>settings</i> = Inspect.Setting.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>settings</i></td><td>result</td><td><i>table</i></td><td>A table containing the player's current settings.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

@@ -1,0 +1,35 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Shard</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Shard">Inspect.Shard</a> </h2>
+    <p><i></i> Returns information about the current shard.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>shard</i> = Inspect.Shard()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>shard</i></td><td>result</td><td><i>table</i></td><td>Table containing requested data.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>name</th>
+            <td>The shard's name.</th>
+          </tr>
+          <tr>
+            <th>pvp</th>
+            <td>Signals that the shard is a PvP shard.</th>
+          </tr>
+          <tr>
+            <th>rp</th>
+            <td>Signals that the shard is a roleplaying shard.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

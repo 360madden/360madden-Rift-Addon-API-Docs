@@ -1,0 +1,21 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Stat</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Stat">Inspect.Stat</a> </h2>
+    <p><i></i> Returns information about the player's stats.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>results</i> = Inspect.Stat()</td></tr>
+      <tr><td colspan=4><i>result</i> = Inspect.Stat(<i>stat</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>stat</i></td><td>parameter</td><td><i>string</i></td><td>Optional parameter identifying the stat desired. May be any of strength, dexterity, intelligence, wisdom, endurance, resistLife, resistDeath, resistFire, resistWater, resistEarth, resistAir, armor, powerAttack, critAttack, hit, powerSpell, critSpell, critPower, block, dodge, or any of the previous with "Unbuffed" appended.</td></tr>
+      <tr><td><i>result</i></td><td>result</td><td><i>number</i></td><td>The current value of that stat.</td></tr>
+      <tr><td><i>results</i></td><td>result</td><td><i>table</i></td><td>A table from stat ID to stat value, containing all the player's stats.</td></tr>
+    </table>
+    <dl>
+    </dl>

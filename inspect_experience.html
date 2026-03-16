@@ -1,0 +1,35 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Experience</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Experience">Inspect.Experience</a> </h2>
+    <p><i></i> Returns information on your experience.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>result</i> = Inspect.Experience()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>result</i></td><td>result</td><td><i>table</i></td><td>Table containing information on experience.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>accumulated</th>
+            <td>Experience accumulated so far in this character level.</th>
+          </tr>
+          <tr>
+            <th>needed</th>
+            <td>Quantity of experience needed to gain a level.</th>
+          </tr>
+          <tr>
+            <th>rested</th>
+            <td>Quantity of available rested experience.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

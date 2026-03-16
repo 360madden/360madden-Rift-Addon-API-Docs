@@ -1,0 +1,21 @@
+<html>
+  <head><title>API Docs (live) -- Command.Auction.Scan</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Command.Auction.Scan">Command.Auction.Scan</a> </h2>
+    <p><i></i> Requests an auction house scan. For type "search", if "index" is omitted then this function will error if the "auctionfullscan" queue is not ready. Type "search" with "index" will throttle on the "auction" command queue. Other types throttle on the "global" command queue.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: auction</p>
+    <table>
+      <tr><td colspan=4>Command.Auction.Scan(<i>parameters</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>parameters</i></td><td>parameter</td><td><i>table</i></td><td>Table containing data about the requested scan.<br/>				type: Type of scan to perform. One of "bids", "buy", "mine", "orders", or "search".<br/>				If type is "bids", "mine", or "orders", no other parameters are allowed.<br/>				If type is "search":<br/>					category: Category to search for. Same as the "category" member returned by Inspect.Item.Detail(). Optional.<br/>					index: Numeric item index to start the scan at. If provided, the auction scan will return the first 50 items immediately following this index.<br/>					levelMax: Maximum level the item must require. Optional.<br/>					levelMin: Minimum level the item must require. Optional.<br/>					priceMax: Maximum price of the item. Optional.<br/>					priceMin: Minimum price of the item. Optional.<br/>					rarity: The minimum rarity to search for. Same as the "rarity" member returned by Inspect.Item.Detail(). Optional.<br/>					role: The role that the item must be compatible with. One of "mage", "rogue", "cleric", "warrior", or "primalist". Optional.<br/>					statType: Which stat to filter based on. One of "armor", "block", "critPower", "critSpell", "dexterity", "dodge", "endurance", "health", "hit", "intelligence", "mana", "powerAttack", "powerSpell", "resistAir", "resistDeath", "resistEarth", "resistFire", "resistLife", "resistWater", "strength", or "wisdom". Optional. If provided, statMin and statMax must also be provided.<br/>					statMax: Maximum allowed value for the filter stat. Optional. If provided, statType and statMin must also be provided.<br/>					statMin: Minimum allowed value for the filter stat. Optional. If provided, statType and statMax must also be provided.<br/>					sort: Which column the requested items should be sorted based on. One of "rarity", "name", "level", "time", "seller", "pricePerUnit", "bid", "buyout", "stack". Optional.<br/>					sortOrder: What order to sort in. One of "ascending" or "descending". Optional.<br/>					text: A string to search for in the item name. Optional.<br/>					type: Type of scan to perform. One of "search", "buy", "mine", or "bids". If "mine" or "bids", must be the only member in the table.<br/>				If type is "buy":<br/>					category: Category to search for. Same as the "category" member returned by Inspect.Item.Detail(). Optional.<br/>					text: A string to search for in the item name. Optional.</td></tr>
+    </table>
+    <dl>
+      <dt><b>hardwareevent</b></dt>
+      <dd>true</dd>
+    </dl>

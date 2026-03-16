@@ -1,0 +1,22 @@
+<html>
+  <head><title>API Docs (live) -- Utility.Auction.CostOrder</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Utility.Auction.CostOrder">Utility.Auction.CostOrder</a> </h2>
+    <p><i></i> Returns the amount of silver it will cost to post a given order.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>cost</i> = Utility.Auction.CostOrder(<i>itemtype</i>, <i>quantity</i>, <i>time</i>, <i>buyout</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>buyout</i></td><td>parameter</td><td><i>number</i></td><td>The total buyout for the new auction, in silver. Must be evenly divisible by quantity.</td></tr>
+      <tr><td><i>itemtype</i></td><td>parameter</td><td><i>itemtype</i></td><td>The item type to be ordered.</td></tr>
+      <tr><td><i>quantity</i></td><td>parameter</td><td><i>number</i></td><td>The number of items to be ordered.</td></tr>
+      <tr><td><i>time</i></td><td>parameter</td><td><i>number</i></td><td>The duration that the order should last, in hours. Valid values are limited to 12, 24, and 48.</td></tr>
+      <tr><td><i>cost</i></td><td>result</td><td><i>number</i></td><td>The cost of posting this order, in silver. Includes the full deposit for the items.</td></tr>
+    </table>
+    <dl>
+    </dl>

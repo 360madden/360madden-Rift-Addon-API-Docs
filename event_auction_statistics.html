@@ -1,0 +1,48 @@
+<html>
+  <head><title>API Docs (live) -- Event.Auction.Statistics</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Event.Auction.Statistics">Event.Auction.Statistics</a> </h2>
+    <p><i></i> Signals receipt of auction statistics.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Auction.Statistics(<i>itemtype</i>, <i>data</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>Table containing a series of tables with different timestamps, each containing data for a single day.</td></tr>
+      <tr><td><i>itemtype</i></td><td>parameter</td><td><i>variant</i></td><td>Item type that the attached statistics refer to.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>priceAverage</th>
+            <td>Average item price during this day.</th>
+          </tr>
+          <tr>
+            <th>priceMax</th>
+            <td>Maximum item price during this day.</th>
+          </tr>
+          <tr>
+            <th>priceMin</th>
+            <td>Minimum item price during this day.</th>
+          </tr>
+          <tr>
+            <th>priceVariance</th>
+            <td>Variance in item price during this day.</th>
+          </tr>
+          <tr>
+            <th>time</th>
+            <td>UNIX timestamp of the day.</th>
+          </tr>
+          <tr>
+            <th>volume</th>
+            <td>Quantity of items traded during this day.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

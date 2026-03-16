@@ -1,0 +1,310 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Layout">Layout</a></td><td><i></i></td><td><i></i></td><td></td><td>A UI element of type Layout or derived from Layout.</td></tr>
+      <tr><td><a href="#Layout.Event:Move">Layout.Event:Move</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the frame's vertices have moved.</td></tr>
+      <tr><td><a href="#Layout.Event:Size">Layout.Event:Size</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the frame's size has changed.</td></tr>
+      <tr><td><a href="#Layout:EventAttach">Layout:EventAttach</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Attaches an event handler to an event.</td></tr>
+      <tr><td><a href="#Layout:EventDetach">Layout:EventDetach</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Detaches an event handler from an event. Any parameter can be 'nil', and this is interpreted as a...</td></tr>
+      <tr><td><a href="#Layout:EventList">Layout:EventList</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists the current event handlers for an event.</td></tr>
+      <tr><td><a href="#Layout:EventMacroGet">Layout:EventMacroGet</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the macro that will be triggered when this event occurs.</td></tr>
+      <tr><td><a href="#Layout:EventMacroSet">Layout:EventMacroSet</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the macro that will be triggered when this event occurs.</td></tr>
+      <tr><td><a href="#Layout:GetBottom">Layout:GetBottom</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the Y position of the bottom edge of this element.</td></tr>
+      <tr><td><a href="#Layout:GetBounds">Layout:GetBounds</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the complete bounds of this element.</td></tr>
+      <tr><td><a href="#Layout:GetEventTable">Layout:GetEventTable</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the event table of this element. By default, this value is also stored in "this.Event".</td></tr>
+      <tr><td><a href="#Layout:GetHeight">Layout:GetHeight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the height of this element.</td></tr>
+      <tr><td><a href="#Layout:GetLeft">Layout:GetLeft</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the X position of the left edge of this element.</td></tr>
+      <tr><td><a href="#Layout:GetName">Layout:GetName</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the name of this element.</td></tr>
+      <tr><td><a href="#Layout:GetOwner">Layout:GetOwner</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the owner of this element.</td></tr>
+      <tr><td><a href="#Layout:GetRight">Layout:GetRight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the X position of the right edge of this element.</td></tr>
+      <tr><td><a href="#Layout:GetTop">Layout:GetTop</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the Y position of the top edge of this element.</td></tr>
+      <tr><td><a href="#Layout:GetType">Layout:GetType</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the type of this element.</td></tr>
+      <tr><td><a href="#Layout:GetWidth">Layout:GetWidth</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the width of this element.</td></tr>
+      <tr><td><a href="#Layout:ReadAll">Layout:ReadAll</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read all set points and sizes from this frame.</td></tr>
+      <tr><td><a href="#Layout:ReadHeight">Layout:ReadHeight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read a set height from this frame.</td></tr>
+      <tr><td><a href="#Layout:ReadPoint">Layout:ReadPoint</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read a set point from this frame. Must be given a single-axis coordinate.</td></tr>
+      <tr><td><a href="#Layout:ReadWidth">Layout:ReadWidth</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read a set width from this frame.</td></tr>
+    </table>
+    <h2><a name="Layout">Layout</a></h2>
+    <p><i></i> A UI element of type Layout or derived from Layout.</p>
+  </body>
+  <h2><a name="Layout.Event:Move">Layout.Event:Move</a></h2>
+  <p><i></i> Signals that the frame's vertices have moved.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout.Event:Move()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout.Event:Size">Layout.Event:Size</a></h2>
+  <p><i></i> Signals that the frame's size has changed.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout.Event:Size()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:EventAttach">Layout:EventAttach</a></h2>
+  <p><i></i> Attaches an event handler to an event.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout:EventAttach(<i>handle</i>, <i>callback</i>, <i>label</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventAttach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>callback</i></td><td>parameter</td><td><i>function</i></td><td>A global event handler function. This will be called when the event fires. The first parameter will be the frame that the event is called on, the second parameter will be the standard frame event handle, any other parameters will follow that.</td></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>label</i></td><td>parameter</td><td><i>string</i></td><td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</td></tr>
+    <tr><td><i>priority</i></td><td>parameter</td><td><i>number</i></td><td>Priority of the event handler. Higher numbers trigger first.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Layout:EventDetach">Layout:EventDetach</a></h2>
+  <p><i></i> Detaches an event handler from an event. Any parameter can be 'nil', and this is interpreted as a wildcard. If multiple events match the constraints, only one will be detached.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>, <i>owner</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>callback</i></td><td>parameter</td><td><i>function/nil</i></td><td>A callback function to search for.</td></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>label</i></td><td>parameter</td><td><i>string/nil</i></td><td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</td></tr>
+    <tr><td><i>owner</i></td><td>parameter</td><td><i>string/nil</i></td><td>Owner to search for.</td></tr>
+    <tr><td><i>priority</i></td><td>parameter</td><td><i>number/nil</i></td><td>Priority of the event handler. Higher numbers trigger first.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:EventList">Layout:EventList</a></h2>
+  <p><i></i> Lists the current event handlers for an event.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>result</i> = Layout:EventList(<i>handle</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>result</i></td><td>result</td><td><i>table</i></td><td>A table of event handlers for this event.</td></tr>
+  </table>
+  <dl>
+    <dt><b>members</b></dt>
+    <dd>
+      <table>
+        <tr>
+          <th>handler</th>
+          <td>The handler that will be called when the event fires.</th>
+        </tr>
+        <tr>
+          <th>label</th>
+          <td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</th>
+        </tr>
+        <tr>
+          <th>macro</th>
+          <td>The macro that will run when the event fires.</th>
+        </tr>
+        <tr>
+          <th>owner</th>
+          <td>Owner to search for.</th>
+        </tr>
+        <tr>
+          <th>priority</th>
+          <td>Priority of the event handler. Higher numbers trigger first.</th>
+        </tr>
+      </table>
+    </dd>
+  </dl>
+  <h2><a name="Layout:EventMacroGet">Layout:EventMacroGet</a></h2>
+  <p><i></i> Gets the macro that will be triggered when this event occurs.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>macro</i> = Layout:EventMacroGet(<i>handle</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>macro</i></td><td>result</td><td><i>string/nil</i></td><td>The macro that will be triggered.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:EventMacroSet">Layout:EventMacroSet</a></h2>
+  <p><i></i> Sets the macro that will be triggered when this event occurs.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout:EventMacroSet(<i>handle</i>, <i>macro</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>macro</i></td><td>parameter</td><td><i>string/nil</i></td><td>The macro to trigger. nil to clear the macro.</td></tr>
+  </table>
+  <dl>
+    <dt><b>requireSecureFrameAndInsecureEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Layout:GetBottom">Layout:GetBottom</a></h2>
+  <p><i></i> Retrieves the Y position of the bottom edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>bottom</i> = Layout:GetBottom()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>bottom</i></td><td>result</td><td><i>number</i></td><td>The Y position of the bottom edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:GetBounds">Layout:GetBounds</a></h2>
+  <p><i></i> Retrieves the complete bounds of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>left, top, right, bottom</i> = Layout:GetBounds()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>bottom</i></td><td>result</td><td><i>number</i></td><td>The Y position of the bottom edge of this element.</td></tr>
+    <tr><td><i>left</i></td><td>result</td><td><i>number</i></td><td>The X position of the left edge of this element.</td></tr>
+    <tr><td><i>right</i></td><td>result</td><td><i>number</i></td><td>The X position of the right edge of this element.</td></tr>
+    <tr><td><i>top</i></td><td>result</td><td><i>number</i></td><td>The Y position of the top edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:GetEventTable">Layout:GetEventTable</a></h2>
+  <p><i></i> Retrieves the event table of this element. By default, this value is also stored in "this.Event".</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>eventTable</i> = Layout:GetEventTable()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>eventTable</i></td><td>result</td><td><i>table</i></td><td>The event table of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:GetHeight">Layout:GetHeight</a></h2>
+  <p><i></i> Retrieves the height of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>height</i> = Layout:GetHeight()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>height</i></td><td>result</td><td><i>number</i></td><td>The height of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:GetLeft">Layout:GetLeft</a></h2>
+  <p><i></i> Retrieves the X position of the left edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>left</i> = Layout:GetLeft()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>left</i></td><td>result</td><td><i>number</i></td><td>The X position of the left edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:GetName">Layout:GetName</a></h2>
+  <p><i></i> Retrieves the name of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>name</i> = Layout:GetName()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>name</i></td><td>result</td><td><i>string</i></td><td>The name of this element, as provided by the addon that created it.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:GetOwner">Layout:GetOwner</a></h2>
+  <p><i></i> Retrieves the owner of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>owner</i> = Layout:GetOwner()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>owner</i></td><td>result</td><td><i>string</i></td><td>The owner of this element. Given as an addon identifier.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:GetRight">Layout:GetRight</a></h2>
+  <p><i></i> Retrieves the X position of the right edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>right</i> = Layout:GetRight()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>right</i></td><td>result</td><td><i>number</i></td><td>The X position of the right edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:GetTop">Layout:GetTop</a></h2>
+  <p><i></i> Retrieves the Y position of the top edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>top</i> = Layout:GetTop()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>top</i></td><td>result</td><td><i>number</i></td><td>The Y position of the top edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:GetType">Layout:GetType</a></h2>
+  <p><i></i> Retrieves the type of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>type</i> = Layout:GetType()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>type</i></td><td>result</td><td><i>string</i></td><td>The type of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:GetWidth">Layout:GetWidth</a></h2>
+  <p><i></i> Retrieves the width of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>width</i> = Layout:GetWidth()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>width</i></td><td>result</td><td><i>number</i></td><td>The width of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:ReadAll">Layout:ReadAll</a></h2>
+  <p><i></i> Read all set points and sizes from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>results</i> = Layout:ReadAll()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>results</i></td><td>result</td><td><i>table</i></td><td>Result table. Contains data in the following format: {x = {size = (size), [(position)] = {layout = (layout), position = (position), offset = (offset)}}, y = (the same thing)}.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:ReadHeight">Layout:ReadHeight</a></h2>
+  <p><i></i> Read a set height from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>height</i> = Layout:ReadHeight()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>height</i></td><td>result</td><td><i>number</i></td><td>The parameter passed to SetHeight(), or nil if no such parameter has been passed.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:ReadPoint">Layout:ReadPoint</a></h2>
+  <p><i></i> Read a set point from this frame. Must be given a single-axis coordinate.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>layout, position, offset</i> = Layout:ReadPoint(<i>coordinate</i>)</td></tr>
+    <tr><td colspan=4><i>layout, position, offset</i> = Layout:ReadPoint(<i>x</i>, <i>y</i>)</td></tr>
+    <tr><td colspan=4><i>origin, offset</i> = Layout:ReadPoint(<i>coordinate</i>)</td></tr>
+    <tr><td colspan=4><i>origin, offset</i> = Layout:ReadPoint(<i>x</i>, <i>y</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>coordinate</i></td><td>parameter</td><td><i>string</i></td><td>Named coordinate. Must be a one-axis coordinate.</td></tr>
+    <tr><td><i>x</i></td><td>parameter</td><td><i>number/nil</i></td><td>X coordinate of the point. Either this or Y must be nil.</td></tr>
+    <tr><td><i>y</i></td><td>parameter</td><td><i>number/nil</i></td><td>Y coordinate of the point. Either this or X must be nil.</td></tr>
+    <tr><td><i>layout</i></td><td>result</td><td><i>Layout</i></td><td>The table that this point is pinned to.</td></tr>
+    <tr><td><i>offset</i></td><td>result</td><td><i>number</i></td><td>The offset in pixels from the source location to the actual location.</td></tr>
+    <tr><td><i>origin</i></td><td>result</td><td><i>string</i></td><td>The string "origin".</td></tr>
+    <tr><td><i>position</i></td><td>result</td><td><i>number</i></td><td>The position on "layout" that this point is pinned. 0 refers to the top or left edge, 1 refers to the bottom or right edge.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Layout:ReadWidth">Layout:ReadWidth</a></h2>
+  <p><i></i> Read a set width from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>width</i> = Layout:ReadWidth()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>width</i></td><td>result</td><td><i>number</i></td><td>The parameter passed to SetWidth(), or nil if no such parameter has been passed.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h4><a href='index.html'>Back to index...</a></h4>

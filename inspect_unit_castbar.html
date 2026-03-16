@@ -1,0 +1,59 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Unit.Castbar</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Unit.Castbar">Inspect.Unit.Castbar</a> </h2>
+    <p><i></i> Provides detailed information about a unit's castbar.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Unit.Castbar(<i>unit</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Unit.Castbar(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>unit</i></td><td>parameter</td><td><i>unit</i></td><td>A unit, in either unit ID or unit specifier format.</td></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>table</i></td><td>A table containing units to inspect.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single castbar.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested castbars. The key is the unit ID or unit specifier, the value is the castbar's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>ability</th>
+            <td>ID of the ability being cast, if available.</th>
+          </tr>
+          <tr>
+            <th>abilityName</th>
+            <td>Name of the ability being cast.</th>
+          </tr>
+          <tr>
+            <th>begin</th>
+            <td>The time the cast started, in the context of Inspect.Time.Frame.</th>
+          </tr>
+          <tr>
+            <th>channeled</th>
+            <td>True if this ability is channeled.</th>
+          </tr>
+          <tr>
+            <th>duration</th>
+            <td>Duration of the cast in seconds.</th>
+          </tr>
+          <tr>
+            <th>expired</th>
+            <td>Number of the seconds the cast is past its completion time. Generally indicates lag.</th>
+          </tr>
+          <tr>
+            <th>remaining</th>
+            <td>Time remaining on the cast, in seconds.</th>
+          </tr>
+          <tr>
+            <th>uninterruptible</th>
+            <td>Signals that the cast is not interruptible.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

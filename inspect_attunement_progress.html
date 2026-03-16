@@ -1,0 +1,43 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Attunement.Progress</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Attunement.Progress">Inspect.Attunement.Progress</a> </h2>
+    <p><i></i> Returns information on your current attunement progress.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>result</i> = Inspect.Attunement.Progress()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>result</i></td><td>result</td><td><i>table</i></td><td>Table containing information on attunement progress.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>accumulated</th>
+            <td>Attunement experience accumulated so far in this attunement level.</th>
+          </tr>
+          <tr>
+            <th>available</th>
+            <td>Number of unused attunement ranks.</th>
+          </tr>
+          <tr>
+            <th>needed</th>
+            <td>Quantity of attunement experience needed to gain a level.</th>
+          </tr>
+          <tr>
+            <th>rested</th>
+            <td>Quantity of available attunement rested experience.</th>
+          </tr>
+          <tr>
+            <th>spent</th>
+            <td>Number of spent attunement ranks.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

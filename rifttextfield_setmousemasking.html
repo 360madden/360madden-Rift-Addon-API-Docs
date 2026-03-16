@@ -1,0 +1,20 @@
+<html>
+  <head><title>API Docs (live) -- RiftTextfield:SetMouseMasking</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="RiftTextfield:SetMouseMasking">RiftTextfield:SetMouseMasking</a> </h2>
+    <p><i></i> Sets the frame's mouse masking mode.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Element:SetMouseMasking(<i>mask</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>mask</i></td><td>parameter</td><td><i>string</i></td><td>The new mouse masking mode. "full" is the standard mode, and means that creating any Left, Right, or movement-related mouse event will cause the frame to accept and consume any event from any of those types. "limited" causes the frame to accept and consume only events for buttons that have been hooked, so that hooking "LeftDown" will still pass Right mouse events through the frame. Note that hooking any mouse event will still consume MouseMove/In/Out events.</td></tr>
+    </table>
+    <dl>
+      <dt><b>noSecureFrameAndEnvironment</b></dt>
+      <dd>true</dd>
+    </dl>

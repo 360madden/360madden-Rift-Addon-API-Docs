@@ -1,0 +1,69 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Event.TEMPORARY.Experience">Event.TEMPORARY.Experience</a></td><td><i></i></td><td><i>deprecated</i></td><td></td><td>Signals a change in the player's experience.</td></tr>
+      <tr><td><a href="#Event.TEMPORARY.Role">Event.TEMPORARY.Role</a></td><td><i></i></td><td><i>deprecated</i></td><td></td><td>Signals a change in the player's current role.</td></tr>
+      <tr><td><a href="#Inspect.TEMPORARY.Experience">Inspect.TEMPORARY.Experience</a></td><td><i>function</i></td><td><i>deprecated</i></td><td></td><td>Returns information about the player's experience.</td></tr>
+      <tr><td><a href="#Inspect.TEMPORARY.Role">Inspect.TEMPORARY.Role</a></td><td><i>function</i></td><td><i>deprecated</i></td><td></td><td>Returns the ID of the player's current role.</td></tr>
+    </table>
+    <h2><a name="Event.TEMPORARY.Experience">Event.TEMPORARY.Experience</a></h2>
+    <p><i></i> Signals a change in the player's experience.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.TEMPORARY.Experience(<i>accumulated</i>, <i>rested</i>, <i>needed</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>accumulated</i></td><td>parameter</td><td><i>variant</i></td><td>The amount of  experience that has accumulated towards the next level.</td></tr>
+      <tr><td><i>needed</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The amount of experience required to reach the next level.</td></tr>
+      <tr><td><i>rested</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The amount of rested experience that has accumulated.</td></tr>
+    </table>
+    <dl>
+      <dt><b>deprecated</b></dt>
+      <dd>standard</dd>
+    </dl>
+    <h2><a name="Event.TEMPORARY.Role">Event.TEMPORARY.Role</a></h2>
+    <p><i></i> Signals a change in the player's current role.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.TEMPORARY.Role(<i>role</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>role</i></td><td>parameter</td><td><i>variant</i></td><td>The ID of the new role.</td></tr>
+    </table>
+    <dl>
+      <dt><b>deprecated</b></dt>
+      <dd>soft</dd>
+    </dl>
+    <h2><a name="Inspect.TEMPORARY.Experience">Inspect.TEMPORARY.Experience</a></h2>
+    <p><i></i> Returns information about the player's experience.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>accumulated, rested, needed</i> = Inspect.TEMPORARY.Experience()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>accumulated</i></td><td>result</td><td><i>number</i></td><td>The amount of experience that has accumulated towards the next level.</td></tr>
+      <tr><td><i>needed</i></td><td>result</td><td><i>number</i></td><td>The amonut of experience required to reach the next level.</td></tr>
+      <tr><td><i>rested</i></td><td>result</td><td><i>number</i></td><td>The amount of rested experience that has accumulated.</td></tr>
+    </table>
+    <dl>
+      <dt><b>deprecated</b></dt>
+      <dd>standard</dd>
+    </dl>
+    <h2><a name="Inspect.TEMPORARY.Role">Inspect.TEMPORARY.Role</a></h2>
+    <p><i></i> Returns the ID of the player's current role.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>role</i> = Inspect.TEMPORARY.Role()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>role</i></td><td>result</td><td><i>number</i></td><td>The ID of the player's current role.</td></tr>
+    </table>
+    <dl>
+      <dt><b>deprecated</b></dt>
+      <dd>soft</dd>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

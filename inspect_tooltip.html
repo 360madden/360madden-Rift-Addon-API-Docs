@@ -1,0 +1,22 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Tooltip</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Tooltip">Inspect.Tooltip</a> </h2>
+    <p><i></i> Returns the current contents of the tooltip.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>type, shown</i> = Inspect.Tooltip()</td></tr>
+      <tr><td colspan=4><i>type, unit, buff</i> = Inspect.Tooltip()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>buff</i></td><td>result</td><td><i>buff</i></td><td>The ID of the tooltip's buff.</td></tr>
+      <tr><td><i>shown</i></td><td>result</td><td><i>variant, nil</i></td><td>The blob describing what is currently shown. Generally, some kind of identifier used in another part of the addon system.</td></tr>
+      <tr><td><i>type</i></td><td>result</td><td><i>string, nil</i></td><td>The current tooltip type. Valid values include "ability", "buff", "item", "itemtype", and "unit".</td></tr>
+      <tr><td><i>unit</i></td><td>result</td><td><i>unit</i></td><td>The unit that the buff is attached to.</td></tr>
+    </table>
+    <dl>
+    </dl>

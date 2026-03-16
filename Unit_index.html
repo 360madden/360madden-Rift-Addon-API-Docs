@@ -1,0 +1,870 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Unit.Menu">Command.Unit.Menu</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Creates a standard context menu targeted at the unit of choice.</td></tr>
+      <tr><td><a href="#Event.Unit.Add">Event.Unit.Add</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals the addition of units to unit specifiers. Always preceded by Event.Unit.Change.Remove. Tr...</td></tr>
+      <tr><td><a href="#Event.Unit.Availability.Full">Event.Unit.Availability.Full</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals units entering Full availability.</td></tr>
+      <tr><td><a href="#Event.Unit.Availability.None">Event.Unit.Availability.None</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals units leaving availability entirely.</td></tr>
+      <tr><td><a href="#Event.Unit.Availability.Partial">Event.Unit.Availability.Partial</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals units entering Partial availability, possibly on the way to Full or None availability.</td></tr>
+      <tr><td><a href="#Event.Unit.Castbar">Event.Unit.Castbar</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's castbar changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Absorb">Event.Unit.Detail.Absorb</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's damage absorption changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Afk">Event.Unit.Detail.Afk</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's AFK flag changing. Will trigger only for partymembers.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Aggro">Event.Unit.Detail.Aggro</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's aggro flag changing. Will trigger only for groupmembers.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Blocked">Event.Unit.Detail.Blocked</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's LOS-blocked flag changing. Will trigger only for groupmembers.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Charge">Event.Unit.Detail.Charge</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's charge changing. Will trigger only for the player's unit ID.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.ChargeMax">Event.Unit.Detail.ChargeMax</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's charge maximum changing. Will trigger only for the player's unit ID.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Combat">Event.Unit.Detail.Combat</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's combat status changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Combo">Event.Unit.Detail.Combo</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's combo points changing. Will trigger only for the player's unit ID.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Coord">Event.Unit.Detail.Coord</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in the unit's location.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Energy">Event.Unit.Detail.Energy</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's energy changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.EnergyMax">Event.Unit.Detail.EnergyMax</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's energy maximum changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Guild">Event.Unit.Detail.Guild</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's guild changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Health">Event.Unit.Detail.Health</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's health changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.HealthCap">Event.Unit.Detail.HealthCap</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's health cap changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.HealthMax">Event.Unit.Detail.HealthMax</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's health maximum changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Level">Event.Unit.Detail.Level</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's level changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.LocationName">Event.Unit.Detail.LocationName</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's location name changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Mana">Event.Unit.Detail.Mana</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's mana changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.ManaMax">Event.Unit.Detail.ManaMax</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's mana maximum changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Mark">Event.Unit.Detail.Mark</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's mark changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Mentoring">Event.Unit.Detail.Mentoring</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's mentoring status changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Name">Event.Unit.Detail.Name</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's name changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Offline">Event.Unit.Detail.Offline</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's offline flag changing. Will trigger only for partymembers.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Planar">Event.Unit.Detail.Planar</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's planar charges changing. Will trigger only for the player or groupmembers.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.PlanarMax">Event.Unit.Detail.PlanarMax</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's maximum planar charges changing. Will trigger only for the player or groupmembers.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Power">Event.Unit.Detail.Power</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's power changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.PublicSize">Event.Unit.Detail.PublicSize</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's public group size or status changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Pvp">Event.Unit.Detail.Pvp</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's PvP flag changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Radius">Event.Unit.Detail.Radius</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's radius changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Ready">Event.Unit.Detail.Ready</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's readycheck status changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Role">Event.Unit.Detail.Role</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's role changing. Will trigger only for the player or partymembers.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Tagged">Event.Unit.Detail.Tagged</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's tagged status changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.TitlePrefixId">Event.Unit.Detail.TitlePrefixId</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's title prefix ID changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.TitlePrefixName">Event.Unit.Detail.TitlePrefixName</a></td><td><i></i></td><td><i>deprecated</i></td><td></td><td>Signals a unit's localized title prefix changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.TitleSuffixId">Event.Unit.Detail.TitleSuffixId</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's title suffix ID changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.TitleSuffixName">Event.Unit.Detail.TitleSuffixName</a></td><td><i></i></td><td><i>deprecated</i></td><td></td><td>Signals a unit's localized title suffix changing.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Vitality">Event.Unit.Detail.Vitality</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's vitality changing. Will trigger only for the player or groupmembers.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Warfront">Event.Unit.Detail.Warfront</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit's warfront flag changing. Will trigger only for partymembers.</td></tr>
+      <tr><td><a href="#Event.Unit.Detail.Zone">Event.Unit.Detail.Zone</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in the unit's zone.</td></tr>
+      <tr><td><a href="#Event.Unit.Remove">Event.Unit.Remove</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals the removal of units from unit specifiers. Always followed by Event.Unit.Change.Add. Trig...</td></tr>
+      <tr><td><a href="#Inspect.Unit.Castbar">Inspect.Unit.Castbar</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about a unit's castbar.</td></tr>
+      <tr><td><a href="#Inspect.Unit.Detail">Inspect.Unit.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about a unit.</td></tr>
+      <tr><td><a href="#Inspect.Unit.List">Inspect.Unit.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists all the units that the client can see.</td></tr>
+      <tr><td><a href="#Inspect.Unit.Lookup">Inspect.Unit.Lookup</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Converts unit IDs to unit specifiers and vice-versa.</td></tr>
+      <tr><td><a href="#Utility.Unit.Availability">Utility.Unit.Availability</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns information on which detail members are available in which availability mode.</td></tr>
+    </table>
+    <h2><a name="Command.Unit.Menu">Command.Unit.Menu</a></h2>
+    <p><i></i> Creates a standard context menu targeted at the unit of choice.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Unit.Menu(<i>target</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>unit</i></td><td>The unit to generate a context menu for.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Add">Event.Unit.Add</a></h2>
+    <p><i></i> Signals the addition of units to unit specifiers. Always preceded by Event.Unit.Change.Remove. Triggers for unit IDs that have been removed from the specifier tree, but may not trigger for any children of those units. You may want to use LibUnitChange instead of this event.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Add(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the unit specifier, or "false" if the unit now has no specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Availability.Full">Event.Unit.Availability.Full</a></h2>
+    <p><i></i> Signals units entering Full availability.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Availability.Full(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the unit specifier, or "false" if the unit now has no specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Availability.None">Event.Unit.Availability.None</a></h2>
+    <p><i></i> Signals units leaving availability entirely.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Availability.None(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the unit specifier, or "false" if the unit now has no specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Availability.Partial">Event.Unit.Availability.Partial</a></h2>
+    <p><i></i> Signals units entering Partial availability, possibly on the way to Full or None availability.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Availability.Partial(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the unit specifier, or "false" if the unit now has no specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Castbar">Event.Unit.Castbar</a></h2>
+    <p><i></i> Signals a unit's castbar changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Castbar(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is a castbar visibility flag.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Absorb">Event.Unit.Detail.Absorb</a></h2>
+    <p><i></i> Signals a unit's damage absorption changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Absorb(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Afk">Event.Unit.Detail.Afk</a></h2>
+    <p><i></i> Signals a unit's AFK flag changing. Will trigger only for partymembers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Afk(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Aggro">Event.Unit.Detail.Aggro</a></h2>
+    <p><i></i> Signals a unit's aggro flag changing. Will trigger only for groupmembers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Aggro(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Blocked">Event.Unit.Detail.Blocked</a></h2>
+    <p><i></i> Signals a unit's LOS-blocked flag changing. Will trigger only for groupmembers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Blocked(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Charge">Event.Unit.Detail.Charge</a></h2>
+    <p><i></i> Signals a unit's charge changing. Will trigger only for the player's unit ID.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Charge(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.ChargeMax">Event.Unit.Detail.ChargeMax</a></h2>
+    <p><i></i> Signals a unit's charge maximum changing. Will trigger only for the player's unit ID.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.ChargeMax(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Combat">Event.Unit.Detail.Combat</a></h2>
+    <p><i></i> Signals a unit's combat status changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Combat(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Combo">Event.Unit.Detail.Combo</a></h2>
+    <p><i></i> Signals a unit's combo points changing. Will trigger only for the player's unit ID.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Combo(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Coord">Event.Unit.Detail.Coord</a></h2>
+    <p><i></i> Signals a change in the unit's location.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Coord(<i>x</i>, <i>y</i>, <i>z</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>x</i></td><td>parameter</td><td><i>variant</i></td><td>The new X coordinate of the changed elements. Takes the form of a table. The key is the element ID.</td></tr>
+      <tr><td><i>y</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The new Y coordinate of the changed elements. Takes the form of a table. The key is the element ID.</td></tr>
+      <tr><td><i>z</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The new Z coordinate of the changed elements. Takes the form of a table. The key is the element ID.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Energy">Event.Unit.Detail.Energy</a></h2>
+    <p><i></i> Signals a unit's energy changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Energy(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.EnergyMax">Event.Unit.Detail.EnergyMax</a></h2>
+    <p><i></i> Signals a unit's energy maximum changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.EnergyMax(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Guild">Event.Unit.Detail.Guild</a></h2>
+    <p><i></i> Signals a unit's guild changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Guild(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Health">Event.Unit.Detail.Health</a></h2>
+    <p><i></i> Signals a unit's health changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Health(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.HealthCap">Event.Unit.Detail.HealthCap</a></h2>
+    <p><i></i> Signals a unit's health cap changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.HealthCap(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.HealthMax">Event.Unit.Detail.HealthMax</a></h2>
+    <p><i></i> Signals a unit's health maximum changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.HealthMax(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Level">Event.Unit.Detail.Level</a></h2>
+    <p><i></i> Signals a unit's level changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Level(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.LocationName">Event.Unit.Detail.LocationName</a></h2>
+    <p><i></i> Signals a unit's location name changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.LocationName(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Mana">Event.Unit.Detail.Mana</a></h2>
+    <p><i></i> Signals a unit's mana changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Mana(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.ManaMax">Event.Unit.Detail.ManaMax</a></h2>
+    <p><i></i> Signals a unit's mana maximum changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.ManaMax(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Mark">Event.Unit.Detail.Mark</a></h2>
+    <p><i></i> Signals a unit's mark changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Mark(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Mentoring">Event.Unit.Detail.Mentoring</a></h2>
+    <p><i></i> Signals a unit's mentoring status changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Mentoring(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Name">Event.Unit.Detail.Name</a></h2>
+    <p><i></i> Signals a unit's name changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Name(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Offline">Event.Unit.Detail.Offline</a></h2>
+    <p><i></i> Signals a unit's offline flag changing. Will trigger only for partymembers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Offline(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Planar">Event.Unit.Detail.Planar</a></h2>
+    <p><i></i> Signals a unit's planar charges changing. Will trigger only for the player or groupmembers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Planar(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.PlanarMax">Event.Unit.Detail.PlanarMax</a></h2>
+    <p><i></i> Signals a unit's maximum planar charges changing. Will trigger only for the player or groupmembers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.PlanarMax(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Power">Event.Unit.Detail.Power</a></h2>
+    <p><i></i> Signals a unit's power changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Power(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.PublicSize">Event.Unit.Detail.PublicSize</a></h2>
+    <p><i></i> Signals a unit's public group size or status changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.PublicSize(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Pvp">Event.Unit.Detail.Pvp</a></h2>
+    <p><i></i> Signals a unit's PvP flag changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Pvp(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Radius">Event.Unit.Detail.Radius</a></h2>
+    <p><i></i> Signals a unit's radius changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Radius(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Ready">Event.Unit.Detail.Ready</a></h2>
+    <p><i></i> Signals a unit's readycheck status changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Ready(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or the string "nil" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Role">Event.Unit.Detail.Role</a></h2>
+    <p><i></i> Signals a unit's role changing. Will trigger only for the player or partymembers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Role(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Tagged">Event.Unit.Detail.Tagged</a></h2>
+    <p><i></i> Signals a unit's tagged status changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Tagged(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.TitlePrefixId">Event.Unit.Detail.TitlePrefixId</a></h2>
+    <p><i></i> Signals a unit's title prefix ID changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.TitlePrefixId(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.TitlePrefixName">Event.Unit.Detail.TitlePrefixName</a></h2>
+    <p><i></i> Signals a unit's localized title prefix changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.TitlePrefixName(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+      <dt><b>deprecated</b></dt>
+      <dd>standard</dd>
+    </dl>
+    <h2><a name="Event.Unit.Detail.TitleSuffixId">Event.Unit.Detail.TitleSuffixId</a></h2>
+    <p><i></i> Signals a unit's title suffix ID changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.TitleSuffixId(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.TitleSuffixName">Event.Unit.Detail.TitleSuffixName</a></h2>
+    <p><i></i> Signals a unit's localized title suffix changing.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.TitleSuffixName(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+      <dt><b>deprecated</b></dt>
+      <dd>standard</dd>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Vitality">Event.Unit.Detail.Vitality</a></h2>
+    <p><i></i> Signals a unit's vitality changing. Will trigger only for the player or groupmembers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Vitality(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Warfront">Event.Unit.Detail.Warfront</a></h2>
+    <p><i></i> Signals a unit's warfront flag changing. Will trigger only for partymembers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Warfront(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Detail.Zone">Event.Unit.Detail.Zone</a></h2>
+    <p><i></i> Signals a change in the unit's zone.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Detail.Zone(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the new value, or "false" in place of nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Unit.Remove">Event.Unit.Remove</a></h2>
+    <p><i></i> Signals the removal of units from unit specifiers. Always followed by Event.Unit.Change.Add. Triggers for unit IDs that have been removed from the specifier tree, but may not trigger for any children of those units. You may want to use LibUnitChange instead of this event.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Unit.Remove(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>variant</i></td><td>Table of the units changed. Key is the unit ID, value is the unit specifier, or "false" if the unit now has no specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Unit.Castbar">Inspect.Unit.Castbar</a></h2>
+    <p><i></i> Provides detailed information about a unit's castbar.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Unit.Castbar(<i>unit</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Unit.Castbar(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>unit</i></td><td>parameter</td><td><i>unit</i></td><td>A unit, in either unit ID or unit specifier format.</td></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>table</i></td><td>A table containing units to inspect.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single castbar.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested castbars. The key is the unit ID or unit specifier, the value is the castbar's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>ability</th>
+            <td>ID of the ability being cast, if available.</th>
+          </tr>
+          <tr>
+            <th>abilityName</th>
+            <td>Name of the ability being cast.</th>
+          </tr>
+          <tr>
+            <th>begin</th>
+            <td>The time the cast started, in the context of Inspect.Time.Frame.</th>
+          </tr>
+          <tr>
+            <th>channeled</th>
+            <td>True if this ability is channeled.</th>
+          </tr>
+          <tr>
+            <th>duration</th>
+            <td>Duration of the cast in seconds.</th>
+          </tr>
+          <tr>
+            <th>expired</th>
+            <td>Number of the seconds the cast is past its completion time. Generally indicates lag.</th>
+          </tr>
+          <tr>
+            <th>remaining</th>
+            <td>Time remaining on the cast, in seconds.</th>
+          </tr>
+          <tr>
+            <th>uninterruptible</th>
+            <td>Signals that the cast is not interruptible.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Unit.Detail">Inspect.Unit.Detail</a></h2>
+    <p><i></i> Provides detailed information about a unit.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Unit.Detail(<i>unit</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Unit.Detail(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>unit</i></td><td>parameter</td><td><i>unit</i></td><td>A unit, in either unit ID or unit specifier format.</td></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>table</i></td><td>A table containing units to inspect.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single unit.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested units. The key is the unit ID or unit specifier, the value is the unit's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>absorb</th>
+            <td>The unit's damage absorption.</th>
+          </tr>
+          <tr>
+            <th>afk</th>
+            <td>Signals that the unit is AFK. Provided only for the player and the player's groupmembers.</th>
+          </tr>
+          <tr>
+            <th>aggro</th>
+            <td>Signals that this unit is being attacked. Provided only for groupmembers.</th>
+          </tr>
+          <tr>
+            <th>alliance</th>
+            <td>The unit's alliance. "defiant", "guardian", or nil.</th>
+          </tr>
+          <tr>
+            <th>availability</th>
+            <td>The unit's current availability. See Utility.Unit.Availability() for details.</th>
+          </tr>
+          <tr>
+            <th>blocked</th>
+            <td>Signals that this unit is not in line of sight. Provided only for groupmembers.</th>
+          </tr>
+          <tr>
+            <th>calling</th>
+            <td>The unit's calling. May be "mage", "rogue", "cleric", "warrior", or "primalist".</th>
+          </tr>
+          <tr>
+            <th>charge</th>
+            <td>The unit's charge. Provided only for the player.</th>
+          </tr>
+          <tr>
+            <th>chargeMax</th>
+            <td>The unit's maximum charge. Provided only for the player.</th>
+          </tr>
+          <tr>
+            <th>combat</th>
+            <td>The unit's combat status.</th>
+          </tr>
+          <tr>
+            <th>combo</th>
+            <td>The unit's combo points. Provided only for the player.</th>
+          </tr>
+          <tr>
+            <th>coordX</th>
+            <td>The unit's current X coordinate.</th>
+          </tr>
+          <tr>
+            <th>coordY</th>
+            <td>The unit's current Y coordinate.</th>
+          </tr>
+          <tr>
+            <th>coordZ</th>
+            <td>The unit's current Z coordinate.</th>
+          </tr>
+          <tr>
+            <th>energy</th>
+            <td>The unit's energy.</th>
+          </tr>
+          <tr>
+            <th>energyMax</th>
+            <td>The unit's maximum energy.</th>
+          </tr>
+          <tr>
+            <th>factionId</th>
+            <td>The unit's faction ID.</th>
+          </tr>
+          <tr>
+            <th>focus</th>
+            <td>The unit's focus.</th>
+          </tr>
+          <tr>
+            <th>guaranteedLoot</th>
+            <td>Signals that this unit guarantees loot on death. Shown in the user interface as a diamond above the portrait.</th>
+          </tr>
+          <tr>
+            <th>guild</th>
+            <td>The unit's guild.</th>
+          </tr>
+          <tr>
+            <th>health</th>
+            <td>The unit's health.</th>
+          </tr>
+          <tr>
+            <th>healthCap</th>
+            <td>The unit's capped maximum health.</th>
+          </tr>
+          <tr>
+            <th>healthMax</th>
+            <td>The unit's maximum health.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>level</th>
+            <td>The unit's level. May be "??" if the unit is hostile and very high-level.</th>
+          </tr>
+          <tr>
+            <th>locationName</th>
+            <td>The name of the unit's location. Provided only for friendly players.</th>
+          </tr>
+          <tr>
+            <th>loot</th>
+            <td>The Unit ID that has looting rights to this corpse.</th>
+          </tr>
+          <tr>
+            <th>mana</th>
+            <td>The unit's mana.</th>
+          </tr>
+          <tr>
+            <th>manaMax</th>
+            <td>The unit's maximum mana.</th>
+          </tr>
+          <tr>
+            <th>mark</th>
+            <td>The mark on this unit.</th>
+          </tr>
+          <tr>
+            <th>mentoring</th>
+            <td>The unit's mentoring status.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The unit's name.</th>
+          </tr>
+          <tr>
+            <th>nameSecondary</th>
+            <td>The unit's secondary name.</th>
+          </tr>
+          <tr>
+            <th>offline</th>
+            <td>Signals that the unit is offline. Provided only for the player's groupmembers.</th>
+          </tr>
+          <tr>
+            <th>planar</th>
+            <td>The unit's available planar charges. Provided only for the player or groupmembers.</th>
+          </tr>
+          <tr>
+            <th>planarMax</th>
+            <td>The unit's maximum planar charges. Provided only for the player or groupmembers.</th>
+          </tr>
+          <tr>
+            <th>player</th>
+            <td>Signals that the unit is a player, not an NPC.</th>
+          </tr>
+          <tr>
+            <th>power</th>
+            <td>The unit's power.</th>
+          </tr>
+          <tr>
+            <th>publicSize</th>
+            <td>The unit's current public group size. nil if the group is not public. Provided only for friendly players.</th>
+          </tr>
+          <tr>
+            <th>pvp</th>
+            <td>The unit's PvP flag.</th>
+          </tr>
+          <tr>
+            <th>race</th>
+            <td>The unit's race. Provided only for players.</th>
+          </tr>
+          <tr>
+            <th>raceName</th>
+            <td>The unit's race, localized. Provided only for players.</th>
+          </tr>
+          <tr>
+            <th>radius</th>
+            <td>The unit's radius.</th>
+          </tr>
+          <tr>
+            <th>ready</th>
+            <td>The unit's readycheck status.</th>
+          </tr>
+          <tr>
+            <th>relation</th>
+            <td>The unit's relation to you. May be "hostile" or "friendly". Neutral targets will not have this member.</th>
+          </tr>
+          <tr>
+            <th>role</th>
+            <td>The unit's role. May be "tank", "heal", "dps", "support", or nil. Provided only for the player and the player's groupmembers.</th>
+          </tr>
+          <tr>
+            <th>spirit</th>
+            <td>The unit's spirit.</th>
+          </tr>
+          <tr>
+            <th>tag</th>
+            <td>The unit's tags, space-separated.</th>
+          </tr>
+          <tr>
+            <th>tagName</th>
+            <td>The unit's tags, localized.</th>
+          </tr>
+          <tr>
+            <th>tagged</th>
+            <td>The unit's tagged status. true if the unit has been tagged by you, "other" if the unit has been tagged by someone else.</th>
+          </tr>
+          <tr>
+            <th>tier</th>
+            <td>The unit's difficulty tier. nil, "group", or "raid".</th>
+          </tr>
+          <tr>
+            <th>titlePrefixId</th>
+            <td>The unit's title prefix ID.</th>
+          </tr>
+          <tr>
+            <th>titlePrefixName</th>
+            <td>The unit's localized title prefix.</th>
+          </tr>
+          <tr>
+            <th>titleSuffixId</th>
+            <td>The unit's title suffix ID.</th>
+          </tr>
+          <tr>
+            <th>titleSuffixName</th>
+            <td>The unit's localized title suffix.</th>
+          </tr>
+          <tr>
+            <th>type</th>
+            <td>The unit type ID.</th>
+          </tr>
+          <tr>
+            <th>vitality</th>
+            <td>The unit's vitality. Provided only for the player or groupmembers.</th>
+          </tr>
+          <tr>
+            <th>warfront</th>
+            <td>Signals that the unit has temporarily left the group to join a warfront. Provided only for groupmembers.</th>
+          </tr>
+          <tr>
+            <th>zone</th>
+            <td>The ID of the unit's current zone.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Unit.List">Inspect.Unit.List</a></h2>
+    <p><i></i> Lists all the units that the client can see.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>list</i> = Inspect.Unit.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>list</i></td><td>result</td><td><i>table</i></td><td>Map of unit ID to unit specifier. Units with multiple valid specifiers will have one chosen at random.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Unit.Lookup">Inspect.Unit.Lookup</a></h2>
+    <p><i></i> Converts unit IDs to unit specifiers and vice-versa.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>unit</i> = Inspect.Unit.Lookup(<i>unit</i>)</td></tr>
+      <tr><td colspan=4><i>units</i> = Inspect.Unit.Lookup(<i>units</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>unit</i></td><td>parameter</td><td><i>unit</i></td><td>A unit ID or unit specifier, whichever is the opposite of the parameter given. May be nil.</td></tr>
+      <tr><td><i>units</i></td><td>parameter</td><td><i>table</i></td><td>A table of unit IDs and unit specifiers. The key is the input, the value is the result. Invalid inputs will not result in output entries.</td></tr>
+      <tr><td><i>unit</i></td><td>result</td><td><i>unit</i></td><td>A unit ID or unit specifier, whichever is the opposite of the parameter given. May be nil.</td></tr>
+      <tr><td><i>units</i></td><td>result</td><td><i>table</i></td><td>A table of unit IDs and unit specifiers. The key is the input, the value is the result. Invalid inputs will not result in output entries.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Unit.Availability">Utility.Unit.Availability</a></h2>
+    <p><i></i> Returns information on which detail members are available in which availability mode.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>lookup</i> = Utility.Unit.Availability()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>lookup</i></td><td>result</td><td><i>table</i></td><td>Lookup table for which members are available in which availability mode. To check if "full" availability contains "level", check "lookup.full.level".</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

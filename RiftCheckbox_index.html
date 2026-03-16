@@ -1,0 +1,1034 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#RiftCheckbox">RiftCheckbox</a></td><td><i></i></td><td><i></i></td><td></td><td>A UI element of type RiftCheckbox or derived from RiftCheckbox.</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:CheckboxChange">RiftCheckbox.Event:CheckboxChange</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the checkbox's checked state has changed.</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:KeyDown">RiftCheckbox.Event:KeyDown</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a key pressed.</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:KeyFocusGain">RiftCheckbox.Event:KeyFocusGain</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals gaining key focus.</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:KeyFocusLoss">RiftCheckbox.Event:KeyFocusLoss</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals losing key focus.</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:KeyRepeat">RiftCheckbox.Event:KeyRepeat</a></td><td><i></i></td><td><i></i></td><td></td><td>Frame.Event:KeyRepeat@summary</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:KeyType">RiftCheckbox.Event:KeyType</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals text typed.</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:KeyUp">RiftCheckbox.Event:KeyUp</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a key released.</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:Layer">RiftCheckbox.Event:Layer</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in the item's layer.</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:LeftClick">RiftCheckbox.Event:LeftClick</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's left button has been clicked inside the frame. Blocks left mouse events ...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:LeftDown">RiftCheckbox.Event:LeftDown</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's left button has been pressed inside the frame. Blocks left mouse events ...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:LeftUp">RiftCheckbox.Event:LeftUp</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's left button has been released inside the frame. Blocks left mouse events...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:LeftUpoutside">RiftCheckbox.Event:LeftUpoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's left button has been released outside the frame, after a "Down" message....</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:MiddleClick">RiftCheckbox.Event:MiddleClick</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's middle button has been clicked inside the frame. Blocks middle mouse eve...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:MiddleDown">RiftCheckbox.Event:MiddleDown</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's middle button has been pressed inside the frame. Blocks middle mouse eve...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:MiddleUp">RiftCheckbox.Event:MiddleUp</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's middle button has been released inside the frame. Blocks middle mouse ev...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:MiddleUpoutside">RiftCheckbox.Event:MiddleUpoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's middle button has been released outside the frame, after a "Down" messag...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:Mouse4Click">RiftCheckbox.Event:Mouse4Click</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fourth button has been clicked inside the frame. Blocks fourth button mo...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:Mouse4Down">RiftCheckbox.Event:Mouse4Down</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fourth button has been pressed inside the frame. Blocks fourth button mo...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:Mouse4Up">RiftCheckbox.Event:Mouse4Up</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fourth button has been released inside the frame. Blocks fourth button m...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:Mouse4Upoutside">RiftCheckbox.Event:Mouse4Upoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fourth button has been released outside the frame, after a "Down" messag...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:Mouse5Click">RiftCheckbox.Event:Mouse5Click</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fifth button has been clicked inside the frame. Blocks fifth button mous...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:Mouse5Down">RiftCheckbox.Event:Mouse5Down</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fifth button has been pressed inside the frame. Blocks fifth button mous...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:Mouse5Up">RiftCheckbox.Event:Mouse5Up</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fifth button has been released inside the frame. Blocks fifth button mou...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:Mouse5Upoutside">RiftCheckbox.Event:Mouse5Upoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fifth button has been released outside the frame, after a "Down" message...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:MouseIn">RiftCheckbox.Event:MouseIn</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse cursor has been moved onto the frame. Blocks mouse movement events from fr...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:MouseMove">RiftCheckbox.Event:MouseMove</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse cursor has been moved within the frame. Blocks mouse movement events from ...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:MouseOut">RiftCheckbox.Event:MouseOut</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse cursor has been moved off of the frame. Blocks mouse movement events from ...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:Move">RiftCheckbox.Event:Move</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the frame's vertices have moved.</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:RightClick">RiftCheckbox.Event:RightClick</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's right button has been clicked inside the frame. Blocks right mouse event...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:RightDown">RiftCheckbox.Event:RightDown</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's right button has been pressed inside the frame. Blocks right mouse event...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:RightUp">RiftCheckbox.Event:RightUp</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's right button has been released inside the frame. Blocks right mouse even...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:RightUpoutside">RiftCheckbox.Event:RightUpoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's right button has been released outside the frame, after a "Down" message...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:Size">RiftCheckbox.Event:Size</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the frame's size has changed.</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:Strata">RiftCheckbox.Event:Strata</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in the item's strata.</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:WheelBack">RiftCheckbox.Event:WheelBack</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mousewheel has been moved backward inside the frame. Blocks mousewheel events fr...</td></tr>
+      <tr><td><a href="#RiftCheckbox.Event:WheelForward">RiftCheckbox.Event:WheelForward</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mousewheel has been moved forward inside the frame. Blocks mousewheel events fro...</td></tr>
+      <tr><td><a href="#RiftCheckbox:ClearAll">RiftCheckbox:ClearAll</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Clear all set points and sizes from this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:ClearHeight">RiftCheckbox:ClearHeight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Clear a set height from this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:ClearPoint">RiftCheckbox:ClearPoint</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Clear a set point from this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:ClearWidth">RiftCheckbox:ClearWidth</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Clear a set width from this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:EventAttach">RiftCheckbox:EventAttach</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Attaches an event handler to an event.</td></tr>
+      <tr><td><a href="#RiftCheckbox:EventDetach">RiftCheckbox:EventDetach</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Detaches an event handler from an event. Any parameter can be 'nil', and this is interpreted as a...</td></tr>
+      <tr><td><a href="#RiftCheckbox:EventList">RiftCheckbox:EventList</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists the current event handlers for an event.</td></tr>
+      <tr><td><a href="#RiftCheckbox:EventMacroGet">RiftCheckbox:EventMacroGet</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the macro that will be triggered when this event occurs.</td></tr>
+      <tr><td><a href="#RiftCheckbox:EventMacroSet">RiftCheckbox:EventMacroSet</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the macro that will be triggered when this event occurs.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetAlpha">RiftCheckbox:GetAlpha</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the alpha multiplier of this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetBackgroundColor">RiftCheckbox:GetBackgroundColor</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the background color of this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetBottom">RiftCheckbox:GetBottom</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the Y position of the bottom edge of this element.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetBounds">RiftCheckbox:GetBounds</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the complete bounds of this element.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetChecked">RiftCheckbox:GetChecked</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets whether the button is checked or not.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetChildren">RiftCheckbox:GetChildren</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns a table containing all of this element's children.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetEnabled">RiftCheckbox:GetEnabled</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets whether the checkbox is enabled or grayed out.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetEventTable">RiftCheckbox:GetEventTable</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the event table of this element. By default, this value is also stored in "this.Event".</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetHeight">RiftCheckbox:GetHeight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the height of this element.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetKeyFocus">RiftCheckbox:GetKeyFocus</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the key focus status.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetLayer">RiftCheckbox:GetLayer</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the frame's layer order.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetLeft">RiftCheckbox:GetLeft</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the X position of the left edge of this element.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetMouseMasking">RiftCheckbox:GetMouseMasking</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Get the current mouse masking mode. See SetMouseMasking for details.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetMouseoverUnit">RiftCheckbox:GetMouseoverUnit</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the unit that is being represented by this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetName">RiftCheckbox:GetName</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the name of this element.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetOwner">RiftCheckbox:GetOwner</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the owner of this element.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetParent">RiftCheckbox:GetParent</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the parent of this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetRight">RiftCheckbox:GetRight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the X position of the right edge of this element.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetSecureMode">RiftCheckbox:GetSecureMode</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Get the current secure mode. See SetSecureMode for details.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetStrata">RiftCheckbox:GetStrata</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the frame's strata. The strata determines render order on a coarser level than Layer does, a...</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetStrataList">RiftCheckbox:GetStrataList</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets a list of valid stratas for this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetTop">RiftCheckbox:GetTop</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the Y position of the top edge of this element.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetType">RiftCheckbox:GetType</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the type of this element.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetVisible">RiftCheckbox:GetVisible</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the visibility flag for this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:GetWidth">RiftCheckbox:GetWidth</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the width of this element.</td></tr>
+      <tr><td><a href="#RiftCheckbox:ReadAll">RiftCheckbox:ReadAll</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read all set points and sizes from this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:ReadHeight">RiftCheckbox:ReadHeight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read a set height from this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:ReadPoint">RiftCheckbox:ReadPoint</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read a set point from this frame. Must be given a single-axis coordinate.</td></tr>
+      <tr><td><a href="#RiftCheckbox:ReadWidth">RiftCheckbox:ReadWidth</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read a set width from this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetAllPoints">RiftCheckbox:SetAllPoints</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Pins all the edges of this frame to the edges of a different frame. If no target is given, defaul...</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetAlpha">RiftCheckbox:SetAlpha</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the alpha transparency multiplier for this frame and its children.</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetBackgroundColor">RiftCheckbox:SetBackgroundColor</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the background color of this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetChecked">RiftCheckbox:SetChecked</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets whether the checkbox is checked or not.</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetEnabled">RiftCheckbox:SetEnabled</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets whether the checkbox is enabled or grayed out.</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetHeight">RiftCheckbox:SetHeight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the height of this frame. Undefined results if the frame already has two pinned Y coordinates.</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetKeyFocus">RiftCheckbox:SetKeyFocus</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the key focus status. Note that only one frame can be the key focus at a time. Focusing on a...</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetLayer">RiftCheckbox:SetLayer</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the frame layer for this frame. This can be any number. Frames are drawn in ascending order....</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetMouseMasking">RiftCheckbox:SetMouseMasking</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the frame's mouse masking mode.</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetMouseoverUnit">RiftCheckbox:SetMouseoverUnit</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the unit that will be represented by this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetParent">RiftCheckbox:SetParent</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the parent of this frame. Circular dependencies result in undefined behavior. If this frame'...</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetPoint">RiftCheckbox:SetPoint</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Pins a point on this frame to a location on another frame. This is a rather complex function and ...</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetSecureMode">RiftCheckbox:SetSecureMode</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the frame's secure mode.<br/>"normal" is the standard mode. It allows for most functionality to ...</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetStrata">RiftCheckbox:SetStrata</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the strata for this frame.</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetVisible">RiftCheckbox:SetVisible</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the frame's visibility flag. If set to false, then this frame and all its children will not ...</td></tr>
+      <tr><td><a href="#RiftCheckbox:SetWidth">RiftCheckbox:SetWidth</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the width of this frame. Undefined results if the frame already has two pinned X coordinates.</td></tr>
+    </table>
+    <h2><a name="RiftCheckbox">RiftCheckbox</a></h2>
+    <p><i></i> A UI element of type RiftCheckbox or derived from RiftCheckbox.</p>
+  </body>
+  <h2><a name="RiftCheckbox.Event:CheckboxChange">RiftCheckbox.Event:CheckboxChange</a></h2>
+  <p><i></i> Signals that the checkbox's checked state has changed.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>RiftCheckbox.Event:CheckboxChange()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:KeyDown">RiftCheckbox.Event:KeyDown</a></h2>
+  <p><i></i> Signals a key pressed.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:KeyDown(<i>button</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>button</i></td><td>parameter</td><td><i>variant</i></td><td>The key, in string form.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:KeyFocusGain">RiftCheckbox.Event:KeyFocusGain</a></h2>
+  <p><i></i> Signals gaining key focus.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:KeyFocusGain()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:KeyFocusLoss">RiftCheckbox.Event:KeyFocusLoss</a></h2>
+  <p><i></i> Signals losing key focus.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:KeyFocusLoss()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:KeyRepeat">RiftCheckbox.Event:KeyRepeat</a></h2>
+  <p><i></i> Frame.Event:KeyRepeat@summary</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:KeyRepeat(<i>button</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>button</i></td><td>parameter</td><td><i>variant</i></td><td>The key, in string form.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:KeyType">RiftCheckbox.Event:KeyType</a></h2>
+  <p><i></i> Signals text typed.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:KeyType(<i>typed</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>typed</i></td><td>parameter</td><td><i>variant</i></td><td>The text.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:KeyUp">RiftCheckbox.Event:KeyUp</a></h2>
+  <p><i></i> Signals a key released.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:KeyUp(<i>button</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>button</i></td><td>parameter</td><td><i>variant</i></td><td>The key, in string form.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:Layer">RiftCheckbox.Event:Layer</a></h2>
+  <p><i></i> Signals a change in the item's layer.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Layer()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:LeftClick">RiftCheckbox.Event:LeftClick</a></h2>
+  <p><i></i> Signals that the mouse's left button has been clicked inside the frame. Blocks left mouse events and mouse movement events from frames below this one. May block right mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:LeftClick()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:LeftDown">RiftCheckbox.Event:LeftDown</a></h2>
+  <p><i></i> Signals that the mouse's left button has been pressed inside the frame. Blocks left mouse events and mouse movement events from frames below this one. May block right mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:LeftDown()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:LeftUp">RiftCheckbox.Event:LeftUp</a></h2>
+  <p><i></i> Signals that the mouse's left button has been released inside the frame. Blocks left mouse events and mouse movement events from frames below this one. May block right mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:LeftUp()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:LeftUpoutside">RiftCheckbox.Event:LeftUpoutside</a></h2>
+  <p><i></i> Signals that the mouse's left button has been released outside the frame, after a "Down" message. Blocks left mouse events and mouse movement events from frames below this one. May block right mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:LeftUpoutside()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:MiddleClick">RiftCheckbox.Event:MiddleClick</a></h2>
+  <p><i></i> Signals that the mouse's middle button has been clicked inside the frame. Blocks middle mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MiddleClick()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:MiddleDown">RiftCheckbox.Event:MiddleDown</a></h2>
+  <p><i></i> Signals that the mouse's middle button has been pressed inside the frame. Blocks middle mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MiddleDown()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:MiddleUp">RiftCheckbox.Event:MiddleUp</a></h2>
+  <p><i></i> Signals that the mouse's middle button has been released inside the frame. Blocks middle mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MiddleUp()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:MiddleUpoutside">RiftCheckbox.Event:MiddleUpoutside</a></h2>
+  <p><i></i> Signals that the mouse's middle button has been released outside the frame, after a "Down" message. Blocks middle mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MiddleUpoutside()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:Mouse4Click">RiftCheckbox.Event:Mouse4Click</a></h2>
+  <p><i></i> Signals that the mouse's fourth button has been clicked inside the frame. Blocks fourth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse4Click()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:Mouse4Down">RiftCheckbox.Event:Mouse4Down</a></h2>
+  <p><i></i> Signals that the mouse's fourth button has been pressed inside the frame. Blocks fourth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse4Down()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:Mouse4Up">RiftCheckbox.Event:Mouse4Up</a></h2>
+  <p><i></i> Signals that the mouse's fourth button has been released inside the frame. Blocks fourth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse4Up()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:Mouse4Upoutside">RiftCheckbox.Event:Mouse4Upoutside</a></h2>
+  <p><i></i> Signals that the mouse's fourth button has been released outside the frame, after a "Down" message. Blocks fourth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse4Upoutside()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:Mouse5Click">RiftCheckbox.Event:Mouse5Click</a></h2>
+  <p><i></i> Signals that the mouse's fifth button has been clicked inside the frame. Blocks fifth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse5Click()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:Mouse5Down">RiftCheckbox.Event:Mouse5Down</a></h2>
+  <p><i></i> Signals that the mouse's fifth button has been pressed inside the frame. Blocks fifth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse5Down()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:Mouse5Up">RiftCheckbox.Event:Mouse5Up</a></h2>
+  <p><i></i> Signals that the mouse's fifth button has been released inside the frame. Blocks fifth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse5Up()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:Mouse5Upoutside">RiftCheckbox.Event:Mouse5Upoutside</a></h2>
+  <p><i></i> Signals that the mouse's fifth button has been released outside the frame, after a "Down" message. Blocks fifth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse5Upoutside()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:MouseIn">RiftCheckbox.Event:MouseIn</a></h2>
+  <p><i></i> Signals that the mouse cursor has been moved onto the frame. Blocks mouse movement events from frames below this one. May block left and right events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MouseIn()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:MouseMove">RiftCheckbox.Event:MouseMove</a></h2>
+  <p><i></i> Signals that the mouse cursor has been moved within the frame. Blocks mouse movement events from frames below this one. May block left and right events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MouseMove(<i>x</i>, <i>y</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>x</i></td><td>parameter</td><td><i>variant</i></td><td>X coordinate.</td></tr>
+    <tr><td><i>y</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>Y coordinate.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:MouseOut">RiftCheckbox.Event:MouseOut</a></h2>
+  <p><i></i> Signals that the mouse cursor has been moved off of the frame. Blocks mouse movement events from frames below this one. May block left and right events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MouseOut()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:Move">RiftCheckbox.Event:Move</a></h2>
+  <p><i></i> Signals that the frame's vertices have moved.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout.Event:Move()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:RightClick">RiftCheckbox.Event:RightClick</a></h2>
+  <p><i></i> Signals that the mouse's right button has been clicked inside the frame. Blocks right mouse events and mouse movement events from frames below this one. May block left mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:RightClick()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:RightDown">RiftCheckbox.Event:RightDown</a></h2>
+  <p><i></i> Signals that the mouse's right button has been pressed inside the frame. Blocks right mouse events and mouse movement events from frames below this one. May block left mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:RightDown()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:RightUp">RiftCheckbox.Event:RightUp</a></h2>
+  <p><i></i> Signals that the mouse's right button has been released inside the frame. Blocks right mouse events and mouse movement events from frames below this one. May block left mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:RightUp()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:RightUpoutside">RiftCheckbox.Event:RightUpoutside</a></h2>
+  <p><i></i> Signals that the mouse's right button has been released outside the frame, after a "Down" message. Blocks right mouse events and mouse movement events from frames below this one. May block left mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:RightUpoutside()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:Size">RiftCheckbox.Event:Size</a></h2>
+  <p><i></i> Signals that the frame's size has changed.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout.Event:Size()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:Strata">RiftCheckbox.Event:Strata</a></h2>
+  <p><i></i> Signals a change in the item's strata.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Strata()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:WheelBack">RiftCheckbox.Event:WheelBack</a></h2>
+  <p><i></i> Signals that the mousewheel has been moved backward inside the frame. Blocks mousewheel events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:WheelBack()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox.Event:WheelForward">RiftCheckbox.Event:WheelForward</a></h2>
+  <p><i></i> Signals that the mousewheel has been moved forward inside the frame. Blocks mousewheel events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:WheelForward()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:ClearAll">RiftCheckbox:ClearAll</a></h2>
+  <p><i></i> Clear all set points and sizes from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:ClearAll()</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:ClearHeight">RiftCheckbox:ClearHeight</a></h2>
+  <p><i></i> Clear a set height from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:ClearHeight()</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:ClearPoint">RiftCheckbox:ClearPoint</a></h2>
+  <p><i></i> Clear a set point from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:ClearPoint(<i>coordinate</i>)</td></tr>
+    <tr><td colspan=4>Frame:ClearPoint(<i>x</i>, <i>y</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>coordinate</i></td><td>parameter</td><td><i>string</i></td><td>Named coordinate.</td></tr>
+    <tr><td><i>x</i></td><td>parameter</td><td><i>number/nil</i></td><td>X coordinate of the point.</td></tr>
+    <tr><td><i>y</i></td><td>parameter</td><td><i>number/nil</i></td><td>Y coordinate of the point.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:ClearWidth">RiftCheckbox:ClearWidth</a></h2>
+  <p><i></i> Clear a set width from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:ClearWidth()</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:EventAttach">RiftCheckbox:EventAttach</a></h2>
+  <p><i></i> Attaches an event handler to an event.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout:EventAttach(<i>handle</i>, <i>callback</i>, <i>label</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventAttach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>callback</i></td><td>parameter</td><td><i>function</i></td><td>A global event handler function. This will be called when the event fires. The first parameter will be the frame that the event is called on, the second parameter will be the standard frame event handle, any other parameters will follow that.</td></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>label</i></td><td>parameter</td><td><i>string</i></td><td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</td></tr>
+    <tr><td><i>priority</i></td><td>parameter</td><td><i>number</i></td><td>Priority of the event handler. Higher numbers trigger first.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:EventDetach">RiftCheckbox:EventDetach</a></h2>
+  <p><i></i> Detaches an event handler from an event. Any parameter can be 'nil', and this is interpreted as a wildcard. If multiple events match the constraints, only one will be detached.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>, <i>owner</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>callback</i></td><td>parameter</td><td><i>function/nil</i></td><td>A callback function to search for.</td></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>label</i></td><td>parameter</td><td><i>string/nil</i></td><td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</td></tr>
+    <tr><td><i>owner</i></td><td>parameter</td><td><i>string/nil</i></td><td>Owner to search for.</td></tr>
+    <tr><td><i>priority</i></td><td>parameter</td><td><i>number/nil</i></td><td>Priority of the event handler. Higher numbers trigger first.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:EventList">RiftCheckbox:EventList</a></h2>
+  <p><i></i> Lists the current event handlers for an event.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>result</i> = Layout:EventList(<i>handle</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>result</i></td><td>result</td><td><i>table</i></td><td>A table of event handlers for this event.</td></tr>
+  </table>
+  <dl>
+    <dt><b>members</b></dt>
+    <dd>
+      <table>
+        <tr>
+          <th>handler</th>
+          <td>The handler that will be called when the event fires.</th>
+        </tr>
+        <tr>
+          <th>label</th>
+          <td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</th>
+        </tr>
+        <tr>
+          <th>macro</th>
+          <td>The macro that will run when the event fires.</th>
+        </tr>
+        <tr>
+          <th>owner</th>
+          <td>Owner to search for.</th>
+        </tr>
+        <tr>
+          <th>priority</th>
+          <td>Priority of the event handler. Higher numbers trigger first.</th>
+        </tr>
+      </table>
+    </dd>
+  </dl>
+  <h2><a name="RiftCheckbox:EventMacroGet">RiftCheckbox:EventMacroGet</a></h2>
+  <p><i></i> Gets the macro that will be triggered when this event occurs.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>macro</i> = Layout:EventMacroGet(<i>handle</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>macro</i></td><td>result</td><td><i>string/nil</i></td><td>The macro that will be triggered.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:EventMacroSet">RiftCheckbox:EventMacroSet</a></h2>
+  <p><i></i> Sets the macro that will be triggered when this event occurs.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout:EventMacroSet(<i>handle</i>, <i>macro</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>macro</i></td><td>parameter</td><td><i>string/nil</i></td><td>The macro to trigger. nil to clear the macro.</td></tr>
+  </table>
+  <dl>
+    <dt><b>requireSecureFrameAndInsecureEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:GetAlpha">RiftCheckbox:GetAlpha</a></h2>
+  <p><i></i> Gets the alpha multiplier of this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>alpha</i> = Element:GetAlpha()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>alpha</i></td><td>result</td><td><i>number</i></td><td>The alpha multiplier of this frame. 1 is fully opaque, 0 is fully transparent. This does not include multiplied alphas from this frame's parent - it's the exact value passed to SetAlpha.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetBackgroundColor">RiftCheckbox:GetBackgroundColor</a></h2>
+  <p><i></i> Retrieves the background color of this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>r, g, b, a</i> = Element:GetBackgroundColor()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>a</i></td><td>result</td><td><i>number</i></td><td>Alpha. 1 is fully opaque, 0 is fully transparent.</td></tr>
+    <tr><td><i>b</i></td><td>result</td><td><i>number</i></td><td>Blue.</td></tr>
+    <tr><td><i>g</i></td><td>result</td><td><i>number</i></td><td>Green.</td></tr>
+    <tr><td><i>r</i></td><td>result</td><td><i>number</i></td><td>Red.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetBottom">RiftCheckbox:GetBottom</a></h2>
+  <p><i></i> Retrieves the Y position of the bottom edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>bottom</i> = Layout:GetBottom()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>bottom</i></td><td>result</td><td><i>number</i></td><td>The Y position of the bottom edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetBounds">RiftCheckbox:GetBounds</a></h2>
+  <p><i></i> Retrieves the complete bounds of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>left, top, right, bottom</i> = Layout:GetBounds()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>bottom</i></td><td>result</td><td><i>number</i></td><td>The Y position of the bottom edge of this element.</td></tr>
+    <tr><td><i>left</i></td><td>result</td><td><i>number</i></td><td>The X position of the left edge of this element.</td></tr>
+    <tr><td><i>right</i></td><td>result</td><td><i>number</i></td><td>The X position of the right edge of this element.</td></tr>
+    <tr><td><i>top</i></td><td>result</td><td><i>number</i></td><td>The Y position of the top edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetChecked">RiftCheckbox:GetChecked</a></h2>
+  <p><i></i> Gets whether the button is checked or not.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>checked</i> = RiftCheckbox:GetChecked()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>checked</i></td><td>result</td><td><i>boolean</i></td><td>The current checked state of this item.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetChildren">RiftCheckbox:GetChildren</a></h2>
+  <p><i></i> Returns a table containing all of this element's children.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>children</i> = Element:GetChildren()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>children</i></td><td>result</td><td><i>table</i></td><td>A table containing this element's children.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetEnabled">RiftCheckbox:GetEnabled</a></h2>
+  <p><i></i> Gets whether the checkbox is enabled or grayed out.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>enabled</i> = RiftCheckbox:GetEnabled()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>enabled</i></td><td>result</td><td><i>boolean</i></td><td>The current enable state of this item.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetEventTable">RiftCheckbox:GetEventTable</a></h2>
+  <p><i></i> Retrieves the event table of this element. By default, this value is also stored in "this.Event".</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>eventTable</i> = Layout:GetEventTable()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>eventTable</i></td><td>result</td><td><i>table</i></td><td>The event table of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetHeight">RiftCheckbox:GetHeight</a></h2>
+  <p><i></i> Retrieves the height of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>height</i> = Layout:GetHeight()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>height</i></td><td>result</td><td><i>number</i></td><td>The height of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetKeyFocus">RiftCheckbox:GetKeyFocus</a></h2>
+  <p><i></i> Gets the key focus status.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>focus</i> = Element:GetKeyFocus()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>focus</i></td><td>result</td><td><i>boolean</i></td><td>Whether this frame is the current key focus.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetLayer">RiftCheckbox:GetLayer</a></h2>
+  <p><i></i> Gets the frame's layer order.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>layer</i> = Frame:GetLayer()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>layer</i></td><td>result</td><td><i>number</i></td><td>The render layer of this frame. See Frame:SetLayer for details.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetLeft">RiftCheckbox:GetLeft</a></h2>
+  <p><i></i> Retrieves the X position of the left edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>left</i> = Layout:GetLeft()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>left</i></td><td>result</td><td><i>number</i></td><td>The X position of the left edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetMouseMasking">RiftCheckbox:GetMouseMasking</a></h2>
+  <p><i></i> Get the current mouse masking mode. See SetMouseMasking for details.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>mask</i> = Element:GetMouseMasking()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>mask</i></td><td>result</td><td><i>string</i></td><td>The current mouse masking mode.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetMouseoverUnit">RiftCheckbox:GetMouseoverUnit</a></h2>
+  <p><i></i> Gets the unit that is being represented by this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>unit</i> = Frame:GetMouseoverUnit()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>unit</i></td><td>result</td><td><i>string</i></td><td>The current mouseover unit. May be nil if there is no mouseover unit.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetName">RiftCheckbox:GetName</a></h2>
+  <p><i></i> Retrieves the name of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>name</i> = Layout:GetName()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>name</i></td><td>result</td><td><i>string</i></td><td>The name of this element, as provided by the addon that created it.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetOwner">RiftCheckbox:GetOwner</a></h2>
+  <p><i></i> Retrieves the owner of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>owner</i> = Layout:GetOwner()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>owner</i></td><td>result</td><td><i>string</i></td><td>The owner of this element. Given as an addon identifier.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetParent">RiftCheckbox:GetParent</a></h2>
+  <p><i></i> Gets the parent of this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>parent</i> = Frame:GetParent()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>parent</i></td><td>result</td><td><i>Element</i></td><td>The parent element of this frame.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetRight">RiftCheckbox:GetRight</a></h2>
+  <p><i></i> Retrieves the X position of the right edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>right</i> = Layout:GetRight()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>right</i></td><td>result</td><td><i>number</i></td><td>The X position of the right edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetSecureMode">RiftCheckbox:GetSecureMode</a></h2>
+  <p><i></i> Get the current secure mode. See SetSecureMode for details.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>secure</i> = Frame:GetSecureMode()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>secure</i></td><td>result</td><td><i>string</i></td><td>The current secure mode.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetStrata">RiftCheckbox:GetStrata</a></h2>
+  <p><i></i> Gets the frame's strata. The strata determines render order on a coarser level than Layer does, as well as determining how far an element is brought to the front when clicked on.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>strata</i> = Frame:GetStrata()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>strata</i></td><td>result</td><td><i>string</i></td><td>The item's current strata.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetStrataList">RiftCheckbox:GetStrataList</a></h2>
+  <p><i></i> Gets a list of valid stratas for this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>stratas</i> = Frame:GetStrataList()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>stratas</i></td><td>result</td><td><i>table</i></td><td>An array of valid stratas, in order.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetTop">RiftCheckbox:GetTop</a></h2>
+  <p><i></i> Retrieves the Y position of the top edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>top</i> = Layout:GetTop()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>top</i></td><td>result</td><td><i>number</i></td><td>The Y position of the top edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetType">RiftCheckbox:GetType</a></h2>
+  <p><i></i> Retrieves the type of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>type</i> = Layout:GetType()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>type</i></td><td>result</td><td><i>string</i></td><td>The type of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetVisible">RiftCheckbox:GetVisible</a></h2>
+  <p><i></i> Gets the visibility flag for this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>visible</i> = Element:GetVisible()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>visible</i></td><td>result</td><td><i>boolean</i></td><td>This frame's visibility flag, as set by SetVisible. Does not check the visibility flags of the frame's parents.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:GetWidth">RiftCheckbox:GetWidth</a></h2>
+  <p><i></i> Retrieves the width of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>width</i> = Layout:GetWidth()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>width</i></td><td>result</td><td><i>number</i></td><td>The width of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:ReadAll">RiftCheckbox:ReadAll</a></h2>
+  <p><i></i> Read all set points and sizes from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>results</i> = Layout:ReadAll()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>results</i></td><td>result</td><td><i>table</i></td><td>Result table. Contains data in the following format: {x = {size = (size), [(position)] = {layout = (layout), position = (position), offset = (offset)}}, y = (the same thing)}.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:ReadHeight">RiftCheckbox:ReadHeight</a></h2>
+  <p><i></i> Read a set height from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>height</i> = Layout:ReadHeight()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>height</i></td><td>result</td><td><i>number</i></td><td>The parameter passed to SetHeight(), or nil if no such parameter has been passed.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:ReadPoint">RiftCheckbox:ReadPoint</a></h2>
+  <p><i></i> Read a set point from this frame. Must be given a single-axis coordinate.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>layout, position, offset</i> = Layout:ReadPoint(<i>coordinate</i>)</td></tr>
+    <tr><td colspan=4><i>layout, position, offset</i> = Layout:ReadPoint(<i>x</i>, <i>y</i>)</td></tr>
+    <tr><td colspan=4><i>origin, offset</i> = Layout:ReadPoint(<i>coordinate</i>)</td></tr>
+    <tr><td colspan=4><i>origin, offset</i> = Layout:ReadPoint(<i>x</i>, <i>y</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>coordinate</i></td><td>parameter</td><td><i>string</i></td><td>Named coordinate. Must be a one-axis coordinate.</td></tr>
+    <tr><td><i>x</i></td><td>parameter</td><td><i>number/nil</i></td><td>X coordinate of the point. Either this or Y must be nil.</td></tr>
+    <tr><td><i>y</i></td><td>parameter</td><td><i>number/nil</i></td><td>Y coordinate of the point. Either this or X must be nil.</td></tr>
+    <tr><td><i>layout</i></td><td>result</td><td><i>Layout</i></td><td>The table that this point is pinned to.</td></tr>
+    <tr><td><i>offset</i></td><td>result</td><td><i>number</i></td><td>The offset in pixels from the source location to the actual location.</td></tr>
+    <tr><td><i>origin</i></td><td>result</td><td><i>string</i></td><td>The string "origin".</td></tr>
+    <tr><td><i>position</i></td><td>result</td><td><i>number</i></td><td>The position on "layout" that this point is pinned. 0 refers to the top or left edge, 1 refers to the bottom or right edge.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:ReadWidth">RiftCheckbox:ReadWidth</a></h2>
+  <p><i></i> Read a set width from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>width</i> = Layout:ReadWidth()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>width</i></td><td>result</td><td><i>number</i></td><td>The parameter passed to SetWidth(), or nil if no such parameter has been passed.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:SetAllPoints">RiftCheckbox:SetAllPoints</a></h2>
+  <p><i></i> Pins all the edges of this frame to the edges of a different frame. If no target is given, defaults to this frame's parent.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetAllPoints()</td></tr>
+    <tr><td colspan=4>Frame:SetAllPoints(<i>target</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>target</i></td><td>parameter</td><td><i>Layout</i></td><td>Target Layout to pin this frame's edges to.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:SetAlpha">RiftCheckbox:SetAlpha</a></h2>
+  <p><i></i> Sets the alpha transparency multiplier for this frame and its children.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Element:SetAlpha(<i>alpha</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>alpha</i></td><td>parameter</td><td><i>number</i></td><td>The new alpha multiplier. 1 is fully opaque, 0 is fully transparent.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:SetBackgroundColor">RiftCheckbox:SetBackgroundColor</a></h2>
+  <p><i></i> Sets the background color of this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Element:SetBackgroundColor(<i>r</i>, <i>g</i>, <i>b</i>)</td></tr>
+    <tr><td colspan=4>Element:SetBackgroundColor(<i>r</i>, <i>g</i>, <i>b</i>, <i>a</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>a</i></td><td>parameter</td><td><i>number</i></td><td>Alpha. 1 is fully opaque, 0 is fully transparent. Defaults to 1.</td></tr>
+    <tr><td><i>b</i></td><td>parameter</td><td><i>number</i></td><td>Blue.</td></tr>
+    <tr><td><i>g</i></td><td>parameter</td><td><i>number</i></td><td>Green.</td></tr>
+    <tr><td><i>r</i></td><td>parameter</td><td><i>number</i></td><td>Red.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:SetChecked">RiftCheckbox:SetChecked</a></h2>
+  <p><i></i> Sets whether the checkbox is checked or not.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>RiftCheckbox:SetChecked(<i>checked</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>checked</i></td><td>parameter</td><td><i>boolean</i></td><td>The new checked state of this item.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:SetEnabled">RiftCheckbox:SetEnabled</a></h2>
+  <p><i></i> Sets whether the checkbox is enabled or grayed out.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>RiftCheckbox:SetEnabled(<i>enabled</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>enabled</i></td><td>parameter</td><td><i>boolean</i></td><td>The new enable state of this item.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:SetHeight">RiftCheckbox:SetHeight</a></h2>
+  <p><i></i> Sets the height of this frame. Undefined results if the frame already has two pinned Y coordinates.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetHeight(<i>height</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>height</i></td><td>parameter</td><td><i>number</i></td><td>The new height of this frame.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:SetKeyFocus">RiftCheckbox:SetKeyFocus</a></h2>
+  <p><i></i> Sets the key focus status. Note that only one frame can be the key focus at a time. Focusing on another frame will automatically unset the current focus.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Element:SetKeyFocus(<i>focus</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>focus</i></td><td>parameter</td><td><i>boolean</i></td><td>The new key focus setting.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:SetLayer">RiftCheckbox:SetLayer</a></h2>
+  <p><i></i> Sets the frame layer for this frame. This can be any number. Frames are drawn in ascending order. If two frames have the same layer number, then the order of those frames is undefined, but guarantees no Z-fighting. Frames are always drawn after their parents.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetLayer(<i>layer</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>layer</i></td><td>parameter</td><td><i>number</i></td><td>The new layer for this frame.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:SetMouseMasking">RiftCheckbox:SetMouseMasking</a></h2>
+  <p><i></i> Sets the frame's mouse masking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Element:SetMouseMasking(<i>mask</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>mask</i></td><td>parameter</td><td><i>string</i></td><td>The new mouse masking mode. "full" is the standard mode, and means that creating any Left, Right, or movement-related mouse event will cause the frame to accept and consume any event from any of those types. "limited" causes the frame to accept and consume only events for buttons that have been hooked, so that hooking "LeftDown" will still pass Right mouse events through the frame. Note that hooking any mouse event will still consume MouseMove/In/Out events.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:SetMouseoverUnit">RiftCheckbox:SetMouseoverUnit</a></h2>
+  <p><i></i> Sets the unit that will be represented by this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetMouseoverUnit(<i>unit</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>unit</i></td><td>parameter</td><td><i>nil, unit</i></td><td>The new mouseover unit. May be a unit ID or a unit specifier. Pass in nil to disable the mouseover effect.</td></tr>
+  </table>
+  <dl>
+    <dt><b>requireSecureFrameAndInsecureEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:SetParent">RiftCheckbox:SetParent</a></h2>
+  <p><i></i> Sets the parent of this frame. Circular dependencies result in undefined behavior. If this frame's secure mode is "restricted", then its parent must also have a secure mode of "restricted".</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetParent(<i>parent</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>parent</i></td><td>parameter</td><td><i>Element</i></td><td>The new parent for this frame.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:SetPoint">RiftCheckbox:SetPoint</a></h2>
+  <p><i></i> Pins a point on this frame to a location on another frame. This is a rather complex function and you should look at examples to see how to use it.<br/>This function can take many different forms. In general, it looks like this: SetPoint(point_on_this_frame, target_frame, point_on_target_frame [, x_offset, y_offset]).<br/>The first part is the point on this frame that will be attached. Usually, these are string identifiers. "TOPLEFT", "TOPCENTER", "TOPRIGHT", "CENTERLEFT", "CENTER", "CENTERRIGHT", "BOTTOMLEFT", "BOTTOMCENTER", "BOTTOMRIGHT". You may also use a string identifier that refers to a single axis - "TOP", "BOTTOM", "LEFT", "RIGHT", "CENTERX", "CENTERY". If you want more direct numeric control you can use number pairs. 0,0 is equivalent to "TOPLEFT", 1,1 is equivalent to "BOTTOMRIGHT", 0.5,nil is equivalent to "CENTERX".<br/>The second part is the frame to attach to, as well as the point on that frame to attach to. The frame is simply passing in the frame table. The point is the same identifier or number pair as the first parameter.<br/>Optionally, you may include an X or Y offset to the point.<br/>This connection is permanent, and if the target frame moves, this frame will move along with it. <br/>Caveat: If the target is a frame set to the "restricted" SecureMode, and the client is currently in "secure" mode, then unexpected behavior may occur.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetPoint(<i>...</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>...</i></td><td>parameter</td><td><i>...</i></td><td>This function's parameters are complicated. Read the above summary for details.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:SetSecureMode">RiftCheckbox:SetSecureMode</a></h2>
+  <p><i></i> Sets the frame's secure mode.<br/>"normal" is the standard mode. It allows for most functionality to be used and does not restrict frames in combat. "restricted" allows for certain sensitive functions to be called, but disables a significant amount of functionality in combat. In order to change a frame to "restricted", its parent must already be "restricted". Note that a "restricted" frame can still have "normal" children.<br/>If you are not planning to use any restricted functions, your frame should remain in normal mode.<br/>At the moment, it is not possible to change from "restricted" back to "normal".</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetSecureMode(<i>secure</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>secure</i></td><td>parameter</td><td><i>string</i></td><td>The new secure mode. Valid inputs are "normal" and "restricted".</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="RiftCheckbox:SetStrata">RiftCheckbox:SetStrata</a></h2>
+  <p><i></i> Sets the strata for this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetStrata(<i>strata</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>strata</i></td><td>parameter</td><td><i>string</i></td><td>The item's new strata. Must be one of the elements returned by :GetStrataList().</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:SetVisible">RiftCheckbox:SetVisible</a></h2>
+  <p><i></i> Sets the frame's visibility flag. If set to false, then this frame and all its children will not be rendered or accept mouse input.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Element:SetVisible(<i>visible</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>visible</i></td><td>parameter</td><td><i>boolean</i></td><td>The new visibility flag.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="RiftCheckbox:SetWidth">RiftCheckbox:SetWidth</a></h2>
+  <p><i></i> Sets the width of this frame. Undefined results if the frame already has two pinned X coordinates.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetWidth(<i>width</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>width</i></td><td>parameter</td><td><i>number</i></td><td>The new width of this frame.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h4><a href='index.html'>Back to index...</a></h4>

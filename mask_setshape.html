@@ -1,0 +1,18 @@
+<html>
+  <head><title>API Docs (live) -- Mask:SetShape</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Mask:SetShape">Mask:SetShape</a> </h2>
+    <p><i></i> Sets the mask shape. Note that masks with custom shapes will not cull mouse events according to the custom shape.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Mask:SetShape(<i>path</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>path</i></td><td>parameter</td><td><i>table, nil</i></td><td>A path. Consists of a table containing a series of tables, with consecutive integer keys starting from 1. Each internal table contains coordinates, either as an absolute value relative to the top-left corner of the frame, or Proportional to the frame size, as a number from 0 to 1. Giving both an absolute value and a proportional value for any coordinate is not allowed. Members:<br/>				x/xProportional: x coordinate of this point. Required.<br/>				y/yProportional: y coordinate of this point. Required.<br/>				xControl/xControlProportional: x coordinate of the curve control handle. If this exists, yControl/yControlProportional must also exist.<br/>				yControl/yControlProportional: y coordinate of the curve control handle. If this exists, xControl/xControlProportional must also exist.</td></tr>
+    </table>
+    <dl>
+    </dl>

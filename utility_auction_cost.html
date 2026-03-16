@@ -1,0 +1,26 @@
+<html>
+  <head><title>API Docs (live) -- Utility.Auction.Cost</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Utility.Auction.Cost">Utility.Auction.Cost</a> (deprecated)</h2>
+    <p><i></i> Returns the amount of silver it will cost to post a given auction.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>cost</i> = Utility.Auction.Cost(<i>item</i>, <i>time</i>, <i>bid</i>, <i>buyout</i>)</td></tr>
+      <tr><td colspan=4><i>cost</i> = Utility.Auction.Cost(<i>item</i>, <i>time</i>, <i>bid</i>, <i>buyout</i>, <i>partial</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>bid</i></td><td>parameter</td><td><i>number/nil</i></td><td>The minimum bid for the new auction, in silver. nil if no bid is desired.</td></tr>
+      <tr><td><i>buyout</i></td><td>parameter</td><td><i>number/nil</i></td><td>The buyout for the new auction, in silver. nil if no buyout is desired.</td></tr>
+      <tr><td><i>item</i></td><td>parameter</td><td><i>item</i></td><td>The ID of the item to be auctioned.</td></tr>
+      <tr><td><i>partial</i></td><td>parameter</td><td><i>boolean</i></td><td>Whether partial buyouts should be permitted. Must be "false" if a buyout is not provided or if a bid is provided that is different from the buyout. If this parameter is omitted, will default to "true" when possible, or "false" otherwise. </td></tr>
+      <tr><td><i>time</i></td><td>parameter</td><td><i>number</i></td><td>The duration that the auction should last, in hours. Valid values are limited to 12, 24, and 48.</td></tr>
+      <tr><td><i>cost</i></td><td>result</td><td><i>number</i></td><td>The cost of posting this auction, in silver.</td></tr>
+    </table>
+    <dl>
+      <dt><b>deprecated</b></dt>
+      <dd>standard</dd>
+    </dl>

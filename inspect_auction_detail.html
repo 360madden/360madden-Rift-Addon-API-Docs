@@ -1,0 +1,68 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Auction.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Auction.Detail">Inspect.Auction.Detail</a> </h2>
+    <p><i></i> Provides detailed information about auctions.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: auction</p>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Auction.Detail(<i>auction</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Auction.Detail(<i>auctions</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>auction</i></td><td>parameter</td><td><i>auction</i></td><td>An identifier for the auction to retrieve detail for.</td></tr>
+      <tr><td><i>auctions</i></td><td>parameter</td><td><i>table</i></td><td>A table containing auction identifiers to retrieve details for. The value is the sort order.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single auction.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested auctions. The key is the auction ID, the value is the auction's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>bid</th>
+            <td>The current bid on this auction, in silver.</th>
+          </tr>
+          <tr>
+            <th>bidder</th>
+            <td>Current high bidder on this auction. Available only if your current character is the bidder or the seller.</th>
+          </tr>
+          <tr>
+            <th>buyout</th>
+            <td>The buyout amount for this auction, in silver.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>item</th>
+            <td>ID of the item involved in the auction.</th>
+          </tr>
+          <tr>
+            <th>itemStack</th>
+            <td>The size of this item stack.</th>
+          </tr>
+          <tr>
+            <th>itemType</th>
+            <td>The item's type specifier.</th>
+          </tr>
+          <tr>
+            <th>partial</th>
+            <td>Whether partial buyouts are permitted.</th>
+          </tr>
+          <tr>
+            <th>remaining</th>
+            <td>Time remaining in the auction, as a number of seconds.</th>
+          </tr>
+          <tr>
+            <th>seller</th>
+            <td>The name of the auction's seller.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

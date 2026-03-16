@@ -1,0 +1,135 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Guild.Rank.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Guild.Rank.Detail">Inspect.Guild.Rank.Detail</a> </h2>
+    <p><i></i> Provides detailed information about guild ranks.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Guild.Rank.Detail(<i>guildrank</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Guild.Rank.Detail(<i>guildranks</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>guildrank</i></td><td>parameter</td><td><i>guildrank</i></td><td>The identifier of the rank to retrieve detail for.</td></tr>
+      <tr><td><i>guildranks</i></td><td>parameter</td><td><i>table</i></td><td>A table of identifiers of ranks to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single rank.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail table for all requested ranks. The key is the rank ID, the value is the rank's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>addonStorageDelete</th>
+            <td>Signals that this rank has permission to modify or delete addon storage elements.</th>
+          </tr>
+          <tr>
+            <th>addonStorageWrite</th>
+            <td>Signals that this rank has permission to non-destructively write addon storage elements.</th>
+          </tr>
+          <tr>
+            <th>demote</th>
+            <td>Signals that this rank has permission to demote guildmembers.</th>
+          </tr>
+          <tr>
+            <th>finderEdit</th>
+            <td>Signals that this rank has permission to edit the Guild Finder settings.</th>
+          </tr>
+          <tr>
+            <th>finderReceive</th>
+            <td>Signals that this rank has permission to receive Guild Finder messages.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>invite</th>
+            <td>Signals that this rank has permission to invite new guildmembers.</th>
+          </tr>
+          <tr>
+            <th>kick</th>
+            <td>Signals that this rank has permission to kick guildmembers.</th>
+          </tr>
+          <tr>
+            <th>listen</th>
+            <td>Signals that this rank has permission to listen to guild chat.</th>
+          </tr>
+          <tr>
+            <th>motd</th>
+            <td>Signals that this rank has permission to change the guild Message of the Day.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The name of this rank.</th>
+          </tr>
+          <tr>
+            <th>noteOfficer</th>
+            <td>Signals that this rank has permission to view and edit Officer Notes.</th>
+          </tr>
+          <tr>
+            <th>officer</th>
+            <td>Signals that this rank has permission to listen to and speak in officer chat.</th>
+          </tr>
+          <tr>
+            <th>perk</th>
+            <td>Signals that this rank has permission to choose guild perks.</th>
+          </tr>
+          <tr>
+            <th>promote</th>
+            <td>Signals that this rank has permission to promote guildmembers.</th>
+          </tr>
+          <tr>
+            <th>questAbandon</th>
+            <td>Signals that this rank has permission to abandon guild quests.</th>
+          </tr>
+          <tr>
+            <th>questAccept</th>
+            <td>Signals that this rank has permission to accept guild quests.</th>
+          </tr>
+          <tr>
+            <th>questComplete</th>
+            <td>Signals that this rank has permission to complete guild quests.</th>
+          </tr>
+          <tr>
+            <th>rally</th>
+            <td>Signals that this rank has permission to set the guild rally point.</th>
+          </tr>
+          <tr>
+            <th>rankEdit</th>
+            <td>Signals that this rank has permission to edit rank permissions.</th>
+          </tr>
+          <tr>
+            <th>rename</th>
+            <td>Signals that this rank has permission to rename the guild.</th>
+          </tr>
+          <tr>
+            <th>speak</th>
+            <td>Signals that this rank has permission to speak in guild chat.</th>
+          </tr>
+          <tr>
+            <th>vaultAccess</th>
+            <td>A table containing information on vault access permissions. The key is the vault ID in slot format. The value is a table containing two members, "access" which may be nil, "deposit", or "full", and "withdrawLimit" which gives the number of stacks that may be withdrawn daily.</th>
+          </tr>
+          <tr>
+            <th>vaultBuy</th>
+            <td>Signals that this rank has permission to buy guild vaults.</th>
+          </tr>
+          <tr>
+            <th>vaultRename</th>
+            <td>Signals that this rank has permission to rename guild vaults.</th>
+          </tr>
+          <tr>
+            <th>wallDelete</th>
+            <td>Signals that this rank has permission to delete entries off the Guild Wall.</th>
+          </tr>
+          <tr>
+            <th>wallPost</th>
+            <td>Signals that this rank has permission to post to the Guild Wall.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

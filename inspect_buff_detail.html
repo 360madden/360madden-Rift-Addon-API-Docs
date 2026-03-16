@@ -1,0 +1,104 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Buff.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Buff.Detail">Inspect.Buff.Detail</a> </h2>
+    <p><i></i> Provides detailed information about the buffs on a unit.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Buff.Detail(<i>unit</i>, <i>buff</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Buff.Detail(<i>unit</i>, <i>buffs</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>buff</i></td><td>parameter</td><td><i>buff</i></td><td>An identifier for the buff to retrieve detail for.</td></tr>
+      <tr><td><i>buffs</i></td><td>parameter</td><td><i>table</i></td><td>A table containing buff identifiers to retrieve details for.</td></tr>
+      <tr><td><i>unit</i></td><td>parameter</td><td><i>unit</i></td><td>The unit to inspect.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single buff.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested buffs. The key is the buff ID, the value is the buff's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>ability</th>
+            <td>The ID of the ability that created this buff. Not guaranteed to exist.</th>
+          </tr>
+          <tr>
+            <th>begin</th>
+            <td>The time the buff started, in the context of Inspect.Time.Frame.</th>
+          </tr>
+          <tr>
+            <th>caster</th>
+            <td>Unit ID of the buff's caster.</th>
+          </tr>
+          <tr>
+            <th>curse</th>
+            <td>Signals that the buff is a curse.</th>
+          </tr>
+          <tr>
+            <th>debuff</th>
+            <td>Signals that the buff is a debuff. If this is missing, then it's an actual buff.</th>
+          </tr>
+          <tr>
+            <th>description</th>
+            <td>Description for the buff. Numbers may not be accurate - see Command.Buff.Describe().</th>
+          </tr>
+          <tr>
+            <th>descriptionComplete</th>
+            <td>Signals that the buff description is complete.</th>
+          </tr>
+          <tr>
+            <th>disease</th>
+            <td>Signals that the buff is a disease.</th>
+          </tr>
+          <tr>
+            <th>duration</th>
+            <td>Duration of the buff in seconds.</th>
+          </tr>
+          <tr>
+            <th>expired</th>
+            <td>Number of seconds the buff is past its expiration time. Generally indicates lag.</th>
+          </tr>
+          <tr>
+            <th>icon</th>
+            <td>Resource filename of the buff's icon.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>Name of the buff.</th>
+          </tr>
+          <tr>
+            <th>noncancelable</th>
+            <td>Signals that the buff cannot be voluntarily canceled. Does not show up for debuffs.</th>
+          </tr>
+          <tr>
+            <th>poison</th>
+            <td>Signals that the buff is a poison.</th>
+          </tr>
+          <tr>
+            <th>remaining</th>
+            <td>Time remaining on the buff, in seconds.</th>
+          </tr>
+          <tr>
+            <th>rune</th>
+            <td>If this buff is created by a rune, the ID of the rune causing it.</th>
+          </tr>
+          <tr>
+            <th>stack</th>
+            <td>Number of stacks on the buff.</th>
+          </tr>
+          <tr>
+            <th>type</th>
+            <td>The buff type ID.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

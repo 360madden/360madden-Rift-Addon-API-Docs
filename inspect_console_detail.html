@@ -1,0 +1,147 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Console.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Console.Detail">Inspect.Console.Detail</a> </h2>
+    <p><i></i> Provides detailed information about consoles.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Console.Detail(<i>console</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Console.Detail(<i>consoles</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>console</i></td><td>parameter</td><td><i>console</i></td><td>The identifier of the console to retrieve information for. May also be "general" or "combat".</td></tr>
+      <tr><td><i>consoles</i></td><td>parameter</td><td><i>table</i></td><td>A table of consoles to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single console.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested consoles.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>accolade</th>
+            <td>Indicates that this console displays Accolade messages.</th>
+          </tr>
+          <tr>
+            <th>achievement</th>
+            <td>Indicates that this console displays Achievement messages.</th>
+          </tr>
+          <tr>
+            <th>channel</th>
+            <td>May contain a table of public channels that this console will display. nil if the console does not display any public channels.</th>
+          </tr>
+          <tr>
+            <th>combatBad</th>
+            <td>Indicates that this console displays Combat Bad messages.</th>
+          </tr>
+          <tr>
+            <th>combatGood</th>
+            <td>Indicates that this console displays Combat Good messages.</th>
+          </tr>
+          <tr>
+            <th>combatNeutral</th>
+            <td>Indicates that this console displays Combat Neutral messages.</th>
+          </tr>
+          <tr>
+            <th>combatOther</th>
+            <td>Indicates that this console displays Combat Other messages.</th>
+          </tr>
+          <tr>
+            <th>combatSpecial</th>
+            <td>Indicates that this console displays Combat Special messages.</th>
+          </tr>
+          <tr>
+            <th>craftingOther</th>
+            <td>Indicates that this console displays Crafting Others messages.</th>
+          </tr>
+          <tr>
+            <th>craftingSelf</th>
+            <td>Indicates that this console displays Crafting Self messages.</th>
+          </tr>
+          <tr>
+            <th>emote</th>
+            <td>Indicates that this console displays Emote messages.</th>
+          </tr>
+          <tr>
+            <th>experience</th>
+            <td>Indicates that this console displays Experience messages.</th>
+          </tr>
+          <tr>
+            <th>guild</th>
+            <td>Indicates that this console displays Guild messages.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>lootGroup</th>
+            <td>Indicates that this console displays Group Loot messages.</th>
+          </tr>
+          <tr>
+            <th>lootItem</th>
+            <td>Indicates that this console displays Item Loot messages.</th>
+          </tr>
+          <tr>
+            <th>lootMoney</th>
+            <td>Indicates that this console displays Money Loot messages.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The player-chosen name of the console.</th>
+          </tr>
+          <tr>
+            <th>notoriety</th>
+            <td>Indicates that this console displays Notoriety messages.</th>
+          </tr>
+          <tr>
+            <th>npc</th>
+            <td>Indicates that this console displays NPC messages.</th>
+          </tr>
+          <tr>
+            <th>officer</th>
+            <td>Indicates that this console displays Officer messages.</th>
+          </tr>
+          <tr>
+            <th>party</th>
+            <td>Indicates that this console displays Party messages.</th>
+          </tr>
+          <tr>
+            <th>purchase</th>
+            <td>Indicates that this console displays Purchase messages.</th>
+          </tr>
+          <tr>
+            <th>raid</th>
+            <td>Indicates that this console displays Raid messages.</th>
+          </tr>
+          <tr>
+            <th>raidWarning</th>
+            <td>Indicates that this console displays Raid Warning messages.</th>
+          </tr>
+          <tr>
+            <th>say</th>
+            <td>Indicates that this console displays Say messages.</th>
+          </tr>
+          <tr>
+            <th>skill</th>
+            <td>Indicates that this console displays Skill messages.</th>
+          </tr>
+          <tr>
+            <th>system</th>
+            <td>Indicates that this console displays System messages.</th>
+          </tr>
+          <tr>
+            <th>tell</th>
+            <td>Indicates that this console displays Tell messages.</th>
+          </tr>
+          <tr>
+            <th>yell</th>
+            <td>Indicates that this console displays Yell messages.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

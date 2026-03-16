@@ -1,0 +1,39 @@
+<html>
+  <head><title>API Docs (live) -- Event.Combat.Death</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Event.Combat.Death">Event.Combat.Death</a> </h2>
+    <p><i></i> Signals the death of a unit. All units referenced by this event will be accessible within this event's handlers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Combat.Death(<i>info</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>info</i></td><td>parameter</td><td><i>variant</i></td><td>Detailed information table about this event, containing several named parameters.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>caster</th>
+            <td>The unit ID for this event's initiator, if one exists.</th>
+          </tr>
+          <tr>
+            <th>casterName</th>
+            <td>The name of this event's initiator, if available.</th>
+          </tr>
+          <tr>
+            <th>target</th>
+            <td>The unit ID for the target.</th>
+          </tr>
+          <tr>
+            <th>targetName</th>
+            <td>The name of the target, if available.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

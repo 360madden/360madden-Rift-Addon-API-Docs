@@ -1,0 +1,833 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Native">Native</a></td><td><i></i></td><td><i></i></td><td></td><td>A UI element of type Native or derived from Native.</td></tr>
+      <tr><td><a href="#Native.Event:Layer">Native.Event:Layer</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in the item's layer.</td></tr>
+      <tr><td><a href="#Native.Event:Loaded">Native.Event:Loaded</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in the item's loaded status.</td></tr>
+      <tr><td><a href="#Native.Event:Move">Native.Event:Move</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the frame's vertices have moved.</td></tr>
+      <tr><td><a href="#Native.Event:Size">Native.Event:Size</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the frame's size has changed.</td></tr>
+      <tr><td><a href="#Native.Event:Strata">Native.Event:Strata</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in the item's strata.</td></tr>
+      <tr><td><a href="#Native:EventAttach">Native:EventAttach</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Attaches an event handler to an event.</td></tr>
+      <tr><td><a href="#Native:EventDetach">Native:EventDetach</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Detaches an event handler from an event. Any parameter can be 'nil', and this is interpreted as a...</td></tr>
+      <tr><td><a href="#Native:EventList">Native:EventList</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists the current event handlers for an event.</td></tr>
+      <tr><td><a href="#Native:EventMacroGet">Native:EventMacroGet</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the macro that will be triggered when this event occurs.</td></tr>
+      <tr><td><a href="#Native:EventMacroSet">Native:EventMacroSet</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the macro that will be triggered when this event occurs.</td></tr>
+      <tr><td><a href="#Native:GetBottom">Native:GetBottom</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the Y position of the bottom edge of this element.</td></tr>
+      <tr><td><a href="#Native:GetBounds">Native:GetBounds</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the complete bounds of this element.</td></tr>
+      <tr><td><a href="#Native:GetEventTable">Native:GetEventTable</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the event table of this element. By default, this value is also stored in "this.Event".</td></tr>
+      <tr><td><a href="#Native:GetHeight">Native:GetHeight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the height of this element.</td></tr>
+      <tr><td><a href="#Native:GetLayer">Native:GetLayer</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the native item's layer order.</td></tr>
+      <tr><td><a href="#Native:GetLeft">Native:GetLeft</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the X position of the left edge of this element.</td></tr>
+      <tr><td><a href="#Native:GetLoaded">Native:GetLoaded</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets whether or not this native element is loaded and rendering.</td></tr>
+      <tr><td><a href="#Native:GetName">Native:GetName</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the name of this element.</td></tr>
+      <tr><td><a href="#Native:GetOwner">Native:GetOwner</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the owner of this element.</td></tr>
+      <tr><td><a href="#Native:GetRight">Native:GetRight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the X position of the right edge of this element.</td></tr>
+      <tr><td><a href="#Native:GetSecureMode">Native:GetSecureMode</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Get the native element's secure mode. See Frame:SetSecureMode() for details.</td></tr>
+      <tr><td><a href="#Native:GetStrata">Native:GetStrata</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the native item's strata. The strata determines render order on a coarser level than Layer d...</td></tr>
+      <tr><td><a href="#Native:GetStrataList">Native:GetStrataList</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets a list of valid stratas for this native element.</td></tr>
+      <tr><td><a href="#Native:GetTop">Native:GetTop</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the Y position of the top edge of this element.</td></tr>
+      <tr><td><a href="#Native:GetType">Native:GetType</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the type of this element.</td></tr>
+      <tr><td><a href="#Native:GetWidth">Native:GetWidth</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the width of this element.</td></tr>
+      <tr><td><a href="#Native:ReadAll">Native:ReadAll</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read all set points and sizes from this frame.</td></tr>
+      <tr><td><a href="#Native:ReadHeight">Native:ReadHeight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read a set height from this frame.</td></tr>
+      <tr><td><a href="#Native:ReadPoint">Native:ReadPoint</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read a set point from this frame. Must be given a single-axis coordinate.</td></tr>
+      <tr><td><a href="#Native:ReadWidth">Native:ReadWidth</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read a set width from this frame.</td></tr>
+      <tr><td><a href="#Native:SetLayer">Native:SetLayer</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the frame layer for this native element. This can be any number. Frames are drawn in ascendi...</td></tr>
+      <tr><td><a href="#Native:SetStrata">Native:SetStrata</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the strata for this native element.</td></tr>
+      <tr><td><a href="#UI.Native.Ability">UI.Native.Ability</a></td><td><i></i></td><td><i></i></td><td></td><td>The Ability dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Accolade">UI.Native.Accolade</a></td><td><i></i></td><td><i></i></td><td></td><td>The Warfront accolade HUD.</td></tr>
+      <tr><td><a href="#UI.Native.Achievement">UI.Native.Achievement</a></td><td><i></i></td><td><i></i></td><td></td><td>The Achievement dialog.</td></tr>
+      <tr><td><a href="#UI.Native.AchievementPopup">UI.Native.AchievementPopup</a></td><td><i></i></td><td><i></i></td><td></td><td>The "Achievement Complete" popup.</td></tr>
+      <tr><td><a href="#UI.Native.Adventure">UI.Native.Adventure</a></td><td><i></i></td><td><i></i></td><td></td><td>The Instant Adventure dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Ascend">UI.Native.Ascend</a></td><td><i></i></td><td><i></i></td><td></td><td>The Ascend-a-Friend dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Attunement">UI.Native.Attunement</a></td><td><i></i></td><td><i></i></td><td></td><td>The Planar Attunement dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Auction">UI.Native.Auction</a></td><td><i></i></td><td><i></i></td><td></td><td>The Auction dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Bag">UI.Native.Bag</a></td><td><i></i></td><td><i></i></td><td></td><td>The bag and currency HUD.</td></tr>
+      <tr><td><a href="#UI.Native.BagBank1">UI.Native.BagBank1</a></td><td><i></i></td><td><i></i></td><td></td><td>The first bank inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagBank2">UI.Native.BagBank2</a></td><td><i></i></td><td><i></i></td><td></td><td>The second bank inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagBank3">UI.Native.BagBank3</a></td><td><i></i></td><td><i></i></td><td></td><td>The third bank inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagBank4">UI.Native.BagBank4</a></td><td><i></i></td><td><i></i></td><td></td><td>The fourth bank inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagBank5">UI.Native.BagBank5</a></td><td><i></i></td><td><i></i></td><td></td><td>The fifth bank inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagBank6">UI.Native.BagBank6</a></td><td><i></i></td><td><i></i></td><td></td><td>The sixth bank inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagBank7">UI.Native.BagBank7</a></td><td><i></i></td><td><i></i></td><td></td><td>The seventh bank inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagBank8">UI.Native.BagBank8</a></td><td><i></i></td><td><i></i></td><td></td><td>The eighth bank inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagInventory1">UI.Native.BagInventory1</a></td><td><i></i></td><td><i></i></td><td></td><td>The first main inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagInventory2">UI.Native.BagInventory2</a></td><td><i></i></td><td><i></i></td><td></td><td>The second main inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagInventory3">UI.Native.BagInventory3</a></td><td><i></i></td><td><i></i></td><td></td><td>The third main inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagInventory4">UI.Native.BagInventory4</a></td><td><i></i></td><td><i></i></td><td></td><td>The fourth main inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagInventory5">UI.Native.BagInventory5</a></td><td><i></i></td><td><i></i></td><td></td><td>The fifth main inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagInventory6">UI.Native.BagInventory6</a></td><td><i></i></td><td><i></i></td><td></td><td>The sixth main inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagInventory7">UI.Native.BagInventory7</a></td><td><i></i></td><td><i></i></td><td></td><td>The seventh main inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.BagInventory8">UI.Native.BagInventory8</a></td><td><i></i></td><td><i></i></td><td></td><td>The eighth main inventory bag.</td></tr>
+      <tr><td><a href="#UI.Native.Bank">UI.Native.Bank</a></td><td><i></i></td><td><i></i></td><td></td><td>The Bank dialog.</td></tr>
+      <tr><td><a href="#UI.Native.BankGuild">UI.Native.BankGuild</a></td><td><i></i></td><td><i></i></td><td></td><td>The Guild Bank dialog.</td></tr>
+      <tr><td><a href="#UI.Native.BarBottom1">UI.Native.BarBottom1</a></td><td><i></i></td><td><i></i></td><td></td><td>The first extra bottom action bar.</td></tr>
+      <tr><td><a href="#UI.Native.BarBottom2">UI.Native.BarBottom2</a></td><td><i></i></td><td><i></i></td><td></td><td>The second extra bottom action bar.</td></tr>
+      <tr><td><a href="#UI.Native.BarBottom3">UI.Native.BarBottom3</a></td><td><i></i></td><td><i></i></td><td></td><td>The third extra bottom action bar.</td></tr>
+      <tr><td><a href="#UI.Native.BarBottom4">UI.Native.BarBottom4</a></td><td><i></i></td><td><i></i></td><td></td><td>The fourth extra bottom action bar.</td></tr>
+      <tr><td><a href="#UI.Native.BarBottom5">UI.Native.BarBottom5</a></td><td><i></i></td><td><i></i></td><td></td><td>The fifth extra bottom action bar.</td></tr>
+      <tr><td><a href="#UI.Native.BarBottom6">UI.Native.BarBottom6</a></td><td><i></i></td><td><i></i></td><td></td><td>The sixth extra bottom action bar.</td></tr>
+      <tr><td><a href="#UI.Native.BarMain">UI.Native.BarMain</a></td><td><i></i></td><td><i></i></td><td></td><td>The main action bar.</td></tr>
+      <tr><td><a href="#UI.Native.BarPet">UI.Native.BarPet</a></td><td><i></i></td><td><i></i></td><td></td><td>The pet action bar.</td></tr>
+      <tr><td><a href="#UI.Native.BarSide1">UI.Native.BarSide1</a></td><td><i></i></td><td><i></i></td><td></td><td>The first extra side action bar.</td></tr>
+      <tr><td><a href="#UI.Native.BarSide2">UI.Native.BarSide2</a></td><td><i></i></td><td><i></i></td><td></td><td>The second extra side action bar.</td></tr>
+      <tr><td><a href="#UI.Native.BarSide3">UI.Native.BarSide3</a></td><td><i></i></td><td><i></i></td><td></td><td>The third extra side action bar.</td></tr>
+      <tr><td><a href="#UI.Native.BarSide4">UI.Native.BarSide4</a></td><td><i></i></td><td><i></i></td><td></td><td>The fourth extra side action bar.</td></tr>
+      <tr><td><a href="#UI.Native.BarTemporary">UI.Native.BarTemporary</a></td><td><i></i></td><td><i></i></td><td></td><td>The action bar used for temporary abilities.</td></tr>
+      <tr><td><a href="#UI.Native.Breath">UI.Native.Breath</a></td><td><i></i></td><td><i></i></td><td></td><td>The breath/fatigue bar.</td></tr>
+      <tr><td><a href="#UI.Native.Buffbar">UI.Native.Buffbar</a></td><td><i></i></td><td><i></i></td><td></td><td>The player's buff bar.</td></tr>
+      <tr><td><a href="#UI.Native.Castbar">UI.Native.Castbar</a></td><td><i></i></td><td><i></i></td><td></td><td>The player's cast bar.</td></tr>
+      <tr><td><a href="#UI.Native.Character">UI.Native.Character</a></td><td><i></i></td><td><i></i></td><td></td><td>The Character dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Chronicle">UI.Native.Chronicle</a></td><td><i></i></td><td><i></i></td><td></td><td>The Chronicles dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Coinlock">UI.Native.Coinlock</a></td><td><i></i></td><td><i></i></td><td></td><td>The Coin Lock button.</td></tr>
+      <tr><td><a href="#UI.Native.Console1">UI.Native.Console1</a></td><td><i></i></td><td><i></i></td><td></td><td>The first console window.</td></tr>
+      <tr><td><a href="#UI.Native.Console2">UI.Native.Console2</a></td><td><i></i></td><td><i></i></td><td></td><td>The second console window.</td></tr>
+      <tr><td><a href="#UI.Native.Console3">UI.Native.Console3</a></td><td><i></i></td><td><i></i></td><td></td><td>The third console window.</td></tr>
+      <tr><td><a href="#UI.Native.Console4">UI.Native.Console4</a></td><td><i></i></td><td><i></i></td><td></td><td>The fourth console window.</td></tr>
+      <tr><td><a href="#UI.Native.Console5">UI.Native.Console5</a></td><td><i></i></td><td><i></i></td><td></td><td>The fifth console window.</td></tr>
+      <tr><td><a href="#UI.Native.Console6">UI.Native.Console6</a></td><td><i></i></td><td><i></i></td><td></td><td>The sixth console window.</td></tr>
+      <tr><td><a href="#UI.Native.Console7">UI.Native.Console7</a></td><td><i></i></td><td><i></i></td><td></td><td>The seventh console window.</td></tr>
+      <tr><td><a href="#UI.Native.ConsoleSetting">UI.Native.ConsoleSetting</a></td><td><i></i></td><td><i></i></td><td></td><td>The console settings dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Crafting">UI.Native.Crafting</a></td><td><i></i></td><td><i></i></td><td></td><td>The Crafting dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Ctf">UI.Native.Ctf</a></td><td><i></i></td><td><i></i></td><td></td><td>The Capture-the-Flag status indicator.</td></tr>
+      <tr><td><a href="#UI.Native.Guest">UI.Native.Guest</a></td><td><i></i></td><td><i></i></td><td></td><td>The guest invite dialog for weddings.</td></tr>
+      <tr><td><a href="#UI.Native.Guild">UI.Native.Guild</a></td><td><i></i></td><td><i></i></td><td></td><td>The Guild dialog.</td></tr>
+      <tr><td><a href="#UI.Native.GuildCharter">UI.Native.GuildCharter</a></td><td><i></i></td><td><i></i></td><td></td><td>The Guild Charter dialog.</td></tr>
+      <tr><td><a href="#UI.Native.GuildFinder">UI.Native.GuildFinder</a></td><td><i></i></td><td><i></i></td><td></td><td>The Guild Finder dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Import">UI.Native.Import</a></td><td><i></i></td><td><i></i></td><td></td><td>The Import dialog, as reached from the escape menu.</td></tr>
+      <tr><td><a href="#UI.Native.Keybind">UI.Native.Keybind</a></td><td><i></i></td><td><i></i></td><td></td><td>The Keybind dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Layout">UI.Native.Layout</a></td><td><i></i></td><td><i></i></td><td></td><td>The UI Layout dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Leaderboard">UI.Native.Leaderboard</a></td><td><i></i></td><td><i></i></td><td></td><td>The Leaderboard dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Lfg">UI.Native.Lfg</a></td><td><i></i></td><td><i></i></td><td></td><td>The Looking-for-Group dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Loot">UI.Native.Loot</a></td><td><i></i></td><td><i></i></td><td></td><td>The Loot dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Macro">UI.Native.Macro</a></td><td><i></i></td><td><i></i></td><td></td><td>The Macro dialog.</td></tr>
+      <tr><td><a href="#UI.Native.MacroIcon">UI.Native.MacroIcon</a></td><td><i></i></td><td><i></i></td><td></td><td>The Macro icons list.</td></tr>
+      <tr><td><a href="#UI.Native.MacroSlash">UI.Native.MacroSlash</a></td><td><i></i></td><td><i></i></td><td></td><td>The Macro slash commands list.</td></tr>
+      <tr><td><a href="#UI.Native.Mail">UI.Native.Mail</a></td><td><i></i></td><td><i></i></td><td></td><td>The Mail dialog.</td></tr>
+      <tr><td><a href="#UI.Native.MailRead">UI.Native.MailRead</a></td><td><i></i></td><td><i></i></td><td></td><td>The currently-being-read Mail dialog.</td></tr>
+      <tr><td><a href="#UI.Native.MapMain">UI.Native.MapMain</a></td><td><i></i></td><td><i></i></td><td></td><td>The main map.</td></tr>
+      <tr><td><a href="#UI.Native.MapMini">UI.Native.MapMini</a></td><td><i></i></td><td><i></i></td><td></td><td>The minimap.</td></tr>
+      <tr><td><a href="#UI.Native.MechanicPlayer">UI.Native.MechanicPlayer</a></td><td><i></i></td><td><i></i></td><td></td><td>The player-focused class-specific-mechanic HUD element.</td></tr>
+      <tr><td><a href="#UI.Native.MechanicTarget">UI.Native.MechanicTarget</a></td><td><i></i></td><td><i></i></td><td></td><td>The target-focused class-specific-mechanic HUD element.</td></tr>
+      <tr><td><a href="#UI.Native.Mentor">UI.Native.Mentor</a></td><td><i></i></td><td><i></i></td><td></td><td>The Mentoring popup.</td></tr>
+      <tr><td><a href="#UI.Native.Menu">UI.Native.Menu</a></td><td><i></i></td><td><i></i></td><td></td><td>The main menu HUD element.</td></tr>
+      <tr><td><a href="#UI.Native.MessageEvent">UI.Native.MessageEvent</a></td><td><i></i></td><td><i></i></td><td></td><td>The event-related message popup.</td></tr>
+      <tr><td><a href="#UI.Native.MessageStandard">UI.Native.MessageStandard</a></td><td><i></i></td><td><i></i></td><td></td><td>The generic message popup.</td></tr>
+      <tr><td><a href="#UI.Native.MessageText">UI.Native.MessageText</a></td><td><i></i></td><td><i></i></td><td></td><td>The generic text popup.</td></tr>
+      <tr><td><a href="#UI.Native.MessageWarfront">UI.Native.MessageWarfront</a></td><td><i></i></td><td><i></i></td><td></td><td>The warfront-related message popup.</td></tr>
+      <tr><td><a href="#UI.Native.MessageZone">UI.Native.MessageZone</a></td><td><i></i></td><td><i></i></td><td></td><td>The zone-related message popup.</td></tr>
+      <tr><td><a href="#UI.Native.Notification">UI.Native.Notification</a></td><td><i></i></td><td><i></i></td><td></td><td>The notification message popup.</td></tr>
+      <tr><td><a href="#UI.Native.Notify">UI.Native.Notify</a></td><td><i></i></td><td><i></i></td><td></td><td>The public-group/return-to-graveyard popup button.</td></tr>
+      <tr><td><a href="#UI.Native.PortraitFocus">UI.Native.PortraitFocus</a></td><td><i></i></td><td><i></i></td><td></td><td>The portrait of your focus target.</td></tr>
+      <tr><td><a href="#UI.Native.PortraitParty1">UI.Native.PortraitParty1</a></td><td><i></i></td><td><i></i></td><td></td><td>The portrait of your first partymember.</td></tr>
+      <tr><td><a href="#UI.Native.PortraitParty1Pet">UI.Native.PortraitParty1Pet</a></td><td><i></i></td><td><i></i></td><td></td><td>The portrait of your first partymember's pet.</td></tr>
+      <tr><td><a href="#UI.Native.PortraitParty2">UI.Native.PortraitParty2</a></td><td><i></i></td><td><i></i></td><td></td><td>The portrait of your second partymember.</td></tr>
+      <tr><td><a href="#UI.Native.PortraitParty2Pet">UI.Native.PortraitParty2Pet</a></td><td><i></i></td><td><i></i></td><td></td><td>The portrait of your second partymember's pet.</td></tr>
+      <tr><td><a href="#UI.Native.PortraitParty3">UI.Native.PortraitParty3</a></td><td><i></i></td><td><i></i></td><td></td><td>The portrait of your third partymember.</td></tr>
+      <tr><td><a href="#UI.Native.PortraitParty3Pet">UI.Native.PortraitParty3Pet</a></td><td><i></i></td><td><i></i></td><td></td><td>The portrait of your third partymember's pet.</td></tr>
+      <tr><td><a href="#UI.Native.PortraitParty4">UI.Native.PortraitParty4</a></td><td><i></i></td><td><i></i></td><td></td><td>The portrait of your fourth partymember.</td></tr>
+      <tr><td><a href="#UI.Native.PortraitParty4Pet">UI.Native.PortraitParty4Pet</a></td><td><i></i></td><td><i></i></td><td></td><td>The portrait of your fourth partymember's pet.</td></tr>
+      <tr><td><a href="#UI.Native.PortraitPet">UI.Native.PortraitPet</a></td><td><i></i></td><td><i></i></td><td></td><td>The portrait of your pet.</td></tr>
+      <tr><td><a href="#UI.Native.PortraitPlayer">UI.Native.PortraitPlayer</a></td><td><i></i></td><td><i></i></td><td></td><td>Your portrait.</td></tr>
+      <tr><td><a href="#UI.Native.PortraitTarget">UI.Native.PortraitTarget</a></td><td><i></i></td><td><i></i></td><td></td><td>The portrait of your target.</td></tr>
+      <tr><td><a href="#UI.Native.PortraitTargetTarget">UI.Native.PortraitTargetTarget</a></td><td><i></i></td><td><i></i></td><td></td><td>The portrait of your target's target.</td></tr>
+      <tr><td><a href="#UI.Native.Quest">UI.Native.Quest</a></td><td><i></i></td><td><i></i></td><td></td><td>The Quest dialog.</td></tr>
+      <tr><td><a href="#UI.Native.QuestStickies">UI.Native.QuestStickies</a></td><td><i></i></td><td><i></i></td><td></td><td>The Quest sticky HUD.</td></tr>
+      <tr><td><a href="#UI.Native.Question">UI.Native.Question</a></td><td><i></i></td><td><i></i></td><td></td><td>The general-purpose question popup.</td></tr>
+      <tr><td><a href="#UI.Native.Raid">UI.Native.Raid</a></td><td><i></i></td><td><i></i></td><td></td><td>The Raid dialog.</td></tr>
+      <tr><td><a href="#UI.Native.RaidGroup1">UI.Native.RaidGroup1</a></td><td><i></i></td><td><i></i></td><td></td><td>The raid frame for your raid's first group.</td></tr>
+      <tr><td><a href="#UI.Native.RaidGroup1Pet">UI.Native.RaidGroup1Pet</a></td><td><i></i></td><td><i></i></td><td></td><td>The raid frame for your raid's first group's pets.</td></tr>
+      <tr><td><a href="#UI.Native.RaidGroup2">UI.Native.RaidGroup2</a></td><td><i></i></td><td><i></i></td><td></td><td>The raid frame for your raid's second group.</td></tr>
+      <tr><td><a href="#UI.Native.RaidGroup2Pet">UI.Native.RaidGroup2Pet</a></td><td><i></i></td><td><i></i></td><td></td><td>The raid frame for your raid's second group's pets.</td></tr>
+      <tr><td><a href="#UI.Native.RaidGroup3">UI.Native.RaidGroup3</a></td><td><i></i></td><td><i></i></td><td></td><td>The raid frame for your raid's third group.</td></tr>
+      <tr><td><a href="#UI.Native.RaidGroup3Pet">UI.Native.RaidGroup3Pet</a></td><td><i></i></td><td><i></i></td><td></td><td>The raid frame for your raid's third group's pets.</td></tr>
+      <tr><td><a href="#UI.Native.RaidGroup4">UI.Native.RaidGroup4</a></td><td><i></i></td><td><i></i></td><td></td><td>The raid frame for your raid's fourth group.</td></tr>
+      <tr><td><a href="#UI.Native.RaidGroup4Pet">UI.Native.RaidGroup4Pet</a></td><td><i></i></td><td><i></i></td><td></td><td>The raid frame for your raid's fourth group's pets.</td></tr>
+      <tr><td><a href="#UI.Native.RaidParty">UI.Native.RaidParty</a></td><td><i></i></td><td><i></i></td><td></td><td>The raid frame used for displaying your party as a raid.</td></tr>
+      <tr><td><a href="#UI.Native.RaidPartyPet">UI.Native.RaidPartyPet</a></td><td><i></i></td><td><i></i></td><td></td><td>The raid frame used for displaying your party's pets as a raid.</td></tr>
+      <tr><td><a href="#UI.Native.Reactive">UI.Native.Reactive</a></td><td><i></i></td><td><i></i></td><td></td><td>The reactive-ability popup.</td></tr>
+      <tr><td><a href="#UI.Native.Recall">UI.Native.Recall</a></td><td><i></i></td><td><i></i></td><td></td><td>The set-recall-point dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Respec">UI.Native.Respec</a></td><td><i></i></td><td><i></i></td><td></td><td>The respec dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Rift">UI.Native.Rift</a></td><td><i></i></td><td><i></i></td><td></td><td>The Rift meter HUD.</td></tr>
+      <tr><td><a href="#UI.Native.Roll1">UI.Native.Roll1</a></td><td><i></i></td><td><i></i></td><td></td><td>The first loot-roll popup.</td></tr>
+      <tr><td><a href="#UI.Native.Roll2">UI.Native.Roll2</a></td><td><i></i></td><td><i></i></td><td></td><td>The second loot-roll popup.</td></tr>
+      <tr><td><a href="#UI.Native.Roll3">UI.Native.Roll3</a></td><td><i></i></td><td><i></i></td><td></td><td>The third loot-roll popup.</td></tr>
+      <tr><td><a href="#UI.Native.Roll4">UI.Native.Roll4</a></td><td><i></i></td><td><i></i></td><td></td><td>The fourth loot-roll popup.</td></tr>
+      <tr><td><a href="#UI.Native.Setting">UI.Native.Setting</a></td><td><i></i></td><td><i></i></td><td></td><td>The Settings dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Social">UI.Native.Social</a></td><td><i></i></td><td><i></i></td><td></td><td>The Social dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Soul">UI.Native.Soul</a></td><td><i></i></td><td><i></i></td><td></td><td>The Soul Tree dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Split">UI.Native.Split</a></td><td><i></i></td><td><i></i></td><td></td><td>The stack split popup.</td></tr>
+      <tr><td><a href="#UI.Native.Streaming">UI.Native.Streaming</a></td><td><i></i></td><td><i></i></td><td></td><td>The icon that indicates your current streaming download status.</td></tr>
+      <tr><td><a href="#UI.Native.Ticket">UI.Native.Ticket</a></td><td><i></i></td><td><i></i></td><td></td><td>The Customer Service Ticket dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Tip">UI.Native.Tip</a></td><td><i></i></td><td><i></i></td><td></td><td>The Game Tip dialog.</td></tr>
+      <tr><td><a href="#UI.Native.TipAlert">UI.Native.TipAlert</a></td><td><i></i></td><td><i></i></td><td></td><td>The Game Tip notification popup.</td></tr>
+      <tr><td><a href="#UI.Native.Tooltip">UI.Native.Tooltip</a></td><td><i></i></td><td><i></i></td><td></td><td>The tooltip.</td></tr>
+      <tr><td><a href="#UI.Native.TooltipAnchor">UI.Native.TooltipAnchor</a></td><td><i></i></td><td><i></i></td><td></td><td>The location that tooltips are anchored to by default.</td></tr>
+      <tr><td><a href="#UI.Native.Trade">UI.Native.Trade</a></td><td><i></i></td><td><i></i></td><td></td><td>The Trade dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Tray">UI.Native.Tray</a></td><td><i></i></td><td><i></i></td><td></td><td>The icon tray used for the clock, mail notification, and similar elements.</td></tr>
+      <tr><td><a href="#UI.Native.TraySocial">UI.Native.TraySocial</a></td><td><i></i></td><td><i></i></td><td></td><td>The icon tray used for social notifications.</td></tr>
+      <tr><td><a href="#UI.Native.Treasure">UI.Native.Treasure</a></td><td><i></i></td><td><i></i></td><td></td><td>The Treasure popup used to claim dungeon loot.</td></tr>
+      <tr><td><a href="#UI.Native.Trial">UI.Native.Trial</a></td><td><i></i></td><td><i></i></td><td></td><td>The Trial dialog.</td></tr>
+      <tr><td><a href="#UI.Native.Upgrade">UI.Native.Upgrade</a></td><td><i></i></td><td><i></i></td><td></td><td>The Upgrade portrait, used for targets that are upgradeable.</td></tr>
+      <tr><td><a href="#UI.Native.Warfront">UI.Native.Warfront</a></td><td><i></i></td><td><i></i></td><td></td><td>The Warfront dialog.</td></tr>
+      <tr><td><a href="#UI.Native.WarfrontLeaderboard">UI.Native.WarfrontLeaderboard</a></td><td><i></i></td><td><i></i></td><td></td><td>The Warfront Leaderboard dialog.</td></tr>
+      <tr><td><a href="#UI.Native.World">UI.Native.World</a></td><td><i></i></td><td><i></i></td><td></td><td>The World Event dialog.</td></tr>
+    </table>
+    <h2><a name="Native">Native</a></h2>
+    <p><i></i> A UI element of type Native or derived from Native.</p>
+  </body>
+  <h2><a name="Native.Event:Layer">Native.Event:Layer</a></h2>
+  <p><i></i> Signals a change in the item's layer.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Native.Event:Layer()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native.Event:Loaded">Native.Event:Loaded</a></h2>
+  <p><i></i> Signals a change in the item's loaded status.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Native.Event:Loaded()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native.Event:Move">Native.Event:Move</a></h2>
+  <p><i></i> Signals that the frame's vertices have moved.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout.Event:Move()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native.Event:Size">Native.Event:Size</a></h2>
+  <p><i></i> Signals that the frame's size has changed.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout.Event:Size()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native.Event:Strata">Native.Event:Strata</a></h2>
+  <p><i></i> Signals a change in the item's strata.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Native.Event:Strata()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:EventAttach">Native:EventAttach</a></h2>
+  <p><i></i> Attaches an event handler to an event.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout:EventAttach(<i>handle</i>, <i>callback</i>, <i>label</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventAttach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>callback</i></td><td>parameter</td><td><i>function</i></td><td>A global event handler function. This will be called when the event fires. The first parameter will be the frame that the event is called on, the second parameter will be the standard frame event handle, any other parameters will follow that.</td></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>label</i></td><td>parameter</td><td><i>string</i></td><td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</td></tr>
+    <tr><td><i>priority</i></td><td>parameter</td><td><i>number</i></td><td>Priority of the event handler. Higher numbers trigger first.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Native:EventDetach">Native:EventDetach</a></h2>
+  <p><i></i> Detaches an event handler from an event. Any parameter can be 'nil', and this is interpreted as a wildcard. If multiple events match the constraints, only one will be detached.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>, <i>owner</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>callback</i></td><td>parameter</td><td><i>function/nil</i></td><td>A callback function to search for.</td></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>label</i></td><td>parameter</td><td><i>string/nil</i></td><td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</td></tr>
+    <tr><td><i>owner</i></td><td>parameter</td><td><i>string/nil</i></td><td>Owner to search for.</td></tr>
+    <tr><td><i>priority</i></td><td>parameter</td><td><i>number/nil</i></td><td>Priority of the event handler. Higher numbers trigger first.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:EventList">Native:EventList</a></h2>
+  <p><i></i> Lists the current event handlers for an event.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>result</i> = Layout:EventList(<i>handle</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>result</i></td><td>result</td><td><i>table</i></td><td>A table of event handlers for this event.</td></tr>
+  </table>
+  <dl>
+    <dt><b>members</b></dt>
+    <dd>
+      <table>
+        <tr>
+          <th>handler</th>
+          <td>The handler that will be called when the event fires.</th>
+        </tr>
+        <tr>
+          <th>label</th>
+          <td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</th>
+        </tr>
+        <tr>
+          <th>macro</th>
+          <td>The macro that will run when the event fires.</th>
+        </tr>
+        <tr>
+          <th>owner</th>
+          <td>Owner to search for.</th>
+        </tr>
+        <tr>
+          <th>priority</th>
+          <td>Priority of the event handler. Higher numbers trigger first.</th>
+        </tr>
+      </table>
+    </dd>
+  </dl>
+  <h2><a name="Native:EventMacroGet">Native:EventMacroGet</a></h2>
+  <p><i></i> Gets the macro that will be triggered when this event occurs.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>macro</i> = Layout:EventMacroGet(<i>handle</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>macro</i></td><td>result</td><td><i>string/nil</i></td><td>The macro that will be triggered.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:EventMacroSet">Native:EventMacroSet</a></h2>
+  <p><i></i> Sets the macro that will be triggered when this event occurs.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout:EventMacroSet(<i>handle</i>, <i>macro</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>macro</i></td><td>parameter</td><td><i>string/nil</i></td><td>The macro to trigger. nil to clear the macro.</td></tr>
+  </table>
+  <dl>
+    <dt><b>requireSecureFrameAndInsecureEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Native:GetBottom">Native:GetBottom</a></h2>
+  <p><i></i> Retrieves the Y position of the bottom edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>bottom</i> = Layout:GetBottom()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>bottom</i></td><td>result</td><td><i>number</i></td><td>The Y position of the bottom edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetBounds">Native:GetBounds</a></h2>
+  <p><i></i> Retrieves the complete bounds of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>left, top, right, bottom</i> = Layout:GetBounds()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>bottom</i></td><td>result</td><td><i>number</i></td><td>The Y position of the bottom edge of this element.</td></tr>
+    <tr><td><i>left</i></td><td>result</td><td><i>number</i></td><td>The X position of the left edge of this element.</td></tr>
+    <tr><td><i>right</i></td><td>result</td><td><i>number</i></td><td>The X position of the right edge of this element.</td></tr>
+    <tr><td><i>top</i></td><td>result</td><td><i>number</i></td><td>The Y position of the top edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetEventTable">Native:GetEventTable</a></h2>
+  <p><i></i> Retrieves the event table of this element. By default, this value is also stored in "this.Event".</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>eventTable</i> = Layout:GetEventTable()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>eventTable</i></td><td>result</td><td><i>table</i></td><td>The event table of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetHeight">Native:GetHeight</a></h2>
+  <p><i></i> Retrieves the height of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>height</i> = Layout:GetHeight()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>height</i></td><td>result</td><td><i>number</i></td><td>The height of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetLayer">Native:GetLayer</a></h2>
+  <p><i></i> Gets the native item's layer order.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>layer</i> = Native:GetLayer()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>layer</i></td><td>result</td><td><i>number</i></td><td>The render layer of this frame. See Frame:SetLayer for details.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetLeft">Native:GetLeft</a></h2>
+  <p><i></i> Retrieves the X position of the left edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>left</i> = Layout:GetLeft()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>left</i></td><td>result</td><td><i>number</i></td><td>The X position of the left edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetLoaded">Native:GetLoaded</a></h2>
+  <p><i></i> Gets whether or not this native element is loaded and rendering.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>loaded</i> = Native:GetLoaded()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>loaded</i></td><td>result</td><td><i>boolean</i></td><td>true if it is loaded.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetName">Native:GetName</a></h2>
+  <p><i></i> Retrieves the name of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>name</i> = Layout:GetName()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>name</i></td><td>result</td><td><i>string</i></td><td>The name of this element, as provided by the addon that created it.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetOwner">Native:GetOwner</a></h2>
+  <p><i></i> Retrieves the owner of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>owner</i> = Layout:GetOwner()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>owner</i></td><td>result</td><td><i>string</i></td><td>The owner of this element. Given as an addon identifier.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetRight">Native:GetRight</a></h2>
+  <p><i></i> Retrieves the X position of the right edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>right</i> = Layout:GetRight()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>right</i></td><td>result</td><td><i>number</i></td><td>The X position of the right edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetSecureMode">Native:GetSecureMode</a></h2>
+  <p><i></i> Get the native element's secure mode. See Frame:SetSecureMode() for details.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>secure</i> = Native:GetSecureMode()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>secure</i></td><td>result</td><td><i>string</i></td><td>The current secure mode.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetStrata">Native:GetStrata</a></h2>
+  <p><i></i> Gets the native item's strata. The strata determines render order on a coarser level than Layer does, as well as determining how far an element is brought to the front when clicked on.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>strata</i> = Native:GetStrata()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>strata</i></td><td>result</td><td><i>string</i></td><td>The item's current strata.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetStrataList">Native:GetStrataList</a></h2>
+  <p><i></i> Gets a list of valid stratas for this native element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>stratas</i> = Native:GetStrataList()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>stratas</i></td><td>result</td><td><i>table</i></td><td>An array of valid stratas, in order.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetTop">Native:GetTop</a></h2>
+  <p><i></i> Retrieves the Y position of the top edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>top</i> = Layout:GetTop()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>top</i></td><td>result</td><td><i>number</i></td><td>The Y position of the top edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetType">Native:GetType</a></h2>
+  <p><i></i> Retrieves the type of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>type</i> = Layout:GetType()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>type</i></td><td>result</td><td><i>string</i></td><td>The type of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:GetWidth">Native:GetWidth</a></h2>
+  <p><i></i> Retrieves the width of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>width</i> = Layout:GetWidth()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>width</i></td><td>result</td><td><i>number</i></td><td>The width of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:ReadAll">Native:ReadAll</a></h2>
+  <p><i></i> Read all set points and sizes from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>results</i> = Layout:ReadAll()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>results</i></td><td>result</td><td><i>table</i></td><td>Result table. Contains data in the following format: {x = {size = (size), [(position)] = {layout = (layout), position = (position), offset = (offset)}}, y = (the same thing)}.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:ReadHeight">Native:ReadHeight</a></h2>
+  <p><i></i> Read a set height from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>height</i> = Layout:ReadHeight()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>height</i></td><td>result</td><td><i>number</i></td><td>The parameter passed to SetHeight(), or nil if no such parameter has been passed.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:ReadPoint">Native:ReadPoint</a></h2>
+  <p><i></i> Read a set point from this frame. Must be given a single-axis coordinate.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>layout, position, offset</i> = Layout:ReadPoint(<i>coordinate</i>)</td></tr>
+    <tr><td colspan=4><i>layout, position, offset</i> = Layout:ReadPoint(<i>x</i>, <i>y</i>)</td></tr>
+    <tr><td colspan=4><i>origin, offset</i> = Layout:ReadPoint(<i>coordinate</i>)</td></tr>
+    <tr><td colspan=4><i>origin, offset</i> = Layout:ReadPoint(<i>x</i>, <i>y</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>coordinate</i></td><td>parameter</td><td><i>string</i></td><td>Named coordinate. Must be a one-axis coordinate.</td></tr>
+    <tr><td><i>x</i></td><td>parameter</td><td><i>number/nil</i></td><td>X coordinate of the point. Either this or Y must be nil.</td></tr>
+    <tr><td><i>y</i></td><td>parameter</td><td><i>number/nil</i></td><td>Y coordinate of the point. Either this or X must be nil.</td></tr>
+    <tr><td><i>layout</i></td><td>result</td><td><i>Layout</i></td><td>The table that this point is pinned to.</td></tr>
+    <tr><td><i>offset</i></td><td>result</td><td><i>number</i></td><td>The offset in pixels from the source location to the actual location.</td></tr>
+    <tr><td><i>origin</i></td><td>result</td><td><i>string</i></td><td>The string "origin".</td></tr>
+    <tr><td><i>position</i></td><td>result</td><td><i>number</i></td><td>The position on "layout" that this point is pinned. 0 refers to the top or left edge, 1 refers to the bottom or right edge.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:ReadWidth">Native:ReadWidth</a></h2>
+  <p><i></i> Read a set width from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>width</i> = Layout:ReadWidth()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>width</i></td><td>result</td><td><i>number</i></td><td>The parameter passed to SetWidth(), or nil if no such parameter has been passed.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Native:SetLayer">Native:SetLayer</a></h2>
+  <p><i></i> Sets the frame layer for this native element. This can be any number. Frames are drawn in ascending order. If two frames have the same layer number, then the order of those frames is undefined, but guarantees no Z-fighting. Frames are always drawn after their parents.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Native:SetLayer(<i>layer</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>layer</i></td><td>parameter</td><td><i>number</i></td><td>The new layer for this frame.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Native:SetStrata">Native:SetStrata</a></h2>
+  <p><i></i> Sets the strata for this native element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Native:SetStrata(<i>layer</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>layer</i></td><td>parameter</td><td><i>string</i></td><td>The new layer for this frame.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="UI.Native.Ability">UI.Native.Ability</a></h2>
+  <p><i></i> The Ability dialog.</p>
+</html>
+<h2><a name="UI.Native.Accolade">UI.Native.Accolade</a></h2>
+<p><i></i> The Warfront accolade HUD.</p>
+<h2><a name="UI.Native.Achievement">UI.Native.Achievement</a></h2>
+<p><i></i> The Achievement dialog.</p>
+<h2><a name="UI.Native.AchievementPopup">UI.Native.AchievementPopup</a></h2>
+<p><i></i> The "Achievement Complete" popup.</p>
+<h2><a name="UI.Native.Adventure">UI.Native.Adventure</a></h2>
+<p><i></i> The Instant Adventure dialog.</p>
+<h2><a name="UI.Native.Ascend">UI.Native.Ascend</a></h2>
+<p><i></i> The Ascend-a-Friend dialog.</p>
+<h2><a name="UI.Native.Attunement">UI.Native.Attunement</a></h2>
+<p><i></i> The Planar Attunement dialog.</p>
+<h2><a name="UI.Native.Auction">UI.Native.Auction</a></h2>
+<p><i></i> The Auction dialog.</p>
+<h2><a name="UI.Native.Bag">UI.Native.Bag</a></h2>
+<p><i></i> The bag and currency HUD.</p>
+<h2><a name="UI.Native.BagBank1">UI.Native.BagBank1</a></h2>
+<p><i></i> The first bank inventory bag.</p>
+<h2><a name="UI.Native.BagBank2">UI.Native.BagBank2</a></h2>
+<p><i></i> The second bank inventory bag.</p>
+<h2><a name="UI.Native.BagBank3">UI.Native.BagBank3</a></h2>
+<p><i></i> The third bank inventory bag.</p>
+<h2><a name="UI.Native.BagBank4">UI.Native.BagBank4</a></h2>
+<p><i></i> The fourth bank inventory bag.</p>
+<h2><a name="UI.Native.BagBank5">UI.Native.BagBank5</a></h2>
+<p><i></i> The fifth bank inventory bag.</p>
+<h2><a name="UI.Native.BagBank6">UI.Native.BagBank6</a></h2>
+<p><i></i> The sixth bank inventory bag.</p>
+<h2><a name="UI.Native.BagBank7">UI.Native.BagBank7</a></h2>
+<p><i></i> The seventh bank inventory bag.</p>
+<h2><a name="UI.Native.BagBank8">UI.Native.BagBank8</a></h2>
+<p><i></i> The eighth bank inventory bag.</p>
+<h2><a name="UI.Native.BagInventory1">UI.Native.BagInventory1</a></h2>
+<p><i></i> The first main inventory bag.</p>
+<h2><a name="UI.Native.BagInventory2">UI.Native.BagInventory2</a></h2>
+<p><i></i> The second main inventory bag.</p>
+<h2><a name="UI.Native.BagInventory3">UI.Native.BagInventory3</a></h2>
+<p><i></i> The third main inventory bag.</p>
+<h2><a name="UI.Native.BagInventory4">UI.Native.BagInventory4</a></h2>
+<p><i></i> The fourth main inventory bag.</p>
+<h2><a name="UI.Native.BagInventory5">UI.Native.BagInventory5</a></h2>
+<p><i></i> The fifth main inventory bag.</p>
+<h2><a name="UI.Native.BagInventory6">UI.Native.BagInventory6</a></h2>
+<p><i></i> The sixth main inventory bag.</p>
+<h2><a name="UI.Native.BagInventory7">UI.Native.BagInventory7</a></h2>
+<p><i></i> The seventh main inventory bag.</p>
+<h2><a name="UI.Native.BagInventory8">UI.Native.BagInventory8</a></h2>
+<p><i></i> The eighth main inventory bag.</p>
+<h2><a name="UI.Native.Bank">UI.Native.Bank</a></h2>
+<p><i></i> The Bank dialog.</p>
+<h2><a name="UI.Native.BankGuild">UI.Native.BankGuild</a></h2>
+<p><i></i> The Guild Bank dialog.</p>
+<h2><a name="UI.Native.BarBottom1">UI.Native.BarBottom1</a></h2>
+<p><i></i> The first extra bottom action bar.</p>
+<h2><a name="UI.Native.BarBottom2">UI.Native.BarBottom2</a></h2>
+<p><i></i> The second extra bottom action bar.</p>
+<h2><a name="UI.Native.BarBottom3">UI.Native.BarBottom3</a></h2>
+<p><i></i> The third extra bottom action bar.</p>
+<h2><a name="UI.Native.BarBottom4">UI.Native.BarBottom4</a></h2>
+<p><i></i> The fourth extra bottom action bar.</p>
+<h2><a name="UI.Native.BarBottom5">UI.Native.BarBottom5</a></h2>
+<p><i></i> The fifth extra bottom action bar.</p>
+<h2><a name="UI.Native.BarBottom6">UI.Native.BarBottom6</a></h2>
+<p><i></i> The sixth extra bottom action bar.</p>
+<h2><a name="UI.Native.BarMain">UI.Native.BarMain</a></h2>
+<p><i></i> The main action bar.</p>
+<h2><a name="UI.Native.BarPet">UI.Native.BarPet</a></h2>
+<p><i></i> The pet action bar.</p>
+<h2><a name="UI.Native.BarSide1">UI.Native.BarSide1</a></h2>
+<p><i></i> The first extra side action bar.</p>
+<h2><a name="UI.Native.BarSide2">UI.Native.BarSide2</a></h2>
+<p><i></i> The second extra side action bar.</p>
+<h2><a name="UI.Native.BarSide3">UI.Native.BarSide3</a></h2>
+<p><i></i> The third extra side action bar.</p>
+<h2><a name="UI.Native.BarSide4">UI.Native.BarSide4</a></h2>
+<p><i></i> The fourth extra side action bar.</p>
+<h2><a name="UI.Native.BarTemporary">UI.Native.BarTemporary</a></h2>
+<p><i></i> The action bar used for temporary abilities.</p>
+<h2><a name="UI.Native.Breath">UI.Native.Breath</a></h2>
+<p><i></i> The breath/fatigue bar.</p>
+<h2><a name="UI.Native.Buffbar">UI.Native.Buffbar</a></h2>
+<p><i></i> The player's buff bar.</p>
+<h2><a name="UI.Native.Castbar">UI.Native.Castbar</a></h2>
+<p><i></i> The player's cast bar.</p>
+<h2><a name="UI.Native.Character">UI.Native.Character</a></h2>
+<p><i></i> The Character dialog.</p>
+<h2><a name="UI.Native.Chronicle">UI.Native.Chronicle</a></h2>
+<p><i></i> The Chronicles dialog.</p>
+<h2><a name="UI.Native.Coinlock">UI.Native.Coinlock</a></h2>
+<p><i></i> The Coin Lock button.</p>
+<h2><a name="UI.Native.Console1">UI.Native.Console1</a></h2>
+<p><i></i> The first console window.</p>
+<h2><a name="UI.Native.Console2">UI.Native.Console2</a></h2>
+<p><i></i> The second console window.</p>
+<h2><a name="UI.Native.Console3">UI.Native.Console3</a></h2>
+<p><i></i> The third console window.</p>
+<h2><a name="UI.Native.Console4">UI.Native.Console4</a></h2>
+<p><i></i> The fourth console window.</p>
+<h2><a name="UI.Native.Console5">UI.Native.Console5</a></h2>
+<p><i></i> The fifth console window.</p>
+<h2><a name="UI.Native.Console6">UI.Native.Console6</a></h2>
+<p><i></i> The sixth console window.</p>
+<h2><a name="UI.Native.Console7">UI.Native.Console7</a></h2>
+<p><i></i> The seventh console window.</p>
+<h2><a name="UI.Native.ConsoleSetting">UI.Native.ConsoleSetting</a></h2>
+<p><i></i> The console settings dialog.</p>
+<h2><a name="UI.Native.Crafting">UI.Native.Crafting</a></h2>
+<p><i></i> The Crafting dialog.</p>
+<h2><a name="UI.Native.Ctf">UI.Native.Ctf</a></h2>
+<p><i></i> The Capture-the-Flag status indicator.</p>
+<h2><a name="UI.Native.Guest">UI.Native.Guest</a></h2>
+<p><i></i> The guest invite dialog for weddings.</p>
+<h2><a name="UI.Native.Guild">UI.Native.Guild</a></h2>
+<p><i></i> The Guild dialog.</p>
+<h2><a name="UI.Native.GuildCharter">UI.Native.GuildCharter</a></h2>
+<p><i></i> The Guild Charter dialog.</p>
+<h2><a name="UI.Native.GuildFinder">UI.Native.GuildFinder</a></h2>
+<p><i></i> The Guild Finder dialog.</p>
+<h2><a name="UI.Native.Import">UI.Native.Import</a></h2>
+<p><i></i> The Import dialog, as reached from the escape menu.</p>
+<h2><a name="UI.Native.Keybind">UI.Native.Keybind</a></h2>
+<p><i></i> The Keybind dialog.</p>
+<h2><a name="UI.Native.Layout">UI.Native.Layout</a></h2>
+<p><i></i> The UI Layout dialog.</p>
+<h2><a name="UI.Native.Leaderboard">UI.Native.Leaderboard</a></h2>
+<p><i></i> The Leaderboard dialog.</p>
+<h2><a name="UI.Native.Lfg">UI.Native.Lfg</a></h2>
+<p><i></i> The Looking-for-Group dialog.</p>
+<h2><a name="UI.Native.Loot">UI.Native.Loot</a></h2>
+<p><i></i> The Loot dialog.</p>
+<h2><a name="UI.Native.Macro">UI.Native.Macro</a></h2>
+<p><i></i> The Macro dialog.</p>
+<h2><a name="UI.Native.MacroIcon">UI.Native.MacroIcon</a></h2>
+<p><i></i> The Macro icons list.</p>
+<h2><a name="UI.Native.MacroSlash">UI.Native.MacroSlash</a></h2>
+<p><i></i> The Macro slash commands list.</p>
+<h2><a name="UI.Native.Mail">UI.Native.Mail</a></h2>
+<p><i></i> The Mail dialog.</p>
+<h2><a name="UI.Native.MailRead">UI.Native.MailRead</a></h2>
+<p><i></i> The currently-being-read Mail dialog.</p>
+<h2><a name="UI.Native.MapMain">UI.Native.MapMain</a></h2>
+<p><i></i> The main map.</p>
+<h2><a name="UI.Native.MapMini">UI.Native.MapMini</a></h2>
+<p><i></i> The minimap.</p>
+<h2><a name="UI.Native.MechanicPlayer">UI.Native.MechanicPlayer</a></h2>
+<p><i></i> The player-focused class-specific-mechanic HUD element.</p>
+<h2><a name="UI.Native.MechanicTarget">UI.Native.MechanicTarget</a></h2>
+<p><i></i> The target-focused class-specific-mechanic HUD element.</p>
+<h2><a name="UI.Native.Mentor">UI.Native.Mentor</a></h2>
+<p><i></i> The Mentoring popup.</p>
+<h2><a name="UI.Native.Menu">UI.Native.Menu</a></h2>
+<p><i></i> The main menu HUD element.</p>
+<h2><a name="UI.Native.MessageEvent">UI.Native.MessageEvent</a></h2>
+<p><i></i> The event-related message popup.</p>
+<h2><a name="UI.Native.MessageStandard">UI.Native.MessageStandard</a></h2>
+<p><i></i> The generic message popup.</p>
+<h2><a name="UI.Native.MessageText">UI.Native.MessageText</a></h2>
+<p><i></i> The generic text popup.</p>
+<h2><a name="UI.Native.MessageWarfront">UI.Native.MessageWarfront</a></h2>
+<p><i></i> The warfront-related message popup.</p>
+<h2><a name="UI.Native.MessageZone">UI.Native.MessageZone</a></h2>
+<p><i></i> The zone-related message popup.</p>
+<h2><a name="UI.Native.Notification">UI.Native.Notification</a></h2>
+<p><i></i> The notification message popup.</p>
+<h2><a name="UI.Native.Notify">UI.Native.Notify</a></h2>
+<p><i></i> The public-group/return-to-graveyard popup button.</p>
+<h2><a name="UI.Native.PortraitFocus">UI.Native.PortraitFocus</a></h2>
+<p><i></i> The portrait of your focus target.</p>
+<h2><a name="UI.Native.PortraitParty1">UI.Native.PortraitParty1</a></h2>
+<p><i></i> The portrait of your first partymember.</p>
+<h2><a name="UI.Native.PortraitParty1Pet">UI.Native.PortraitParty1Pet</a></h2>
+<p><i></i> The portrait of your first partymember's pet.</p>
+<h2><a name="UI.Native.PortraitParty2">UI.Native.PortraitParty2</a></h2>
+<p><i></i> The portrait of your second partymember.</p>
+<h2><a name="UI.Native.PortraitParty2Pet">UI.Native.PortraitParty2Pet</a></h2>
+<p><i></i> The portrait of your second partymember's pet.</p>
+<h2><a name="UI.Native.PortraitParty3">UI.Native.PortraitParty3</a></h2>
+<p><i></i> The portrait of your third partymember.</p>
+<h2><a name="UI.Native.PortraitParty3Pet">UI.Native.PortraitParty3Pet</a></h2>
+<p><i></i> The portrait of your third partymember's pet.</p>
+<h2><a name="UI.Native.PortraitParty4">UI.Native.PortraitParty4</a></h2>
+<p><i></i> The portrait of your fourth partymember.</p>
+<h2><a name="UI.Native.PortraitParty4Pet">UI.Native.PortraitParty4Pet</a></h2>
+<p><i></i> The portrait of your fourth partymember's pet.</p>
+<h2><a name="UI.Native.PortraitPet">UI.Native.PortraitPet</a></h2>
+<p><i></i> The portrait of your pet.</p>
+<h2><a name="UI.Native.PortraitPlayer">UI.Native.PortraitPlayer</a></h2>
+<p><i></i> Your portrait.</p>
+<h2><a name="UI.Native.PortraitTarget">UI.Native.PortraitTarget</a></h2>
+<p><i></i> The portrait of your target.</p>
+<h2><a name="UI.Native.PortraitTargetTarget">UI.Native.PortraitTargetTarget</a></h2>
+<p><i></i> The portrait of your target's target.</p>
+<h2><a name="UI.Native.Quest">UI.Native.Quest</a></h2>
+<p><i></i> The Quest dialog.</p>
+<h2><a name="UI.Native.QuestStickies">UI.Native.QuestStickies</a></h2>
+<p><i></i> The Quest sticky HUD.</p>
+<h2><a name="UI.Native.Question">UI.Native.Question</a></h2>
+<p><i></i> The general-purpose question popup.</p>
+<h2><a name="UI.Native.Raid">UI.Native.Raid</a></h2>
+<p><i></i> The Raid dialog.</p>
+<h2><a name="UI.Native.RaidGroup1">UI.Native.RaidGroup1</a></h2>
+<p><i></i> The raid frame for your raid's first group.</p>
+<h2><a name="UI.Native.RaidGroup1Pet">UI.Native.RaidGroup1Pet</a></h2>
+<p><i></i> The raid frame for your raid's first group's pets.</p>
+<h2><a name="UI.Native.RaidGroup2">UI.Native.RaidGroup2</a></h2>
+<p><i></i> The raid frame for your raid's second group.</p>
+<h2><a name="UI.Native.RaidGroup2Pet">UI.Native.RaidGroup2Pet</a></h2>
+<p><i></i> The raid frame for your raid's second group's pets.</p>
+<h2><a name="UI.Native.RaidGroup3">UI.Native.RaidGroup3</a></h2>
+<p><i></i> The raid frame for your raid's third group.</p>
+<h2><a name="UI.Native.RaidGroup3Pet">UI.Native.RaidGroup3Pet</a></h2>
+<p><i></i> The raid frame for your raid's third group's pets.</p>
+<h2><a name="UI.Native.RaidGroup4">UI.Native.RaidGroup4</a></h2>
+<p><i></i> The raid frame for your raid's fourth group.</p>
+<h2><a name="UI.Native.RaidGroup4Pet">UI.Native.RaidGroup4Pet</a></h2>
+<p><i></i> The raid frame for your raid's fourth group's pets.</p>
+<h2><a name="UI.Native.RaidParty">UI.Native.RaidParty</a></h2>
+<p><i></i> The raid frame used for displaying your party as a raid.</p>
+<h2><a name="UI.Native.RaidPartyPet">UI.Native.RaidPartyPet</a></h2>
+<p><i></i> The raid frame used for displaying your party's pets as a raid.</p>
+<h2><a name="UI.Native.Reactive">UI.Native.Reactive</a></h2>
+<p><i></i> The reactive-ability popup.</p>
+<h2><a name="UI.Native.Recall">UI.Native.Recall</a></h2>
+<p><i></i> The set-recall-point dialog.</p>
+<h2><a name="UI.Native.Respec">UI.Native.Respec</a></h2>
+<p><i></i> The respec dialog.</p>
+<h2><a name="UI.Native.Rift">UI.Native.Rift</a></h2>
+<p><i></i> The Rift meter HUD.</p>
+<h2><a name="UI.Native.Roll1">UI.Native.Roll1</a></h2>
+<p><i></i> The first loot-roll popup.</p>
+<h2><a name="UI.Native.Roll2">UI.Native.Roll2</a></h2>
+<p><i></i> The second loot-roll popup.</p>
+<h2><a name="UI.Native.Roll3">UI.Native.Roll3</a></h2>
+<p><i></i> The third loot-roll popup.</p>
+<h2><a name="UI.Native.Roll4">UI.Native.Roll4</a></h2>
+<p><i></i> The fourth loot-roll popup.</p>
+<h2><a name="UI.Native.Setting">UI.Native.Setting</a></h2>
+<p><i></i> The Settings dialog.</p>
+<h2><a name="UI.Native.Social">UI.Native.Social</a></h2>
+<p><i></i> The Social dialog.</p>
+<h2><a name="UI.Native.Soul">UI.Native.Soul</a></h2>
+<p><i></i> The Soul Tree dialog.</p>
+<h2><a name="UI.Native.Split">UI.Native.Split</a></h2>
+<p><i></i> The stack split popup.</p>
+<h2><a name="UI.Native.Streaming">UI.Native.Streaming</a></h2>
+<p><i></i> The icon that indicates your current streaming download status.</p>
+<h2><a name="UI.Native.Ticket">UI.Native.Ticket</a></h2>
+<p><i></i> The Customer Service Ticket dialog.</p>
+<h2><a name="UI.Native.Tip">UI.Native.Tip</a></h2>
+<p><i></i> The Game Tip dialog.</p>
+<h2><a name="UI.Native.TipAlert">UI.Native.TipAlert</a></h2>
+<p><i></i> The Game Tip notification popup.</p>
+<h2><a name="UI.Native.Tooltip">UI.Native.Tooltip</a></h2>
+<p><i></i> The tooltip.</p>
+<h2><a name="UI.Native.TooltipAnchor">UI.Native.TooltipAnchor</a></h2>
+<p><i></i> The location that tooltips are anchored to by default.</p>
+<h2><a name="UI.Native.Trade">UI.Native.Trade</a></h2>
+<p><i></i> The Trade dialog.</p>
+<h2><a name="UI.Native.Tray">UI.Native.Tray</a></h2>
+<p><i></i> The icon tray used for the clock, mail notification, and similar elements.</p>
+<h2><a name="UI.Native.TraySocial">UI.Native.TraySocial</a></h2>
+<p><i></i> The icon tray used for social notifications.</p>
+<h2><a name="UI.Native.Treasure">UI.Native.Treasure</a></h2>
+<p><i></i> The Treasure popup used to claim dungeon loot.</p>
+<h2><a name="UI.Native.Trial">UI.Native.Trial</a></h2>
+<p><i></i> The Trial dialog.</p>
+<h2><a name="UI.Native.Upgrade">UI.Native.Upgrade</a></h2>
+<p><i></i> The Upgrade portrait, used for targets that are upgradeable.</p>
+<h2><a name="UI.Native.Warfront">UI.Native.Warfront</a></h2>
+<p><i></i> The Warfront dialog.</p>
+<h2><a name="UI.Native.WarfrontLeaderboard">UI.Native.WarfrontLeaderboard</a></h2>
+<p><i></i> The Warfront Leaderboard dialog.</p>
+<h2><a name="UI.Native.World">UI.Native.World</a></h2>
+<p><i></i> The World Event dialog.</p>
+<h4><a href='index.html'>Back to index...</a></h4>

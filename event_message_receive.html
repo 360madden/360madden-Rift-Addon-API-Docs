@@ -1,0 +1,22 @@
+<html>
+  <head><title>API Docs (live) -- Event.Message.Receive</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Event.Message.Receive">Event.Message.Receive</a> </h2>
+    <p><i></i> Signals the receipt of an addon message.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Message.Receive(<i>from</i>, <i>type</i>, <i>channel</i>, <i>identifier</i>, <i>data</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>channel</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>If type is "channel", the channel that this message was sent to. Otherwise, nil.</td></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The data payload for this message type.</td></tr>
+      <tr><td><i>from</i></td><td>parameter</td><td><i>variant</i></td><td>The name of the player this message is from.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The identifier for this message.</td></tr>
+      <tr><td><i>type</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The type of this message. May be any of "send", "tell", "channel", "guild", "officer", "party", "raid", "say", or "yell".</td></tr>
+    </table>
+    <dl>
+    </dl>

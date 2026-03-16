@@ -1,0 +1,19 @@
+<html>
+  <head><title>API Docs (live) -- Command.Message.Reject</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Command.Message.Reject">Command.Message.Reject</a> </h2>
+    <p><i></i> Sets the environment to reject a given type and identifier of message. Directly cancels out single calls to Command.Message.Accept.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Message.Reject(<i>type</i>, <i>identifier</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string/nil</i></td><td>The identifier type of the message. Used for the receiver to filter accepted messages via the Command.Message.Accept() function. Must be at least three characters long.</td></tr>
+      <tr><td><i>type</i></td><td>parameter</td><td><i>string/nil</i></td><td>The type of message. Valid types include "tell", "channel", "guild", "officer", "party", "raid", "say", "yell", "send".</td></tr>
+    </table>
+    <dl>
+    </dl>

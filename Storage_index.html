@@ -1,0 +1,160 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Storage.Clear">Command.Storage.Clear</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Remove an element from a storage segment. If accessing guild storage, you will need write access ...</td></tr>
+      <tr><td><a href="#Command.Storage.Get">Command.Storage.Get</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets a specific element from a target's storage. The result will be sent to Event.Storage.Get. Th...</td></tr>
+      <tr><td><a href="#Command.Storage.List">Command.Storage.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists the visible elements in a target's storage. The results will be sent to Event.Storage.List....</td></tr>
+      <tr><td><a href="#Command.Storage.Set">Command.Storage.Set</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets a storage element.  If accessing guild storage, you will need the Write to Guild Addon Stora...</td></tr>
+      <tr><td><a href="#Event.Storage.Get">Event.Storage.Get</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals receiving storage data from a target.</td></tr>
+      <tr><td><a href="#Event.Storage.List">Event.Storage.List</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals receiving a list of storage elements from a target.</td></tr>
+      <tr><td><a href="#Inspect.Storage.Used">Inspect.Storage.Used</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns the storage space currently used for a given segment.</td></tr>
+      <tr><td><a href="#Utility.Storage.Checksum">Utility.Storage.Checksum</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Calculates the storage checksum of a string.</td></tr>
+      <tr><td><a href="#Utility.Storage.Limits">Utility.Storage.Limits</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns information on the storage bandwidth limits.</td></tr>
+      <tr><td><a href="#Utility.Storage.Size">Utility.Storage.Size</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns the size of a stored element, as used for storage quota and bandwidth control.</td></tr>
+    </table>
+    <h2><a name="Command.Storage.Clear">Command.Storage.Clear</a></h2>
+    <p><i></i> Remove an element from a storage segment. If accessing guild storage, you will need write access to that element, as well as the Delete from Guild Addon Storage permission. This command is throttled by the "storage" throttle type.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Storage.Clear(<i>segment</i>, <i>identifier</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string</i></td><td>The identifier of the storage bucket. Must be at least three characters long.</td></tr>
+      <tr><td><i>segment</i></td><td>parameter</td><td><i>string</i></td><td>The storage segment to access. "player" will access the target's per-player storage, "guild" will access the target's guild's per-guild storage. If this function has no target parameter, then the player will be targeted.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Storage.Get">Command.Storage.Get</a></h2>
+    <p><i></i> Gets a specific element from a target's storage. The result will be sent to Event.Storage.Get. This command is throttled by the "storage" throttle type on both the client and server.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Storage.Get(<i>target</i>, <i>segment</i>, <i>identifier</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string</i></td><td>The identifier of the storage bucket. Must be at least three characters long.</td></tr>
+      <tr><td><i>segment</i></td><td>parameter</td><td><i>string</i></td><td>The storage segment to access. "player" will access the target's per-player storage, "guild" will access the target's guild's per-guild storage. If this function has no target parameter, then the player will be targeted.</td></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>string</i></td><td>The name of the player whose storage should be accessed. Will work only on players in your guild, players in your group, or players that the addon unit system is aware of.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Storage.List">Command.Storage.List</a></h2>
+    <p><i></i> Lists the visible elements in a target's storage. The results will be sent to Event.Storage.List. This command is throttled by the "storage" throttle type.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Storage.List(<i>target</i>, <i>segment</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>segment</i></td><td>parameter</td><td><i>string</i></td><td>The storage segment to access. "player" will access the target's per-player storage, "guild" will access the target's guild's per-guild storage. If this function has no target parameter, then the player will be targeted.</td></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>string</i></td><td>The name of the player whose storage should be accessed. Will work only on players in your guild, players in your group, or players that the addon unit system is aware of.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Storage.Set">Command.Storage.Set</a></h2>
+    <p><i></i> Sets a storage element.  If accessing guild storage, you will need the Write to Guild Addon Storage permission. If replacing an existing element, you will also need write access to that element as well as the Delete from Guild Addon Storage permission. You cannot create an element that you cannot read, nor can you create an element with Officer write permissions if you are not an Officer. This command is throttled by the "storage" throttle type.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Storage.Set(<i>segment</i>, <i>identifier</i>, <i>read</i>, <i>write</i>, <i>data</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>string</i></td><td>The data to store. This parameter is binary-safe.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string</i></td><td>The identifier of the storage bucket. Must be at least three characters long.</td></tr>
+      <tr><td><i>read</i></td><td>parameter</td><td><i>string</i></td><td>Read permissions for this element. If the segment is "player", this may be "public", "guild", or "private", where public is readable by anyone, guild is readable by your guildmembers only, and private is readable by the player only. If the segment is "guild", this may be "public", "guild", or "officer", where public is readable by anyone, guild is readable by guildmembers with the Listen permission, and officer is readable by guildmembers with the Officer Chat permission.</td></tr>
+      <tr><td><i>segment</i></td><td>parameter</td><td><i>string</i></td><td>The storage segment to access. "player" will access the target's per-player storage, "guild" will access the target's guild's per-guild storage. If this function has no target parameter, then the player will be targeted.</td></tr>
+      <tr><td><i>write</i></td><td>parameter</td><td><i>string</i></td><td>Write permissions for this element. If the segment is "player", this must be "private", as only you may modify your own storage. If the segment is "guild", this may be "guild" or "officer", where guild is changeable by guildmembers with the Delete from Guild Addon Storage permission, and officer is changeable by guildmembers with the Delete from Guild Addon Storage permission and the Officer Chat permission. The write permission must be "officer" if the read permission is "officer".</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Storage.Get">Event.Storage.Get</a></h2>
+    <p><i></i> Signals receiving storage data from a target.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Storage.Get(<i>target</i>, <i>segment</i>, <i>identifier</i>, <i>read</i>, <i>write</i>, <i>data</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The data contained in the requested element.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The identifier that was inspected.</td></tr>
+      <tr><td><i>read</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The read permissions of this element. See Command.Storage.Set() for details.</td></tr>
+      <tr><td><i>segment</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The segment that has been inspected, either "player" or "guild".</td></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>variant</i></td><td>The name of the player that has been inspected.</td></tr>
+      <tr><td><i>write</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The write permissions of this element. See Command.Storage.Set() for details.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Storage.List">Event.Storage.List</a></h2>
+    <p><i></i> Signals receiving a list of storage elements from a target.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Storage.List(<i>target</i>, <i>segment</i>, <i>identifiers</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>identifiers</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>A list of identifiers available to you, in {identifier = checksum} format.</td></tr>
+      <tr><td><i>segment</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The segment that has been inspected, either "player" or "guild".</td></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>variant</i></td><td>The name of the player that has been inspected.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Storage.Used">Inspect.Storage.Used</a></h2>
+    <p><i></i> Returns the storage space currently used for a given segment.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>current, maximum</i> = Inspect.Storage.Used(<i>segment</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>segment</i></td><td>parameter</td><td><i>string</i></td><td>The storage segment to access. "player" will access the target's per-player storage, "guild" will access the target's guild's per-guild storage. If this function has no target parameter, then the player will be targeted.</td></tr>
+      <tr><td><i>current</i></td><td>result</td><td><i>number</i></td><td>Current storage space used.</td></tr>
+      <tr><td><i>maximum</i></td><td>result</td><td><i>number</i></td><td>Maximum storage space available.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Storage.Checksum">Utility.Storage.Checksum</a></h2>
+    <p><i></i> Calculates the storage checksum of a string.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>checksum</i> = Utility.Storage.Checksum(<i>data</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>string</i></td><td>The data to store. This parameter is binary-safe.</td></tr>
+      <tr><td><i>checksum</i></td><td>result</td><td><i>string</i></td><td>An opaque string representing the storage checksum.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Storage.Limits">Utility.Storage.Limits</a></h2>
+    <p><i></i> Returns information on the storage bandwidth limits.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>data</i> = Utility.Storage.Limits()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>data</i></td><td>result</td><td><i>table</i></td><td>The requested data.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>burst</th>
+            <td>The amount of data that can be sent or received without being subject to throttling.</th>
+          </tr>
+          <tr>
+            <th>sustained</th>
+            <td>Amount of data that can be transferred per second without dropping messages.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Utility.Storage.Size">Utility.Storage.Size</a></h2>
+    <p><i></i> Returns the size of a stored element, as used for storage quota and bandwidth control.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>size</i> = Utility.Storage.Size(<i>identifier</i>, <i>data</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>string</i></td><td>The data to store. This parameter is binary-safe.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string</i></td><td>The identifier of the storage bucket. Must be at least three characters long.</td></tr>
+      <tr><td><i>size</i></td><td>result</td><td><i>number</i></td><td>The calculated size of the storage bucket.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

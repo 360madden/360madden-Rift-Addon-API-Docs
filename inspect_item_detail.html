@@ -1,0 +1,204 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Item.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Item.Detail">Inspect.Item.Detail</a> </h2>
+    <p><i></i> Provides detailed information about items.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>item</i> = Inspect.Item.Detail(<i>item</i>)</td></tr>
+      <tr><td colspan=4><i>item</i> = Inspect.Item.Detail(<i>itemtype</i>)</td></tr>
+      <tr><td colspan=4><i>item</i> = Inspect.Item.Detail(<i>slot</i>)</td></tr>
+      <tr><td colspan=4><i>items</i> = Inspect.Item.Detail(<i>slot</i>)</td></tr>
+      <tr><td colspan=4><i>items</i> = Inspect.Item.Detail(<i>elements</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>elements</i></td><td>parameter</td><td><i>table</i></td><td>A table of slot specifiers, item IDs, or item types.</td></tr>
+      <tr><td><i>item</i></td><td>parameter</td><td><i>item, table</i></td><td>Detail table for a single item.</td></tr>
+      <tr><td><i>itemtype</i></td><td>parameter</td><td><i>itemtype</i></td><td>A single item type.</td></tr>
+      <tr><td><i>slot</i></td><td>parameter</td><td><i>slot</i></td><td>A single slot specifier.</td></tr>
+      <tr><td><i>item</i></td><td>result</td><td><i>item, table</i></td><td>Detail table for a single item.</td></tr>
+      <tr><td><i>items</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested items. The key is the string used to lookup, the value is the item's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>bind</th>
+            <td>The item's binding type. May be "equip", "use", "pickup", or "account".</th>
+          </tr>
+          <tr>
+            <th>bound</th>
+            <td>The item's bound flag.</th>
+          </tr>
+          <tr>
+            <th>category</th>
+            <td>The item's type category.</th>
+          </tr>
+          <tr>
+            <th>coin</th>
+            <td>The amount of silver this item represents.</th>
+          </tr>
+          <tr>
+            <th>cooldown</th>
+            <td>The cooldown for using this item.</th>
+          </tr>
+          <tr>
+            <th>cooldownBegin</th>
+            <td>The time the current cooldown started, in the context of Inspect.Time.Frame.</th>
+          </tr>
+          <tr>
+            <th>cooldownDuration</th>
+            <td>Duration of the current cooldown the item is influenced by, in seconds.</th>
+          </tr>
+          <tr>
+            <th>cooldownExpired</th>
+            <td>Number of seconds the current cooldown is past its expiration time. Generally indicates lag.</th>
+          </tr>
+          <tr>
+            <th>cooldownRemaining</th>
+            <td>Time remaining in the item's current cooldown, in seconds.</th>
+          </tr>
+          <tr>
+            <th>crafter</th>
+            <td>The name of the player who crafted this item.</th>
+          </tr>
+          <tr>
+            <th>damageDelay</th>
+            <td>If a weapon, the delay between autoattacks using this weapon.</th>
+          </tr>
+          <tr>
+            <th>damageMax</th>
+            <td>If a weapon, the maximum damage done by a single hit with this item.</th>
+          </tr>
+          <tr>
+            <th>damageMin</th>
+            <td>If a weapon, the minimum damage done by a single hit with this item.</th>
+          </tr>
+          <tr>
+            <th>damageType</th>
+            <td>If a weapon, the damage type done by autoattacks. Values include "life", "death", "air", "earth", "fire", and "water".</th>
+          </tr>
+          <tr>
+            <th>description</th>
+            <td>The description of this item.</th>
+          </tr>
+          <tr>
+            <th>flavor</th>
+            <td>The flavor text for this item.</th>
+          </tr>
+          <tr>
+            <th>fragmentAffinity</th>
+            <td>The planar type of the planar fragment.</th>
+          </tr>
+          <tr>
+            <th>fragmentTier</th>
+            <td>The pairing rating of the stats for the planar fragment.</th>
+          </tr>
+          <tr>
+            <th>icon</th>
+            <td>Resource filename of the item's icon.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>infusionLevel</th>
+            <td>The current level of a planar fragment.</th>
+          </tr>
+          <tr>
+            <th>lootable</th>
+            <td>Indicates that the item contains loot.</th>
+          </tr>
+          <tr>
+            <th>mountAquatic</th>
+            <td>Indicates that the mount is aquatic.</th>
+          </tr>
+          <tr>
+            <th>mountAutoscale</th>
+            <td>Indicates if the mount autoscales to your fastest mount speed.</th>
+          </tr>
+          <tr>
+            <th>mountSpeed</th>
+            <td>The speed of your character while mounted.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The item's name.</th>
+          </tr>
+          <tr>
+            <th>range</th>
+            <td>If a ranged weapon, the maximum range of this item.</th>
+          </tr>
+          <tr>
+            <th>rarity</th>
+            <td>The item's rarity. Values include "sellable", "uncommon", "rare", "epic", "relic", "transcendent", or "quest". Common items have a rarity of nil.</th>
+          </tr>
+          <tr>
+            <th>requiredCalling</th>
+            <td>Space-delimited list of the required callings to use this item.</th>
+          </tr>
+          <tr>
+            <th>requiredFaction</th>
+            <td>The ID of the faction required to use this item.</th>
+          </tr>
+          <tr>
+            <th>requiredFactionLevel</th>
+            <td>The faction notoriety required to use this item.</th>
+          </tr>
+          <tr>
+            <th>requiredLevel</th>
+            <td>The level required to use this item.</th>
+          </tr>
+          <tr>
+            <th>requiredPrestige</th>
+            <td>The prestige rank required to use this item.</th>
+          </tr>
+          <tr>
+            <th>requiredSkill</th>
+            <td>The skill required to use this item.</th>
+          </tr>
+          <tr>
+            <th>requiredSkillLevel</th>
+            <td>The skill level required to use this item.</th>
+          </tr>
+          <tr>
+            <th>sell</th>
+            <td>The sell value of this item, in silver.</th>
+          </tr>
+          <tr>
+            <th>slots</th>
+            <td>If a container, the number of slots that this item can contain.</th>
+          </tr>
+          <tr>
+            <th>stack</th>
+            <td>The size of this item stack.</th>
+          </tr>
+          <tr>
+            <th>stackMax</th>
+            <td>The maximum size of this item stack.</th>
+          </tr>
+          <tr>
+            <th>stats</th>
+            <td>The base stats of this item. Members may include "armor", "block", "critAttack", "critPower", "critSpell", "dexterity", "dodge", "endurance", "energyMax", "energyRegen", "hit", "intelligence", "manaMax", "manaRegen", "movement", "powerAttack", "powerMax", "powerRegen", "powerSpell", "resistAir", "resistAll", "resistDeath", "resistEarth", "resistFire", "resistLife", "resistWater", "stealth", "stealthDetect", "strength", and "wisdom".</th>
+          </tr>
+          <tr>
+            <th>statsRune</th>
+            <td>The added rune stats of this item. May contain the same members as stats.</th>
+          </tr>
+          <tr>
+            <th>statsRuneTemporary</th>
+            <td>The added temporary rune stats of this item. May contain the same members as stats.</th>
+          </tr>
+          <tr>
+            <th>type</th>
+            <td>The item's type specifier.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

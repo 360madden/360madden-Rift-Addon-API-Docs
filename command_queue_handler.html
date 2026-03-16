@@ -1,0 +1,18 @@
+<html>
+  <head><title>API Docs (live) -- Command.Queue.Handler</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Command.Queue.Handler">Command.Queue.Handler</a> </h2>
+    <p><i></i> Sets the queue handler function. The queue handler function will be called when a Command.* function is called which relies on a queue for throttling and that queue is full. This function will be passed (queue, owner, func, ...). queue: The identifier of the queue that this function call will wait on. owner: The identifier of the addon that made the function call. func: The function call that has been queued. ...: The argument list that must be passed to func.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Queue.Handler(<i>handler</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handler</i></td><td>parameter</td><td><i>function</i></td><td>The new queue handler.</td></tr>
+    </table>
+    <dl>
+    </dl>

@@ -1,0 +1,20 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Storage.Used</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Storage.Used">Inspect.Storage.Used</a> </h2>
+    <p><i></i> Returns the storage space currently used for a given segment.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>current, maximum</i> = Inspect.Storage.Used(<i>segment</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>segment</i></td><td>parameter</td><td><i>string</i></td><td>The storage segment to access. "player" will access the target's per-player storage, "guild" will access the target's guild's per-guild storage. If this function has no target parameter, then the player will be targeted.</td></tr>
+      <tr><td><i>current</i></td><td>result</td><td><i>number</i></td><td>Current storage space used.</td></tr>
+      <tr><td><i>maximum</i></td><td>result</td><td><i>number</i></td><td>Maximum storage space available.</td></tr>
+    </table>
+    <dl>
+    </dl>

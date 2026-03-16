@@ -1,0 +1,63 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Queue.Handler">Command.Queue.Handler</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the queue handler function. The queue handler function will be called when a Command.* funct...</td></tr>
+      <tr><td><a href="#Event.Queue.Status">Event.Queue.Status</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a queue may have left or entered the throttled state.</td></tr>
+      <tr><td><a href="#Inspect.Queue.Handler">Inspect.Queue.Handler</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns the current queue handler function.</td></tr>
+      <tr><td><a href="#Inspect.Queue.Status">Inspect.Queue.Status</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Inspects the current queue status. Omit the first parameter to get a table containing information...</td></tr>
+    </table>
+    <h2><a name="Command.Queue.Handler">Command.Queue.Handler</a></h2>
+    <p><i></i> Sets the queue handler function. The queue handler function will be called when a Command.* function is called which relies on a queue for throttling and that queue is full. This function will be passed (queue, owner, func, ...). queue: The identifier of the queue that this function call will wait on. owner: The identifier of the addon that made the function call. func: The function call that has been queued. ...: The argument list that must be passed to func.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Queue.Handler(<i>handler</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handler</i></td><td>parameter</td><td><i>function</i></td><td>The new queue handler.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Queue.Status">Event.Queue.Status</a></h2>
+    <p><i></i> Signals that a queue may have left or entered the throttled state.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Queue.Status(<i>id</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>id</i></td><td>parameter</td><td><i>variant</i></td><td>The ID of the queue affected. To get the actual new state, use Inspect.Queue.Status().</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Queue.Handler">Inspect.Queue.Handler</a></h2>
+    <p><i></i> Returns the current queue handler function.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>handler, owner</i> = Inspect.Queue.Handler()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handler</i></td><td>result</td><td><i>function</i></td><td>The current queue handler function.</td></tr>
+      <tr><td><i>owner</i></td><td>result</td><td><i>string</i></td><td>The owner of the current queue handler function.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Queue.Status">Inspect.Queue.Status</a></h2>
+    <p><i></i> Inspects the current queue status. Omit the first parameter to get a table containing information on all queues.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>results</i> = Inspect.Queue.Status()</td></tr>
+      <tr><td colspan=4><i>result</i> = Inspect.Queue.Status(<i>queue</i>)</td></tr>
+      <tr><td colspan=4><i>results</i> = Inspect.Queue.Status(<i>queue</i>, <i>size</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>queue</i></td><td>parameter</td><td><i>string</i></td><td>Optional identifier of the queue to query. Valid values include "global" and "auctionfullscan".</td></tr>
+      <tr><td><i>size</i></td><td>parameter</td><td><i>number</i></td><td>The size of the element to test in this queue. Defaults to 1 if no size is provided.</td></tr>
+      <tr><td><i>result</i></td><td>result</td><td><i>boolean</i></td><td>false if this queue is throttled, non-false otherwise.</td></tr>
+      <tr><td><i>results</i></td><td>result</td><td><i>table</i></td><td>A key/value table. The first parameter is the name of the queue. The second parameter is false if the queue is throttled, or a number representing the queue size available otherwise.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

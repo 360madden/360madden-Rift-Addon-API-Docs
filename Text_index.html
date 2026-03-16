@@ -1,0 +1,1271 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Text">Text</a></td><td><i></i></td><td><i></i></td><td></td><td>A UI element of type Text or derived from Text.</td></tr>
+      <tr><td><a href="#Text.Event:KeyDown">Text.Event:KeyDown</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a key pressed.</td></tr>
+      <tr><td><a href="#Text.Event:KeyFocusGain">Text.Event:KeyFocusGain</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals gaining key focus.</td></tr>
+      <tr><td><a href="#Text.Event:KeyFocusLoss">Text.Event:KeyFocusLoss</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals losing key focus.</td></tr>
+      <tr><td><a href="#Text.Event:KeyRepeat">Text.Event:KeyRepeat</a></td><td><i></i></td><td><i></i></td><td></td><td>Frame.Event:KeyRepeat@summary</td></tr>
+      <tr><td><a href="#Text.Event:KeyType">Text.Event:KeyType</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals text typed.</td></tr>
+      <tr><td><a href="#Text.Event:KeyUp">Text.Event:KeyUp</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a key released.</td></tr>
+      <tr><td><a href="#Text.Event:Layer">Text.Event:Layer</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in the item's layer.</td></tr>
+      <tr><td><a href="#Text.Event:LeftClick">Text.Event:LeftClick</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's left button has been clicked inside the frame. Blocks left mouse events ...</td></tr>
+      <tr><td><a href="#Text.Event:LeftDown">Text.Event:LeftDown</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's left button has been pressed inside the frame. Blocks left mouse events ...</td></tr>
+      <tr><td><a href="#Text.Event:LeftUp">Text.Event:LeftUp</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's left button has been released inside the frame. Blocks left mouse events...</td></tr>
+      <tr><td><a href="#Text.Event:LeftUpoutside">Text.Event:LeftUpoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's left button has been released outside the frame, after a "Down" message....</td></tr>
+      <tr><td><a href="#Text.Event:MiddleClick">Text.Event:MiddleClick</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's middle button has been clicked inside the frame. Blocks middle mouse eve...</td></tr>
+      <tr><td><a href="#Text.Event:MiddleDown">Text.Event:MiddleDown</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's middle button has been pressed inside the frame. Blocks middle mouse eve...</td></tr>
+      <tr><td><a href="#Text.Event:MiddleUp">Text.Event:MiddleUp</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's middle button has been released inside the frame. Blocks middle mouse ev...</td></tr>
+      <tr><td><a href="#Text.Event:MiddleUpoutside">Text.Event:MiddleUpoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's middle button has been released outside the frame, after a "Down" messag...</td></tr>
+      <tr><td><a href="#Text.Event:Mouse4Click">Text.Event:Mouse4Click</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fourth button has been clicked inside the frame. Blocks fourth button mo...</td></tr>
+      <tr><td><a href="#Text.Event:Mouse4Down">Text.Event:Mouse4Down</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fourth button has been pressed inside the frame. Blocks fourth button mo...</td></tr>
+      <tr><td><a href="#Text.Event:Mouse4Up">Text.Event:Mouse4Up</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fourth button has been released inside the frame. Blocks fourth button m...</td></tr>
+      <tr><td><a href="#Text.Event:Mouse4Upoutside">Text.Event:Mouse4Upoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fourth button has been released outside the frame, after a "Down" messag...</td></tr>
+      <tr><td><a href="#Text.Event:Mouse5Click">Text.Event:Mouse5Click</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fifth button has been clicked inside the frame. Blocks fifth button mous...</td></tr>
+      <tr><td><a href="#Text.Event:Mouse5Down">Text.Event:Mouse5Down</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fifth button has been pressed inside the frame. Blocks fifth button mous...</td></tr>
+      <tr><td><a href="#Text.Event:Mouse5Up">Text.Event:Mouse5Up</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fifth button has been released inside the frame. Blocks fifth button mou...</td></tr>
+      <tr><td><a href="#Text.Event:Mouse5Upoutside">Text.Event:Mouse5Upoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's fifth button has been released outside the frame, after a "Down" message...</td></tr>
+      <tr><td><a href="#Text.Event:MouseIn">Text.Event:MouseIn</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse cursor has been moved onto the frame. Blocks mouse movement events from fr...</td></tr>
+      <tr><td><a href="#Text.Event:MouseMove">Text.Event:MouseMove</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse cursor has been moved within the frame. Blocks mouse movement events from ...</td></tr>
+      <tr><td><a href="#Text.Event:MouseOut">Text.Event:MouseOut</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse cursor has been moved off of the frame. Blocks mouse movement events from ...</td></tr>
+      <tr><td><a href="#Text.Event:Move">Text.Event:Move</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the frame's vertices have moved.</td></tr>
+      <tr><td><a href="#Text.Event:RightClick">Text.Event:RightClick</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's right button has been clicked inside the frame. Blocks right mouse event...</td></tr>
+      <tr><td><a href="#Text.Event:RightDown">Text.Event:RightDown</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's right button has been pressed inside the frame. Blocks right mouse event...</td></tr>
+      <tr><td><a href="#Text.Event:RightUp">Text.Event:RightUp</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's right button has been released inside the frame. Blocks right mouse even...</td></tr>
+      <tr><td><a href="#Text.Event:RightUpoutside">Text.Event:RightUpoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mouse's right button has been released outside the frame, after a "Down" message...</td></tr>
+      <tr><td><a href="#Text.Event:Size">Text.Event:Size</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the frame's size has changed.</td></tr>
+      <tr><td><a href="#Text.Event:Strata">Text.Event:Strata</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in the item's strata.</td></tr>
+      <tr><td><a href="#Text.Event:WheelBack">Text.Event:WheelBack</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mousewheel has been moved backward inside the frame. Blocks mousewheel events fr...</td></tr>
+      <tr><td><a href="#Text.Event:WheelForward">Text.Event:WheelForward</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the mousewheel has been moved forward inside the frame. Blocks mousewheel events fro...</td></tr>
+      <tr><td><a href="#Text:ClearAll">Text:ClearAll</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Clear all set points and sizes from this frame.</td></tr>
+      <tr><td><a href="#Text:ClearHeight">Text:ClearHeight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Clear a set height from this frame.</td></tr>
+      <tr><td><a href="#Text:ClearPoint">Text:ClearPoint</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Clear a set point from this frame.</td></tr>
+      <tr><td><a href="#Text:ClearWidth">Text:ClearWidth</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Clear a set width from this frame.</td></tr>
+      <tr><td><a href="#Text:EventAttach">Text:EventAttach</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Attaches an event handler to an event.</td></tr>
+      <tr><td><a href="#Text:EventDetach">Text:EventDetach</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Detaches an event handler from an event. Any parameter can be 'nil', and this is interpreted as a...</td></tr>
+      <tr><td><a href="#Text:EventList">Text:EventList</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists the current event handlers for an event.</td></tr>
+      <tr><td><a href="#Text:EventMacroGet">Text:EventMacroGet</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the macro that will be triggered when this event occurs.</td></tr>
+      <tr><td><a href="#Text:EventMacroSet">Text:EventMacroSet</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the macro that will be triggered when this event occurs.</td></tr>
+      <tr><td><a href="#Text:GetAlpha">Text:GetAlpha</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the alpha multiplier of this frame.</td></tr>
+      <tr><td><a href="#Text:GetBackgroundColor">Text:GetBackgroundColor</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the background color of this frame.</td></tr>
+      <tr><td><a href="#Text:GetBottom">Text:GetBottom</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the Y position of the bottom edge of this element.</td></tr>
+      <tr><td><a href="#Text:GetBounds">Text:GetBounds</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the complete bounds of this element.</td></tr>
+      <tr><td><a href="#Text:GetChildren">Text:GetChildren</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns a table containing all of this element's children.</td></tr>
+      <tr><td><a href="#Text:GetEffectBlur">Text:GetEffectBlur</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the current parameters for the Blur effect.</td></tr>
+      <tr><td><a href="#Text:GetEffectGlow">Text:GetEffectGlow</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the current parameters for the Glow effect.</td></tr>
+      <tr><td><a href="#Text:GetEventTable">Text:GetEventTable</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the event table of this element. By default, this value is also stored in "this.Event".</td></tr>
+      <tr><td><a href="#Text:GetFont">Text:GetFont</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the current font used for this element.</td></tr>
+      <tr><td><a href="#Text:GetFontColor">Text:GetFontColor</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the current font color for this element.</td></tr>
+      <tr><td><a href="#Text:GetFontSize">Text:GetFontSize</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the font size of the current element.</td></tr>
+      <tr><td><a href="#Text:GetHeight">Text:GetHeight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the height of this element.</td></tr>
+      <tr><td><a href="#Text:GetKeyFocus">Text:GetKeyFocus</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the key focus status.</td></tr>
+      <tr><td><a href="#Text:GetLayer">Text:GetLayer</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the frame's layer order.</td></tr>
+      <tr><td><a href="#Text:GetLeft">Text:GetLeft</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the X position of the left edge of this element.</td></tr>
+      <tr><td><a href="#Text:GetMouseMasking">Text:GetMouseMasking</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Get the current mouse masking mode. See SetMouseMasking for details.</td></tr>
+      <tr><td><a href="#Text:GetMouseoverUnit">Text:GetMouseoverUnit</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the unit that is being represented by this frame.</td></tr>
+      <tr><td><a href="#Text:GetName">Text:GetName</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the name of this element.</td></tr>
+      <tr><td><a href="#Text:GetOwner">Text:GetOwner</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the owner of this element.</td></tr>
+      <tr><td><a href="#Text:GetParent">Text:GetParent</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the parent of this frame.</td></tr>
+      <tr><td><a href="#Text:GetRight">Text:GetRight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the X position of the right edge of this element.</td></tr>
+      <tr><td><a href="#Text:GetSecureMode">Text:GetSecureMode</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Get the current secure mode. See SetSecureMode for details.</td></tr>
+      <tr><td><a href="#Text:GetStrata">Text:GetStrata</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the frame's strata. The strata determines render order on a coarser level than Layer does, a...</td></tr>
+      <tr><td><a href="#Text:GetStrataList">Text:GetStrataList</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets a list of valid stratas for this frame.</td></tr>
+      <tr><td><a href="#Text:GetText">Text:GetText</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Get the current text for this element.</td></tr>
+      <tr><td><a href="#Text:GetTop">Text:GetTop</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the Y position of the top edge of this element.</td></tr>
+      <tr><td><a href="#Text:GetType">Text:GetType</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the type of this element.</td></tr>
+      <tr><td><a href="#Text:GetVisible">Text:GetVisible</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the visibility flag for this frame.</td></tr>
+      <tr><td><a href="#Text:GetWidth">Text:GetWidth</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the width of this element.</td></tr>
+      <tr><td><a href="#Text:GetWordwrap">Text:GetWordwrap</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Gets the wordwrap flag for this element.</td></tr>
+      <tr><td><a href="#Text:ReadAll">Text:ReadAll</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read all set points and sizes from this frame.</td></tr>
+      <tr><td><a href="#Text:ReadHeight">Text:ReadHeight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read a set height from this frame.</td></tr>
+      <tr><td><a href="#Text:ReadPoint">Text:ReadPoint</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read a set point from this frame. Must be given a single-axis coordinate.</td></tr>
+      <tr><td><a href="#Text:ReadWidth">Text:ReadWidth</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Read a set width from this frame.</td></tr>
+      <tr><td><a href="#Text:SetAllPoints">Text:SetAllPoints</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Pins all the edges of this frame to the edges of a different frame. If no target is given, defaul...</td></tr>
+      <tr><td><a href="#Text:SetAlpha">Text:SetAlpha</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the alpha transparency multiplier for this frame and its children.</td></tr>
+      <tr><td><a href="#Text:SetBackgroundColor">Text:SetBackgroundColor</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the background color of this frame.</td></tr>
+      <tr><td><a href="#Text:SetEffectBlur">Text:SetEffectBlur</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the parameters for the Blur effect.</td></tr>
+      <tr><td><a href="#Text:SetEffectGlow">Text:SetEffectGlow</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the parameters for the Glow effect.</td></tr>
+      <tr><td><a href="#Text:SetFont">Text:SetFont</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the current font used for this element.</td></tr>
+      <tr><td><a href="#Text:SetFontColor">Text:SetFontColor</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the current font color for this element.</td></tr>
+      <tr><td><a href="#Text:SetFontSize">Text:SetFontSize</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the current font size of this element.</td></tr>
+      <tr><td><a href="#Text:SetHeight">Text:SetHeight</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the height of this frame. Undefined results if the frame already has two pinned Y coordinates.</td></tr>
+      <tr><td><a href="#Text:SetKeyFocus">Text:SetKeyFocus</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the key focus status. Note that only one frame can be the key focus at a time. Focusing on a...</td></tr>
+      <tr><td><a href="#Text:SetLayer">Text:SetLayer</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the frame layer for this frame. This can be any number. Frames are drawn in ascending order....</td></tr>
+      <tr><td><a href="#Text:SetMouseMasking">Text:SetMouseMasking</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the frame's mouse masking mode.</td></tr>
+      <tr><td><a href="#Text:SetMouseoverUnit">Text:SetMouseoverUnit</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the unit that will be represented by this frame.</td></tr>
+      <tr><td><a href="#Text:SetParent">Text:SetParent</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the parent of this frame. Circular dependencies result in undefined behavior. If this frame'...</td></tr>
+      <tr><td><a href="#Text:SetPoint">Text:SetPoint</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Pins a point on this frame to a location on another frame. This is a rather complex function and ...</td></tr>
+      <tr><td><a href="#Text:SetSecureMode">Text:SetSecureMode</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the frame's secure mode.<br/>"normal" is the standard mode. It allows for most functionality to ...</td></tr>
+      <tr><td><a href="#Text:SetStrata">Text:SetStrata</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the strata for this frame.</td></tr>
+      <tr><td><a href="#Text:SetText">Text:SetText</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the current text for this element.</td></tr>
+      <tr><td><a href="#Text:SetVisible">Text:SetVisible</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the frame's visibility flag. If set to false, then this frame and all its children will not ...</td></tr>
+      <tr><td><a href="#Text:SetWidth">Text:SetWidth</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the width of this frame. Undefined results if the frame already has two pinned X coordinates.</td></tr>
+      <tr><td><a href="#Text:SetWordwrap">Text:SetWordwrap</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the wordwrap flag for this element.</td></tr>
+    </table>
+    <h2><a name="Text">Text</a></h2>
+    <p><i></i> A UI element of type Text or derived from Text.</p>
+  </body>
+  <h2><a name="Text.Event:KeyDown">Text.Event:KeyDown</a></h2>
+  <p><i></i> Signals a key pressed.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:KeyDown(<i>button</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>button</i></td><td>parameter</td><td><i>variant</i></td><td>The key, in string form.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:KeyFocusGain">Text.Event:KeyFocusGain</a></h2>
+  <p><i></i> Signals gaining key focus.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:KeyFocusGain()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:KeyFocusLoss">Text.Event:KeyFocusLoss</a></h2>
+  <p><i></i> Signals losing key focus.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:KeyFocusLoss()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:KeyRepeat">Text.Event:KeyRepeat</a></h2>
+  <p><i></i> Frame.Event:KeyRepeat@summary</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:KeyRepeat(<i>button</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>button</i></td><td>parameter</td><td><i>variant</i></td><td>The key, in string form.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:KeyType">Text.Event:KeyType</a></h2>
+  <p><i></i> Signals text typed.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:KeyType(<i>typed</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>typed</i></td><td>parameter</td><td><i>variant</i></td><td>The text.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:KeyUp">Text.Event:KeyUp</a></h2>
+  <p><i></i> Signals a key released.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:KeyUp(<i>button</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>button</i></td><td>parameter</td><td><i>variant</i></td><td>The key, in string form.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:Layer">Text.Event:Layer</a></h2>
+  <p><i></i> Signals a change in the item's layer.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Layer()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:LeftClick">Text.Event:LeftClick</a></h2>
+  <p><i></i> Signals that the mouse's left button has been clicked inside the frame. Blocks left mouse events and mouse movement events from frames below this one. May block right mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:LeftClick()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:LeftDown">Text.Event:LeftDown</a></h2>
+  <p><i></i> Signals that the mouse's left button has been pressed inside the frame. Blocks left mouse events and mouse movement events from frames below this one. May block right mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:LeftDown()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:LeftUp">Text.Event:LeftUp</a></h2>
+  <p><i></i> Signals that the mouse's left button has been released inside the frame. Blocks left mouse events and mouse movement events from frames below this one. May block right mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:LeftUp()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:LeftUpoutside">Text.Event:LeftUpoutside</a></h2>
+  <p><i></i> Signals that the mouse's left button has been released outside the frame, after a "Down" message. Blocks left mouse events and mouse movement events from frames below this one. May block right mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:LeftUpoutside()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:MiddleClick">Text.Event:MiddleClick</a></h2>
+  <p><i></i> Signals that the mouse's middle button has been clicked inside the frame. Blocks middle mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MiddleClick()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:MiddleDown">Text.Event:MiddleDown</a></h2>
+  <p><i></i> Signals that the mouse's middle button has been pressed inside the frame. Blocks middle mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MiddleDown()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:MiddleUp">Text.Event:MiddleUp</a></h2>
+  <p><i></i> Signals that the mouse's middle button has been released inside the frame. Blocks middle mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MiddleUp()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:MiddleUpoutside">Text.Event:MiddleUpoutside</a></h2>
+  <p><i></i> Signals that the mouse's middle button has been released outside the frame, after a "Down" message. Blocks middle mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MiddleUpoutside()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:Mouse4Click">Text.Event:Mouse4Click</a></h2>
+  <p><i></i> Signals that the mouse's fourth button has been clicked inside the frame. Blocks fourth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse4Click()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:Mouse4Down">Text.Event:Mouse4Down</a></h2>
+  <p><i></i> Signals that the mouse's fourth button has been pressed inside the frame. Blocks fourth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse4Down()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:Mouse4Up">Text.Event:Mouse4Up</a></h2>
+  <p><i></i> Signals that the mouse's fourth button has been released inside the frame. Blocks fourth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse4Up()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:Mouse4Upoutside">Text.Event:Mouse4Upoutside</a></h2>
+  <p><i></i> Signals that the mouse's fourth button has been released outside the frame, after a "Down" message. Blocks fourth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse4Upoutside()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:Mouse5Click">Text.Event:Mouse5Click</a></h2>
+  <p><i></i> Signals that the mouse's fifth button has been clicked inside the frame. Blocks fifth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse5Click()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:Mouse5Down">Text.Event:Mouse5Down</a></h2>
+  <p><i></i> Signals that the mouse's fifth button has been pressed inside the frame. Blocks fifth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse5Down()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:Mouse5Up">Text.Event:Mouse5Up</a></h2>
+  <p><i></i> Signals that the mouse's fifth button has been released inside the frame. Blocks fifth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse5Up()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:Mouse5Upoutside">Text.Event:Mouse5Upoutside</a></h2>
+  <p><i></i> Signals that the mouse's fifth button has been released outside the frame, after a "Down" message. Blocks fifth button mouse events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Mouse5Upoutside()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:MouseIn">Text.Event:MouseIn</a></h2>
+  <p><i></i> Signals that the mouse cursor has been moved onto the frame. Blocks mouse movement events from frames below this one. May block left and right events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MouseIn()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:MouseMove">Text.Event:MouseMove</a></h2>
+  <p><i></i> Signals that the mouse cursor has been moved within the frame. Blocks mouse movement events from frames below this one. May block left and right events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MouseMove(<i>x</i>, <i>y</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>x</i></td><td>parameter</td><td><i>variant</i></td><td>X coordinate.</td></tr>
+    <tr><td><i>y</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>Y coordinate.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:MouseOut">Text.Event:MouseOut</a></h2>
+  <p><i></i> Signals that the mouse cursor has been moved off of the frame. Blocks mouse movement events from frames below this one. May block left and right events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:MouseOut()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:Move">Text.Event:Move</a></h2>
+  <p><i></i> Signals that the frame's vertices have moved.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout.Event:Move()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:RightClick">Text.Event:RightClick</a></h2>
+  <p><i></i> Signals that the mouse's right button has been clicked inside the frame. Blocks right mouse events and mouse movement events from frames below this one. May block left mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:RightClick()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:RightDown">Text.Event:RightDown</a></h2>
+  <p><i></i> Signals that the mouse's right button has been pressed inside the frame. Blocks right mouse events and mouse movement events from frames below this one. May block left mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:RightDown()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:RightUp">Text.Event:RightUp</a></h2>
+  <p><i></i> Signals that the mouse's right button has been released inside the frame. Blocks right mouse events and mouse movement events from frames below this one. May block left mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:RightUp()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:RightUpoutside">Text.Event:RightUpoutside</a></h2>
+  <p><i></i> Signals that the mouse's right button has been released outside the frame, after a "Down" message. Blocks right mouse events and mouse movement events from frames below this one. May block left mouse events depending on the MouseMasking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:RightUpoutside()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:Size">Text.Event:Size</a></h2>
+  <p><i></i> Signals that the frame's size has changed.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout.Event:Size()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:Strata">Text.Event:Strata</a></h2>
+  <p><i></i> Signals a change in the item's strata.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:Strata()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:WheelBack">Text.Event:WheelBack</a></h2>
+  <p><i></i> Signals that the mousewheel has been moved backward inside the frame. Blocks mousewheel events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:WheelBack()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text.Event:WheelForward">Text.Event:WheelForward</a></h2>
+  <p><i></i> Signals that the mousewheel has been moved forward inside the frame. Blocks mousewheel events from frames below this one.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame.Event:WheelForward()</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:ClearAll">Text:ClearAll</a></h2>
+  <p><i></i> Clear all set points and sizes from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:ClearAll()</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:ClearHeight">Text:ClearHeight</a></h2>
+  <p><i></i> Clear a set height from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:ClearHeight()</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:ClearPoint">Text:ClearPoint</a></h2>
+  <p><i></i> Clear a set point from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:ClearPoint(<i>coordinate</i>)</td></tr>
+    <tr><td colspan=4>Frame:ClearPoint(<i>x</i>, <i>y</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>coordinate</i></td><td>parameter</td><td><i>string</i></td><td>Named coordinate.</td></tr>
+    <tr><td><i>x</i></td><td>parameter</td><td><i>number/nil</i></td><td>X coordinate of the point.</td></tr>
+    <tr><td><i>y</i></td><td>parameter</td><td><i>number/nil</i></td><td>Y coordinate of the point.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:ClearWidth">Text:ClearWidth</a></h2>
+  <p><i></i> Clear a set width from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:ClearWidth()</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:EventAttach">Text:EventAttach</a></h2>
+  <p><i></i> Attaches an event handler to an event.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout:EventAttach(<i>handle</i>, <i>callback</i>, <i>label</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventAttach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>callback</i></td><td>parameter</td><td><i>function</i></td><td>A global event handler function. This will be called when the event fires. The first parameter will be the frame that the event is called on, the second parameter will be the standard frame event handle, any other parameters will follow that.</td></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>label</i></td><td>parameter</td><td><i>string</i></td><td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</td></tr>
+    <tr><td><i>priority</i></td><td>parameter</td><td><i>number</i></td><td>Priority of the event handler. Higher numbers trigger first.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:EventDetach">Text:EventDetach</a></h2>
+  <p><i></i> Detaches an event handler from an event. Any parameter can be 'nil', and this is interpreted as a wildcard. If multiple events match the constraints, only one will be detached.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>)</td></tr>
+    <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>, <i>owner</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>callback</i></td><td>parameter</td><td><i>function/nil</i></td><td>A callback function to search for.</td></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>label</i></td><td>parameter</td><td><i>string/nil</i></td><td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</td></tr>
+    <tr><td><i>owner</i></td><td>parameter</td><td><i>string/nil</i></td><td>Owner to search for.</td></tr>
+    <tr><td><i>priority</i></td><td>parameter</td><td><i>number/nil</i></td><td>Priority of the event handler. Higher numbers trigger first.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:EventList">Text:EventList</a></h2>
+  <p><i></i> Lists the current event handlers for an event.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>result</i> = Layout:EventList(<i>handle</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>result</i></td><td>result</td><td><i>table</i></td><td>A table of event handlers for this event.</td></tr>
+  </table>
+  <dl>
+    <dt><b>members</b></dt>
+    <dd>
+      <table>
+        <tr>
+          <th>handler</th>
+          <td>The handler that will be called when the event fires.</th>
+        </tr>
+        <tr>
+          <th>label</th>
+          <td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</th>
+        </tr>
+        <tr>
+          <th>macro</th>
+          <td>The macro that will run when the event fires.</th>
+        </tr>
+        <tr>
+          <th>owner</th>
+          <td>Owner to search for.</th>
+        </tr>
+        <tr>
+          <th>priority</th>
+          <td>Priority of the event handler. Higher numbers trigger first.</th>
+        </tr>
+      </table>
+    </dd>
+  </dl>
+  <h2><a name="Text:EventMacroGet">Text:EventMacroGet</a></h2>
+  <p><i></i> Gets the macro that will be triggered when this event occurs.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>macro</i> = Layout:EventMacroGet(<i>handle</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>macro</i></td><td>result</td><td><i>string/nil</i></td><td>The macro that will be triggered.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:EventMacroSet">Text:EventMacroSet</a></h2>
+  <p><i></i> Sets the macro that will be triggered when this event occurs.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Layout:EventMacroSet(<i>handle</i>, <i>macro</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+    <tr><td><i>macro</i></td><td>parameter</td><td><i>string/nil</i></td><td>The macro to trigger. nil to clear the macro.</td></tr>
+  </table>
+  <dl>
+    <dt><b>requireSecureFrameAndInsecureEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:GetAlpha">Text:GetAlpha</a></h2>
+  <p><i></i> Gets the alpha multiplier of this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>alpha</i> = Element:GetAlpha()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>alpha</i></td><td>result</td><td><i>number</i></td><td>The alpha multiplier of this frame. 1 is fully opaque, 0 is fully transparent. This does not include multiplied alphas from this frame's parent - it's the exact value passed to SetAlpha.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetBackgroundColor">Text:GetBackgroundColor</a></h2>
+  <p><i></i> Retrieves the background color of this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>r, g, b, a</i> = Element:GetBackgroundColor()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>a</i></td><td>result</td><td><i>number</i></td><td>Alpha. 1 is fully opaque, 0 is fully transparent.</td></tr>
+    <tr><td><i>b</i></td><td>result</td><td><i>number</i></td><td>Blue.</td></tr>
+    <tr><td><i>g</i></td><td>result</td><td><i>number</i></td><td>Green.</td></tr>
+    <tr><td><i>r</i></td><td>result</td><td><i>number</i></td><td>Red.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetBottom">Text:GetBottom</a></h2>
+  <p><i></i> Retrieves the Y position of the bottom edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>bottom</i> = Layout:GetBottom()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>bottom</i></td><td>result</td><td><i>number</i></td><td>The Y position of the bottom edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetBounds">Text:GetBounds</a></h2>
+  <p><i></i> Retrieves the complete bounds of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>left, top, right, bottom</i> = Layout:GetBounds()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>bottom</i></td><td>result</td><td><i>number</i></td><td>The Y position of the bottom edge of this element.</td></tr>
+    <tr><td><i>left</i></td><td>result</td><td><i>number</i></td><td>The X position of the left edge of this element.</td></tr>
+    <tr><td><i>right</i></td><td>result</td><td><i>number</i></td><td>The X position of the right edge of this element.</td></tr>
+    <tr><td><i>top</i></td><td>result</td><td><i>number</i></td><td>The Y position of the top edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetChildren">Text:GetChildren</a></h2>
+  <p><i></i> Returns a table containing all of this element's children.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>children</i> = Element:GetChildren()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>children</i></td><td>result</td><td><i>table</i></td><td>A table containing this element's children.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetEffectBlur">Text:GetEffectBlur</a></h2>
+  <p><i></i> Gets the current parameters for the Blur effect.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>effect</i> = Text:GetEffectBlur()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>effect</i></td><td>result</td><td><i>nil, table</i></td><td>The current parameters for this effect. All members are optional. Pass nil to disable the effect.</td></tr>
+  </table>
+  <dl>
+    <dt><b>members</b></dt>
+    <dd>
+      <table>
+        <tr>
+          <th>blurX</th>
+          <td>Controls how much blurring exists along the X axis. Defaults to 2.</th>
+        </tr>
+        <tr>
+          <th>blurY</th>
+          <td>Controls how much blurring exists along the Y axis. Defaults to 2.</th>
+        </tr>
+      </table>
+    </dd>
+  </dl>
+  <h2><a name="Text:GetEffectGlow">Text:GetEffectGlow</a></h2>
+  <p><i></i> Gets the current parameters for the Glow effect.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>effect</i> = Text:GetEffectGlow()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>effect</i></td><td>result</td><td><i>nil, table</i></td><td>The current parameters for this effect. All members are optional. Pass nil to disable the effect.</td></tr>
+  </table>
+  <dl>
+    <dt><b>members</b></dt>
+    <dd>
+      <table>
+        <tr>
+          <th>blurX</th>
+          <td>Controls how much blurring exists along the X axis. Defaults to 2.</th>
+        </tr>
+        <tr>
+          <th>blurY</th>
+          <td>Controls how much blurring exists along the Y axis. Defaults to 2.</th>
+        </tr>
+        <tr>
+          <th>colorA</th>
+          <td>Controls the alpha channel of the glow effect. Defaults to 1.</th>
+        </tr>
+        <tr>
+          <th>colorB</th>
+          <td>Controls the blue channel of the glow effect. Defaults to 0.</th>
+        </tr>
+        <tr>
+          <th>colorG</th>
+          <td>Controls the green channel of the glow effect. Defaults to 0.</th>
+        </tr>
+        <tr>
+          <th>colorR</th>
+          <td>Controls the red channel of the glow effect. Defaults to 0.</th>
+        </tr>
+        <tr>
+          <th>knockout</th>
+          <td>Enables the "knockout" effect. Defaults to false.</th>
+        </tr>
+        <tr>
+          <th>offsetX</th>
+          <td>Controls the glow offset along the X axis. Defaults to 0.</th>
+        </tr>
+        <tr>
+          <th>offsetY</th>
+          <td>Controls the glow offset along the Y axis. Defaults to 0.</th>
+        </tr>
+        <tr>
+          <th>replace</th>
+          <td>Hides the original text. Defaults to false.</th>
+        </tr>
+        <tr>
+          <th>strength</th>
+          <td>Controls the strength of the glow. Defaults to 1.</th>
+        </tr>
+      </table>
+    </dd>
+  </dl>
+  <h2><a name="Text:GetEventTable">Text:GetEventTable</a></h2>
+  <p><i></i> Retrieves the event table of this element. By default, this value is also stored in "this.Event".</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>eventTable</i> = Layout:GetEventTable()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>eventTable</i></td><td>result</td><td><i>table</i></td><td>The event table of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetFont">Text:GetFont</a></h2>
+  <p><i></i> Gets the current font used for this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>source, font</i> = Text:GetFont()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>font</i></td><td>result</td><td><i>string</i></td><td>The actual font identifier. Either a resource identifier or a filename.</td></tr>
+    <tr><td><i>source</i></td><td>result</td><td><i>string</i></td><td>The source of the resource. "Rift" will take the resource from Rift's internal data. Anything else will take the resource from the addon with that identifier.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetFontColor">Text:GetFontColor</a></h2>
+  <p><i></i> Gets the current font color for this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>r, g, b, a</i> = Text:GetFontColor()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>a</i></td><td>result</td><td><i>number</i></td><td>Alpha. 1 is fully opaque, 0 is fully transparent.</td></tr>
+    <tr><td><i>b</i></td><td>result</td><td><i>number</i></td><td>Blue.</td></tr>
+    <tr><td><i>g</i></td><td>result</td><td><i>number</i></td><td>Green.</td></tr>
+    <tr><td><i>r</i></td><td>result</td><td><i>number</i></td><td>Red.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetFontSize">Text:GetFontSize</a></h2>
+  <p><i></i> Gets the font size of the current element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>fontsize</i> = Text:GetFontSize()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>fontsize</i></td><td>result</td><td><i>number</i></td><td>The current font size of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetHeight">Text:GetHeight</a></h2>
+  <p><i></i> Retrieves the height of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>height</i> = Layout:GetHeight()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>height</i></td><td>result</td><td><i>number</i></td><td>The height of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetKeyFocus">Text:GetKeyFocus</a></h2>
+  <p><i></i> Gets the key focus status.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>focus</i> = Element:GetKeyFocus()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>focus</i></td><td>result</td><td><i>boolean</i></td><td>Whether this frame is the current key focus.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetLayer">Text:GetLayer</a></h2>
+  <p><i></i> Gets the frame's layer order.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>layer</i> = Frame:GetLayer()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>layer</i></td><td>result</td><td><i>number</i></td><td>The render layer of this frame. See Frame:SetLayer for details.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetLeft">Text:GetLeft</a></h2>
+  <p><i></i> Retrieves the X position of the left edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>left</i> = Layout:GetLeft()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>left</i></td><td>result</td><td><i>number</i></td><td>The X position of the left edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetMouseMasking">Text:GetMouseMasking</a></h2>
+  <p><i></i> Get the current mouse masking mode. See SetMouseMasking for details.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>mask</i> = Element:GetMouseMasking()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>mask</i></td><td>result</td><td><i>string</i></td><td>The current mouse masking mode.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetMouseoverUnit">Text:GetMouseoverUnit</a></h2>
+  <p><i></i> Gets the unit that is being represented by this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>unit</i> = Frame:GetMouseoverUnit()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>unit</i></td><td>result</td><td><i>string</i></td><td>The current mouseover unit. May be nil if there is no mouseover unit.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetName">Text:GetName</a></h2>
+  <p><i></i> Retrieves the name of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>name</i> = Layout:GetName()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>name</i></td><td>result</td><td><i>string</i></td><td>The name of this element, as provided by the addon that created it.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetOwner">Text:GetOwner</a></h2>
+  <p><i></i> Retrieves the owner of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>owner</i> = Layout:GetOwner()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>owner</i></td><td>result</td><td><i>string</i></td><td>The owner of this element. Given as an addon identifier.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetParent">Text:GetParent</a></h2>
+  <p><i></i> Gets the parent of this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>parent</i> = Frame:GetParent()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>parent</i></td><td>result</td><td><i>Element</i></td><td>The parent element of this frame.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetRight">Text:GetRight</a></h2>
+  <p><i></i> Retrieves the X position of the right edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>right</i> = Layout:GetRight()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>right</i></td><td>result</td><td><i>number</i></td><td>The X position of the right edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetSecureMode">Text:GetSecureMode</a></h2>
+  <p><i></i> Get the current secure mode. See SetSecureMode for details.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>secure</i> = Frame:GetSecureMode()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>secure</i></td><td>result</td><td><i>string</i></td><td>The current secure mode.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetStrata">Text:GetStrata</a></h2>
+  <p><i></i> Gets the frame's strata. The strata determines render order on a coarser level than Layer does, as well as determining how far an element is brought to the front when clicked on.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>strata</i> = Frame:GetStrata()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>strata</i></td><td>result</td><td><i>string</i></td><td>The item's current strata.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetStrataList">Text:GetStrataList</a></h2>
+  <p><i></i> Gets a list of valid stratas for this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>stratas</i> = Frame:GetStrataList()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>stratas</i></td><td>result</td><td><i>table</i></td><td>An array of valid stratas, in order.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetText">Text:GetText</a></h2>
+  <p><i></i> Get the current text for this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>text, html</i> = Text:GetText()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>html</i></td><td>result</td><td><i>boolean</i></td><td>The current HTML flag.</td></tr>
+    <tr><td><i>text</i></td><td>result</td><td><i>string</i></td><td>The current text of the element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetTop">Text:GetTop</a></h2>
+  <p><i></i> Retrieves the Y position of the top edge of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>top</i> = Layout:GetTop()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>top</i></td><td>result</td><td><i>number</i></td><td>The Y position of the top edge of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetType">Text:GetType</a></h2>
+  <p><i></i> Retrieves the type of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>type</i> = Layout:GetType()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>type</i></td><td>result</td><td><i>string</i></td><td>The type of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetVisible">Text:GetVisible</a></h2>
+  <p><i></i> Gets the visibility flag for this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>visible</i> = Element:GetVisible()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>visible</i></td><td>result</td><td><i>boolean</i></td><td>This frame's visibility flag, as set by SetVisible. Does not check the visibility flags of the frame's parents.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetWidth">Text:GetWidth</a></h2>
+  <p><i></i> Retrieves the width of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>width</i> = Layout:GetWidth()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>width</i></td><td>result</td><td><i>number</i></td><td>The width of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:GetWordwrap">Text:GetWordwrap</a></h2>
+  <p><i></i> Gets the wordwrap flag for this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>wordwrap</i> = Text:GetWordwrap()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>wordwrap</i></td><td>result</td><td><i>boolean</i></td><td>The current wordwrap flag for this element. If false, long lines will be truncated. Defaults to false.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:ReadAll">Text:ReadAll</a></h2>
+  <p><i></i> Read all set points and sizes from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>results</i> = Layout:ReadAll()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>results</i></td><td>result</td><td><i>table</i></td><td>Result table. Contains data in the following format: {x = {size = (size), [(position)] = {layout = (layout), position = (position), offset = (offset)}}, y = (the same thing)}.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:ReadHeight">Text:ReadHeight</a></h2>
+  <p><i></i> Read a set height from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>height</i> = Layout:ReadHeight()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>height</i></td><td>result</td><td><i>number</i></td><td>The parameter passed to SetHeight(), or nil if no such parameter has been passed.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:ReadPoint">Text:ReadPoint</a></h2>
+  <p><i></i> Read a set point from this frame. Must be given a single-axis coordinate.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>layout, position, offset</i> = Layout:ReadPoint(<i>coordinate</i>)</td></tr>
+    <tr><td colspan=4><i>layout, position, offset</i> = Layout:ReadPoint(<i>x</i>, <i>y</i>)</td></tr>
+    <tr><td colspan=4><i>origin, offset</i> = Layout:ReadPoint(<i>coordinate</i>)</td></tr>
+    <tr><td colspan=4><i>origin, offset</i> = Layout:ReadPoint(<i>x</i>, <i>y</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>coordinate</i></td><td>parameter</td><td><i>string</i></td><td>Named coordinate. Must be a one-axis coordinate.</td></tr>
+    <tr><td><i>x</i></td><td>parameter</td><td><i>number/nil</i></td><td>X coordinate of the point. Either this or Y must be nil.</td></tr>
+    <tr><td><i>y</i></td><td>parameter</td><td><i>number/nil</i></td><td>Y coordinate of the point. Either this or X must be nil.</td></tr>
+    <tr><td><i>layout</i></td><td>result</td><td><i>Layout</i></td><td>The table that this point is pinned to.</td></tr>
+    <tr><td><i>offset</i></td><td>result</td><td><i>number</i></td><td>The offset in pixels from the source location to the actual location.</td></tr>
+    <tr><td><i>origin</i></td><td>result</td><td><i>string</i></td><td>The string "origin".</td></tr>
+    <tr><td><i>position</i></td><td>result</td><td><i>number</i></td><td>The position on "layout" that this point is pinned. 0 refers to the top or left edge, 1 refers to the bottom or right edge.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:ReadWidth">Text:ReadWidth</a></h2>
+  <p><i></i> Read a set width from this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>width</i> = Layout:ReadWidth()</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>width</i></td><td>result</td><td><i>number</i></td><td>The parameter passed to SetWidth(), or nil if no such parameter has been passed.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:SetAllPoints">Text:SetAllPoints</a></h2>
+  <p><i></i> Pins all the edges of this frame to the edges of a different frame. If no target is given, defaults to this frame's parent.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetAllPoints()</td></tr>
+    <tr><td colspan=4>Frame:SetAllPoints(<i>target</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>target</i></td><td>parameter</td><td><i>Layout</i></td><td>Target Layout to pin this frame's edges to.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:SetAlpha">Text:SetAlpha</a></h2>
+  <p><i></i> Sets the alpha transparency multiplier for this frame and its children.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Element:SetAlpha(<i>alpha</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>alpha</i></td><td>parameter</td><td><i>number</i></td><td>The new alpha multiplier. 1 is fully opaque, 0 is fully transparent.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:SetBackgroundColor">Text:SetBackgroundColor</a></h2>
+  <p><i></i> Sets the background color of this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Element:SetBackgroundColor(<i>r</i>, <i>g</i>, <i>b</i>)</td></tr>
+    <tr><td colspan=4>Element:SetBackgroundColor(<i>r</i>, <i>g</i>, <i>b</i>, <i>a</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>a</i></td><td>parameter</td><td><i>number</i></td><td>Alpha. 1 is fully opaque, 0 is fully transparent. Defaults to 1.</td></tr>
+    <tr><td><i>b</i></td><td>parameter</td><td><i>number</i></td><td>Blue.</td></tr>
+    <tr><td><i>g</i></td><td>parameter</td><td><i>number</i></td><td>Green.</td></tr>
+    <tr><td><i>r</i></td><td>parameter</td><td><i>number</i></td><td>Red.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:SetEffectBlur">Text:SetEffectBlur</a></h2>
+  <p><i></i> Sets the parameters for the Blur effect.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Text:SetEffectBlur(<i>effect</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>effect</i></td><td>parameter</td><td><i>nil, table</i></td><td>The parameters for this effect. All members are optional. Pass nil to disable the effect.</td></tr>
+  </table>
+  <dl>
+    <dt><b>members</b></dt>
+    <dd>
+      <table>
+        <tr>
+          <th>blurX</th>
+          <td>Controls how much blurring exists along the X axis. Defaults to 2.</th>
+        </tr>
+        <tr>
+          <th>blurY</th>
+          <td>Controls how much blurring exists along the Y axis. Defaults to 2.</th>
+        </tr>
+      </table>
+    </dd>
+  </dl>
+  <h2><a name="Text:SetEffectGlow">Text:SetEffectGlow</a></h2>
+  <p><i></i> Sets the parameters for the Glow effect.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Text:SetEffectGlow(<i>effect</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>effect</i></td><td>parameter</td><td><i>nil, table</i></td><td>The parameters for this effect. All members are optional. Pass nil to disable the effect.</td></tr>
+  </table>
+  <dl>
+    <dt><b>members</b></dt>
+    <dd>
+      <table>
+        <tr>
+          <th>blurX</th>
+          <td>Controls how much blurring exists along the X axis. Defaults to 2.</th>
+        </tr>
+        <tr>
+          <th>blurY</th>
+          <td>Controls how much blurring exists along the Y axis. Defaults to 2.</th>
+        </tr>
+        <tr>
+          <th>colorA</th>
+          <td>Controls the alpha channel of the glow effect. Defaults to 1.</th>
+        </tr>
+        <tr>
+          <th>colorB</th>
+          <td>Controls the blue channel of the glow effect. Defaults to 0.</th>
+        </tr>
+        <tr>
+          <th>colorG</th>
+          <td>Controls the green channel of the glow effect. Defaults to 0.</th>
+        </tr>
+        <tr>
+          <th>colorR</th>
+          <td>Controls the red channel of the glow effect. Defaults to 0.</th>
+        </tr>
+        <tr>
+          <th>knockout</th>
+          <td>Enables the "knockout" effect. Defaults to false.</th>
+        </tr>
+        <tr>
+          <th>offsetX</th>
+          <td>Controls the glow offset along the X axis. Defaults to 0.</th>
+        </tr>
+        <tr>
+          <th>offsetY</th>
+          <td>Controls the glow offset along the Y axis. Defaults to 0.</th>
+        </tr>
+        <tr>
+          <th>replace</th>
+          <td>Hides the original text. Defaults to false.</th>
+        </tr>
+        <tr>
+          <th>strength</th>
+          <td>Controls the strength of the glow. Defaults to 1.</th>
+        </tr>
+      </table>
+    </dd>
+  </dl>
+  <h2><a name="Text:SetFont">Text:SetFont</a></h2>
+  <p><i></i> Sets the current font used for this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Text:SetFont(<i>source</i>, <i>font</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>font</i></td><td>parameter</td><td><i>string</i></td><td>The actual font identifier. Either a resource identifier or a filename.</td></tr>
+    <tr><td><i>source</i></td><td>parameter</td><td><i>string</i></td><td>The source of the resource. "Rift" will take the resource from Rift's internal data. Anything else will take the resource from the addon with that identifier.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:SetFontColor">Text:SetFontColor</a></h2>
+  <p><i></i> Sets the current font color for this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Text:SetFontColor(<i>r</i>, <i>g</i>, <i>b</i>)</td></tr>
+    <tr><td colspan=4>Text:SetFontColor(<i>r</i>, <i>g</i>, <i>b</i>, <i>a</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>a</i></td><td>parameter</td><td><i>number</i></td><td>Alpha. 1 is fully opaque, 0 is fully transparent. Defaults to 1.</td></tr>
+    <tr><td><i>b</i></td><td>parameter</td><td><i>number</i></td><td>Blue.</td></tr>
+    <tr><td><i>g</i></td><td>parameter</td><td><i>number</i></td><td>Green.</td></tr>
+    <tr><td><i>r</i></td><td>parameter</td><td><i>number</i></td><td>Red.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:SetFontSize">Text:SetFontSize</a></h2>
+  <p><i></i> Sets the current font size of this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Text:SetFontSize(<i>fontsize</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>fontsize</i></td><td>parameter</td><td><i>number</i></td><td>The new font size of this element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:SetHeight">Text:SetHeight</a></h2>
+  <p><i></i> Sets the height of this frame. Undefined results if the frame already has two pinned Y coordinates.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetHeight(<i>height</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>height</i></td><td>parameter</td><td><i>number</i></td><td>The new height of this frame.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:SetKeyFocus">Text:SetKeyFocus</a></h2>
+  <p><i></i> Sets the key focus status. Note that only one frame can be the key focus at a time. Focusing on another frame will automatically unset the current focus.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Element:SetKeyFocus(<i>focus</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>focus</i></td><td>parameter</td><td><i>boolean</i></td><td>The new key focus setting.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:SetLayer">Text:SetLayer</a></h2>
+  <p><i></i> Sets the frame layer for this frame. This can be any number. Frames are drawn in ascending order. If two frames have the same layer number, then the order of those frames is undefined, but guarantees no Z-fighting. Frames are always drawn after their parents.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetLayer(<i>layer</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>layer</i></td><td>parameter</td><td><i>number</i></td><td>The new layer for this frame.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:SetMouseMasking">Text:SetMouseMasking</a></h2>
+  <p><i></i> Sets the frame's mouse masking mode.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Element:SetMouseMasking(<i>mask</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>mask</i></td><td>parameter</td><td><i>string</i></td><td>The new mouse masking mode. "full" is the standard mode, and means that creating any Left, Right, or movement-related mouse event will cause the frame to accept and consume any event from any of those types. "limited" causes the frame to accept and consume only events for buttons that have been hooked, so that hooking "LeftDown" will still pass Right mouse events through the frame. Note that hooking any mouse event will still consume MouseMove/In/Out events.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:SetMouseoverUnit">Text:SetMouseoverUnit</a></h2>
+  <p><i></i> Sets the unit that will be represented by this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetMouseoverUnit(<i>unit</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>unit</i></td><td>parameter</td><td><i>nil, unit</i></td><td>The new mouseover unit. May be a unit ID or a unit specifier. Pass in nil to disable the mouseover effect.</td></tr>
+  </table>
+  <dl>
+    <dt><b>requireSecureFrameAndInsecureEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:SetParent">Text:SetParent</a></h2>
+  <p><i></i> Sets the parent of this frame. Circular dependencies result in undefined behavior. If this frame's secure mode is "restricted", then its parent must also have a secure mode of "restricted".</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetParent(<i>parent</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>parent</i></td><td>parameter</td><td><i>Element</i></td><td>The new parent for this frame.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:SetPoint">Text:SetPoint</a></h2>
+  <p><i></i> Pins a point on this frame to a location on another frame. This is a rather complex function and you should look at examples to see how to use it.<br/>This function can take many different forms. In general, it looks like this: SetPoint(point_on_this_frame, target_frame, point_on_target_frame [, x_offset, y_offset]).<br/>The first part is the point on this frame that will be attached. Usually, these are string identifiers. "TOPLEFT", "TOPCENTER", "TOPRIGHT", "CENTERLEFT", "CENTER", "CENTERRIGHT", "BOTTOMLEFT", "BOTTOMCENTER", "BOTTOMRIGHT". You may also use a string identifier that refers to a single axis - "TOP", "BOTTOM", "LEFT", "RIGHT", "CENTERX", "CENTERY". If you want more direct numeric control you can use number pairs. 0,0 is equivalent to "TOPLEFT", 1,1 is equivalent to "BOTTOMRIGHT", 0.5,nil is equivalent to "CENTERX".<br/>The second part is the frame to attach to, as well as the point on that frame to attach to. The frame is simply passing in the frame table. The point is the same identifier or number pair as the first parameter.<br/>Optionally, you may include an X or Y offset to the point.<br/>This connection is permanent, and if the target frame moves, this frame will move along with it. <br/>Caveat: If the target is a frame set to the "restricted" SecureMode, and the client is currently in "secure" mode, then unexpected behavior may occur.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetPoint(<i>...</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>...</i></td><td>parameter</td><td><i>...</i></td><td>This function's parameters are complicated. Read the above summary for details.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:SetSecureMode">Text:SetSecureMode</a></h2>
+  <p><i></i> Sets the frame's secure mode.<br/>"normal" is the standard mode. It allows for most functionality to be used and does not restrict frames in combat. "restricted" allows for certain sensitive functions to be called, but disables a significant amount of functionality in combat. In order to change a frame to "restricted", its parent must already be "restricted". Note that a "restricted" frame can still have "normal" children.<br/>If you are not planning to use any restricted functions, your frame should remain in normal mode.<br/>At the moment, it is not possible to change from "restricted" back to "normal".</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetSecureMode(<i>secure</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>secure</i></td><td>parameter</td><td><i>string</i></td><td>The new secure mode. Valid inputs are "normal" and "restricted".</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:SetStrata">Text:SetStrata</a></h2>
+  <p><i></i> Sets the strata for this frame.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetStrata(<i>strata</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>strata</i></td><td>parameter</td><td><i>string</i></td><td>The item's new strata. Must be one of the elements returned by :GetStrataList().</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:SetText">Text:SetText</a></h2>
+  <p><i></i> Sets the current text for this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Text:SetText(<i>text</i>)</td></tr>
+    <tr><td colspan=4>Text:SetText(<i>text</i>, <i>html</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>html</i></td><td>parameter</td><td><i>boolean</i></td><td>Enables HTML mode. In HTML mode, a limited number of formatting tags are available: &lt;u&gt;, &lt;font color="#rrggbb"&gt;, and &lt;a lua="print('This is a lua script.')"&gt;.</td></tr>
+    <tr><td><i>text</i></td><td>parameter</td><td><i>string</i></td><td>The new text for the element.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="Text:SetVisible">Text:SetVisible</a></h2>
+  <p><i></i> Sets the frame's visibility flag. If set to false, then this frame and all its children will not be rendered or accept mouse input.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Element:SetVisible(<i>visible</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>visible</i></td><td>parameter</td><td><i>boolean</i></td><td>The new visibility flag.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:SetWidth">Text:SetWidth</a></h2>
+  <p><i></i> Sets the width of this frame. Undefined results if the frame already has two pinned X coordinates.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Frame:SetWidth(<i>width</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>width</i></td><td>parameter</td><td><i>number</i></td><td>The new width of this frame.</td></tr>
+  </table>
+  <dl>
+    <dt><b>noSecureFrameAndEnvironment</b></dt>
+    <dd>true</dd>
+  </dl>
+  <h2><a name="Text:SetWordwrap">Text:SetWordwrap</a></h2>
+  <p><i></i> Sets the wordwrap flag for this element.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4>Text:SetWordwrap(<i>wordwrap</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>wordwrap</i></td><td>parameter</td><td><i>boolean</i></td><td>The new wordwrap flag for this element. If false, long lines will be truncated. Defaults to false.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h4><a href='index.html'>Back to index...</a></h4>

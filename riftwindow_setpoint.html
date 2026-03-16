@@ -1,0 +1,20 @@
+<html>
+  <head><title>API Docs (live) -- RiftWindow:SetPoint</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="RiftWindow:SetPoint">RiftWindow:SetPoint</a> </h2>
+    <p><i></i> Pins a point on this frame to a location on another frame. This is a rather complex function and you should look at examples to see how to use it.<br/>This function can take many different forms. In general, it looks like this: SetPoint(point_on_this_frame, target_frame, point_on_target_frame [, x_offset, y_offset]).<br/>The first part is the point on this frame that will be attached. Usually, these are string identifiers. "TOPLEFT", "TOPCENTER", "TOPRIGHT", "CENTERLEFT", "CENTER", "CENTERRIGHT", "BOTTOMLEFT", "BOTTOMCENTER", "BOTTOMRIGHT". You may also use a string identifier that refers to a single axis - "TOP", "BOTTOM", "LEFT", "RIGHT", "CENTERX", "CENTERY". If you want more direct numeric control you can use number pairs. 0,0 is equivalent to "TOPLEFT", 1,1 is equivalent to "BOTTOMRIGHT", 0.5,nil is equivalent to "CENTERX".<br/>The second part is the frame to attach to, as well as the point on that frame to attach to. The frame is simply passing in the frame table. The point is the same identifier or number pair as the first parameter.<br/>Optionally, you may include an X or Y offset to the point.<br/>This connection is permanent, and if the target frame moves, this frame will move along with it. <br/>Caveat: If the target is a frame set to the "restricted" SecureMode, and the client is currently in "secure" mode, then unexpected behavior may occur.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Frame:SetPoint(<i>...</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>...</i></td><td>parameter</td><td><i>...</i></td><td>This function's parameters are complicated. Read the above summary for details.</td></tr>
+    </table>
+    <dl>
+      <dt><b>noSecureFrameAndEnvironment</b></dt>
+      <dd>true</dd>
+    </dl>

@@ -1,0 +1,23 @@
+<html>
+  <head><title>API Docs (live) -- Utility.Matrix.Create</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Utility.Matrix.Create">Utility.Matrix.Create</a> </h2>
+    <p><i></i> Creates a transformation matrix table. These can also be created by hand; this is simply a convenience routine. Applies scaling first, then rotation, then translation.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>matrix</i> = Utility.Matrix.Create(<i>scaleX</i>, <i>scaleY</i>, <i>rotate</i>, <i>translateX</i>, <i>translateY</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>rotate</i></td><td>parameter</td><td><i>number/nil</i></td><td>Rotation amount in radians. Defaults to 0.</td></tr>
+      <tr><td><i>scaleX</i></td><td>parameter</td><td><i>number/nil</i></td><td>Scaling along the X axis. Defaults to 1.</td></tr>
+      <tr><td><i>scaleY</i></td><td>parameter</td><td><i>number/nil</i></td><td>Scaling along the Y axis. Defaults to 1.</td></tr>
+      <tr><td><i>translateX</i></td><td>parameter</td><td><i>number/nil</i></td><td>Translation along the X axis. Defaults to 0.</td></tr>
+      <tr><td><i>translateY</i></td><td>parameter</td><td><i>number/nil</i></td><td>Translation along the Y axis. Defaults to 0.</td></tr>
+      <tr><td><i>matrix</i></td><td>result</td><td><i>table</i></td><td>Matrix table suitable for "transform" members.</td></tr>
+    </table>
+    <dl>
+    </dl>

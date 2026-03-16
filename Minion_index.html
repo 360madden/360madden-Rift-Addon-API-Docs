@@ -1,0 +1,366 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Minion.Claim">Command.Minion.Claim</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Claims an award from a minion adventure in "finished" mode.</td></tr>
+      <tr><td><a href="#Command.Minion.Hurry">Command.Minion.Hurry</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Hurry a minion adventure in "working" mode.</td></tr>
+      <tr><td><a href="#Command.Minion.Send">Command.Minion.Send</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Send a minion on an adventure.</td></tr>
+      <tr><td><a href="#Command.Minion.Shuffle">Command.Minion.Shuffle</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Shuffle an adventure for a new option.</td></tr>
+      <tr><td><a href="#Command.Minion.Unlock">Command.Minion.Unlock</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Unlock another minion adventure slot.</td></tr>
+      <tr><td><a href="#Event.Minion.Adventure.Change">Event.Minion.Adventure.Change</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in a minion adventure.</td></tr>
+      <tr><td><a href="#Event.Minion.Minion.Change">Event.Minion.Minion.Change</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in a minion.</td></tr>
+      <tr><td><a href="#Inspect.Minion.Adventure.Detail">Inspect.Minion.Adventure.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about minion adventures.</td></tr>
+      <tr><td><a href="#Inspect.Minion.Adventure.List">Inspect.Minion.Adventure.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists known minion adventures.</td></tr>
+      <tr><td><a href="#Inspect.Minion.Minion.Detail">Inspect.Minion.Minion.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about minions.</td></tr>
+      <tr><td><a href="#Inspect.Minion.Minion.List">Inspect.Minion.Minion.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists available minions.</td></tr>
+      <tr><td><a href="#Inspect.Minion.Slot">Inspect.Minion.Slot</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns the total number of minion adventure slots.</td></tr>
+    </table>
+    <h2><a name="Command.Minion.Claim">Command.Minion.Claim</a></h2>
+    <p><i></i> Claims an award from a minion adventure in "finished" mode.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Minion.Claim(<i>adventure</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>adventure</i></td><td>parameter</td><td><i>minionadventure</i></td><td>The minion adventure to be affected.</td></tr>
+    </table>
+    <dl>
+      <dt><b>hardwareevent</b></dt>
+      <dd>true</dd>
+    </dl>
+    <h2><a name="Command.Minion.Hurry">Command.Minion.Hurry</a></h2>
+    <p><i></i> Hurry a minion adventure in "working" mode.</p>
+    <h3>Usage:   </h3>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Minion.Hurry(<i>adventure</i>, <i>currency</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>adventure</i></td><td>parameter</td><td><i>minionadventure</i></td><td>The minion adventure to be affected.</td></tr>
+      <tr><td><i>currency</i></td><td>parameter</td><td><i>string</i></td><td>The currency to use for this command. May be any of "none", "aventurine", or "credit".</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Minion.Send">Command.Minion.Send</a></h2>
+    <p><i></i> Send a minion on an adventure.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Minion.Send(<i>minion</i>, <i>adventure</i>)</td></tr>
+      <tr><td colspan=4>Command.Minion.Send(<i>minion</i>, <i>adventure</i>, <i>currency</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>adventure</i></td><td>parameter</td><td><i>minionadventure</i></td><td>The minion adventure to be affected.</td></tr>
+      <tr><td><i>currency</i></td><td>parameter</td><td><i>string</i></td><td>The currency to use for this command. May be any of "none", "aventurine", or "credit".</td></tr>
+      <tr><td><i>minion</i></td><td>parameter</td><td><i>minionminion</i></td><td>The minion to be affected.</td></tr>
+    </table>
+    <dl>
+      <dt><b>hardwareevent</b></dt>
+      <dd>true</dd>
+    </dl>
+    <h2><a name="Command.Minion.Shuffle">Command.Minion.Shuffle</a></h2>
+    <p><i></i> Shuffle an adventure for a new option.</p>
+    <h3>Usage:   </h3>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Minion.Shuffle(<i>adventure</i>, <i>currency</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>adventure</i></td><td>parameter</td><td><i>minionadventure</i></td><td>The minion adventure to be affected.</td></tr>
+      <tr><td><i>currency</i></td><td>parameter</td><td><i>string</i></td><td>The currency to use for this command. May be any of "none", "aventurine", or "credit".</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Minion.Unlock">Command.Minion.Unlock</a></h2>
+    <p><i></i> Unlock another minion adventure slot.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Minion.Unlock()</td></tr>
+    </table>
+    <dl>
+      <dt><b>hardwareevent</b></dt>
+      <dd>true</dd>
+    </dl>
+    <h2><a name="Event.Minion.Adventure.Change">Event.Minion.Adventure.Change</a></h2>
+    <p><i></i> Signals a change in a minion adventure.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Minion.Adventure.Change(<i>adventures</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>adventures</i></td><td>parameter</td><td><i>variant</i></td><td>A table of minion adventures that have changed. Takes the form of a table. The key is the minion adventure ID.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Minion.Minion.Change">Event.Minion.Minion.Change</a></h2>
+    <p><i></i> Signals a change in a minion.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Minion.Minion.Change(<i>minions</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>minions</i></td><td>parameter</td><td><i>variant</i></td><td>A table of minions that have changed. Takes the form of a table. The key is the minion ID.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Minion.Adventure.Detail">Inspect.Minion.Adventure.Detail</a></h2>
+    <p><i></i> Provides detailed information about minion adventures.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Minion.Adventure.Detail(<i>adventure</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Minion.Adventure.Detail(<i>adventures</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>adventure</i></td><td>parameter</td><td><i>minionadventure</i></td><td>The identifier of the minion adventure to retrieve detail for.</td></tr>
+      <tr><td><i>adventures</i></td><td>parameter</td><td><i>table</i></td><td>A table of identifiers of minion adventures to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single minion adventure.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail table for all requested minion adventures. The key is the minion adventure ID, the value is the adventure's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>completion</th>
+            <td>The time a "working" adventure will change to "finished", represented as UNIX time.</th>
+          </tr>
+          <tr>
+            <th>costAventurine</th>
+            <td>The cost to start this adventure in Aventurine.</th>
+          </tr>
+          <tr>
+            <th>costCredit</th>
+            <td>The cost to start this adventure in credits.</th>
+          </tr>
+          <tr>
+            <th>costStamina</th>
+            <td>The cost to start this adventure in stamina.</th>
+          </tr>
+          <tr>
+            <th>duration</th>
+            <td>The duration of this adventure in seconds.</th>
+          </tr>
+          <tr>
+            <th>hurryAventurine</th>
+            <td>The cost to hurry this adventure in Aventurine.</th>
+          </tr>
+          <tr>
+            <th>hurryCredit</th>
+            <td>The cost to hurry this adventure in credits.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>minion</th>
+            <td>The minion currently involved with this adventure.</th>
+          </tr>
+          <tr>
+            <th>mode</th>
+            <td>The mode this adventure is in. One of "available", "working", or "finished".</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The name of this adventure.</th>
+          </tr>
+          <tr>
+            <th>reward</th>
+            <td>The reward type of this adventure.</th>
+          </tr>
+          <tr>
+            <th>rewardQuality</th>
+            <td>The final reward quality of this adventure once in "finished" mode.</th>
+          </tr>
+          <tr>
+            <th>statAir</th>
+            <td>Indicates greater rewards if finished by a minion with an Air stat.</th>
+          </tr>
+          <tr>
+            <th>statArtifact</th>
+            <td>Indicates greater rewards if finished by a minion with an Artifact stat.</th>
+          </tr>
+          <tr>
+            <th>statAssassination</th>
+            <td>Indicates greater rewards if finished by a minion with an Assassination stat.</th>
+          </tr>
+          <tr>
+            <th>statDeath</th>
+            <td>Indicates greater rewards if finished by a minion with a Death stat.</th>
+          </tr>
+          <tr>
+            <th>statDimension</th>
+            <td>Indicates greater rewards if finished by a minion with a Dimension stat.</th>
+          </tr>
+          <tr>
+            <th>statDiplomacy</th>
+            <td>Indicates greater rewards if finished by a minion with a Diplomacy stat.</th>
+          </tr>
+          <tr>
+            <th>statEarth</th>
+            <td>Indicates greater rewards if finished by a minion with an Earth stat.</th>
+          </tr>
+          <tr>
+            <th>statExploration</th>
+            <td>Indicates greater rewards if finished by a minion with an Exploration stat.</th>
+          </tr>
+          <tr>
+            <th>statFire</th>
+            <td>Indicates greater rewards if finished by a minion with a Fire stat.</th>
+          </tr>
+          <tr>
+            <th>statHarvesting</th>
+            <td>Indicates greater rewards if finished by a minion with a Harvesting stat.</th>
+          </tr>
+          <tr>
+            <th>statHunting</th>
+            <td>Indicates greater rewards if finished by a minion with a Hunting stat.</th>
+          </tr>
+          <tr>
+            <th>statLife</th>
+            <td>Indicates greater rewards if finished by a minion with a Life stat.</th>
+          </tr>
+          <tr>
+            <th>statWater</th>
+            <td>Indicates greater rewards if finished by a minion with a Water stat.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Minion.Adventure.List">Inspect.Minion.Adventure.List</a></h2>
+    <p><i></i> Lists known minion adventures.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>list</i> = Inspect.Minion.Adventure.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>list</i></td><td>result</td><td><i>table</i></td><td>A table of minion adventure IDs. The key is the minion adventure ID.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Minion.Minion.Detail">Inspect.Minion.Minion.Detail</a></h2>
+    <p><i></i> Provides detailed information about minions.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Minion.Minion.Detail(<i>minion</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Minion.Minion.Detail(<i>minions</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>minion</i></td><td>parameter</td><td><i>minionminion</i></td><td>The identifier of the minion to retrieve detail for.</td></tr>
+      <tr><td><i>minions</i></td><td>parameter</td><td><i>table</i></td><td>A table of identifiers of minions to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single minion.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail table for all requested minions. The key is the minion ID, the value is the minion's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>description</th>
+            <td>The description of this minion.</th>
+          </tr>
+          <tr>
+            <th>experienceAccumulated</th>
+            <td>If not at max level, this minion's accumulated experience in their current level.</th>
+          </tr>
+          <tr>
+            <th>experienceNeeded</th>
+            <td>If not at max level, the amount of experience required to gain a level.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>level</th>
+            <td>The current level of this minion.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The name of this minion.</th>
+          </tr>
+          <tr>
+            <th>rarity</th>
+            <td>The rarity of this minion. "common", "uncommon", "rare", or "epic".</th>
+          </tr>
+          <tr>
+            <th>stamina</th>
+            <td>The current stamina of this minion.</th>
+          </tr>
+          <tr>
+            <th>staminaMax</th>
+            <td>The maximum stamina of this minion.</th>
+          </tr>
+          <tr>
+            <th>statAir</th>
+            <td>This minion's Air stat.</th>
+          </tr>
+          <tr>
+            <th>statArtifact</th>
+            <td>This minion's Artifact stat.</th>
+          </tr>
+          <tr>
+            <th>statAssassination</th>
+            <td>This minion's Assassination stat.</th>
+          </tr>
+          <tr>
+            <th>statDeath</th>
+            <td>This minion's Death stat.</th>
+          </tr>
+          <tr>
+            <th>statDimension</th>
+            <td>This minion's Dimension stat.</th>
+          </tr>
+          <tr>
+            <th>statDiplomacy</th>
+            <td>This minion's Diplomacy stat.</th>
+          </tr>
+          <tr>
+            <th>statEarth</th>
+            <td>This minion's Earth stat.</th>
+          </tr>
+          <tr>
+            <th>statExploration</th>
+            <td>This minion's Exploration stat.</th>
+          </tr>
+          <tr>
+            <th>statFire</th>
+            <td>This minion's Fire stat.</th>
+          </tr>
+          <tr>
+            <th>statHarvesting</th>
+            <td>This minion's Harvesting stat.</th>
+          </tr>
+          <tr>
+            <th>statHunting</th>
+            <td>This minion's Hunting stat.</th>
+          </tr>
+          <tr>
+            <th>statLife</th>
+            <td>This minion's Life stat.</th>
+          </tr>
+          <tr>
+            <th>statWater</th>
+            <td>This minion's Water stat.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Minion.Minion.List">Inspect.Minion.Minion.List</a></h2>
+    <p><i></i> Lists available minions.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>list</i> = Inspect.Minion.Minion.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>list</i></td><td>result</td><td><i>table</i></td><td>A table of minion IDs. The key is the minion ID.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Minion.Slot">Inspect.Minion.Slot</a></h2>
+    <p><i></i> Returns the total number of minion adventure slots.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>slots</i> = Inspect.Minion.Slot()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>slots</i></td><td>result</td><td><i>number</i></td><td>The number of slots available for active minion adventures.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

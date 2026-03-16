@@ -1,0 +1,67 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Guild.Roster.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Guild.Roster.Detail">Inspect.Guild.Roster.Detail</a> </h2>
+    <p><i></i> Provides detailed information about guildmembers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Guild.Roster.Detail(<i>guildmember</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Guild.Roster.Detail(<i>guildmembers</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>guildmember</i></td><td>parameter</td><td><i>string</i></td><td>The name of the guildmember to retrieve data for.</td></tr>
+      <tr><td><i>guildmembers</i></td><td>parameter</td><td><i>table</i></td><td>A table of names of guildmembers to retrieve data for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single guildmember.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested guildmembers. The key is the guildmember's name, the value is the guildmember's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>level</th>
+            <td>The guildmember's level.</th>
+          </tr>
+          <tr>
+            <th>logout</th>
+            <td>The guildmember's last logout time, in UNIX time.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The guildmember's name.</th>
+          </tr>
+          <tr>
+            <th>note</th>
+            <td>The guildmember's public note.</th>
+          </tr>
+          <tr>
+            <th>noteOfficer</th>
+            <td>The guildmember's officer note.</th>
+          </tr>
+          <tr>
+            <th>rank</th>
+            <td>The guildmember's rank.</th>
+          </tr>
+          <tr>
+            <th>score</th>
+            <td>The guildmember's achievement score.</th>
+          </tr>
+          <tr>
+            <th>status</th>
+            <td>The guildmember's current status. May include "online" or "mobile". nil if the guildmember is offline.</th>
+          </tr>
+          <tr>
+            <th>zone</th>
+            <td>The guildmember's current zone, if online.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

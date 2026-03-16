@@ -1,0 +1,131 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Minion.Adventure.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Minion.Adventure.Detail">Inspect.Minion.Adventure.Detail</a> </h2>
+    <p><i></i> Provides detailed information about minion adventures.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Minion.Adventure.Detail(<i>adventure</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Minion.Adventure.Detail(<i>adventures</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>adventure</i></td><td>parameter</td><td><i>minionadventure</i></td><td>The identifier of the minion adventure to retrieve detail for.</td></tr>
+      <tr><td><i>adventures</i></td><td>parameter</td><td><i>table</i></td><td>A table of identifiers of minion adventures to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single minion adventure.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail table for all requested minion adventures. The key is the minion adventure ID, the value is the adventure's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>completion</th>
+            <td>The time a "working" adventure will change to "finished", represented as UNIX time.</th>
+          </tr>
+          <tr>
+            <th>costAventurine</th>
+            <td>The cost to start this adventure in Aventurine.</th>
+          </tr>
+          <tr>
+            <th>costCredit</th>
+            <td>The cost to start this adventure in credits.</th>
+          </tr>
+          <tr>
+            <th>costStamina</th>
+            <td>The cost to start this adventure in stamina.</th>
+          </tr>
+          <tr>
+            <th>duration</th>
+            <td>The duration of this adventure in seconds.</th>
+          </tr>
+          <tr>
+            <th>hurryAventurine</th>
+            <td>The cost to hurry this adventure in Aventurine.</th>
+          </tr>
+          <tr>
+            <th>hurryCredit</th>
+            <td>The cost to hurry this adventure in credits.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>minion</th>
+            <td>The minion currently involved with this adventure.</th>
+          </tr>
+          <tr>
+            <th>mode</th>
+            <td>The mode this adventure is in. One of "available", "working", or "finished".</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The name of this adventure.</th>
+          </tr>
+          <tr>
+            <th>reward</th>
+            <td>The reward type of this adventure.</th>
+          </tr>
+          <tr>
+            <th>rewardQuality</th>
+            <td>The final reward quality of this adventure once in "finished" mode.</th>
+          </tr>
+          <tr>
+            <th>statAir</th>
+            <td>Indicates greater rewards if finished by a minion with an Air stat.</th>
+          </tr>
+          <tr>
+            <th>statArtifact</th>
+            <td>Indicates greater rewards if finished by a minion with an Artifact stat.</th>
+          </tr>
+          <tr>
+            <th>statAssassination</th>
+            <td>Indicates greater rewards if finished by a minion with an Assassination stat.</th>
+          </tr>
+          <tr>
+            <th>statDeath</th>
+            <td>Indicates greater rewards if finished by a minion with a Death stat.</th>
+          </tr>
+          <tr>
+            <th>statDimension</th>
+            <td>Indicates greater rewards if finished by a minion with a Dimension stat.</th>
+          </tr>
+          <tr>
+            <th>statDiplomacy</th>
+            <td>Indicates greater rewards if finished by a minion with a Diplomacy stat.</th>
+          </tr>
+          <tr>
+            <th>statEarth</th>
+            <td>Indicates greater rewards if finished by a minion with an Earth stat.</th>
+          </tr>
+          <tr>
+            <th>statExploration</th>
+            <td>Indicates greater rewards if finished by a minion with an Exploration stat.</th>
+          </tr>
+          <tr>
+            <th>statFire</th>
+            <td>Indicates greater rewards if finished by a minion with a Fire stat.</th>
+          </tr>
+          <tr>
+            <th>statHarvesting</th>
+            <td>Indicates greater rewards if finished by a minion with a Harvesting stat.</th>
+          </tr>
+          <tr>
+            <th>statHunting</th>
+            <td>Indicates greater rewards if finished by a minion with a Hunting stat.</th>
+          </tr>
+          <tr>
+            <th>statLife</th>
+            <td>Indicates greater rewards if finished by a minion with a Life stat.</th>
+          </tr>
+          <tr>
+            <th>statWater</th>
+            <td>Indicates greater rewards if finished by a minion with a Water stat.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

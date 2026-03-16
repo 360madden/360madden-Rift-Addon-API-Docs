@@ -1,0 +1,18 @@
+<html>
+  <head><title>API Docs (live) -- RiftCheckbox:SetSecureMode</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="RiftCheckbox:SetSecureMode">RiftCheckbox:SetSecureMode</a> </h2>
+    <p><i></i> Sets the frame's secure mode.<br/>"normal" is the standard mode. It allows for most functionality to be used and does not restrict frames in combat. "restricted" allows for certain sensitive functions to be called, but disables a significant amount of functionality in combat. In order to change a frame to "restricted", its parent must already be "restricted". Note that a "restricted" frame can still have "normal" children.<br/>If you are not planning to use any restricted functions, your frame should remain in normal mode.<br/>At the moment, it is not possible to change from "restricted" back to "normal".</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Frame:SetSecureMode(<i>secure</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>secure</i></td><td>parameter</td><td><i>string</i></td><td>The new secure mode. Valid inputs are "normal" and "restricted".</td></tr>
+    </table>
+    <dl>
+    </dl>

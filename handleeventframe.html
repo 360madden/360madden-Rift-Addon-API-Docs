@@ -1,0 +1,11 @@
+<html>
+  <head><title>API Docs (live) -- handleEventFrame</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="handleEventFrame">handleEventFrame</a> </h2>
+    <p><i></i> A handle for active frame events. Includes the member :GetTarget(), which returns the target frame of this event. If being passed to a .Dive handler, also includes :Halt() and :Catch().  :Halt() halts propogation of the event through the hierarchy and, after finishing the current frame's .Dive handlers, immediately begins processing .Bubble events. :Catch() works similarly but processes main events before continuing to .Bubble. Neither function may be called when the environment is in secure mode and either the current or target frame has a restricted secure mode.</p>
+  </body>

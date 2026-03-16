@@ -1,0 +1,120 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Event.Currency">Event.Currency</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in the player's available currency.</td></tr>
+      <tr><td><a href="#Inspect.Currency.Category.Detail">Inspect.Currency.Category.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns information about currency categories.</td></tr>
+      <tr><td><a href="#Inspect.Currency.Category.List">Inspect.Currency.Category.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns a table of valid currency categories.</td></tr>
+      <tr><td><a href="#Inspect.Currency.Detail">Inspect.Currency.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about currencies.</td></tr>
+      <tr><td><a href="#Inspect.Currency.List">Inspect.Currency.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns a table of all known currencies.</td></tr>
+    </table>
+    <h2><a name="Event.Currency">Event.Currency</a></h2>
+    <p><i></i> Signals a change in the player's available currency.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Currency(<i>currencies</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>currencies</i></td><td>parameter</td><td><i>variant</i></td><td>New currency counts, in key/value form.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Currency.Category.Detail">Inspect.Currency.Category.Detail</a></h2>
+    <p><i></i> Returns information about currency categories.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Currency.Category.Detail(<i>category</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Currency.Category.Detail(<i>categories</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>categories</i></td><td>parameter</td><td><i>table</i></td><td>A table of identifiers of currency categories to retrieve detail for.</td></tr>
+      <tr><td><i>category</i></td><td>parameter</td><td><i>currencycategory</i></td><td>The identifier of the currency category to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single currency category.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested currency categories. The key is the category ID, the value is the category's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The name of the currency category.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Currency.Category.List">Inspect.Currency.Category.List</a></h2>
+    <p><i></i> Returns a table of valid currency categories.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>categories</i> = Inspect.Currency.Category.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>categories</i></td><td>result</td><td><i>table</i></td><td>Valid currency categories, in {id = true} format.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Currency.Detail">Inspect.Currency.Detail</a></h2>
+    <p><i></i> Provides detailed information about currencies.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Currency.Detail(<i>coin</i>)</td></tr>
+      <tr><td colspan=4><i>detail</i> = Inspect.Currency.Detail(<i>currency</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Currency.Detail(<i>currencies</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>coin</i></td><td>parameter</td><td><i>string</i></td><td>The string "coin", used as a value to request the player's money.</td></tr>
+      <tr><td><i>currencies</i></td><td>parameter</td><td><i>table</i></td><td>A table of identifiers of currencies to retrieve detail for.</td></tr>
+      <tr><td><i>currency</i></td><td>parameter</td><td><i>itemtype</i></td><td>The identifier of the currency to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single currency.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested currencies. The key is the currency ID, the value is the currency's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>category</th>
+            <td>ID of the currency's category.</th>
+          </tr>
+          <tr>
+            <th>icon</th>
+            <td>Internal name of the currency's icon.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The currency's name.</th>
+          </tr>
+          <tr>
+            <th>stack</th>
+            <td>The number of this currency that you have.</th>
+          </tr>
+          <tr>
+            <th>stackMax</th>
+            <td>The maximum number of this currency that you can have.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Currency.List">Inspect.Currency.List</a></h2>
+    <p><i></i> Returns a table of all known currencies.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>currencies</i> = Inspect.Currency.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>currencies</i></td><td>result</td><td><i>table</i></td><td>All known currencies, in {id = amount} format.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

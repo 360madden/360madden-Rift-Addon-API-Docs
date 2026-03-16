@@ -1,0 +1,20 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Message.Accept.Check</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Message.Accept.Check">Inspect.Message.Accept.Check</a> </h2>
+    <p><i></i> Checks whether a given message type would be accepted if it were sent to you. Parameters can be replaced by "nil" to check for wildcard acceptance.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>accepted</i> = Inspect.Message.Accept.Check(<i>type</i>, <i>identifier</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string/nil</i></td><td>The identifier type of the message. Used for the receiver to filter accepted messages via the Command.Message.Accept() function. Must be at least three characters long.</td></tr>
+      <tr><td><i>type</i></td><td>parameter</td><td><i>string/nil</i></td><td>The type of message. Valid types include "tell", "channel", "guild", "officer", "party", "raid", "say", "yell", "send".</td></tr>
+      <tr><td><i>accepted</i></td><td>result</td><td><i>boolean</i></td><td>True if the message would be transferred to this client.</td></tr>
+    </table>
+    <dl>
+    </dl>

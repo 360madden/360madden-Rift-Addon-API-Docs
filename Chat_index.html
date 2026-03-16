@@ -1,0 +1,61 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Event.Chat.Notify">Event.Chat.Notify</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a screen notification. This is generally used as a warning mechanism during boss fights.</td></tr>
+      <tr><td><a href="#Event.Chat.Npc">Event.Chat.Npc</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals an NPC speaking a line of text.</td></tr>
+    </table>
+    <h2><a name="Event.Chat.Notify">Event.Chat.Notify</a></h2>
+    <p><i></i> Signals a screen notification. This is generally used as a warning mechanism during boss fights.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Chat.Notify(<i>info</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>info</i></td><td>parameter</td><td><i>variant</i></td><td>Detailed information table about this event, containing several named parameters.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>message</th>
+            <td>The text said.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Event.Chat.Npc">Event.Chat.Npc</a></h2>
+    <p><i></i> Signals an NPC speaking a line of text.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Chat.Npc(<i>info</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>info</i></td><td>parameter</td><td><i>variant</i></td><td>Detailed information table about this event, containing several named parameters.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>from</th>
+            <td>The unit ID of the speaker, if available.</th>
+          </tr>
+          <tr>
+            <th>fromName</th>
+            <td>The name of the speaker.</th>
+          </tr>
+          <tr>
+            <th>message</th>
+            <td>The text said.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

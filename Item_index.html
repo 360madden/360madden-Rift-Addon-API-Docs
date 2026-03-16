@@ -1,0 +1,523 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Item.Destroy">Command.Item.Destroy</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Destroys an item. Be careful: this really does destroy an item. There is no confirmation dialog a...</td></tr>
+      <tr><td><a href="#Command.Item.Mount.Use">Command.Item.Mount.Use</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Uses a collected mount.</td></tr>
+      <tr><td><a href="#Command.Item.Move">Command.Item.Move</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Moves an item from one location to another. This cannot move items directly between equipment, wa...</td></tr>
+      <tr><td><a href="#Command.Item.Split">Command.Item.Split</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Splits a number of items off a stack.</td></tr>
+      <tr><td><a href="#Command.Item.Standard.Drag">Command.Item.Standard.Drag</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Behaves in the same way that the addon system does when an inventory icon is dragged.</td></tr>
+      <tr><td><a href="#Command.Item.Standard.Drop">Command.Item.Standard.Drop</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Behaves in the same way that the addon system does when an inventory icon is dropped.</td></tr>
+      <tr><td><a href="#Command.Item.Standard.Left">Command.Item.Standard.Left</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Behaves in the same way that the addon system does when an inventory icon is left-clicked.</td></tr>
+      <tr><td><a href="#Command.Item.Standard.Right">Command.Item.Standard.Right</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Behaves in the same way that the addon system does when an inventory icon is right-clicked.</td></tr>
+      <tr><td><a href="#Event.Item.Slot">Event.Item.Slot</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the contents of an item slot have changed.</td></tr>
+      <tr><td><a href="#Event.Item.Update">Event.Item.Update</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that an item has changed.</td></tr>
+      <tr><td><a href="#Inspect.Item.Detail">Inspect.Item.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about items.</td></tr>
+      <tr><td><a href="#Inspect.Item.Find">Inspect.Item.Find</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Finds a slot specifier based on an item ID.</td></tr>
+      <tr><td><a href="#Inspect.Item.List">Inspect.Item.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Generate a list of item IDs from a slot specifier or set of slot specifiers.</td></tr>
+      <tr><td><a href="#Inspect.Item.Mount.List">Inspect.Item.Mount.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns details about all of your collected mounts.</td></tr>
+      <tr><td><a href="#Utility.Item.Slot.All">Utility.Item.Slot.All</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Generates a slot specifier for all known items.</td></tr>
+      <tr><td><a href="#Utility.Item.Slot.Bank">Utility.Item.Slot.Bank</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Generates a slot specifier for the player's bank.</td></tr>
+      <tr><td><a href="#Utility.Item.Slot.Equipment">Utility.Item.Slot.Equipment</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Generates a slot specifier for the player's equipment.</td></tr>
+      <tr><td><a href="#Utility.Item.Slot.Fragments">Utility.Item.Slot.Fragments</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Generates a slot specifier for the player's fragment inventory.</td></tr>
+      <tr><td><a href="#Utility.Item.Slot.Guild">Utility.Item.Slot.Guild</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Generates a slot specifier for the player's guild bank.</td></tr>
+      <tr><td><a href="#Utility.Item.Slot.Inventory">Utility.Item.Slot.Inventory</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Generates a slot specifier for the player's inventory.</td></tr>
+      <tr><td><a href="#Utility.Item.Slot.Parse">Utility.Item.Slot.Parse</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Parses a slot specifier, returning information on what it represents.</td></tr>
+      <tr><td><a href="#Utility.Item.Slot.Quest">Utility.Item.Slot.Quest</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Generates a slot specifier for the player's quest bag.</td></tr>
+      <tr><td><a href="#Utility.Item.Slot.Vault">Utility.Item.Slot.Vault</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Generates a slot specifier for the player's bank vaults.</td></tr>
+      <tr><td><a href="#Utility.Item.Slot.Wardrobe">Utility.Item.Slot.Wardrobe</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Generates a slot specifier for the player's wardrobe.</td></tr>
+    </table>
+    <h2><a name="Command.Item.Destroy">Command.Item.Destroy</a></h2>
+    <p><i></i> Destroys an item. Be careful: this really does destroy an item. There is no confirmation dialog and the process is irreversible. This cannot destroy items directly out of the guild bank.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: item</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Item.Destroy(<i>target</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>item</i></td><td>The item ID of the item to destroy.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Item.Mount.Use">Command.Item.Mount.Use</a></h2>
+    <p><i></i> Uses a collected mount.</p>
+    <h3>Usage:   </h3>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Item.Mount.Use(<i>mount</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>mount</i></td><td>parameter</td><td><i>item</i></td><td>The item ID of the collected mount to use.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Item.Move">Command.Item.Move</a></h2>
+    <p><i></i> Moves an item from one location to another. This cannot move items directly between equipment, wardrobe, or guild bank - you'll have to stop off in the inventory first.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: item</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Item.Move(<i>source</i>, <i>destination</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>destination</i></td><td>parameter</td><td><i>slot</i></td><td>The location to move the item. May attempt to stack or swap if there is already an item here.</td></tr>
+      <tr><td><i>source</i></td><td>parameter</td><td><i>item, slot</i></td><td>The item to move. Must be a slot specifier that refers to an actual item.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Item.Split">Command.Item.Split</a></h2>
+    <p><i></i> Splits a number of items off a stack.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: item</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Item.Split(<i>source</i>, <i>stack</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>source</i></td><td>parameter</td><td><i>item, slot</i></td><td>The item to split. May be a slot specifier or an item ID.</td></tr>
+      <tr><td><i>stack</i></td><td>parameter</td><td><i>number</i></td><td>The number of items to move into the new stack. Must be a positive integer.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Item.Standard.Drag">Command.Item.Standard.Drag</a></h2>
+    <p><i></i> Behaves in the same way that the addon system does when an inventory icon is dragged.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: item</p>
+    <table>
+      <tr><td colspan=4>Command.Item.Standard.Drag(<i>target</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>item, slot</i></td><td>The item or slot to be targeted.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Item.Standard.Drop">Command.Item.Standard.Drop</a></h2>
+    <p><i></i> Behaves in the same way that the addon system does when an inventory icon is dropped.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: item</p>
+    <table>
+      <tr><td colspan=4>Command.Item.Standard.Drop(<i>target</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>item, slot</i></td><td>The item or slot to be targeted.</td></tr>
+    </table>
+    <dl>
+      <dt><b>hardwareevent</b></dt>
+      <dd>true</dd>
+    </dl>
+    <h2><a name="Command.Item.Standard.Left">Command.Item.Standard.Left</a></h2>
+    <p><i></i> Behaves in the same way that the addon system does when an inventory icon is left-clicked.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: item</p>
+    <table>
+      <tr><td colspan=4>Command.Item.Standard.Left(<i>target</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>item, slot</i></td><td>The item or slot to be targeted.</td></tr>
+    </table>
+    <dl>
+      <dt><b>hardwareevent</b></dt>
+      <dd>true</dd>
+    </dl>
+    <h2><a name="Command.Item.Standard.Right">Command.Item.Standard.Right</a></h2>
+    <p><i></i> Behaves in the same way that the addon system does when an inventory icon is right-clicked.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: item</p>
+    <table>
+      <tr><td colspan=4>Command.Item.Standard.Right(<i>target</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>item, slot</i></td><td>The item or slot to be targeted.</td></tr>
+    </table>
+    <dl>
+      <dt><b>hardwareevent</b></dt>
+      <dd>true</dd>
+    </dl>
+    <h2><a name="Event.Item.Slot">Event.Item.Slot</a></h2>
+    <p><i></i> Signals that the contents of an item slot have changed.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Item.Slot(<i>updates</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>updates</i></td><td>parameter</td><td><i>variant</i></td><td>Table of changes. Key is the slot identifier, value is an item ID, false if the slot is now empty, or the string "nil" if the slot no longer exists.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Item.Update">Event.Item.Update</a></h2>
+    <p><i></i> Signals that an item has changed.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Item.Update(<i>updates</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>updates</i></td><td>parameter</td><td><i>variant</i></td><td>Table of changes. Key is the slot identifier, value is an item ID, false if the slot is now empty, or the string "nil" if the slot no longer exists.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Item.Detail">Inspect.Item.Detail</a></h2>
+    <p><i></i> Provides detailed information about items.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>item</i> = Inspect.Item.Detail(<i>item</i>)</td></tr>
+      <tr><td colspan=4><i>item</i> = Inspect.Item.Detail(<i>itemtype</i>)</td></tr>
+      <tr><td colspan=4><i>item</i> = Inspect.Item.Detail(<i>slot</i>)</td></tr>
+      <tr><td colspan=4><i>items</i> = Inspect.Item.Detail(<i>slot</i>)</td></tr>
+      <tr><td colspan=4><i>items</i> = Inspect.Item.Detail(<i>elements</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>elements</i></td><td>parameter</td><td><i>table</i></td><td>A table of slot specifiers, item IDs, or item types.</td></tr>
+      <tr><td><i>item</i></td><td>parameter</td><td><i>item, table</i></td><td>Detail table for a single item.</td></tr>
+      <tr><td><i>itemtype</i></td><td>parameter</td><td><i>itemtype</i></td><td>A single item type.</td></tr>
+      <tr><td><i>slot</i></td><td>parameter</td><td><i>slot</i></td><td>A single slot specifier.</td></tr>
+      <tr><td><i>item</i></td><td>result</td><td><i>item, table</i></td><td>Detail table for a single item.</td></tr>
+      <tr><td><i>items</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested items. The key is the string used to lookup, the value is the item's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>bind</th>
+            <td>The item's binding type. May be "equip", "use", "pickup", or "account".</th>
+          </tr>
+          <tr>
+            <th>bound</th>
+            <td>The item's bound flag.</th>
+          </tr>
+          <tr>
+            <th>category</th>
+            <td>The item's type category.</th>
+          </tr>
+          <tr>
+            <th>coin</th>
+            <td>The amount of silver this item represents.</th>
+          </tr>
+          <tr>
+            <th>cooldown</th>
+            <td>The cooldown for using this item.</th>
+          </tr>
+          <tr>
+            <th>cooldownBegin</th>
+            <td>The time the current cooldown started, in the context of Inspect.Time.Frame.</th>
+          </tr>
+          <tr>
+            <th>cooldownDuration</th>
+            <td>Duration of the current cooldown the item is influenced by, in seconds.</th>
+          </tr>
+          <tr>
+            <th>cooldownExpired</th>
+            <td>Number of seconds the current cooldown is past its expiration time. Generally indicates lag.</th>
+          </tr>
+          <tr>
+            <th>cooldownRemaining</th>
+            <td>Time remaining in the item's current cooldown, in seconds.</th>
+          </tr>
+          <tr>
+            <th>crafter</th>
+            <td>The name of the player who crafted this item.</th>
+          </tr>
+          <tr>
+            <th>damageDelay</th>
+            <td>If a weapon, the delay between autoattacks using this weapon.</th>
+          </tr>
+          <tr>
+            <th>damageMax</th>
+            <td>If a weapon, the maximum damage done by a single hit with this item.</th>
+          </tr>
+          <tr>
+            <th>damageMin</th>
+            <td>If a weapon, the minimum damage done by a single hit with this item.</th>
+          </tr>
+          <tr>
+            <th>damageType</th>
+            <td>If a weapon, the damage type done by autoattacks. Values include "life", "death", "air", "earth", "fire", and "water".</th>
+          </tr>
+          <tr>
+            <th>description</th>
+            <td>The description of this item.</th>
+          </tr>
+          <tr>
+            <th>flavor</th>
+            <td>The flavor text for this item.</th>
+          </tr>
+          <tr>
+            <th>fragmentAffinity</th>
+            <td>The planar type of the planar fragment.</th>
+          </tr>
+          <tr>
+            <th>fragmentTier</th>
+            <td>The pairing rating of the stats for the planar fragment.</th>
+          </tr>
+          <tr>
+            <th>icon</th>
+            <td>Resource filename of the item's icon.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>infusionLevel</th>
+            <td>The current level of a planar fragment.</th>
+          </tr>
+          <tr>
+            <th>lootable</th>
+            <td>Indicates that the item contains loot.</th>
+          </tr>
+          <tr>
+            <th>mountAquatic</th>
+            <td>Indicates that the mount is aquatic.</th>
+          </tr>
+          <tr>
+            <th>mountAutoscale</th>
+            <td>Indicates if the mount autoscales to your fastest mount speed.</th>
+          </tr>
+          <tr>
+            <th>mountSpeed</th>
+            <td>The speed of your character while mounted.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The item's name.</th>
+          </tr>
+          <tr>
+            <th>range</th>
+            <td>If a ranged weapon, the maximum range of this item.</th>
+          </tr>
+          <tr>
+            <th>rarity</th>
+            <td>The item's rarity. Values include "sellable", "uncommon", "rare", "epic", "relic", "transcendent", or "quest". Common items have a rarity of nil.</th>
+          </tr>
+          <tr>
+            <th>requiredCalling</th>
+            <td>Space-delimited list of the required callings to use this item.</th>
+          </tr>
+          <tr>
+            <th>requiredFaction</th>
+            <td>The ID of the faction required to use this item.</th>
+          </tr>
+          <tr>
+            <th>requiredFactionLevel</th>
+            <td>The faction notoriety required to use this item.</th>
+          </tr>
+          <tr>
+            <th>requiredLevel</th>
+            <td>The level required to use this item.</th>
+          </tr>
+          <tr>
+            <th>requiredPrestige</th>
+            <td>The prestige rank required to use this item.</th>
+          </tr>
+          <tr>
+            <th>requiredSkill</th>
+            <td>The skill required to use this item.</th>
+          </tr>
+          <tr>
+            <th>requiredSkillLevel</th>
+            <td>The skill level required to use this item.</th>
+          </tr>
+          <tr>
+            <th>sell</th>
+            <td>The sell value of this item, in silver.</th>
+          </tr>
+          <tr>
+            <th>slots</th>
+            <td>If a container, the number of slots that this item can contain.</th>
+          </tr>
+          <tr>
+            <th>stack</th>
+            <td>The size of this item stack.</th>
+          </tr>
+          <tr>
+            <th>stackMax</th>
+            <td>The maximum size of this item stack.</th>
+          </tr>
+          <tr>
+            <th>stats</th>
+            <td>The base stats of this item. Members may include "armor", "block", "critAttack", "critPower", "critSpell", "dexterity", "dodge", "endurance", "energyMax", "energyRegen", "hit", "intelligence", "manaMax", "manaRegen", "movement", "powerAttack", "powerMax", "powerRegen", "powerSpell", "resistAir", "resistAll", "resistDeath", "resistEarth", "resistFire", "resistLife", "resistWater", "stealth", "stealthDetect", "strength", and "wisdom".</th>
+          </tr>
+          <tr>
+            <th>statsRune</th>
+            <td>The added rune stats of this item. May contain the same members as stats.</th>
+          </tr>
+          <tr>
+            <th>statsRuneTemporary</th>
+            <td>The added temporary rune stats of this item. May contain the same members as stats.</th>
+          </tr>
+          <tr>
+            <th>type</th>
+            <td>The item's type specifier.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Item.Find">Inspect.Item.Find</a></h2>
+    <p><i></i> Finds a slot specifier based on an item ID.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>slot</i> = Inspect.Item.Find(<i>item</i>)</td></tr>
+      <tr><td colspan=4><i>slots</i> = Inspect.Item.Find(<i>items</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>item</i></td><td>parameter</td><td><i>item</i></td><td>A single item ID.</td></tr>
+      <tr><td><i>items</i></td><td>parameter</td><td><i>table</i></td><td>A table of item IDs.</td></tr>
+      <tr><td><i>slot</i></td><td>result</td><td><i>slot</i></td><td>A slot specifier for that item.</td></tr>
+      <tr><td><i>slots</i></td><td>result</td><td><i>table</i></td><td>Slot specifiers for all requested items. The key is the string used to lookup, the value is the slot specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Item.List">Inspect.Item.List</a></h2>
+    <p><i></i> Generate a list of item IDs from a slot specifier or set of slot specifiers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>items</i> = Inspect.Item.List()</td></tr>
+      <tr><td colspan=4><i>item</i> = Inspect.Item.List(<i>slot</i>)</td></tr>
+      <tr><td colspan=4><i>items</i> = Inspect.Item.List(<i>slot</i>)</td></tr>
+      <tr><td colspan=4><i>items</i> = Inspect.Item.List(<i>slots</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>slot</i></td><td>parameter</td><td><i>slot</i></td><td>A single slot specifier.</td></tr>
+      <tr><td><i>slots</i></td><td>parameter</td><td><i>table</i></td><td>A table of slot specifiers.</td></tr>
+      <tr><td><i>item</i></td><td>result</td><td><i>item</i></td><td>A single item ID. This will be returned only if the input is a single fully-specified slot specifier.</td></tr>
+      <tr><td><i>items</i></td><td>result</td><td><i>table</i></td><td>A table of item IDs. The key is the slot specifier, the value is the item ID.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Item.Mount.List">Inspect.Item.Mount.List</a></h2>
+    <p><i></i> Returns details about all of your collected mounts.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>mounts</i> = Inspect.Item.Mount.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>mounts</i></td><td>result</td><td><i>table</i></td><td>Valid collected mount, in {id = "type"} format.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Item.Slot.All">Utility.Item.Slot.All</a></h2>
+    <p><i></i> Generates a slot specifier for all known items.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.All()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>slot</i></td><td>result</td><td><i>slot</i></td><td>The requested slot specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Item.Slot.Bank">Utility.Item.Slot.Bank</a></h2>
+    <p><i></i> Generates a slot specifier for the player's bank.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Bank()</td></tr>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Bank(<i>segment</i>)</td></tr>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Bank(<i>segment</i>, <i>slot</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>segment</i></td><td>parameter</td><td><i>number, string</i></td><td>Segment to inspect. Use "main" for the main bank area, "bag" for the bank bags, or a number starting at 1 for the contents of a specific bank bag.</td></tr>
+      <tr><td><i>slot</i></td><td>parameter</td><td><i>number, slot</i></td><td>The requested slot specifier.</td></tr>
+      <tr><td><i>slot</i></td><td>result</td><td><i>number, slot</i></td><td>The requested slot specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Item.Slot.Equipment">Utility.Item.Slot.Equipment</a></h2>
+    <p><i></i> Generates a slot specifier for the player's equipment.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Equipment()</td></tr>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Equipment(<i>slot</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>slot</i></td><td>parameter</td><td><i>string, slot</i></td><td>The requested slot specifier.</td></tr>
+      <tr><td><i>slot</i></td><td>result</td><td><i>string, slot</i></td><td>The requested slot specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Item.Slot.Fragments">Utility.Item.Slot.Fragments</a></h2>
+    <p><i></i> Generates a slot specifier for the player's fragment inventory.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Fragments()</td></tr>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Fragments(<i>slot</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>slot</i></td><td>parameter</td><td><i>number, slot</i></td><td>The requested slot specifier.</td></tr>
+      <tr><td><i>slot</i></td><td>result</td><td><i>number, slot</i></td><td>The requested slot specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Item.Slot.Guild">Utility.Item.Slot.Guild</a></h2>
+    <p><i></i> Generates a slot specifier for the player's guild bank.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Guild()</td></tr>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Guild(<i>vault</i>)</td></tr>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Guild(<i>vault</i>, <i>slot</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>slot</i></td><td>parameter</td><td><i>number, slot</i></td><td>The requested slot specifier.</td></tr>
+      <tr><td><i>vault</i></td><td>parameter</td><td><i>number</i></td><td>The vault ID to inspect. Starts at 1.</td></tr>
+      <tr><td><i>slot</i></td><td>result</td><td><i>number, slot</i></td><td>The requested slot specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Item.Slot.Inventory">Utility.Item.Slot.Inventory</a></h2>
+    <p><i></i> Generates a slot specifier for the player's inventory.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Inventory()</td></tr>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Inventory(<i>bag</i>)</td></tr>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Inventory(<i>bag</i>, <i>slot</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>bag</i></td><td>parameter</td><td><i>number, string</i></td><td>The number of the bag whose contents should be inspected, starting at 1, or "bag" to inspect the actual inventory bags.</td></tr>
+      <tr><td><i>slot</i></td><td>parameter</td><td><i>number, slot</i></td><td>The requested slot specifier.</td></tr>
+      <tr><td><i>slot</i></td><td>result</td><td><i>number, slot</i></td><td>The requested slot specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Item.Slot.Parse">Utility.Item.Slot.Parse</a></h2>
+    <p><i></i> Parses a slot specifier, returning information on what it represents.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>type, parameter, parameter</i> = Utility.Item.Slot.Parse(<i>slot</i>)</td></tr>
+      <tr><td colspan=4><i>type, parameter</i> = Utility.Item.Slot.Parse(<i>slot</i>)</td></tr>
+      <tr><td colspan=4><i>type</i> = Utility.Item.Slot.Parse(<i>slot</i>)</td></tr>
+      <tr><td colspan=4>Utility.Item.Slot.Parse(<i>slot</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>slot</i></td><td>parameter</td><td><i>slot</i></td><td>The slot ID, starting at 1.</td></tr>
+      <tr><td><i>parameter</i></td><td>result</td><td><i>variant</i></td><td>A parameter for this slot type. Actual meaning depends on the type.</td></tr>
+      <tr><td><i>type</i></td><td>result</td><td><i>string</i></td><td>The type of this element.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Item.Slot.Quest">Utility.Item.Slot.Quest</a></h2>
+    <p><i></i> Generates a slot specifier for the player's quest bag.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Quest()</td></tr>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Quest(<i>slot</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>slot</i></td><td>parameter</td><td><i>number, slot</i></td><td>The requested slot specifier.</td></tr>
+      <tr><td><i>slot</i></td><td>result</td><td><i>number, slot</i></td><td>The requested slot specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Item.Slot.Vault">Utility.Item.Slot.Vault</a></h2>
+    <p><i></i> Generates a slot specifier for the player's bank vaults.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Vault()</td></tr>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Vault(<i>vault</i>)</td></tr>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Vault(<i>vault</i>, <i>slot</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>slot</i></td><td>parameter</td><td><i>number, slot</i></td><td>The requested slot specifier.</td></tr>
+      <tr><td><i>vault</i></td><td>parameter</td><td><i>number</i></td><td>The vault ID, starting at 1.</td></tr>
+      <tr><td><i>slot</i></td><td>result</td><td><i>number, slot</i></td><td>The requested slot specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Item.Slot.Wardrobe">Utility.Item.Slot.Wardrobe</a></h2>
+    <p><i></i> Generates a slot specifier for the player's wardrobe.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Wardrobe()</td></tr>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Wardrobe(<i>costume</i>)</td></tr>
+      <tr><td colspan=4><i>slot</i> = Utility.Item.Slot.Wardrobe(<i>costume</i>, <i>slot</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>costume</i></td><td>parameter</td><td><i>number</i></td><td>The number of the wardrobe costume to inspect, starting at 1.</td></tr>
+      <tr><td><i>slot</i></td><td>parameter</td><td><i>string, slot</i></td><td>The requested slot specifier.</td></tr>
+      <tr><td><i>slot</i></td><td>result</td><td><i>string, slot</i></td><td>The requested slot specifier.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

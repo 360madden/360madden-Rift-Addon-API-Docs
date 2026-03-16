@@ -1,0 +1,215 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Mail.Delete">Command.Mail.Delete</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Deletes a mail.</td></tr>
+      <tr><td><a href="#Command.Mail.Open">Command.Mail.Open</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Opens a mail, retrieving detailed information for it.</td></tr>
+      <tr><td><a href="#Command.Mail.Pay">Command.Mail.Pay</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Pays the COD fee on a mail.</td></tr>
+      <tr><td><a href="#Command.Mail.Return">Command.Mail.Return</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns a mail to its sender.</td></tr>
+      <tr><td><a href="#Command.Mail.Send">Command.Mail.Send</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sends mail.</td></tr>
+      <tr><td><a href="#Command.Mail.Spam">Command.Mail.Spam</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Marks mail as spam.</td></tr>
+      <tr><td><a href="#Command.Mail.Take">Command.Mail.Take</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Takes an attached item from mail.</td></tr>
+      <tr><td><a href="#Event.Mail">Event.Mail</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in the available mail messages.</td></tr>
+      <tr><td><a href="#Inspect.Mail.Detail">Inspect.Mail.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns information about mail.</td></tr>
+      <tr><td><a href="#Inspect.Mail.List">Inspect.Mail.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns a table of valid mail and its status.</td></tr>
+      <tr><td><a href="#Utility.Mail.Cost">Utility.Mail.Cost</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns the amount of silver it will cost to send a given mail.</td></tr>
+    </table>
+    <h2><a name="Command.Mail.Delete">Command.Mail.Delete</a></h2>
+    <p><i></i> Deletes a mail.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: mail</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Mail.Delete(<i>mail</i>)</td></tr>
+      <tr><td colspan=4>Command.Mail.Delete(<i>mail</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>mail</i></td><td>parameter</td><td><i>mail</i></td><td>The ID of the mail to be targeted.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Mail.Open">Command.Mail.Open</a></h2>
+    <p><i></i> Opens a mail, retrieving detailed information for it.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: mail</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Mail.Open(<i>mail</i>)</td></tr>
+      <tr><td colspan=4>Command.Mail.Open(<i>mail</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>mail</i></td><td>parameter</td><td><i>mail</i></td><td>The ID of the mail to be targeted.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Mail.Pay">Command.Mail.Pay</a></h2>
+    <p><i></i> Pays the COD fee on a mail.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: mail</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Mail.Pay(<i>mail</i>)</td></tr>
+      <tr><td colspan=4>Command.Mail.Pay(<i>mail</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>mail</i></td><td>parameter</td><td><i>mail</i></td><td>The ID of the mail to be targeted.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Mail.Return">Command.Mail.Return</a></h2>
+    <p><i></i> Returns a mail to its sender.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: mail</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Mail.Return(<i>mail</i>)</td></tr>
+      <tr><td colspan=4>Command.Mail.Return(<i>mail</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>mail</i></td><td>parameter</td><td><i>mail</i></td><td>The ID of the mail to be targeted.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Mail.Send">Command.Mail.Send</a></h2>
+    <p><i></i> Sends mail.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: mail</p>
+    <table>
+      <tr><td colspan=4>Command.Mail.Send(<i>mail</i>)</td></tr>
+      <tr><td colspan=4>Command.Mail.Send(<i>mail</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>mail</i></td><td>parameter</td><td><i>table</i></td><td>Table containing data about the mail to send.<br/>				to: The name of the player to send mail to. Required.<br/>				subject: The mail's subject. Required.<br/>				body: The mail's body.<br/>				cod: The money required for the recipient to remove attachments. Mutually exclusive with "coin", requires non-empty "attachments".<br/>				coin: The amount of money attached to this message. Mutually exclusive with "cod".<br/>				attachments: A table listing the item IDs of the items you wish to attach. Maximum of 6.</td></tr>
+    </table>
+    <dl>
+      <dt><b>hardwareevent</b></dt>
+      <dd>true</dd>
+    </dl>
+    <h2><a name="Command.Mail.Spam">Command.Mail.Spam</a></h2>
+    <p><i></i> Marks mail as spam.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: mail</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Mail.Spam(<i>mail</i>)</td></tr>
+      <tr><td colspan=4>Command.Mail.Spam(<i>mail</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>mail</i></td><td>parameter</td><td><i>mail</i></td><td>The ID of the mail to be targeted.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Mail.Take">Command.Mail.Take</a></h2>
+    <p><i></i> Takes an attached item from mail.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: mail</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Mail.Take(<i>mail</i>, <i>item</i>)</td></tr>
+      <tr><td colspan=4>Command.Mail.Take(<i>mail</i>, <i>items</i>)</td></tr>
+      <tr><td colspan=4>Command.Mail.Take(<i>mail</i>, <i>item</i>, <i>callback</i>)</td></tr>
+      <tr><td colspan=4>Command.Mail.Take(<i>mail</i>, <i>items</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>item</i></td><td>parameter</td><td><i>item</i></td><td>The ID of the item to be taken.</td></tr>
+      <tr><td><i>items</i></td><td>parameter</td><td><i>table</i></td><td>A table containing a list of the items to be taken.</td></tr>
+      <tr><td><i>mail</i></td><td>parameter</td><td><i>mail</i></td><td>The ID of the mail to be targeted.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Mail">Event.Mail</a></h2>
+    <p><i></i> Signals a change in the available mail messages.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Mail(<i>mail</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>mail</i></td><td>parameter</td><td><i>variant</i></td><td>The changed mail messages. Takes the form of a table. The key is the mail ID, the value is "basic" to indicate basic information available about a piece of mail, "detail" to indicate detailed information available, or false to indicate no information available.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Mail.Detail">Inspect.Mail.Detail</a></h2>
+    <p><i></i> Returns information about mail.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: mail</p>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Mail.Detail(<i>mail</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Mail.Detail(<i>mails</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>mail</i></td><td>parameter</td><td><i>mail</i></td><td>The identifier of the mail to retrieve detail for.</td></tr>
+      <tr><td><i>mails</i></td><td>parameter</td><td><i>table</i></td><td>A table of identifiers of mail to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single mail.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested mail. The key is the mail ID, the value is the mail's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>attachments</th>
+            <td>The attachments available on this mail. A number if this mail has basic information, or a table of item IDs if this mail has detailed information.</th>
+          </tr>
+          <tr>
+            <th>body</th>
+            <td>The body of this mail. Available only if detailed information on the mail has been retrieved.</th>
+          </tr>
+          <tr>
+            <th>cod</th>
+            <td>The Cash on Delivery required to retrieve attachments out of this mail message.</th>
+          </tr>
+          <tr>
+            <th>expire</th>
+            <td>The time this mail will expire, in Unix timestamp form.</th>
+          </tr>
+          <tr>
+            <th>from</th>
+            <td>The name of the character this mail was sent from.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>read</th>
+            <td>"true" if you have already opened this mail.</th>
+          </tr>
+          <tr>
+            <th>spam</th>
+            <td>"true" if this mail is considered spam.</th>
+          </tr>
+          <tr>
+            <th>subject</th>
+            <td>The subject line for this mail.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Mail.List">Inspect.Mail.List</a></h2>
+    <p><i></i> Returns a table of valid mail and its status.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: mail</p>
+    <table>
+      <tr><td colspan=4><i>mails</i> = Inspect.Mail.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>mails</i></td><td>result</td><td><i>table</i></td><td>Valid mail, in {id = "type"} format. The type may be either "basic" or "detail", indicating whether the mail has been opened and its detailed information is available.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Mail.Cost">Utility.Mail.Cost</a></h2>
+    <p><i></i> Returns the amount of silver it will cost to send a given mail.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>cost</i> = Utility.Mail.Cost(<i>mail</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>mail</i></td><td>parameter</td><td><i>table</i></td><td>The mail to check. In the same format as the parameter of Command.Mail.Send.</td></tr>
+      <tr><td><i>cost</i></td><td>result</td><td><i>number</i></td><td>The cost of sending this mail, in silver.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

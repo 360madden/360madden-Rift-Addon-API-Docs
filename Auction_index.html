@@ -1,0 +1,298 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Auction.Analyze">Command.Auction.Analyze</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Requests auction statistics from the server. The results will be sent to Event.Auction.Statistics...</td></tr>
+      <tr><td><a href="#Command.Auction.Bid">Command.Auction.Bid</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Bids or buys out an auction.</td></tr>
+      <tr><td><a href="#Command.Auction.Cancel">Command.Auction.Cancel</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Cancels an auction.</td></tr>
+      <tr><td><a href="#Command.Auction.Fulfill">Command.Auction.Fulfill</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Fulfills an existing buy order.</td></tr>
+      <tr><td><a href="#Command.Auction.Order">Command.Auction.Order</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Posts a new buy order.</td></tr>
+      <tr><td><a href="#Command.Auction.Post">Command.Auction.Post</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Posts a new auction.</td></tr>
+      <tr><td><a href="#Command.Auction.Scan">Command.Auction.Scan</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Requests an auction house scan. For type "search", if "index" is omitted then this function will ...</td></tr>
+      <tr><td><a href="#Event.Auction.Scan">Event.Auction.Scan</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals incoming auction data.</td></tr>
+      <tr><td><a href="#Event.Auction.Statistics">Event.Auction.Statistics</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals receipt of auction statistics.</td></tr>
+      <tr><td><a href="#Inspect.Auction.Detail">Inspect.Auction.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about auctions.</td></tr>
+      <tr><td><a href="#Utility.Auction.Cost">Utility.Auction.Cost</a></td><td><i>function</i></td><td><i>deprecated</i></td><td></td><td>Returns the amount of silver it will cost to post a given auction.</td></tr>
+      <tr><td><a href="#Utility.Auction.CostOrder">Utility.Auction.CostOrder</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns the amount of silver it will cost to post a given order.</td></tr>
+      <tr><td><a href="#Utility.Auction.CostPost">Utility.Auction.CostPost</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns the amount of silver it will cost to post a given auction.</td></tr>
+    </table>
+    <h2><a name="Command.Auction.Analyze">Command.Auction.Analyze</a></h2>
+    <p><i></i> Requests auction statistics from the server. The results will be sent to Event.Auction.Statistics. This command is throttled by the "auctionanalyze" throttle type, proportional to the number of days requested.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: auction</p>
+    <table>
+      <tr><td colspan=4>Command.Auction.Analyze(<i>itemtype</i>, <i>begin</i>, <i>end</i>)</td></tr>
+      <tr><td colspan=4>Command.Auction.Analyze(<i>itemtype</i>, <i>begin</i>, <i>end</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>begin</i></td><td>parameter</td><td><i>number</i></td><td>UNIX timestamp to begin analysis at.</td></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>end</i></td><td>parameter</td><td><i>number</i></td><td>UNIX timestamp to end analysis at.</td></tr>
+      <tr><td><i>itemtype</i></td><td>parameter</td><td><i>itemtype</i></td><td>Item type to analyze.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Auction.Bid">Command.Auction.Bid</a></h2>
+    <p><i></i> Bids or buys out an auction.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: auction</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Auction.Bid(<i>auction</i>, <i>bid</i>)</td></tr>
+      <tr><td colspan=4>Command.Auction.Bid(<i>auction</i>, <i>bid</i>, <i>quantity</i>)</td></tr>
+      <tr><td colspan=4>Command.Auction.Bid(<i>auction</i>, <i>bid</i>, <i>callback</i>)</td></tr>
+      <tr><td colspan=4>Command.Auction.Bid(<i>auction</i>, <i>bid</i>, <i>quantity</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>auction</i></td><td>parameter</td><td><i>auction</i></td><td>The auction to be targeted.</td></tr>
+      <tr><td><i>bid</i></td><td>parameter</td><td><i>number</i></td><td>The amount to bid. To place a buyout, simply bid the buyout value.</td></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>quantity</i></td><td>parameter</td><td><i>number</i></td><td>How many items to purchase. If omitted, defaults to the entire auction quantity.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Auction.Cancel">Command.Auction.Cancel</a></h2>
+    <p><i></i> Cancels an auction.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: auction</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Auction.Cancel(<i>auction</i>)</td></tr>
+      <tr><td colspan=4>Command.Auction.Cancel(<i>auction</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>auction</i></td><td>parameter</td><td><i>auction</i></td><td>The auction to be targeted.</td></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Auction.Fulfill">Command.Auction.Fulfill</a></h2>
+    <p><i></i> Fulfills an existing buy order.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: auction</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Auction.Fulfill(<i>auction</i>, <i>item</i>, <i>quantity</i>)</td></tr>
+      <tr><td colspan=4>Command.Auction.Fulfill(<i>auction</i>, <i>item</i>, <i>quantity</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>auction</i></td><td>parameter</td><td><i>auction</i></td><td>The auction to be targeted.</td></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>item</i></td><td>parameter</td><td><i>item</i></td><td>The ID of the item to be taken.</td></tr>
+      <tr><td><i>quantity</i></td><td>parameter</td><td><i>number</i></td><td>Stack size to fulfill.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Auction.Order">Command.Auction.Order</a></h2>
+    <p><i></i> Posts a new buy order.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: auction</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Auction.Order(<i>itemtype</i>, <i>quantity</i>, <i>time</i>, <i>buyout</i>)</td></tr>
+      <tr><td colspan=4>Command.Auction.Order(<i>itemtype</i>, <i>quantity</i>, <i>time</i>, <i>buyout</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>buyout</i></td><td>parameter</td><td><i>number</i></td><td>The total buyout for the new auction, in silver. Must be evenly divisible by quantity.</td></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>itemtype</i></td><td>parameter</td><td><i>itemtype</i></td><td>The item type to be ordered.</td></tr>
+      <tr><td><i>quantity</i></td><td>parameter</td><td><i>number</i></td><td>The number of items to be ordered.</td></tr>
+      <tr><td><i>time</i></td><td>parameter</td><td><i>number</i></td><td>The duration that the order should last, in hours. Valid values are limited to 12, 24, and 48.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Auction.Post">Command.Auction.Post</a></h2>
+    <p><i></i> Posts a new auction.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: auction</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Auction.Post(<i>item</i>, <i>time</i>, <i>bid</i>, <i>buyout</i>)</td></tr>
+      <tr><td colspan=4>Command.Auction.Post(<i>item</i>, <i>time</i>, <i>bid</i>, <i>buyout</i>, <i>partial</i>)</td></tr>
+      <tr><td colspan=4>Command.Auction.Post(<i>item</i>, <i>time</i>, <i>bid</i>, <i>buyout</i>, <i>callback</i>)</td></tr>
+      <tr><td colspan=4>Command.Auction.Post(<i>item</i>, <i>time</i>, <i>bid</i>, <i>buyout</i>, <i>partial</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>bid</i></td><td>parameter</td><td><i>number/nil</i></td><td>The minimum bid for the new auction, in silver. nil if no bid is desired.</td></tr>
+      <tr><td><i>buyout</i></td><td>parameter</td><td><i>number/nil</i></td><td>The buyout for the new auction, in silver. nil if no buyout is desired.</td></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>item</i></td><td>parameter</td><td><i>item</i></td><td>The ID of the item to be auctioned.</td></tr>
+      <tr><td><i>partial</i></td><td>parameter</td><td><i>boolean</i></td><td>Whether partial buyouts should be permitted. Must be "false" if a buyout is not provided or if a bid is provided that is different from the buyout. If this parameter is omitted, will default to "true" when possible, or "false" otherwise. </td></tr>
+      <tr><td><i>time</i></td><td>parameter</td><td><i>number</i></td><td>The duration that the auction should last, in hours. Valid values are limited to 12, 24, and 48.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Auction.Scan">Command.Auction.Scan</a></h2>
+    <p><i></i> Requests an auction house scan. For type "search", if "index" is omitted then this function will error if the "auctionfullscan" queue is not ready. Type "search" with "index" will throttle on the "auction" command queue. Other types throttle on the "global" command queue.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: auction</p>
+    <table>
+      <tr><td colspan=4>Command.Auction.Scan(<i>parameters</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>parameters</i></td><td>parameter</td><td><i>table</i></td><td>Table containing data about the requested scan.<br/>				type: Type of scan to perform. One of "bids", "buy", "mine", "orders", or "search".<br/>				If type is "bids", "mine", or "orders", no other parameters are allowed.<br/>				If type is "search":<br/>					category: Category to search for. Same as the "category" member returned by Inspect.Item.Detail(). Optional.<br/>					index: Numeric item index to start the scan at. If provided, the auction scan will return the first 50 items immediately following this index.<br/>					levelMax: Maximum level the item must require. Optional.<br/>					levelMin: Minimum level the item must require. Optional.<br/>					priceMax: Maximum price of the item. Optional.<br/>					priceMin: Minimum price of the item. Optional.<br/>					rarity: The minimum rarity to search for. Same as the "rarity" member returned by Inspect.Item.Detail(). Optional.<br/>					role: The role that the item must be compatible with. One of "mage", "rogue", "cleric", "warrior", or "primalist". Optional.<br/>					statType: Which stat to filter based on. One of "armor", "block", "critPower", "critSpell", "dexterity", "dodge", "endurance", "health", "hit", "intelligence", "mana", "powerAttack", "powerSpell", "resistAir", "resistDeath", "resistEarth", "resistFire", "resistLife", "resistWater", "strength", or "wisdom". Optional. If provided, statMin and statMax must also be provided.<br/>					statMax: Maximum allowed value for the filter stat. Optional. If provided, statType and statMin must also be provided.<br/>					statMin: Minimum allowed value for the filter stat. Optional. If provided, statType and statMax must also be provided.<br/>					sort: Which column the requested items should be sorted based on. One of "rarity", "name", "level", "time", "seller", "pricePerUnit", "bid", "buyout", "stack". Optional.<br/>					sortOrder: What order to sort in. One of "ascending" or "descending". Optional.<br/>					text: A string to search for in the item name. Optional.<br/>					type: Type of scan to perform. One of "search", "buy", "mine", or "bids". If "mine" or "bids", must be the only member in the table.<br/>				If type is "buy":<br/>					category: Category to search for. Same as the "category" member returned by Inspect.Item.Detail(). Optional.<br/>					text: A string to search for in the item name. Optional.</td></tr>
+    </table>
+    <dl>
+      <dt><b>hardwareevent</b></dt>
+      <dd>true</dd>
+    </dl>
+    <h2><a name="Event.Auction.Scan">Event.Auction.Scan</a></h2>
+    <p><i></i> Signals incoming auction data.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Auction.Scan(<i>type</i>, <i>auctions</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>auctions</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>A table of the auctions returned from this scan.</td></tr>
+      <tr><td><i>type</i></td><td>parameter</td><td><i>variant</i></td><td>A table containing information on this scan. In the same format as the parameter to Command.Auction.Scan().</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Auction.Statistics">Event.Auction.Statistics</a></h2>
+    <p><i></i> Signals receipt of auction statistics.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Auction.Statistics(<i>itemtype</i>, <i>data</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>Table containing a series of tables with different timestamps, each containing data for a single day.</td></tr>
+      <tr><td><i>itemtype</i></td><td>parameter</td><td><i>variant</i></td><td>Item type that the attached statistics refer to.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>priceAverage</th>
+            <td>Average item price during this day.</th>
+          </tr>
+          <tr>
+            <th>priceMax</th>
+            <td>Maximum item price during this day.</th>
+          </tr>
+          <tr>
+            <th>priceMin</th>
+            <td>Minimum item price during this day.</th>
+          </tr>
+          <tr>
+            <th>priceVariance</th>
+            <td>Variance in item price during this day.</th>
+          </tr>
+          <tr>
+            <th>time</th>
+            <td>UNIX timestamp of the day.</th>
+          </tr>
+          <tr>
+            <th>volume</th>
+            <td>Quantity of items traded during this day.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Auction.Detail">Inspect.Auction.Detail</a></h2>
+    <p><i></i> Provides detailed information about auctions.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: auction</p>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Auction.Detail(<i>auction</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Auction.Detail(<i>auctions</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>auction</i></td><td>parameter</td><td><i>auction</i></td><td>An identifier for the auction to retrieve detail for.</td></tr>
+      <tr><td><i>auctions</i></td><td>parameter</td><td><i>table</i></td><td>A table containing auction identifiers to retrieve details for. The value is the sort order.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single auction.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested auctions. The key is the auction ID, the value is the auction's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>bid</th>
+            <td>The current bid on this auction, in silver.</th>
+          </tr>
+          <tr>
+            <th>bidder</th>
+            <td>Current high bidder on this auction. Available only if your current character is the bidder or the seller.</th>
+          </tr>
+          <tr>
+            <th>buyout</th>
+            <td>The buyout amount for this auction, in silver.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>item</th>
+            <td>ID of the item involved in the auction.</th>
+          </tr>
+          <tr>
+            <th>itemStack</th>
+            <td>The size of this item stack.</th>
+          </tr>
+          <tr>
+            <th>itemType</th>
+            <td>The item's type specifier.</th>
+          </tr>
+          <tr>
+            <th>partial</th>
+            <td>Whether partial buyouts are permitted.</th>
+          </tr>
+          <tr>
+            <th>remaining</th>
+            <td>Time remaining in the auction, as a number of seconds.</th>
+          </tr>
+          <tr>
+            <th>seller</th>
+            <td>The name of the auction's seller.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Utility.Auction.Cost">Utility.Auction.Cost</a></h2>
+    <p><i></i> Returns the amount of silver it will cost to post a given auction.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>cost</i> = Utility.Auction.Cost(<i>item</i>, <i>time</i>, <i>bid</i>, <i>buyout</i>)</td></tr>
+      <tr><td colspan=4><i>cost</i> = Utility.Auction.Cost(<i>item</i>, <i>time</i>, <i>bid</i>, <i>buyout</i>, <i>partial</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>bid</i></td><td>parameter</td><td><i>number/nil</i></td><td>The minimum bid for the new auction, in silver. nil if no bid is desired.</td></tr>
+      <tr><td><i>buyout</i></td><td>parameter</td><td><i>number/nil</i></td><td>The buyout for the new auction, in silver. nil if no buyout is desired.</td></tr>
+      <tr><td><i>item</i></td><td>parameter</td><td><i>item</i></td><td>The ID of the item to be auctioned.</td></tr>
+      <tr><td><i>partial</i></td><td>parameter</td><td><i>boolean</i></td><td>Whether partial buyouts should be permitted. Must be "false" if a buyout is not provided or if a bid is provided that is different from the buyout. If this parameter is omitted, will default to "true" when possible, or "false" otherwise. </td></tr>
+      <tr><td><i>time</i></td><td>parameter</td><td><i>number</i></td><td>The duration that the auction should last, in hours. Valid values are limited to 12, 24, and 48.</td></tr>
+      <tr><td><i>cost</i></td><td>result</td><td><i>number</i></td><td>The cost of posting this auction, in silver.</td></tr>
+    </table>
+    <dl>
+      <dt><b>deprecated</b></dt>
+      <dd>standard</dd>
+    </dl>
+    <h2><a name="Utility.Auction.CostOrder">Utility.Auction.CostOrder</a></h2>
+    <p><i></i> Returns the amount of silver it will cost to post a given order.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>cost</i> = Utility.Auction.CostOrder(<i>itemtype</i>, <i>quantity</i>, <i>time</i>, <i>buyout</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>buyout</i></td><td>parameter</td><td><i>number</i></td><td>The total buyout for the new auction, in silver. Must be evenly divisible by quantity.</td></tr>
+      <tr><td><i>itemtype</i></td><td>parameter</td><td><i>itemtype</i></td><td>The item type to be ordered.</td></tr>
+      <tr><td><i>quantity</i></td><td>parameter</td><td><i>number</i></td><td>The number of items to be ordered.</td></tr>
+      <tr><td><i>time</i></td><td>parameter</td><td><i>number</i></td><td>The duration that the order should last, in hours. Valid values are limited to 12, 24, and 48.</td></tr>
+      <tr><td><i>cost</i></td><td>result</td><td><i>number</i></td><td>The cost of posting this order, in silver. Includes the full deposit for the items.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Auction.CostPost">Utility.Auction.CostPost</a></h2>
+    <p><i></i> Returns the amount of silver it will cost to post a given auction.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>cost</i> = Utility.Auction.CostPost(<i>item</i>, <i>time</i>, <i>bid</i>, <i>buyout</i>)</td></tr>
+      <tr><td colspan=4><i>cost</i> = Utility.Auction.CostPost(<i>item</i>, <i>time</i>, <i>bid</i>, <i>buyout</i>, <i>partial</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>bid</i></td><td>parameter</td><td><i>number/nil</i></td><td>The minimum bid for the new auction, in silver. nil if no bid is desired.</td></tr>
+      <tr><td><i>buyout</i></td><td>parameter</td><td><i>number/nil</i></td><td>The buyout for the new auction, in silver. nil if no buyout is desired.</td></tr>
+      <tr><td><i>item</i></td><td>parameter</td><td><i>item</i></td><td>The ID of the item to be auctioned.</td></tr>
+      <tr><td><i>partial</i></td><td>parameter</td><td><i>boolean</i></td><td>Whether partial buyouts should be permitted. Must be "false" if a buyout is not provided or if a bid is provided that is different from the buyout. If this parameter is omitted, will default to "true" when possible, or "false" otherwise. </td></tr>
+      <tr><td><i>time</i></td><td>parameter</td><td><i>number</i></td><td>The duration that the auction should last, in hours. Valid values are limited to 12, 24, and 48.</td></tr>
+      <tr><td><i>cost</i></td><td>result</td><td><i>number</i></td><td>The cost of posting this auction, in silver.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

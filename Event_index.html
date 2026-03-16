@@ -1,0 +1,93 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Event.Attach">Command.Event.Attach</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Attaches an event handler to an event.</td></tr>
+      <tr><td><a href="#Command.Event.Detach">Command.Event.Detach</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Detaches an event handler from an event. Any parameter can be 'nil', and this is interpreted as a...</td></tr>
+      <tr><td><a href="#Inspect.Event.List">Inspect.Event.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists the current event handlers for an event.</td></tr>
+      <tr><td><a href="#Utility.Event.Create">Utility.Event.Create</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Creates a custom event. Takes an identifier and an event path as parameters. Called with Create("...</td></tr>
+    </table>
+    <h2><a name="Command.Event.Attach">Command.Event.Attach</a></h2>
+    <p><i></i> Attaches an event handler to an event.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Event.Attach(<i>event</i>, <i>handler</i>, <i>label</i>)</td></tr>
+      <tr><td colspan=4>Command.Event.Attach(<i>event</i>, <i>handler</i>, <i>label</i>, <i>priority</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>event</i></td><td>parameter</td><td><i>eventGlobal</i></td><td>A global event handle, usually pulled out of the "Event." hierarchy.</td></tr>
+      <tr><td><i>handler</i></td><td>parameter</td><td><i>function</i></td><td>A global event handler function. This will be called when the event fires. The first parameter will be the standard global event handle, any other parameters will follow that.</td></tr>
+      <tr><td><i>label</i></td><td>parameter</td><td><i>string</i></td><td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</td></tr>
+      <tr><td><i>priority</i></td><td>parameter</td><td><i>number</i></td><td>Priority of the event handler. Higher numbers trigger first.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Event.Detach">Command.Event.Detach</a></h2>
+    <p><i></i> Detaches an event handler from an event. Any parameter can be 'nil', and this is interpreted as a wildcard. If multiple events match the constraints, only one will be detached.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Event.Detach(<i>event</i>, <i>handler</i>)</td></tr>
+      <tr><td colspan=4>Command.Event.Detach(<i>event</i>, <i>handler</i>, <i>label</i>)</td></tr>
+      <tr><td colspan=4>Command.Event.Detach(<i>event</i>, <i>handler</i>, <i>label</i>, <i>priority</i>)</td></tr>
+      <tr><td colspan=4>Command.Event.Detach(<i>event</i>, <i>handler</i>, <i>label</i>, <i>priority</i>, <i>owner</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>event</i></td><td>parameter</td><td><i>eventGlobal</i></td><td>A global event handle, usually pulled out of the "Event." hierarchy.</td></tr>
+      <tr><td><i>handler</i></td><td>parameter</td><td><i>function/nil</i></td><td>A global event handler function. This will be called when the event fires. The first parameter will be the standard global event handle, any other parameters will follow that.</td></tr>
+      <tr><td><i>label</i></td><td>parameter</td><td><i>string/nil</i></td><td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</td></tr>
+      <tr><td><i>owner</i></td><td>parameter</td><td><i>string/nil</i></td><td>Owner to search for.</td></tr>
+      <tr><td><i>priority</i></td><td>parameter</td><td><i>number/nil</i></td><td>Priority of the event handler. Higher numbers trigger first.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Event.List">Inspect.Event.List</a></h2>
+    <p><i></i> Lists the current event handlers for an event.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>result</i> = Inspect.Event.List(<i>event</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>event</i></td><td>parameter</td><td><i>eventGlobal</i></td><td>A global event handle, usually pulled out of the "Event." hierarchy.</td></tr>
+      <tr><td><i>result</i></td><td>result</td><td><i>table</i></td><td>A table of event handlers for this event.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>handler</th>
+            <td>The handler that will be called when the event fires.</th>
+          </tr>
+          <tr>
+            <th>label</th>
+            <td>Label assigned to the event handler at creation.</th>
+          </tr>
+          <tr>
+            <th>owner</th>
+            <td>Owner addon for the event handler.</th>
+          </tr>
+          <tr>
+            <th>priority</th>
+            <td>Priority for the event handler.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Utility.Event.Create">Utility.Event.Create</a></h2>
+    <p><i></i> Creates a custom event. Takes an identifier and an event path as parameters. Called with Create("Identifier", "The.Event.Path") the event table will end up at Event.Identifier.The.Event.Path, and will behave like a standard Rift event table in every way. Undefined behavior if given an identifier or a path that conflicts with a built-in Rift event or an existing addon event.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>caller, handle</i> = Utility.Event.Create(<i>identifier</i>, <i>event</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>event</i></td><td>parameter</td><td><i>string</i></td><td>The event's name. "." characters will be treated as hierarchy delimeters.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string</i></td><td>The identifier of the addon creating this event.</td></tr>
+      <tr><td><i>caller</i></td><td>result</td><td><i>function</i></td><td>A function used to trigger the event. Called with any selection of parameters, it will pass those parameters through to properly registered event handlers in order. Any errors caused by those event handlers will be caught and handled.</td></tr>
+      <tr><td><i>handle</i></td><td>result</td><td><i>table</i></td><td>The resulting event handle.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

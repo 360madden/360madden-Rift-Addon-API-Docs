@@ -1,0 +1,71 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Event.Faction.Notoriety">Event.Faction.Notoriety</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in the player's faction notoriety.</td></tr>
+      <tr><td><a href="#Inspect.Faction.Detail">Inspect.Faction.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about factions.</td></tr>
+      <tr><td><a href="#Inspect.Faction.List">Inspect.Faction.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns a table of all known factions.</td></tr>
+    </table>
+    <h2><a name="Event.Faction.Notoriety">Event.Faction.Notoriety</a></h2>
+    <p><i></i> Signals a change in the player's faction notoriety.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Faction.Notoriety(<i>notoriety</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>notoriety</i></td><td>parameter</td><td><i>variant</i></td><td>New notoriety values, in key/value form.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Faction.Detail">Inspect.Faction.Detail</a></h2>
+    <p><i></i> Provides detailed information about factions.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Faction.Detail(<i>faction</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Faction.Detail(<i>factions</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>faction</i></td><td>parameter</td><td><i>faction</i></td><td>The identifier of the faction to retrieve detail for.</td></tr>
+      <tr><td><i>factions</i></td><td>parameter</td><td><i>table</i></td><td>A table of identifiers of factions to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single faction.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested factions. The key is the faction ID, the value is the faction's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>categoryName</th>
+            <td>Name of the faction's category.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The faction's name.</th>
+          </tr>
+          <tr>
+            <th>notoriety</th>
+            <td>The current notoriety you have with this faction.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Faction.List">Inspect.Faction.List</a></h2>
+    <p><i></i> Returns a table of all known factions.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>factions</i> = Inspect.Faction.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>factions</i></td><td>result</td><td><i>table</i></td><td>All known factions, in {id = notoriety} format.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

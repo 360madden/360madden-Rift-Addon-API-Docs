@@ -1,0 +1,148 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Message.Accept">Command.Message.Accept</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the environment to accept a given type and identifier of message. Parameters can be replaced...</td></tr>
+      <tr><td><a href="#Command.Message.Broadcast">Command.Message.Broadcast</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Broadcast an unreliable addon message to some number of targets. This message will be dropped sil...</td></tr>
+      <tr><td><a href="#Command.Message.Reject">Command.Message.Reject</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Sets the environment to reject a given type and identifier of message. Directly cancels out singl...</td></tr>
+      <tr><td><a href="#Command.Message.Send">Command.Message.Send</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Send an reliable addon message to a single target.  The callback will respond with success only o...</td></tr>
+      <tr><td><a href="#Event.Message.Receive">Event.Message.Receive</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals the receipt of an addon message.</td></tr>
+      <tr><td><a href="#Inspect.Message.Accept.Check">Inspect.Message.Accept.Check</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Checks whether a given message type would be accepted if it were sent to you. Parameters can be r...</td></tr>
+      <tr><td><a href="#Inspect.Message.Accept.List">Inspect.Message.Accept.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Retrieves the list of accepted message types and identifiers.</td></tr>
+      <tr><td><a href="#Utility.Message.Limits">Utility.Message.Limits</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns information on the message bandwidth limits.</td></tr>
+      <tr><td><a href="#Utility.Message.Size">Utility.Message.Size</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns the size of a message, as used for bandwidth control.</td></tr>
+    </table>
+    <h2><a name="Command.Message.Accept">Command.Message.Accept</a></h2>
+    <p><i></i> Sets the environment to accept a given type and identifier of message. Parameters can be replaced with "nil" to act as a wildcard.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Message.Accept(<i>type</i>, <i>identifier</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string/nil</i></td><td>The identifier type of the message. Used for the receiver to filter accepted messages via the Command.Message.Accept() function. Must be at least three characters long.</td></tr>
+      <tr><td><i>type</i></td><td>parameter</td><td><i>string/nil</i></td><td>The type of message. Valid types include "tell", "channel", "guild", "officer", "party", "raid", "say", "yell", "send".</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Message.Broadcast">Command.Message.Broadcast</a></h2>
+    <p><i></i> Broadcast an unreliable addon message to some number of targets. This message will be dropped silently if the targets do not have the available bandwidth to receive it. The callback will respond with failure only if the message's target is invalid. "tell" messages are subject to the same restrictions as Command.Message.Send(). This command is throttled by the "message" throttle type.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Message.Broadcast(<i>type</i>, <i>target</i>, <i>identifier</i>, <i>data</i>)</td></tr>
+      <tr><td colspan=4>Command.Message.Broadcast(<i>type</i>, <i>target</i>, <i>identifier</i>, <i>data</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>string</i></td><td>The data to send. This parameter is binary-safe.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string</i></td><td>The identifier type of the message. Used for the receiver to filter accepted messages via the Command.Message.Accept() function. Must be at least three characters long.</td></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>string/nil</i></td><td>The target of this message. Required for "channel" or "tell" message types, must be nil otherwise.</td></tr>
+      <tr><td><i>type</i></td><td>parameter</td><td><i>string</i></td><td>The type of message to send. Valid types include "tell", "channel", "guild", "officer", "party", "raid", "say", "yell".</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Message.Reject">Command.Message.Reject</a></h2>
+    <p><i></i> Sets the environment to reject a given type and identifier of message. Directly cancels out single calls to Command.Message.Accept.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Message.Reject(<i>type</i>, <i>identifier</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string/nil</i></td><td>The identifier type of the message. Used for the receiver to filter accepted messages via the Command.Message.Accept() function. Must be at least three characters long.</td></tr>
+      <tr><td><i>type</i></td><td>parameter</td><td><i>string/nil</i></td><td>The type of message. Valid types include "tell", "channel", "guild", "officer", "party", "raid", "say", "yell", "send".</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Message.Send">Command.Message.Send</a></h2>
+    <p><i></i> Send an reliable addon message to a single target.  The callback will respond with success only once the server has accepted the message for processing and queueing. Failure may occur if the target is invalid or if the target's receive queue is full. Messages may be sent only to players that are nearby, in your guild, in your party or raid, or that have sent you a message or tell during this session. This command is throttled by the "message" throttle type.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Message.Send(<i>target</i>, <i>identifier</i>, <i>data</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>string</i></td><td>The data to send. This parameter is binary-safe.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string</i></td><td>The identifier type of the message. Used for the receiver to filter accepted messages via the Command.Message.Accept() function. Must be at least three characters long.</td></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>string</i></td><td>The name of the player to send the message to.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Message.Receive">Event.Message.Receive</a></h2>
+    <p><i></i> Signals the receipt of an addon message.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Message.Receive(<i>from</i>, <i>type</i>, <i>channel</i>, <i>identifier</i>, <i>data</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>channel</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>If type is "channel", the channel that this message was sent to. Otherwise, nil.</td></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The data payload for this message type.</td></tr>
+      <tr><td><i>from</i></td><td>parameter</td><td><i>variant</i></td><td>The name of the player this message is from.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The identifier for this message.</td></tr>
+      <tr><td><i>type</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The type of this message. May be any of "send", "tell", "channel", "guild", "officer", "party", "raid", "say", or "yell".</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Message.Accept.Check">Inspect.Message.Accept.Check</a></h2>
+    <p><i></i> Checks whether a given message type would be accepted if it were sent to you. Parameters can be replaced by "nil" to check for wildcard acceptance.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>accepted</i> = Inspect.Message.Accept.Check(<i>type</i>, <i>identifier</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string/nil</i></td><td>The identifier type of the message. Used for the receiver to filter accepted messages via the Command.Message.Accept() function. Must be at least three characters long.</td></tr>
+      <tr><td><i>type</i></td><td>parameter</td><td><i>string/nil</i></td><td>The type of message. Valid types include "tell", "channel", "guild", "officer", "party", "raid", "say", "yell", "send".</td></tr>
+      <tr><td><i>accepted</i></td><td>result</td><td><i>boolean</i></td><td>True if the message would be transferred to this client.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Message.Accept.List">Inspect.Message.Accept.List</a></h2>
+    <p><i></i> Retrieves the list of accepted message types and identifiers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>accepts</i> = Inspect.Message.Accept.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>accepts</i></td><td>result</td><td><i>table</i></td><td>List of all accepted message types. Takes the form of a key/value table. The key is a table containing {type, identifier}, where either element may be nil to indicate a wildcard. The value is the number of times this type has been accepted.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Message.Limits">Utility.Message.Limits</a></h2>
+    <p><i></i> Returns information on the message bandwidth limits.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>data</i> = Utility.Message.Limits()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>data</i></td><td>result</td><td><i>table</i></td><td>The requested data.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>burst</th>
+            <td>The amount of data that can be sent or received without being subject to throttling.</th>
+          </tr>
+          <tr>
+            <th>maximum</th>
+            <td>Maximum allowed message size.</th>
+          </tr>
+          <tr>
+            <th>sustained</th>
+            <td>Amount of data that can be transferred per second without dropping messages.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Utility.Message.Size">Utility.Message.Size</a></h2>
+    <p><i></i> Returns the size of a message, as used for bandwidth control.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>size</i> = Utility.Message.Size(<i>to</i>, <i>identifier</i>, <i>data</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>string</i></td><td>The data to send. This parameter is binary-safe.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string</i></td><td>The identifier type of the message. Used for the receiver to filter accepted messages via the Command.Message.Accept() function. Must be at least three characters long.</td></tr>
+      <tr><td><i>to</i></td><td>parameter</td><td><i>string/nil</i></td><td>The name of the player or channel to send to. nil if this is not targeted at a specific player or channel.</td></tr>
+      <tr><td><i>size</i></td><td>result</td><td><i>number</i></td><td>The calculated size of the message.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

@@ -1,0 +1,57 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Tooltip">Command.Tooltip</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Changes the displayed tooltip.</td></tr>
+      <tr><td><a href="#Event.Tooltip">Event.Tooltip</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the tooltip has changed.</td></tr>
+      <tr><td><a href="#Inspect.Tooltip">Inspect.Tooltip</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns the current contents of the tooltip.</td></tr>
+    </table>
+    <h2><a name="Command.Tooltip">Command.Tooltip</a></h2>
+    <p><i></i> Changes the displayed tooltip.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Tooltip(<i>target</i>)</td></tr>
+      <tr><td colspan=4>Command.Tooltip(<i>target</i>, <i>nil</i>)</td></tr>
+      <tr><td colspan=4>Command.Tooltip(<i>owner</i>, <i>buff</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>buff</i></td><td>parameter</td><td><i>buff</i></td><td>The ID of a buff for the new tooltip.</td></tr>
+      <tr><td><i>nil</i></td><td>parameter</td><td><i>nil</i></td><td>Optional placeholder nil.</td></tr>
+      <tr><td><i>owner</i></td><td>parameter</td><td><i>unit</i></td><td>The ID of the owner of the buff.</td></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>variant</i></td><td>The new tooltip. Currently accepts ability, item, itemtype, or unit IDs. Pass nil to clear the tooltip.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Tooltip">Event.Tooltip</a></h2>
+    <p><i></i> Signals that the tooltip has changed.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Tooltip(<i>type</i>, <i>shown</i>, <i>buff</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>buff</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The ID of the tooltip's new buff. "shown" will be a unit in this case.</td></tr>
+      <tr><td><i>shown</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The blob describing the new element shown. Generally, some kind of identifier used in another part of the addon system.</td></tr>
+      <tr><td><i>type</i></td><td>parameter</td><td><i>variant</i></td><td>The current tooltip type. Valid values include "ability", "buff", "item", "itemtype", and "unit".</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Tooltip">Inspect.Tooltip</a></h2>
+    <p><i></i> Returns the current contents of the tooltip.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>type, shown</i> = Inspect.Tooltip()</td></tr>
+      <tr><td colspan=4><i>type, unit, buff</i> = Inspect.Tooltip()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>buff</i></td><td>result</td><td><i>buff</i></td><td>The ID of the tooltip's buff.</td></tr>
+      <tr><td><i>shown</i></td><td>result</td><td><i>variant, nil</i></td><td>The blob describing what is currently shown. Generally, some kind of identifier used in another part of the addon system.</td></tr>
+      <tr><td><i>type</i></td><td>result</td><td><i>string, nil</i></td><td>The current tooltip type. Valid values include "ability", "buff", "item", "itemtype", and "unit".</td></tr>
+      <tr><td><i>unit</i></td><td>result</td><td><i>unit</i></td><td>The unit that the buff is attached to.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

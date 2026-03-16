@@ -1,0 +1,44 @@
+<html>
+  <head><title>API Docs (live) -- Native:EventList</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Native:EventList">Native:EventList</a> </h2>
+    <p><i></i> Lists the current event handlers for an event.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>result</i> = Layout:EventList(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+      <tr><td><i>result</i></td><td>result</td><td><i>table</i></td><td>A table of event handlers for this event.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>handler</th>
+            <td>The handler that will be called when the event fires.</th>
+          </tr>
+          <tr>
+            <th>label</th>
+            <td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</th>
+          </tr>
+          <tr>
+            <th>macro</th>
+            <td>The macro that will run when the event fires.</th>
+          </tr>
+          <tr>
+            <th>owner</th>
+            <td>Owner to search for.</th>
+          </tr>
+          <tr>
+            <th>priority</th>
+            <td>Priority of the event handler. Higher numbers trigger first.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

@@ -1,0 +1,63 @@
+<html>
+  <head><title>API Docs (live) -- Event.Guild.Log</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Event.Guild.Log">Event.Guild.Log</a> </h2>
+    <p><i></i> Signals incoming guild log data. Can be triggered manually with Command.Guild.Log.Request().</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Guild.Log(<i>log</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>log</i></td><td>parameter</td><td><i>variant</i></td><td>An array containing the refreshed guild log items, in order.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>achievement</th>
+            <td>The achievement involved.</th>
+          </tr>
+          <tr>
+            <th>coin</th>
+            <td>The amount of silver involved.</th>
+          </tr>
+          <tr>
+            <th>count</th>
+            <td>The number of items involved.</th>
+          </tr>
+          <tr>
+            <th>item</th>
+            <td>The item type involved.</th>
+          </tr>
+          <tr>
+            <th>level</th>
+            <td>The level involved.</th>
+          </tr>
+          <tr>
+            <th>rank</th>
+            <td>The rank involved.</th>
+          </tr>
+          <tr>
+            <th>source</th>
+            <td>The source of the log event.</th>
+          </tr>
+          <tr>
+            <th>target</th>
+            <td>The target of the log event.</th>
+          </tr>
+          <tr>
+            <th>type</th>
+            <td>The type of the log message. May be any of achievement, bankCoinDeposit, bankCoinHeal, bankCoinTithe, bankCoinWithdraw, bankItemDeposit, bankItemWithdraw, bankVault, charterSign, charterUnsign, demote, demoteTrial, dimensionBuy, finder, firstAchievement, firstCollection, firstItem, firstKill, firstQuest, form, found, invite, kick, leave, level, motd, promote, rankEdit, rename, transferred, unlearnActive, unlearnPassive, wallDelete, wallModify, xp, or xpQuest.</th>
+          </tr>
+          <tr>
+            <th>xp</th>
+            <td>The amount of XP involved.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

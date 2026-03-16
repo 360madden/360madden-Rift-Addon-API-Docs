@@ -1,0 +1,1258 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.UI.Error">Command.UI.Error</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Display the addon error dialog.</td></tr>
+      <tr><td><a href="#Event.UI.Button.Left.Press">Event.UI.Button.Left.Press</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a Button has been pressed with the left mouse button. Equivalent to LeftClick, but t...</td></tr>
+      <tr><td><a href="#Event.UI.Checkbox.Change">Event.UI.Checkbox.Change</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a checkbox's state has changed.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Down">Event.UI.Input.Key.Down</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a keyboard key has been pressed. Requires key focus.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Down.Bubble">Event.UI.Input.Key.Down.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Key.Down.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Down.Dive">Event.UI.Input.Key.Down.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Key.Down.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Focus.Gain">Event.UI.Input.Key.Focus.Gain</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a frame has gained the key focus.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Focus.Gain.Bubble">Event.UI.Input.Key.Focus.Gain.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Key.Focus.Gain.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Focus.Gain.Dive">Event.UI.Input.Key.Focus.Gain.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Key.Focus.Gain.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Focus.Loss">Event.UI.Input.Key.Focus.Loss</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a frame has lost the key focus.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Focus.Loss.Bubble">Event.UI.Input.Key.Focus.Loss.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Key.Focus.Loss.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Focus.Loss.Dive">Event.UI.Input.Key.Focus.Loss.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Key.Focus.Loss.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Repeat">Event.UI.Input.Key.Repeat</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a keyboard key is repeating. Requires key focus.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Repeat.Bubble">Event.UI.Input.Key.Repeat.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Key.Repeat.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Repeat.Dive">Event.UI.Input.Key.Repeat.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Key.Repeat.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Type">Event.UI.Input.Key.Type</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that text has been typed. Requires key focus.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Type.Bubble">Event.UI.Input.Key.Type.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Key.Type.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Type.Dive">Event.UI.Input.Key.Type.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Key.Type.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Up">Event.UI.Input.Key.Up</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a keyboard key has been released. Requires key focus.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Up.Bubble">Event.UI.Input.Key.Up.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Key.Up.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Key.Up.Dive">Event.UI.Input.Key.Up.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Key.Up.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Cursor.In">Event.UI.Input.Mouse.Cursor.In</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the cursor has moved into a frame.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Cursor.In.Bubble">Event.UI.Input.Mouse.Cursor.In.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Cursor.In.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Cursor.In.Dive">Event.UI.Input.Mouse.Cursor.In.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Cursor.In.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Cursor.Move">Event.UI.Input.Mouse.Cursor.Move</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the cursor has moved within a frame.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Cursor.Move.Bubble">Event.UI.Input.Mouse.Cursor.Move.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Cursor.Move.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Cursor.Move.Dive">Event.UI.Input.Mouse.Cursor.Move.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Cursor.Move.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Cursor.Out">Event.UI.Input.Mouse.Cursor.Out</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the cursor has moved out of a frame.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Cursor.Out.Bubble">Event.UI.Input.Mouse.Cursor.Out.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Cursor.Out.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Cursor.Out.Dive">Event.UI.Input.Mouse.Cursor.Out.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Cursor.Out.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Left.Click">Event.UI.Input.Mouse.Left.Click</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has clicked the left mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Left.Click.Bubble">Event.UI.Input.Mouse.Left.Click.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Left.Click.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Left.Click.Dive">Event.UI.Input.Mouse.Left.Click.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Left.Click.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Left.Down">Event.UI.Input.Mouse.Left.Down</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has pressed the left mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Left.Down.Bubble">Event.UI.Input.Mouse.Left.Down.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Left.Down.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Left.Down.Dive">Event.UI.Input.Mouse.Left.Down.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Left.Down.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Left.Up">Event.UI.Input.Mouse.Left.Up</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has released the left mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Left.Up.Bubble">Event.UI.Input.Mouse.Left.Up.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Left.Up.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Left.Up.Dive">Event.UI.Input.Mouse.Left.Up.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Left.Up.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Left.Upoutside">Event.UI.Input.Mouse.Left.Upoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has released the left mouse button off this frame after pressing it on this...</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Left.Upoutside.Bubble">Event.UI.Input.Mouse.Left.Upoutside.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Left.Upoutside.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Left.Upoutside.Dive">Event.UI.Input.Mouse.Left.Upoutside.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Left.Upoutside.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Middle.Click">Event.UI.Input.Mouse.Middle.Click</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has clicked the middle mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Middle.Click.Bubble">Event.UI.Input.Mouse.Middle.Click.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Middle.Click.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Middle.Click.Dive">Event.UI.Input.Mouse.Middle.Click.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Middle.Click.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Middle.Down">Event.UI.Input.Mouse.Middle.Down</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has pressed the middle mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Middle.Down.Bubble">Event.UI.Input.Mouse.Middle.Down.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Middle.Down.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Middle.Down.Dive">Event.UI.Input.Mouse.Middle.Down.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Middle.Down.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Middle.Up">Event.UI.Input.Mouse.Middle.Up</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has released the middle mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Middle.Up.Bubble">Event.UI.Input.Mouse.Middle.Up.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Middle.Up.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Middle.Up.Dive">Event.UI.Input.Mouse.Middle.Up.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Middle.Up.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Middle.Upoutside">Event.UI.Input.Mouse.Middle.Upoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has released the middle mouse button off this frame after pressing it on th...</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Middle.Upoutside.Bubble">Event.UI.Input.Mouse.Middle.Upoutside.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Middle.Upoutside.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Middle.Upoutside.Dive">Event.UI.Input.Mouse.Middle.Upoutside.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Middle.Upoutside.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse4.Click">Event.UI.Input.Mouse.Mouse4.Click</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has clicked the fourth mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse4.Click.Bubble">Event.UI.Input.Mouse.Mouse4.Click.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse4.Click.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse4.Click.Dive">Event.UI.Input.Mouse.Mouse4.Click.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse4.Click.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse4.Down">Event.UI.Input.Mouse.Mouse4.Down</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has pressed the fourth mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse4.Down.Bubble">Event.UI.Input.Mouse.Mouse4.Down.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse4.Down.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse4.Down.Dive">Event.UI.Input.Mouse.Mouse4.Down.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse4.Down.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse4.Up">Event.UI.Input.Mouse.Mouse4.Up</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has released the fourth mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse4.Up.Bubble">Event.UI.Input.Mouse.Mouse4.Up.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse4.Up.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse4.Up.Dive">Event.UI.Input.Mouse.Mouse4.Up.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse4.Up.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse4.Upoutside">Event.UI.Input.Mouse.Mouse4.Upoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has released the fourth mouse button off this frame after pressing it on th...</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse4.Upoutside.Bubble">Event.UI.Input.Mouse.Mouse4.Upoutside.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse4.Upoutside.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse4.Upoutside.Dive">Event.UI.Input.Mouse.Mouse4.Upoutside.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse4.Upoutside.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse5.Click">Event.UI.Input.Mouse.Mouse5.Click</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has clicked the fifth mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse5.Click.Bubble">Event.UI.Input.Mouse.Mouse5.Click.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse5.Click.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse5.Click.Dive">Event.UI.Input.Mouse.Mouse5.Click.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse5.Click.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse5.Down">Event.UI.Input.Mouse.Mouse5.Down</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has pressed the fifth mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse5.Down.Bubble">Event.UI.Input.Mouse.Mouse5.Down.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse5.Down.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse5.Down.Dive">Event.UI.Input.Mouse.Mouse5.Down.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse5.Down.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse5.Up">Event.UI.Input.Mouse.Mouse5.Up</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has released the fifth mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse5.Up.Bubble">Event.UI.Input.Mouse.Mouse5.Up.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse5.Up.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse5.Up.Dive">Event.UI.Input.Mouse.Mouse5.Up.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse5.Up.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse5.Upoutside">Event.UI.Input.Mouse.Mouse5.Upoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has released the fifth mouse button off this frame after pressing it on thi...</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse5.Upoutside.Bubble">Event.UI.Input.Mouse.Mouse5.Upoutside.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse5.Upoutside.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Mouse5.Upoutside.Dive">Event.UI.Input.Mouse.Mouse5.Upoutside.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Mouse5.Upoutside.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Right.Click">Event.UI.Input.Mouse.Right.Click</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has clicked the right mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Right.Click.Bubble">Event.UI.Input.Mouse.Right.Click.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Right.Click.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Right.Click.Dive">Event.UI.Input.Mouse.Right.Click.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Right.Click.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Right.Down">Event.UI.Input.Mouse.Right.Down</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has pressed the right mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Right.Down.Bubble">Event.UI.Input.Mouse.Right.Down.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Right.Down.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Right.Down.Dive">Event.UI.Input.Mouse.Right.Down.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Right.Down.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Right.Up">Event.UI.Input.Mouse.Right.Up</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has released the right mouse button.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Right.Up.Bubble">Event.UI.Input.Mouse.Right.Up.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Right.Up.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Right.Up.Dive">Event.UI.Input.Mouse.Right.Up.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Right.Up.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Right.Upoutside">Event.UI.Input.Mouse.Right.Upoutside</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has released the right mouse button off this frame after pressing it on thi...</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Right.Upoutside.Bubble">Event.UI.Input.Mouse.Right.Upoutside.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Right.Upoutside.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Right.Upoutside.Dive">Event.UI.Input.Mouse.Right.Upoutside.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Right.Upoutside.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Wheel.Back">Event.UI.Input.Mouse.Wheel.Back</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has moved the mousewheel back.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Wheel.Back.Bubble">Event.UI.Input.Mouse.Wheel.Back.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Wheel.Back.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Wheel.Back.Dive">Event.UI.Input.Mouse.Wheel.Back.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Wheel.Back.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Wheel.Forward">Event.UI.Input.Mouse.Wheel.Forward</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the user has moved the mousewheel forwards.</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Wheel.Forward.Bubble">Event.UI.Input.Mouse.Wheel.Forward.Bubble</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Wheel.Forward.Bubble@summary</td></tr>
+      <tr><td><a href="#Event.UI.Input.Mouse.Wheel.Forward.Dive">Event.UI.Input.Mouse.Wheel.Forward.Dive</a></td><td><i></i></td><td><i></i></td><td></td><td>Event.UI.Input.Mouse.Wheel.Forward.Dive@summary</td></tr>
+      <tr><td><a href="#Event.UI.Layout.Layer">Event.UI.Layout.Layer</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in layer.</td></tr>
+      <tr><td><a href="#Event.UI.Layout.Move">Event.UI.Layout.Move</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in the top-left corner's position. May be delayed after the actual movement.</td></tr>
+      <tr><td><a href="#Event.UI.Layout.Size">Event.UI.Layout.Size</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in size. May be delayed after the actual change.</td></tr>
+      <tr><td><a href="#Event.UI.Layout.Strata">Event.UI.Layout.Strata</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in strata.</td></tr>
+      <tr><td><a href="#Event.UI.Native.Loaded">Event.UI.Native.Loaded</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in this native frame's loaded state.</td></tr>
+      <tr><td><a href="#Event.UI.Scrollbar.Change">Event.UI.Scrollbar.Change</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in scrollbar position.</td></tr>
+      <tr><td><a href="#Event.UI.Scrollbar.Grab">Event.UI.Scrollbar.Grab</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a scrollbar has been grabbed.</td></tr>
+      <tr><td><a href="#Event.UI.Scrollbar.Release">Event.UI.Scrollbar.Release</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a scrollbar has been released.</td></tr>
+      <tr><td><a href="#Event.UI.Slider.Change">Event.UI.Slider.Change</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in slider position.</td></tr>
+      <tr><td><a href="#Event.UI.Slider.Grab">Event.UI.Slider.Grab</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a slider has been grabbed.</td></tr>
+      <tr><td><a href="#Event.UI.Slider.Release">Event.UI.Slider.Release</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a slider has been released.</td></tr>
+      <tr><td><a href="#Event.UI.Textfield.Change">Event.UI.Textfield.Change</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in textfield contents.</td></tr>
+      <tr><td><a href="#Event.UI.Textfield.Select">Event.UI.Textfield.Select</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in textfield selection.</td></tr>
+      <tr><td><a href="#UI.Context">UI.Context</a></td><td><i></i></td><td><i></i></td><td></td><td>Lists all contexts that have been created. Organizes them under [addonIdentifier][contextIdentifi...</td></tr>
+      <tr><td><a href="#UI.CreateContext">UI.CreateContext</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Creates a new UI context. A UI context must be created in order to create any frames.</td></tr>
+      <tr><td><a href="#UI.CreateFrame">UI.CreateFrame</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Creates a new frame. Frames are the blocks that all addon UIs are made out of. Since all frames m...</td></tr>
+      <tr><td><a href="#UI.Frame">UI.Frame</a></td><td><i></i></td><td><i></i></td><td></td><td>Lists all frames that have been created. Organizes them under [addonIdentifier][contextIdentifier...</td></tr>
+    </table>
+    <h2><a name="Command.UI.Error">Command.UI.Error</a></h2>
+    <p><i></i> Display the addon error dialog.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.UI.Error(<i>id</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>id</i></td><td>parameter</td><td><i>error</i></td><td>The ID of the error to be displayed.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Button.Left.Press">Event.UI.Button.Left.Press</a></h2>
+    <p><i></i> Signals that a Button has been pressed with the left mouse button. Equivalent to LeftClick, but triggers only while the button is enabled.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Button.Left.Press(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Checkbox.Change">Event.UI.Checkbox.Change</a></h2>
+    <p><i></i> Signals that a checkbox's state has changed.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Checkbox.Change(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Down">Event.UI.Input.Key.Down</a></h2>
+    <p><i></i> Signals that a keyboard key has been pressed. Requires key focus.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Down(<i>handle</i>, <i>key</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+      <tr><td><i>key</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>Key code for the applicable key. Generally, the lowercase non-shifted result of pressing that key. Will be a user-identifiable string for keys without standard display representations.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Down.Bubble">Event.UI.Input.Key.Down.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Key.Down.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Down.Bubble(<i>handle</i>, <i>key</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+      <tr><td><i>key</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>Key code for the applicable key. Generally, the lowercase non-shifted result of pressing that key. Will be a user-identifiable string for keys without standard display representations.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Down.Dive">Event.UI.Input.Key.Down.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Key.Down.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Down.Dive(<i>handle</i>, <i>key</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+      <tr><td><i>key</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>Key code for the applicable key. Generally, the lowercase non-shifted result of pressing that key. Will be a user-identifiable string for keys without standard display representations.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Focus.Gain">Event.UI.Input.Key.Focus.Gain</a></h2>
+    <p><i></i> Signals that a frame has gained the key focus.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Focus.Gain(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Focus.Gain.Bubble">Event.UI.Input.Key.Focus.Gain.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Key.Focus.Gain.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Focus.Gain.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Focus.Gain.Dive">Event.UI.Input.Key.Focus.Gain.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Key.Focus.Gain.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Focus.Gain.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Focus.Loss">Event.UI.Input.Key.Focus.Loss</a></h2>
+    <p><i></i> Signals that a frame has lost the key focus.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Focus.Loss(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Focus.Loss.Bubble">Event.UI.Input.Key.Focus.Loss.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Key.Focus.Loss.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Focus.Loss.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Focus.Loss.Dive">Event.UI.Input.Key.Focus.Loss.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Key.Focus.Loss.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Focus.Loss.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Repeat">Event.UI.Input.Key.Repeat</a></h2>
+    <p><i></i> Signals that a keyboard key is repeating. Requires key focus.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Repeat(<i>handle</i>, <i>key</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+      <tr><td><i>key</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>Key code for the applicable key. Generally, the lowercase non-shifted result of pressing that key. Will be a user-identifiable string for keys without standard display representations.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Repeat.Bubble">Event.UI.Input.Key.Repeat.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Key.Repeat.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Repeat.Bubble(<i>handle</i>, <i>key</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+      <tr><td><i>key</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>Key code for the applicable key. Generally, the lowercase non-shifted result of pressing that key. Will be a user-identifiable string for keys without standard display representations.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Repeat.Dive">Event.UI.Input.Key.Repeat.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Key.Repeat.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Repeat.Dive(<i>handle</i>, <i>key</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+      <tr><td><i>key</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>Key code for the applicable key. Generally, the lowercase non-shifted result of pressing that key. Will be a user-identifiable string for keys without standard display representations.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Type">Event.UI.Input.Key.Type</a></h2>
+    <p><i></i> Signals that text has been typed. Requires key focus.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Type(<i>handle</i>, <i>text</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+      <tr><td><i>text</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The text that has been entered.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Type.Bubble">Event.UI.Input.Key.Type.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Key.Type.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Type.Bubble(<i>handle</i>, <i>text</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+      <tr><td><i>text</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The text that has been entered.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Type.Dive">Event.UI.Input.Key.Type.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Key.Type.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Type.Dive(<i>handle</i>, <i>text</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+      <tr><td><i>text</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The text that has been entered.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Up">Event.UI.Input.Key.Up</a></h2>
+    <p><i></i> Signals that a keyboard key has been released. Requires key focus.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Up(<i>handle</i>, <i>key</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+      <tr><td><i>key</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>Key code for the applicable key. Generally, the lowercase non-shifted result of pressing that key. Will be a user-identifiable string for keys without standard display representations.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Up.Bubble">Event.UI.Input.Key.Up.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Key.Up.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Up.Bubble(<i>handle</i>, <i>key</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+      <tr><td><i>key</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>Key code for the applicable key. Generally, the lowercase non-shifted result of pressing that key. Will be a user-identifiable string for keys without standard display representations.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Key.Up.Dive">Event.UI.Input.Key.Up.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Key.Up.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Key.Up.Dive(<i>handle</i>, <i>key</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+      <tr><td><i>key</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>Key code for the applicable key. Generally, the lowercase non-shifted result of pressing that key. Will be a user-identifiable string for keys without standard display representations.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Cursor.In">Event.UI.Input.Mouse.Cursor.In</a></h2>
+    <p><i></i> Signals that the cursor has moved into a frame.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Cursor.In(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Cursor.In.Bubble">Event.UI.Input.Mouse.Cursor.In.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Cursor.In.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Cursor.In.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Cursor.In.Dive">Event.UI.Input.Mouse.Cursor.In.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Cursor.In.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Cursor.In.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Cursor.Move">Event.UI.Input.Mouse.Cursor.Move</a></h2>
+    <p><i></i> Signals that the cursor has moved within a frame.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Cursor.Move(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Cursor.Move.Bubble">Event.UI.Input.Mouse.Cursor.Move.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Cursor.Move.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Cursor.Move.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Cursor.Move.Dive">Event.UI.Input.Mouse.Cursor.Move.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Cursor.Move.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Cursor.Move.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Cursor.Out">Event.UI.Input.Mouse.Cursor.Out</a></h2>
+    <p><i></i> Signals that the cursor has moved out of a frame.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Cursor.Out(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Cursor.Out.Bubble">Event.UI.Input.Mouse.Cursor.Out.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Cursor.Out.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Cursor.Out.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Cursor.Out.Dive">Event.UI.Input.Mouse.Cursor.Out.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Cursor.Out.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Cursor.Out.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Left.Click">Event.UI.Input.Mouse.Left.Click</a></h2>
+    <p><i></i> Signals that the user has clicked the left mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Left.Click(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Left.Click.Bubble">Event.UI.Input.Mouse.Left.Click.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Left.Click.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Left.Click.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Left.Click.Dive">Event.UI.Input.Mouse.Left.Click.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Left.Click.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Left.Click.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Left.Down">Event.UI.Input.Mouse.Left.Down</a></h2>
+    <p><i></i> Signals that the user has pressed the left mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Left.Down(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Left.Down.Bubble">Event.UI.Input.Mouse.Left.Down.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Left.Down.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Left.Down.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Left.Down.Dive">Event.UI.Input.Mouse.Left.Down.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Left.Down.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Left.Down.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Left.Up">Event.UI.Input.Mouse.Left.Up</a></h2>
+    <p><i></i> Signals that the user has released the left mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Left.Up(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Left.Up.Bubble">Event.UI.Input.Mouse.Left.Up.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Left.Up.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Left.Up.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Left.Up.Dive">Event.UI.Input.Mouse.Left.Up.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Left.Up.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Left.Up.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Left.Upoutside">Event.UI.Input.Mouse.Left.Upoutside</a></h2>
+    <p><i></i> Signals that the user has released the left mouse button off this frame after pressing it on this frame.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Left.Upoutside(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Left.Upoutside.Bubble">Event.UI.Input.Mouse.Left.Upoutside.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Left.Upoutside.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Left.Upoutside.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Left.Upoutside.Dive">Event.UI.Input.Mouse.Left.Upoutside.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Left.Upoutside.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Left.Upoutside.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Middle.Click">Event.UI.Input.Mouse.Middle.Click</a></h2>
+    <p><i></i> Signals that the user has clicked the middle mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Middle.Click(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Middle.Click.Bubble">Event.UI.Input.Mouse.Middle.Click.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Middle.Click.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Middle.Click.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Middle.Click.Dive">Event.UI.Input.Mouse.Middle.Click.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Middle.Click.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Middle.Click.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Middle.Down">Event.UI.Input.Mouse.Middle.Down</a></h2>
+    <p><i></i> Signals that the user has pressed the middle mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Middle.Down(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Middle.Down.Bubble">Event.UI.Input.Mouse.Middle.Down.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Middle.Down.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Middle.Down.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Middle.Down.Dive">Event.UI.Input.Mouse.Middle.Down.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Middle.Down.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Middle.Down.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Middle.Up">Event.UI.Input.Mouse.Middle.Up</a></h2>
+    <p><i></i> Signals that the user has released the middle mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Middle.Up(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Middle.Up.Bubble">Event.UI.Input.Mouse.Middle.Up.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Middle.Up.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Middle.Up.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Middle.Up.Dive">Event.UI.Input.Mouse.Middle.Up.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Middle.Up.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Middle.Up.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Middle.Upoutside">Event.UI.Input.Mouse.Middle.Upoutside</a></h2>
+    <p><i></i> Signals that the user has released the middle mouse button off this frame after pressing it on this frame.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Middle.Upoutside(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Middle.Upoutside.Bubble">Event.UI.Input.Mouse.Middle.Upoutside.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Middle.Upoutside.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Middle.Upoutside.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Middle.Upoutside.Dive">Event.UI.Input.Mouse.Middle.Upoutside.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Middle.Upoutside.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Middle.Upoutside.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse4.Click">Event.UI.Input.Mouse.Mouse4.Click</a></h2>
+    <p><i></i> Signals that the user has clicked the fourth mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse4.Click(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse4.Click.Bubble">Event.UI.Input.Mouse.Mouse4.Click.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse4.Click.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse4.Click.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse4.Click.Dive">Event.UI.Input.Mouse.Mouse4.Click.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse4.Click.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse4.Click.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse4.Down">Event.UI.Input.Mouse.Mouse4.Down</a></h2>
+    <p><i></i> Signals that the user has pressed the fourth mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse4.Down(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse4.Down.Bubble">Event.UI.Input.Mouse.Mouse4.Down.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse4.Down.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse4.Down.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse4.Down.Dive">Event.UI.Input.Mouse.Mouse4.Down.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse4.Down.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse4.Down.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse4.Up">Event.UI.Input.Mouse.Mouse4.Up</a></h2>
+    <p><i></i> Signals that the user has released the fourth mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse4.Up(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse4.Up.Bubble">Event.UI.Input.Mouse.Mouse4.Up.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse4.Up.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse4.Up.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse4.Up.Dive">Event.UI.Input.Mouse.Mouse4.Up.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse4.Up.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse4.Up.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse4.Upoutside">Event.UI.Input.Mouse.Mouse4.Upoutside</a></h2>
+    <p><i></i> Signals that the user has released the fourth mouse button off this frame after pressing it on this frame.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse4.Upoutside(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse4.Upoutside.Bubble">Event.UI.Input.Mouse.Mouse4.Upoutside.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse4.Upoutside.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse4.Upoutside.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse4.Upoutside.Dive">Event.UI.Input.Mouse.Mouse4.Upoutside.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse4.Upoutside.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse4.Upoutside.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse5.Click">Event.UI.Input.Mouse.Mouse5.Click</a></h2>
+    <p><i></i> Signals that the user has clicked the fifth mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse5.Click(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse5.Click.Bubble">Event.UI.Input.Mouse.Mouse5.Click.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse5.Click.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse5.Click.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse5.Click.Dive">Event.UI.Input.Mouse.Mouse5.Click.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse5.Click.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse5.Click.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse5.Down">Event.UI.Input.Mouse.Mouse5.Down</a></h2>
+    <p><i></i> Signals that the user has pressed the fifth mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse5.Down(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse5.Down.Bubble">Event.UI.Input.Mouse.Mouse5.Down.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse5.Down.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse5.Down.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse5.Down.Dive">Event.UI.Input.Mouse.Mouse5.Down.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse5.Down.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse5.Down.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse5.Up">Event.UI.Input.Mouse.Mouse5.Up</a></h2>
+    <p><i></i> Signals that the user has released the fifth mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse5.Up(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse5.Up.Bubble">Event.UI.Input.Mouse.Mouse5.Up.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse5.Up.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse5.Up.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse5.Up.Dive">Event.UI.Input.Mouse.Mouse5.Up.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse5.Up.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse5.Up.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse5.Upoutside">Event.UI.Input.Mouse.Mouse5.Upoutside</a></h2>
+    <p><i></i> Signals that the user has released the fifth mouse button off this frame after pressing it on this frame.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse5.Upoutside(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse5.Upoutside.Bubble">Event.UI.Input.Mouse.Mouse5.Upoutside.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse5.Upoutside.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse5.Upoutside.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Mouse5.Upoutside.Dive">Event.UI.Input.Mouse.Mouse5.Upoutside.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Mouse5.Upoutside.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Mouse5.Upoutside.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Right.Click">Event.UI.Input.Mouse.Right.Click</a></h2>
+    <p><i></i> Signals that the user has clicked the right mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Right.Click(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Right.Click.Bubble">Event.UI.Input.Mouse.Right.Click.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Right.Click.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Right.Click.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Right.Click.Dive">Event.UI.Input.Mouse.Right.Click.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Right.Click.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Right.Click.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Right.Down">Event.UI.Input.Mouse.Right.Down</a></h2>
+    <p><i></i> Signals that the user has pressed the right mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Right.Down(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Right.Down.Bubble">Event.UI.Input.Mouse.Right.Down.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Right.Down.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Right.Down.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Right.Down.Dive">Event.UI.Input.Mouse.Right.Down.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Right.Down.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Right.Down.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Right.Up">Event.UI.Input.Mouse.Right.Up</a></h2>
+    <p><i></i> Signals that the user has released the right mouse button.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Right.Up(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Right.Up.Bubble">Event.UI.Input.Mouse.Right.Up.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Right.Up.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Right.Up.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Right.Up.Dive">Event.UI.Input.Mouse.Right.Up.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Right.Up.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Right.Up.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Right.Upoutside">Event.UI.Input.Mouse.Right.Upoutside</a></h2>
+    <p><i></i> Signals that the user has released the right mouse button off this frame after pressing it on this frame.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Right.Upoutside(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Right.Upoutside.Bubble">Event.UI.Input.Mouse.Right.Upoutside.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Right.Upoutside.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Right.Upoutside.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Right.Upoutside.Dive">Event.UI.Input.Mouse.Right.Upoutside.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Right.Upoutside.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Right.Upoutside.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Wheel.Back">Event.UI.Input.Mouse.Wheel.Back</a></h2>
+    <p><i></i> Signals that the user has moved the mousewheel back.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Wheel.Back(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Wheel.Back.Bubble">Event.UI.Input.Mouse.Wheel.Back.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Wheel.Back.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Wheel.Back.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Wheel.Back.Dive">Event.UI.Input.Mouse.Wheel.Back.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Wheel.Back.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Wheel.Back.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Wheel.Forward">Event.UI.Input.Mouse.Wheel.Forward</a></h2>
+    <p><i></i> Signals that the user has moved the mousewheel forwards.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Wheel.Forward(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Wheel.Forward.Bubble">Event.UI.Input.Mouse.Wheel.Forward.Bubble</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Wheel.Forward.Bubble@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Wheel.Forward.Bubble(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Input.Mouse.Wheel.Forward.Dive">Event.UI.Input.Mouse.Wheel.Forward.Dive</a></h2>
+    <p><i></i> Event.UI.Input.Mouse.Wheel.Forward.Dive@summary</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Input.Mouse.Wheel.Forward.Dive(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Layout.Layer">Event.UI.Layout.Layer</a></h2>
+    <p><i></i> Signals a change in layer.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Layout.Layer(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Layout.Move">Event.UI.Layout.Move</a></h2>
+    <p><i></i> Signals a change in the top-left corner's position. May be delayed after the actual movement.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Layout.Move(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Layout.Size">Event.UI.Layout.Size</a></h2>
+    <p><i></i> Signals a change in size. May be delayed after the actual change.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Layout.Size(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Layout.Strata">Event.UI.Layout.Strata</a></h2>
+    <p><i></i> Signals a change in strata.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Layout.Strata(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Native.Loaded">Event.UI.Native.Loaded</a></h2>
+    <p><i></i> Signals a change in this native frame's loaded state.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Native.Loaded(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Scrollbar.Change">Event.UI.Scrollbar.Change</a></h2>
+    <p><i></i> Signals a change in scrollbar position.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Scrollbar.Change(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Scrollbar.Grab">Event.UI.Scrollbar.Grab</a></h2>
+    <p><i></i> Signals that a scrollbar has been grabbed.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Scrollbar.Grab(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Scrollbar.Release">Event.UI.Scrollbar.Release</a></h2>
+    <p><i></i> Signals that a scrollbar has been released.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Scrollbar.Release(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Slider.Change">Event.UI.Slider.Change</a></h2>
+    <p><i></i> Signals a change in slider position.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Slider.Change(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Slider.Grab">Event.UI.Slider.Grab</a></h2>
+    <p><i></i> Signals that a slider has been grabbed.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Slider.Grab(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Slider.Release">Event.UI.Slider.Release</a></h2>
+    <p><i></i> Signals that a slider has been released.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Slider.Release(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Textfield.Change">Event.UI.Textfield.Change</a></h2>
+    <p><i></i> Signals a change in textfield contents.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Textfield.Change(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.UI.Textfield.Select">Event.UI.Textfield.Select</a></h2>
+    <p><i></i> Signals a change in textfield selection.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.UI.Textfield.Select(<i>handle</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>handle</i></td><td>???</td><td><i>variant</i></td><td></td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="UI.Context">UI.Context</a></h2>
+    <p><i></i> Lists all contexts that have been created. Organizes them under [addonIdentifier][contextIdentifier][constructionOrder]. As an example, if TestAddon created four contexts named UIElement, the second would be UI.Context.TestAddon.UIElement[2].</p>
+  </body>
+  <h2><a name="UI.CreateContext">UI.CreateContext</a></h2>
+  <p><i></i> Creates a new UI context. A UI context must be created in order to create any frames.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>context</i> = UI.CreateContext(<i>name</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>name</i></td><td>parameter</td><td><i>string</i></td><td>A descriptive name for this element. Used for error reports and performance information. May be shown to end-users.</td></tr>
+    <tr><td><i>context</i></td><td>result</td><td><i>Context</i></td><td>A new context. Contexts are guaranteed to have at least the capabilities of a Frame.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="UI.CreateFrame">UI.CreateFrame</a></h2>
+  <p><i></i> Creates a new frame. Frames are the blocks that all addon UIs are made out of. Since all frames must have a parent, you'll need to create a Context before any frames. See UI.CreateContext.<br/>List of valid frame types:<br/>Frame: The base type. No special capabilities. Useful for spacing, organization, input handling, and solid color squares.<br/>Mask: Obscures the contents of child frames that do not fall within the mask boundaries.<br/>Text: Displays text.<br/>Texture: Displays a static texture image.<br/>RiftButton: A standard Rift button widget.<br/>RiftCheckbox: A standard Rift checkbox widget.<br/>RiftScrollbar: A standard Rift scrollbar widget.<br/>RiftSlider: A standard Rift slider widget.<br/>RiftTextfield: A standard Rift textfield widget.<br/>RiftWindow: A standard Rift window widget.</p>
+  <h3>Usage:   </h3>
+  <table>
+    <tr><td colspan=4><i>frame</i> = UI.CreateFrame(<i>type</i>, <i>name</i>, <i>parent</i>)</td></tr>
+    <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+    <tr><td><i>name</i></td><td>parameter</td><td><i>string</i></td><td>A descriptive name for this element. Used for error reports and performance information. May be shown to end-users.</td></tr>
+    <tr><td><i>parent</i></td><td>parameter</td><td><i>Element</i></td><td>The new parent for this frame.</td></tr>
+    <tr><td><i>type</i></td><td>parameter</td><td><i>string</i></td><td>The type of your new frame. Current supported types: Frame, Text, Texture.</td></tr>
+    <tr><td><i>frame</i></td><td>result</td><td><i>Frame</i></td><td>Your new frame.</td></tr>
+  </table>
+  <dl>
+  </dl>
+  <h2><a name="UI.Frame">UI.Frame</a></h2>
+  <p><i></i> Lists all frames that have been created. Organizes them under [addonIdentifier][contextIdentifier][constructionOrder]. As an example, if TestAddon created four frames named UIElement, the second would be UI.Frame.TestAddon.UIElement[2].</p>
+</html>
+<h4><a href='index.html'>Back to index...</a></h4>

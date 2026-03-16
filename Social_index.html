@@ -1,0 +1,219 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Social.Friend.Add">Command.Social.Friend.Add</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Adds a player to your friend list.</td></tr>
+      <tr><td><a href="#Command.Social.Friend.Note">Command.Social.Friend.Note</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Changes a friend's personal note.</td></tr>
+      <tr><td><a href="#Command.Social.Friend.Remove">Command.Social.Friend.Remove</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Removes a player from your friend list.</td></tr>
+      <tr><td><a href="#Command.Social.Ignore.Add">Command.Social.Ignore.Add</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Adds an player to your ignore list.</td></tr>
+      <tr><td><a href="#Command.Social.Ignore.Note">Command.Social.Ignore.Note</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Changes an ignored player's personal note.</td></tr>
+      <tr><td><a href="#Command.Social.Ignore.Remove">Command.Social.Ignore.Remove</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Removes a player from your ignore list.</td></tr>
+      <tr><td><a href="#Event.Social.Friend">Event.Social.Friend</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in your friend list.</td></tr>
+      <tr><td><a href="#Event.Social.Ignore">Event.Social.Ignore</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a change in your ignore list.</td></tr>
+      <tr><td><a href="#Inspect.Social.Friend.Detail">Inspect.Social.Friend.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about a friend.</td></tr>
+      <tr><td><a href="#Inspect.Social.Friend.List">Inspect.Social.Friend.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists the player's current friends.</td></tr>
+      <tr><td><a href="#Inspect.Social.Ignore.Detail">Inspect.Social.Ignore.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about an ignored player.</td></tr>
+      <tr><td><a href="#Inspect.Social.Ignore.List">Inspect.Social.Ignore.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists the player's current ignored players.</td></tr>
+    </table>
+    <h2><a name="Command.Social.Friend.Add">Command.Social.Friend.Add</a></h2>
+    <p><i></i> Adds a player to your friend list.</p>
+    <h3>Usage:   </h3>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Social.Friend.Add(<i>name</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>name</i></td><td>parameter</td><td><i>string</i></td><td>The name of the friend.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Social.Friend.Note">Command.Social.Friend.Note</a></h2>
+    <p><i></i> Changes a friend's personal note.</p>
+    <h3>Usage:   </h3>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Social.Friend.Note(<i>name</i>, <i>note</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>name</i></td><td>parameter</td><td><i>string</i></td><td>The name of the friend.</td></tr>
+      <tr><td><i>note</i></td><td>parameter</td><td><i>string</i></td><td>The new personal note.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Social.Friend.Remove">Command.Social.Friend.Remove</a></h2>
+    <p><i></i> Removes a player from your friend list.</p>
+    <h3>Usage:   </h3>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Social.Friend.Remove(<i>name</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>name</i></td><td>parameter</td><td><i>string</i></td><td>The name of the friend.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Social.Ignore.Add">Command.Social.Ignore.Add</a></h2>
+    <p><i></i> Adds an player to your ignore list.</p>
+    <h3>Usage:   </h3>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Social.Ignore.Add(<i>name</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>name</i></td><td>parameter</td><td><i>string</i></td><td>The name of the ignored player.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Social.Ignore.Note">Command.Social.Ignore.Note</a></h2>
+    <p><i></i> Changes an ignored player's personal note.</p>
+    <h3>Usage:   </h3>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Social.Ignore.Note(<i>name</i>, <i>note</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>name</i></td><td>parameter</td><td><i>string</i></td><td>The name of the ignored player.</td></tr>
+      <tr><td><i>note</i></td><td>parameter</td><td><i>string</i></td><td>The new personal note.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Social.Ignore.Remove">Command.Social.Ignore.Remove</a></h2>
+    <p><i></i> Removes a player from your ignore list.</p>
+    <h3>Usage:   </h3>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Social.Ignore.Remove(<i>name</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>name</i></td><td>parameter</td><td><i>string</i></td><td>The name of the ignored player.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Social.Friend">Event.Social.Friend</a></h2>
+    <p><i></i> Signals a change in your friend list.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Social.Friend(<i>friends</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>friends</i></td><td>parameter</td><td><i>variant</i></td><td>A lookup table containing the changed friends.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Social.Ignore">Event.Social.Ignore</a></h2>
+    <p><i></i> Signals a change in your ignore list.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Social.Ignore(<i>ignores</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>ignores</i></td><td>parameter</td><td><i>variant</i></td><td>A lookup table containing the changed ignored players.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Social.Friend.Detail">Inspect.Social.Friend.Detail</a></h2>
+    <p><i></i> Provides detailed information about a friend.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Social.Friend.Detail(<i>friend</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Social.Friend.Detail(<i>friends</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>friend</i></td><td>parameter</td><td><i>string</i></td><td>The name of a friend to retrieve detail for.</td></tr>
+      <tr><td><i>friends</i></td><td>parameter</td><td><i>table</i></td><td>A table of names of friends to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single friend.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested friends.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>calling</th>
+            <td>The friend's calling, if known.</th>
+          </tr>
+          <tr>
+            <th>guild</th>
+            <td>The friend's current guild.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>level</th>
+            <td>The friend's current level, if known.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The friend's name.</th>
+          </tr>
+          <tr>
+            <th>note</th>
+            <td>The friend's personal note.</th>
+          </tr>
+          <tr>
+            <th>race</th>
+            <td>The friend's race, if known.</th>
+          </tr>
+          <tr>
+            <th>status</th>
+            <td>The friend's status. Either "online", "afk", or nil.</th>
+          </tr>
+          <tr>
+            <th>zone</th>
+            <td>The friend's current zone, if known.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Social.Friend.List">Inspect.Social.Friend.List</a></h2>
+    <p><i></i> Lists the player's current friends.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>friends</i> = Inspect.Social.Friend.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>friends</i></td><td>result</td><td><i>table</i></td><td>A table containing the player's current friends.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Social.Ignore.Detail">Inspect.Social.Ignore.Detail</a></h2>
+    <p><i></i> Provides detailed information about an ignored player.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Social.Ignore.Detail(<i>ignore</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Social.Ignore.Detail(<i>ignores</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>ignore</i></td><td>parameter</td><td><i>string</i></td><td>The name of an ignored player to retrieve detail for.</td></tr>
+      <tr><td><i>ignores</i></td><td>parameter</td><td><i>table</i></td><td>A table of names of ignored players to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single ignored player.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested ignored players.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The ignored player's name.</th>
+          </tr>
+          <tr>
+            <th>note</th>
+            <td>The ignored player's personal note.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Social.Ignore.List">Inspect.Social.Ignore.List</a></h2>
+    <p><i></i> Lists the player's current ignored players.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>ignores</i> = Inspect.Social.Ignore.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>ignores</i></td><td>result</td><td><i>table</i></td><td>A table containing the player's current ignored players.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

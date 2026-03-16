@@ -1,0 +1,35 @@
+<html>
+  <head><title>API Docs (live) -- Utility.Message.Limits</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Utility.Message.Limits">Utility.Message.Limits</a> </h2>
+    <p><i></i> Returns information on the message bandwidth limits.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>data</i> = Utility.Message.Limits()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>data</i></td><td>result</td><td><i>table</i></td><td>The requested data.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>burst</th>
+            <td>The amount of data that can be sent or received without being subject to throttling.</th>
+          </tr>
+          <tr>
+            <th>maximum</th>
+            <td>Maximum allowed message size.</th>
+          </tr>
+          <tr>
+            <th>sustained</th>
+            <td>Amount of data that can be transferred per second without dropping messages.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

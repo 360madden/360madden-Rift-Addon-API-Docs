@@ -1,0 +1,40 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Event.List</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Event.List">Inspect.Event.List</a> </h2>
+    <p><i></i> Lists the current event handlers for an event.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>result</i> = Inspect.Event.List(<i>event</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>event</i></td><td>parameter</td><td><i>eventGlobal</i></td><td>A global event handle, usually pulled out of the "Event." hierarchy.</td></tr>
+      <tr><td><i>result</i></td><td>result</td><td><i>table</i></td><td>A table of event handlers for this event.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>handler</th>
+            <td>The handler that will be called when the event fires.</th>
+          </tr>
+          <tr>
+            <th>label</th>
+            <td>Label assigned to the event handler at creation.</th>
+          </tr>
+          <tr>
+            <th>owner</th>
+            <td>Owner addon for the event handler.</th>
+          </tr>
+          <tr>
+            <th>priority</th>
+            <td>Priority for the event handler.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

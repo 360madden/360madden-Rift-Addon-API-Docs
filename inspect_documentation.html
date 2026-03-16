@@ -1,0 +1,42 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Documentation</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Documentation">Inspect.Documentation</a> </h2>
+    <p><i></i> Provide documentation on items in the addon environment. Called with no parameters, it returns a table listing all documentation. Can provide both human-readable and computer-readable documentation.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>documentables</i> = Inspect.Documentation()</td></tr>
+      <tr><td colspan=4><i>documentation</i> = Inspect.Documentation(<i>item</i>)</td></tr>
+      <tr><td colspan=4><i>documentation</i> = Inspect.Documentation(<i>item</i>, <i>parseable</i>)</td></tr>
+      <tr><td colspan=4><i>documentationTable</i> = Inspect.Documentation(<i>item</i>, <i>parseable</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>item</i></td><td>parameter</td><td><i>variant</i></td><td>The item to get documentation on. May be either the item itself or a string identifier.</td></tr>
+      <tr><td><i>parseable</i></td><td>parameter</td><td><i>boolean</i></td><td>Whether to return in a computer-readable format, as opposed to the normal human-readable format.</td></tr>
+      <tr><td><i>documentables</i></td><td>result</td><td><i>table</i></td><td>List of all items that documentation can be retrieved for. In {["itemname"] = true} format.</td></tr>
+      <tr><td><i>documentation</i></td><td>result</td><td><i>string</i></td><td>Documentation for the requested item.</td></tr>
+      <tr><td><i>documentationTable</i></td><td>result</td><td><i>table</i></td><td>Computer-readable documentation for the requested item. Format may change without warning.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>(other)</th>
+            <td>May include many other parameters. These parameters are not yet documented.</th>
+          </tr>
+          <tr>
+            <th>disabled</th>
+            <td>Boolean that indicates whether this function is disabled for deprecation reasons.</th>
+          </tr>
+          <tr>
+            <th>readable</th>
+            <td>Human-readable string version of this documentation.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

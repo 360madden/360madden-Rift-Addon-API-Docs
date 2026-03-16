@@ -1,0 +1,238 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.System.Flash">Command.System.Flash</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Controls the flashing of the Rift taskbar icon.</td></tr>
+      <tr><td><a href="#Command.System.Strict">Command.System.Strict</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Puts the environment into Strict mode. In Strict mode, deprecated functions and events will throw...</td></tr>
+      <tr><td><a href="#Command.System.Texture.Record">Command.System.Texture.Record</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Begin recording Rift UI textures. The texture list will be transmitted via Event.System.Texture d...</td></tr>
+      <tr><td><a href="#Command.System.Watchdog.Quiet">Command.System.Watchdog.Quiet</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Significantly increases the time required for the watchdog to generate warnings. Intended for boo...</td></tr>
+      <tr><td><a href="#Event.System.Error">Event.System.Error</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that an addon error has occurred. To prevent infinite loops, errors in handlers for this ...</td></tr>
+      <tr><td><a href="#Event.System.Secure.Enter">Event.System.Secure.Enter</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the system is entering Secure mode. Usually this is equivalent to entering combat. F...</td></tr>
+      <tr><td><a href="#Event.System.Secure.Leave">Event.System.Secure.Leave</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the system is leaving Secure mode. Usually this is equivalent to leaving combat. Fun...</td></tr>
+      <tr><td><a href="#Event.System.Texture">Event.System.Texture</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals information on Rift UI textures that have been seen.</td></tr>
+      <tr><td><a href="#Event.System.Update.Begin">Event.System.Update.Begin</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals the beginning of a frame render. This is your last chance to make UI changes for this frame.</td></tr>
+      <tr><td><a href="#Event.System.Update.End">Event.System.Update.End</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals the end of a frame render.</td></tr>
+      <tr><td><a href="#Inspect.System.Error.Detail">Inspect.System.Error.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about an addon error.</td></tr>
+      <tr><td><a href="#Inspect.System.Language">Inspect.System.Language</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns the client's current language.</td></tr>
+      <tr><td><a href="#Inspect.System.Secure">Inspect.System.Secure</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns the client's current secure mode.</td></tr>
+      <tr><td><a href="#Inspect.System.Version">Inspect.System.Version</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns information on the client version.</td></tr>
+      <tr><td><a href="#Inspect.System.Watchdog">Inspect.System.Watchdog</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns the number of seconds until the system watchdog may begin generating warnings.</td></tr>
+    </table>
+    <h2><a name="Command.System.Flash">Command.System.Flash</a></h2>
+    <p><i></i> Controls the flashing of the Rift taskbar icon.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.System.Flash(<i>flash</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>flash</i></td><td>parameter</td><td><i>boolean</i></td><td>Whether the taskbar icon should flash or not.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.System.Strict">Command.System.Strict</a></h2>
+    <p><i></i> Puts the environment into Strict mode. In Strict mode, deprecated functions and events will throw errors instead of functioning normally.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.System.Strict()</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.System.Texture.Record">Command.System.Texture.Record</a></h2>
+    <p><i></i> Begin recording Rift UI textures. The texture list will be transmitted via Event.System.Texture during the logout sequence. Note that this flag persists through character selection and cannot be disabled without restarting the client.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.System.Texture.Record()</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.System.Watchdog.Quiet">Command.System.Watchdog.Quiet</a></h2>
+    <p><i></i> Significantly increases the time required for the watchdog to generate warnings. Intended for bootup processes or similar long startup sequences that will not adversely affect the player experience. This function may not be called in combat.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.System.Watchdog.Quiet()</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.System.Error">Event.System.Error</a></h2>
+    <p><i></i> Signals that an addon error has occurred. To prevent infinite loops, errors in handlers for this event may not result in further events being triggered.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.System.Error(<i>error</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>error</i></td><td>parameter</td><td><i>variant</i></td><td>Table containing error data.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>addon</th>
+            <td>The identifier of the responsible addon. Used in error types event, frameEvent, dispatch, fileNotFound, fileLoad, fileRun, perfWarning, perfError, text, and requirement.</th>
+          </tr>
+          <tr>
+            <th>axis</th>
+            <td>The axis influenced by the error. Used in error types layoutLoop and layoutError.</th>
+          </tr>
+          <tr>
+            <th>deprecation</th>
+            <td>Indicates that the error was caused by attempted use of deprecated functionality. May appear in error types event, frameEvent, script, dispatch, queue, callback, or fileRun.</th>
+          </tr>
+          <tr>
+            <th>error</th>
+            <td>The actual error message generated. Used in error types event, frameEvent, script, dispatch, fileLoad, fileRun, and text.</th>
+          </tr>
+          <tr>
+            <th>event</th>
+            <td>The name of the event responsible. Used in error types event, frameEvent, and internal.</th>
+          </tr>
+          <tr>
+            <th>file</th>
+            <td>The name of the file responsible. Used in error types fileNotFound, fileLoad, and fileRun.</th>
+          </tr>
+          <tr>
+            <th>frame</th>
+            <td>The name of the frame that the event was generated on. Used in error type frameEvent.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The internal ID of this error.</th>
+          </tr>
+          <tr>
+            <th>info</th>
+            <td>The info string provided as part of the event handler. Used in error types event, dispatch, perfWarning, perfError, and requirement.</th>
+          </tr>
+          <tr>
+            <th>script</th>
+            <td>The exact script entered by the user. Used in error type script.</th>
+          </tr>
+          <tr>
+            <th>stacktrace</th>
+            <td>The stacktrace at the point of the error. Used in error types event, frameEvent, script, dispatch, fileRun, layoutLoop, layoutError, perfWarning, perfError, text, and requirement.</th>
+          </tr>
+          <tr>
+            <th>type</th>
+            <td>Error type. "event" indicates an error within a global event handler. "frameEvent" indicates an error within a frame event handler. "script" indicates an error within a user-entered /script. "dispatch" indicates an error within a Utility.Dispatch handler. "internal" indicates an error within Rift's code (hopefully you'll never see this). "fileNotFound" indicates a missing file when attempting to load an addon. "fileLoad" indicates a parse failure when attempting to load an addon. "fileRun" indicates an execution error when attempting to load an addon. "layoutLoop" indicates a dependency loop found when evaluating the layout. "layoutError" indicates an invalid position found when evaluating the layout. "perfWarning" indicates a watchdog performance warning. "perfError" indicates a watchdog performance error, and that the Lua thread may have been interrupted. "text" indicates an error in Lua code embedded in HTML text. "requirement" indicates an error caused by not fulfilling function requirements.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Event.System.Secure.Enter">Event.System.Secure.Enter</a></h2>
+    <p><i></i> Signals that the system is entering Secure mode. Usually this is equivalent to entering combat. Functions that may not be called in Secure mode will be locked after this event is complete.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.System.Secure.Enter()</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.System.Secure.Leave">Event.System.Secure.Leave</a></h2>
+    <p><i></i> Signals that the system is leaving Secure mode. Usually this is equivalent to leaving combat. Functions that may not be called in Secure mode are unlocked just before this event fires.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.System.Secure.Leave()</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.System.Texture">Event.System.Texture</a></h2>
+    <p><i></i> Signals information on Rift UI textures that have been seen.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.System.Texture(<i>textures</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>textures</i></td><td>parameter</td><td><i>variant</i></td><td>A lookup table of all textures that has been seen since the last event.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.System.Update.Begin">Event.System.Update.Begin</a></h2>
+    <p><i></i> Signals the beginning of a frame render. This is your last chance to make UI changes for this frame.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.System.Update.Begin()</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.System.Update.End">Event.System.Update.End</a></h2>
+    <p><i></i> Signals the end of a frame render.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.System.Update.End()</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.System.Error.Detail">Inspect.System.Error.Detail</a></h2>
+    <p><i></i> Provides detailed information about an addon error.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.System.Error.Detail(<i>error</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.System.Error.Detail(<i>errors</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>error</i></td><td>parameter</td><td><i>error</i></td><td>The error to be inspected.</td></tr>
+      <tr><td><i>errors</i></td><td>parameter</td><td><i>table</i></td><td>A table of errors to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single error. Member documentation can be found in Event.System.Error.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested errors.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.System.Language">Inspect.System.Language</a></h2>
+    <p><i></i> Returns the client's current language.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>language</i> = Inspect.System.Language()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>language</i></td><td>result</td><td><i>string</i></td><td>Current language. Valid values include "English", "French", "German", "Korean", "Russian", "Chinese", and "Taiwanese".</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.System.Secure">Inspect.System.Secure</a></h2>
+    <p><i></i> Returns the client's current secure mode.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>secure</i> = Inspect.System.Secure()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>secure</i></td><td>result</td><td><i>boolean</i></td><td>The current secure mode.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.System.Version">Inspect.System.Version</a></h2>
+    <p><i></i> Returns information on the client version.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>version</i> = Inspect.System.Version()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>version</i></td><td>result</td><td><i>table</i></td><td>A table containing detailed version information.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>build</th>
+            <td>Client build information.</th>
+          </tr>
+          <tr>
+            <th>external</th>
+            <td>Client external version.</th>
+          </tr>
+          <tr>
+            <th>internal</th>
+            <td>Client internal version.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.System.Watchdog">Inspect.System.Watchdog</a></h2>
+    <p><i></i> Returns the number of seconds until the system watchdog may begin generating warnings.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>time</i> = Inspect.System.Watchdog()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>time</i></td><td>result</td><td><i>number</i></td><td>Time left in seconds.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

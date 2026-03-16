@@ -1,0 +1,39 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Utility.Serialize.Full">Utility.Serialize.Full</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Serializes a table of parameters. Results in a string suitable for feeding directly into loadstri...</td></tr>
+      <tr><td><a href="#Utility.Serialize.Inline">Utility.Serialize.Inline</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Serializes a single parameter. Results in a string suitable for use as a parameter in Lua code. I...</td></tr>
+    </table>
+    <h2><a name="Utility.Serialize.Full">Utility.Serialize.Full</a></h2>
+    <p><i></i> Serializes a table of parameters. Results in a string suitable for feeding directly into loadstring(). Deals properly with table cycles and non-tree structures.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>serialized</i> = Utility.Serialize.Full(<i>elements</i>)</td></tr>
+      <tr><td colspan=4><i>serialized</i> = Utility.Serialize.Full(<i>elements</i>, <i>exists</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>elements</i></td><td>parameter</td><td><i>table</i></td><td>Table of elements to serialize.</td></tr>
+      <tr><td><i>exists</i></td><td>parameter</td><td><i>table</i></td><td>Optional parameter containing a table of elements that should be included even in the case that they are nil.</td></tr>
+      <tr><td><i>serialized</i></td><td>result</td><td><i>string</i></td><td>String containing serialized output. May be nil if there was an error with the input.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Utility.Serialize.Inline">Utility.Serialize.Inline</a></h2>
+    <p><i></i> Serializes a single parameter. Results in a string suitable for use as a parameter in Lua code. If the input is a table, it must not contain table cycles or non-tree structures.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>serialized</i> = Utility.Serialize.Inline(<i>element</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>element</i></td><td>parameter</td><td><i>variant</i></td><td>Element to serialize.</td></tr>
+      <tr><td><i>serialized</i></td><td>result</td><td><i>string</i></td><td>String containing serialized output. May be nil if there was an error with the input.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

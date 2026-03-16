@@ -1,0 +1,19 @@
+<html>
+  <head><title>API Docs (live) -- Command.Slash.Register</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Command.Slash.Register">Command.Slash.Register</a> </h2>
+    <p><i></i> Registers a new chat slash command, inserts a new event handle into the Event.Slash hierarchy, and returns that handle. If called multiple times with the same slash command, will return the same handle each time.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>eventTable</i> = Command.Slash.Register(<i>slashCommand</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>slashCommand</i></td><td>parameter</td><td><i>string</i></td><td>The name of the slash command to register.</td></tr>
+      <tr><td><i>eventTable</i></td><td>result</td><td><i>table</i></td><td>The event table for your slash command. nil if the slash command could not be registered (usually because it conflicts with a built-in slash command.) Will return the same event table if used twice to register the same slash command.</td></tr>
+    </table>
+    <dl>
+    </dl>

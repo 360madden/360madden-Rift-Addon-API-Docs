@@ -1,0 +1,237 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Quest.Abandon">Command.Quest.Abandon</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Abandons the given quest. Permitted only on personal quests.</td></tr>
+      <tr><td><a href="#Command.Quest.Share">Command.Quest.Share</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Shares the given quest. Permitted only on personal quests.</td></tr>
+      <tr><td><a href="#Command.Quest.Track">Command.Quest.Track</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Tracks the current quest, un-tracking any other quest that may be tracked. Pass in "nil" to cance...</td></tr>
+      <tr><td><a href="#Command.Quest.Watch">Command.Quest.Watch</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Watches a quest, possibly unwatching another item if the player is already watching the maximum i...</td></tr>
+      <tr><td><a href="#Event.Quest.Abandon">Event.Quest.Abandon</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a quest has been abandoned.</td></tr>
+      <tr><td><a href="#Event.Quest.Accept">Event.Quest.Accept</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a quest has been accepted.</td></tr>
+      <tr><td><a href="#Event.Quest.Change">Event.Quest.Change</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a quest has been changed in some manner, most likely progress in an objective.</td></tr>
+      <tr><td><a href="#Event.Quest.Complete">Event.Quest.Complete</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that a quest has been completed.</td></tr>
+      <tr><td><a href="#Inspect.Quest.Complete">Inspect.Quest.Complete</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns a table of all quests completed.</td></tr>
+      <tr><td><a href="#Inspect.Quest.Detail">Inspect.Quest.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about a quest.</td></tr>
+      <tr><td><a href="#Inspect.Quest.List">Inspect.Quest.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists the player's current active quests.</td></tr>
+    </table>
+    <h2><a name="Command.Quest.Abandon">Command.Quest.Abandon</a></h2>
+    <p><i></i> Abandons the given quest. Permitted only on personal quests.</p>
+    <h3>Usage:   </h3>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Quest.Abandon(<i>quest</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>quest</i></td><td>parameter</td><td><i>quest</i></td><td>The quest to be affected.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Quest.Share">Command.Quest.Share</a></h2>
+    <p><i></i> Shares the given quest. Permitted only on personal quests.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Quest.Share(<i>quest</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>quest</i></td><td>parameter</td><td><i>quest</i></td><td>The quest to be affected.</td></tr>
+    </table>
+    <dl>
+      <dt><b>hardwareevent</b></dt>
+      <dd>true</dd>
+    </dl>
+    <h2><a name="Command.Quest.Track">Command.Quest.Track</a></h2>
+    <p><i></i> Tracks the current quest, un-tracking any other quest that may be tracked. Pass in "nil" to cancel all tracking. Permitted only on personal quests.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Quest.Track(<i>quest</i>)</td></tr>
+      <tr><td colspan=4>Command.Quest.Track(<i>nil</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>nil</i></td><td>parameter</td><td><i>nil</i></td><td>The value "nil".</td></tr>
+      <tr><td><i>quest</i></td><td>parameter</td><td><i>quest</i></td><td>The quest to be affected.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Quest.Watch">Command.Quest.Watch</a></h2>
+    <p><i></i> Watches a quest, possibly unwatching another item if the player is already watching the maximum item count. Permitted only on personal quests.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Quest.Watch(<i>quest</i>, <i>flag</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>flag</i></td><td>parameter</td><td><i>boolean</i></td><td>The new watch status.</td></tr>
+      <tr><td><i>quest</i></td><td>parameter</td><td><i>quest</i></td><td>The quest to be affected.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Quest.Abandon">Event.Quest.Abandon</a></h2>
+    <p><i></i> Signals that a quest has been abandoned.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Quest.Abandon(<i>elements</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>elements</i></td><td>parameter</td><td><i>variant</i></td><td>The changed elements. Takes the form of a table. The key is the element ID.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Quest.Accept">Event.Quest.Accept</a></h2>
+    <p><i></i> Signals that a quest has been accepted.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Quest.Accept(<i>elements</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>elements</i></td><td>parameter</td><td><i>variant</i></td><td>The changed elements. Takes the form of a table. The key is the element ID.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Quest.Change">Event.Quest.Change</a></h2>
+    <p><i></i> Signals that a quest has been changed in some manner, most likely progress in an objective.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Quest.Change(<i>elements</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>elements</i></td><td>parameter</td><td><i>variant</i></td><td>The changed elements. Takes the form of a table. The key is the element ID.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Quest.Complete">Event.Quest.Complete</a></h2>
+    <p><i></i> Signals that a quest has been completed.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Quest.Complete(<i>elements</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>elements</i></td><td>parameter</td><td><i>variant</i></td><td>The changed elements. Takes the form of a table. The key is the element ID.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Quest.Complete">Inspect.Quest.Complete</a></h2>
+    <p><i></i> Returns a table of all quests completed.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>quests</i> = Inspect.Quest.Complete()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>quests</i></td><td>result</td><td><i>table</i></td><td>A table where the key is the incomplete quest identifier. Identifiers returned by this function may not include all characters - the last eight characters may be replaced by "xxxxxxxx". These elements can still be compared against standard quest IDs by comparing only the first nine characters (including the 'q' prefix).</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Quest.Detail">Inspect.Quest.Detail</a></h2>
+    <p><i></i> Provides detailed information about a quest.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Quest.Detail(<i>quest</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Quest.Detail(<i>quests</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>quest</i></td><td>parameter</td><td><i>quest</i></td><td>The quest to retrieve detail for.</td></tr>
+      <tr><td><i>quests</i></td><td>parameter</td><td><i>table</i></td><td>A table of quests to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single quest.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested quests.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>categoryName</th>
+            <td>The name of the category this quest is placed under.</th>
+          </tr>
+          <tr>
+            <th>complete</th>
+            <td>Signals that this quest is complete.</th>
+          </tr>
+          <tr>
+            <th>description</th>
+            <td>The long description for this quest.</th>
+          </tr>
+          <tr>
+            <th>domain</th>
+            <td>The quest's domain. May be "area", "guild", "instant", or "zone". Personal quests are signaled with nil.</th>
+          </tr>
+          <tr>
+            <th>failed</th>
+            <td>Signals that this quest has failed.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>mode</th>
+            <td>This quest's mode, if it has a special mode. May be "story" or "soul".</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The name of this quest.</th>
+          </tr>
+          <tr>
+            <th>objective</th>
+            <td>A table of objectives. Each objective is a table that may contain the following members: "description", representing the quest's full description. "count", representing how many elements must be completed to finish this quest. "countDone", representing how many elements have been completed. "complete", indicating that this objective is complete. "indicator", listing all the map indicators that can be used to complete this quest.</th>
+          </tr>
+          <tr>
+            <th>rewardChoose</th>
+            <td>Lists the possible reward choices for the player. The key is the item type, the value is the count.</th>
+          </tr>
+          <tr>
+            <th>rewardCoin</th>
+            <td>The amount of silver this quest's completion will award.</th>
+          </tr>
+          <tr>
+            <th>rewardExperience</th>
+            <td>The amount of experience this quest's completion will award.</th>
+          </tr>
+          <tr>
+            <th>rewardExperienceGuild</th>
+            <td>The amount of guild experience this quest's completion will award.</th>
+          </tr>
+          <tr>
+            <th>rewardFavor</th>
+            <td>The amount of favor this quest's completion will award.</th>
+          </tr>
+          <tr>
+            <th>rewardGuaranteed</th>
+            <td>Lists the guaranteed rewards for the player. The key is the item type, the value is the count.</th>
+          </tr>
+          <tr>
+            <th>rewardNotoriety</th>
+            <td>The amount of notoriety this quest's completion will award, represented as a table. The key is the faction ID, the value is the amount.</th>
+          </tr>
+          <tr>
+            <th>rewardPrestige</th>
+            <td>The amount of prestige this quest's completion will award.</th>
+          </tr>
+          <tr>
+            <th>summary</th>
+            <td>The short summary for this quest.</th>
+          </tr>
+          <tr>
+            <th>tag</th>
+            <td>The quest's tags, space-separated.</th>
+          </tr>
+          <tr>
+            <th>tagName</th>
+            <td>The quest's tags, localized.</th>
+          </tr>
+          <tr>
+            <th>track</th>
+            <td>Signals that this quest is being manually tracked.</th>
+          </tr>
+          <tr>
+            <th>watch</th>
+            <td>Signals that this quest is being watched.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Quest.List">Inspect.Quest.List</a></h2>
+    <p><i></i> Lists the player's current active quests.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>quests</i> = Inspect.Quest.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>quests</i></td><td>result</td><td><i>table</i></td><td>A table containing the player's current quests.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

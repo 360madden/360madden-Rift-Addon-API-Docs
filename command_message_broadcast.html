@@ -1,0 +1,23 @@
+<html>
+  <head><title>API Docs (live) -- Command.Message.Broadcast</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Command.Message.Broadcast">Command.Message.Broadcast</a> </h2>
+    <p><i></i> Broadcast an unreliable addon message to some number of targets. This message will be dropped silently if the targets do not have the available bandwidth to receive it. The callback will respond with failure only if the message's target is invalid. "tell" messages are subject to the same restrictions as Command.Message.Send(). This command is throttled by the "message" throttle type.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Message.Broadcast(<i>type</i>, <i>target</i>, <i>identifier</i>, <i>data</i>)</td></tr>
+      <tr><td colspan=4>Command.Message.Broadcast(<i>type</i>, <i>target</i>, <i>identifier</i>, <i>data</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>string</i></td><td>The data to send. This parameter is binary-safe.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string</i></td><td>The identifier type of the message. Used for the receiver to filter accepted messages via the Command.Message.Accept() function. Must be at least three characters long.</td></tr>
+      <tr><td><i>target</i></td><td>parameter</td><td><i>string/nil</i></td><td>The target of this message. Required for "channel" or "tell" message types, must be nil otherwise.</td></tr>
+      <tr><td><i>type</i></td><td>parameter</td><td><i>string</i></td><td>The type of message to send. Valid types include "tell", "channel", "guild", "officer", "party", "raid", "say", "yell".</td></tr>
+    </table>
+    <dl>
+    </dl>

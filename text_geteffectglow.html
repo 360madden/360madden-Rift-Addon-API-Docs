@@ -1,0 +1,67 @@
+<html>
+  <head><title>API Docs (live) -- Text:GetEffectGlow</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Text:GetEffectGlow">Text:GetEffectGlow</a> </h2>
+    <p><i></i> Gets the current parameters for the Glow effect.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>effect</i> = Text:GetEffectGlow()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>effect</i></td><td>result</td><td><i>nil, table</i></td><td>The current parameters for this effect. All members are optional. Pass nil to disable the effect.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>blurX</th>
+            <td>Controls how much blurring exists along the X axis. Defaults to 2.</th>
+          </tr>
+          <tr>
+            <th>blurY</th>
+            <td>Controls how much blurring exists along the Y axis. Defaults to 2.</th>
+          </tr>
+          <tr>
+            <th>colorA</th>
+            <td>Controls the alpha channel of the glow effect. Defaults to 1.</th>
+          </tr>
+          <tr>
+            <th>colorB</th>
+            <td>Controls the blue channel of the glow effect. Defaults to 0.</th>
+          </tr>
+          <tr>
+            <th>colorG</th>
+            <td>Controls the green channel of the glow effect. Defaults to 0.</th>
+          </tr>
+          <tr>
+            <th>colorR</th>
+            <td>Controls the red channel of the glow effect. Defaults to 0.</th>
+          </tr>
+          <tr>
+            <th>knockout</th>
+            <td>Enables the "knockout" effect. Defaults to false.</th>
+          </tr>
+          <tr>
+            <th>offsetX</th>
+            <td>Controls the glow offset along the X axis. Defaults to 0.</th>
+          </tr>
+          <tr>
+            <th>offsetY</th>
+            <td>Controls the glow offset along the Y axis. Defaults to 0.</th>
+          </tr>
+          <tr>
+            <th>replace</th>
+            <td>Hides the original text. Defaults to false.</th>
+          </tr>
+          <tr>
+            <th>strength</th>
+            <td>Controls the strength of the glow. Defaults to 1.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

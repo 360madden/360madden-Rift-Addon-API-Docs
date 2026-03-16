@@ -1,0 +1,272 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#ability">ability</a></td><td><i></i></td><td><i></i></td><td></td><td>An ability, represented by a standard identifier with an 'a' prefix.</td></tr>
+      <tr><td><a href="#achievement">achievement</a></td><td><i></i></td><td><i></i></td><td></td><td>An achievement, represented by a standard identifier with a 'c' prefix.</td></tr>
+      <tr><td><a href="#achievementcategory">achievementcategory</a></td><td><i></i></td><td><i></i></td><td></td><td>An achievement category, represented by a standard identifier with a 'C' prefix.</td></tr>
+      <tr><td><a href="#auction">auction</a></td><td><i></i></td><td><i></i></td><td></td><td>An auction, represented by a standard identifier with an 'o' prefix.</td></tr>
+      <tr><td><a href="#boolean">boolean</a></td><td><i></i></td><td><i></i></td><td></td><td>A value of type 'boolean'.</td></tr>
+      <tr><td><a href="#buff">buff</a></td><td><i></i></td><td><i></i></td><td></td><td>A buff, represented by a standard identifier with a 'b' prefix.</td></tr>
+      <tr><td><a href="#callbackfunction">callbackfunction</a></td><td><i></i></td><td><i></i></td><td></td><td>A callback function, used to signal success or failure. Must be a function that takes two paramet...</td></tr>
+      <tr><td><a href="#console">console</a></td><td><i></i></td><td><i></i></td><td></td><td>A text console, represented by a standard ID with a 'v' prefix.</td></tr>
+      <tr><td><a href="#currencycategory">currencycategory</a></td><td><i></i></td><td><i></i></td><td></td><td>A currency category, represented by a standard identifier with a 'N' prefix.</td></tr>
+      <tr><td><a href="#dimensionitem">dimensionitem</a></td><td><i></i></td><td><i></i></td><td></td><td>A dimension item, represented by a standard identifier with a 'd' prefix.</td></tr>
+      <tr><td><a href="#dump">dump</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Debug utility function. Similar to print(), but serializes any table parameters before outputting.</td></tr>
+      <tr><td><a href="#error">error</a></td><td><i></i></td><td><i></i></td><td></td><td>An error, represented by a standard ID with an 'x' prefix.</td></tr>
+      <tr><td><a href="#eventFrame">eventFrame</a></td><td><i></i></td><td><i></i></td><td></td><td>A frame event handle.</td></tr>
+      <tr><td><a href="#eventGlobal">eventGlobal</a></td><td><i></i></td><td><i></i></td><td></td><td>A global event handle.</td></tr>
+      <tr><td><a href="#faction">faction</a></td><td><i></i></td><td><i></i></td><td></td><td>A faction, represented by a standard ID with an 'f' prefix.</td></tr>
+      <tr><td><a href="#frameEventTable">frameEventTable</a></td><td><i></i></td><td><i></i></td><td></td><td>A frame event table of a UI element.</td></tr>
+      <tr><td><a href="#function">function</a></td><td><i></i></td><td><i></i></td><td></td><td>A value of type 'function'.</td></tr>
+      <tr><td><a href="#function/nil">function/nil</a></td><td><i></i></td><td><i></i></td><td></td><td>A value of type "function" or "nil".</td></tr>
+      <tr><td><a href="#function/string">function/string</a></td><td><i></i></td><td><i></i></td><td></td><td>A value of type "function" or "string".</td></tr>
+      <tr><td><a href="#function/string/nil">function/string/nil</a></td><td><i></i></td><td><i></i></td><td></td><td>A value of type "function", "string", or "nil".</td></tr>
+      <tr><td><a href="#guildrank">guildrank</a></td><td><i></i></td><td><i></i></td><td></td><td>A guild rank, represented by a standard identifier with a 'k' prefix.</td></tr>
+      <tr><td><a href="#guildwall">guildwall</a></td><td><i></i></td><td><i></i></td><td></td><td>A guild wall ID, represented by a standard identifier with a 'w' prefix.</td></tr>
+      <tr><td><a href="#handleEventFrame">handleEventFrame</a></td><td><i></i></td><td><i></i></td><td></td><td>A handle for active frame events. Includes the member :GetTarget(), which returns the target fram...</td></tr>
+      <tr><td><a href="#handleEventGlobal">handleEventGlobal</a></td><td><i></i></td><td><i></i></td><td></td><td>A handle for active global events. Currently contains no members.</td></tr>
+      <tr><td><a href="#item">item</a></td><td><i></i></td><td><i></i></td><td></td><td>An item, represented by either a standard identifier with an 'i' prefix or a slot.</td></tr>
+      <tr><td><a href="#itemtype">itemtype</a></td><td><i></i></td><td><i></i></td><td></td><td>An item type, represented by a nonstandard identifier with an 'I' prefix.</td></tr>
+      <tr><td><a href="#location">location</a></td><td><i></i></td><td><i></i></td><td></td><td>A map location, represented by a nonstandard identifier with an 'l' prefix.</td></tr>
+      <tr><td><a href="#mail">mail</a></td><td><i></i></td><td><i></i></td><td></td><td>A mail, represented by a standard identifier with an 'm' prefix.</td></tr>
+      <tr><td><a href="#minionadventure">minionadventure</a></td><td><i></i></td><td><i></i></td><td></td><td>A minion adventure, represented by a standard identifier with a 'mn.adv.' prefix.</td></tr>
+      <tr><td><a href="#minionminion">minionminion</a></td><td><i></i></td><td><i></i></td><td></td><td>A minion, represented by a standard identifier with a 'mn.mn.' prefix.</td></tr>
+      <tr><td><a href="#nil">nil</a></td><td><i></i></td><td><i></i></td><td></td><td>A value of type 'nil'.</td></tr>
+      <tr><td><a href="#number">number</a></td><td><i></i></td><td><i></i></td><td></td><td>A value of type 'number'. May not be NaN.</td></tr>
+      <tr><td><a href="#number/nil">number/nil</a></td><td><i></i></td><td><i></i></td><td></td><td>A value of type 'number' or 'nil'. May not be NaN.</td></tr>
+      <tr><td><a href="#quest">quest</a></td><td><i></i></td><td><i></i></td><td></td><td>A quest, represented by a standard identifier with a 'q' prefix.</td></tr>
+      <tr><td><a href="#role">role</a></td><td><i></i></td><td><i></i></td><td></td><td>A role, represented by a standard identifier with a "h" prefix.</td></tr>
+      <tr><td><a href="#slot">slot</a></td><td><i></i></td><td><i></i></td><td></td><td>An item slot, represented by a nonstandard identifier with an 's' prefix, as generated by the Uti...</td></tr>
+      <tr><td><a href="#string">string</a></td><td><i></i></td><td><i></i></td><td></td><td>A value of type 'string'.</td></tr>
+      <tr><td><a href="#string/nil">string/nil</a></td><td><i></i></td><td><i></i></td><td></td><td>A value of type 'string' or 'nil'.</td></tr>
+      <tr><td><a href="#table">table</a></td><td><i></i></td><td><i></i></td><td></td><td>A value of type 'table'.</td></tr>
+      <tr><td><a href="#title">title</a></td><td><i></i></td><td><i></i></td><td></td><td>A title, represented by a standard identifier with a 't' prefix.</td></tr>
+      <tr><td><a href="#titlecategory">titlecategory</a></td><td><i></i></td><td><i></i></td><td></td><td>A title category, represented by a standard identifier with a 'T' prefix.</td></tr>
+      <tr><td><a href="#unit">unit</a></td><td><i></i></td><td><i></i></td><td></td><td>A unit, represented by either a standard identifier with a 'u' prefix or by a unit specifier. Uni...</td></tr>
+      <tr><td><a href="#variant">variant</a></td><td><i></i></td><td><i></i></td><td></td><td>A value of any type.</td></tr>
+      <tr><td><a href="#zone">zone</a></td><td><i></i></td><td><i></i></td><td></td><td>A zone, represented by a standard identifier with a 'z' prefix.</td></tr>
+    </table>
+    <h2><a name="ability">ability</a></h2>
+    <p><i></i> An ability, represented by a standard identifier with an 'a' prefix.</p>
+  </body>
+  <h2><a name="achievement">achievement</a></h2>
+  <p><i></i> An achievement, represented by a standard identifier with a 'c' prefix.</p>
+</html>
+<h2><a name="achievementcategory">achievementcategory</a></h2>
+<p><i></i> An achievement category, represented by a standard identifier with a 'C' prefix.</p>
+<h2><a name="auction">auction</a></h2>
+<p><i></i> An auction, represented by a standard identifier with an 'o' prefix.</p>
+<h2><a name="boolean">boolean</a></h2>
+<p><i></i> A value of type 'boolean'.</p>
+<h2><a name="buff">buff</a></h2>
+<p><i></i> A buff, represented by a standard identifier with a 'b' prefix.</p>
+<h2><a name="callbackfunction">callbackfunction</a></h2>
+<p><i></i> A callback function, used to signal success or failure. Must be a function that takes two parameters, "failure" and "message". On success, "failure" will be false or nil. Otherwise, "failure" will be either a computer-readable string identifier or true. "message" may contain a human-readable message that may be delivered to the user.</p>
+<h2><a name="console">console</a></h2>
+<p><i></i> A text console, represented by a standard ID with a 'v' prefix.</p>
+<h2><a name="currencycategory">currencycategory</a></h2>
+<p><i></i> A currency category, represented by a standard identifier with a 'N' prefix.</p>
+<h2><a name="dimensionitem">dimensionitem</a></h2>
+<p><i></i> A dimension item, represented by a standard identifier with a 'd' prefix.</p>
+<h2><a name="dump">dump</a></h2>
+<p><i></i> Debug utility function. Similar to print(), but serializes any table parameters before outputting.</p>
+<h3>Usage:   </h3>
+<table>
+  <tr><td colspan=4>dump(<i>...</i>)</td></tr>
+  <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+  <tr><td><i>...</i></td><td>parameter</td><td><i>...</i></td><td>Takes any number of any parameter type.</td></tr>
+</table>
+<dl>
+</dl>
+<h2><a name="error">error</a></h2>
+<p><i></i> An error, represented by a standard ID with an 'x' prefix.</p>
+<h2><a name="eventFrame">eventFrame</a></h2>
+<p><i></i> A frame event handle.</p>
+<h2><a name="eventGlobal">eventGlobal</a></h2>
+<p><i></i> A global event handle.</p>
+<h2><a name="faction">faction</a></h2>
+<p><i></i> A faction, represented by a standard ID with an 'f' prefix.</p>
+<h2><a name="frameEventTable">frameEventTable</a></h2>
+<p><i></i> A frame event table of a UI element.</p>
+<h2><a name="function">function</a></h2>
+<p><i></i> A value of type 'function'.</p>
+<h2><a name="function/nil">function/nil</a></h2>
+<p><i></i> A value of type "function" or "nil".</p>
+<h2><a name="function/string">function/string</a></h2>
+<p><i></i> A value of type "function" or "string".</p>
+<h2><a name="function/string/nil">function/string/nil</a></h2>
+<p><i></i> A value of type "function", "string", or "nil".</p>
+<h2><a name="guildrank">guildrank</a></h2>
+<p><i></i> A guild rank, represented by a standard identifier with a 'k' prefix.</p>
+<h2><a name="guildwall">guildwall</a></h2>
+<p><i></i> A guild wall ID, represented by a standard identifier with a 'w' prefix.</p>
+<h2><a name="handleEventFrame">handleEventFrame</a></h2>
+<p><i></i> A handle for active frame events. Includes the member :GetTarget(), which returns the target frame of this event. If being passed to a .Dive handler, also includes :Halt() and :Catch().  :Halt() halts propogation of the event through the hierarchy and, after finishing the current frame's .Dive handlers, immediately begins processing .Bubble events. :Catch() works similarly but processes main events before continuing to .Bubble. Neither function may be called when the environment is in secure mode and either the current or target frame has a restricted secure mode.</p>
+<h2><a name="handleEventGlobal">handleEventGlobal</a></h2>
+<p><i></i> A handle for active global events. Currently contains no members.</p>
+<h2><a name="item">item</a></h2>
+<p><i></i> An item, represented by either a standard identifier with an 'i' prefix or a slot.</p>
+<h2><a name="itemtype">itemtype</a></h2>
+<p><i></i> An item type, represented by a nonstandard identifier with an 'I' prefix.</p>
+<h2><a name="location">location</a></h2>
+<p><i></i> A map location, represented by a nonstandard identifier with an 'l' prefix.</p>
+<h2><a name="mail">mail</a></h2>
+<p><i></i> A mail, represented by a standard identifier with an 'm' prefix.</p>
+<h2><a name="minionadventure">minionadventure</a></h2>
+<p><i></i> A minion adventure, represented by a standard identifier with a 'mn.adv.' prefix.</p>
+<h2><a name="minionminion">minionminion</a></h2>
+<p><i></i> A minion, represented by a standard identifier with a 'mn.mn.' prefix.</p>
+<h2><a name="nil">nil</a></h2>
+<p><i></i> A value of type 'nil'.</p>
+<h2><a name="number">number</a></h2>
+<p><i></i> A value of type 'number'. May not be NaN.</p>
+<h2><a name="number/nil">number/nil</a></h2>
+<p><i></i> A value of type 'number' or 'nil'. May not be NaN.</p>
+<h2><a name="quest">quest</a></h2>
+<p><i></i> A quest, represented by a standard identifier with a 'q' prefix.</p>
+<h2><a name="role">role</a></h2>
+<p><i></i> A role, represented by a standard identifier with a "h" prefix.</p>
+<h2><a name="slot">slot</a></h2>
+<p><i></i> An item slot, represented by a nonstandard identifier with an 's' prefix, as generated by the Utility.Item.Slot.* functions.</p>
+<h2><a name="string">string</a></h2>
+<p><i></i> A value of type 'string'.</p>
+<h2><a name="string/nil">string/nil</a></h2>
+<p><i></i> A value of type 'string' or 'nil'.</p>
+<h2><a name="table">table</a></h2>
+<p><i></i> A value of type 'table'.</p>
+<h2><a name="title">title</a></h2>
+<p><i></i> A title, represented by a standard identifier with a 't' prefix.</p>
+<h2><a name="titlecategory">titlecategory</a></h2>
+<p><i></i> A title category, represented by a standard identifier with a 'T' prefix.</p>
+<h2><a name="types">types</a></h2>
+<dt><b>string</b></dt>
+<dd>true</dd>
+<dt><b>Canvas</b></dt>
+<dd>true</dd>
+<dt><b>buff</b></dt>
+<dd>true</dd>
+<dt><b>callbackfunction</b></dt>
+<dd>true</dd>
+<dt><b>number/nil</b></dt>
+<dd>true</dd>
+<dt><b>role</b></dt>
+<dd>true</dd>
+<dt><b>table</b></dt>
+<dd>true</dd>
+<dt><b>console</b></dt>
+<dd>true</dd>
+<dt><b>Native</b></dt>
+<dd>true</dd>
+<dt><b>Context</b></dt>
+<dd>true</dd>
+<dt><b>Texture</b></dt>
+<dd>true</dd>
+<dt><b>Text</b></dt>
+<dd>true</dd>
+<dt><b>boolean</b></dt>
+<dd>true</dd>
+<dt><b>zone</b></dt>
+<dd>true</dd>
+<dt><b>location</b></dt>
+<dd>true</dd>
+<dt><b>ability</b></dt>
+<dd>true</dd>
+<dt><b>achievementcategory</b></dt>
+<dd>true</dd>
+<dt><b>RiftButton</b></dt>
+<dd>true</dd>
+<dt><b>Element</b></dt>
+<dd>true</dd>
+<dt><b>handleEventGlobal</b></dt>
+<dd>true</dd>
+<dt><b>title</b></dt>
+<dd>true</dd>
+<dt><b>minionminion</b></dt>
+<dd>true</dd>
+<dt><b>auction</b></dt>
+<dd>true</dd>
+<dt><b>Frame</b></dt>
+<dd>true</dd>
+<dt><b>achievement</b></dt>
+<dd>true</dd>
+<dt><b>RiftScrollbar</b></dt>
+<dd>true</dd>
+<dt><b>number</b></dt>
+<dd>true</dd>
+<dt><b>RiftTextfield</b></dt>
+<dd>true</dd>
+<dt><b>eventGlobal</b></dt>
+<dd>true</dd>
+<dt><b>currencycategory</b></dt>
+<dd>true</dd>
+<dt><b>Layout</b></dt>
+<dd>true</dd>
+<dt><b>Mask</b></dt>
+<dd>true</dd>
+<dt><b>eventFrame</b></dt>
+<dd>true</dd>
+<dt><b>unit</b></dt>
+<dd>true</dd>
+<dt><b>function</b></dt>
+<dd>true</dd>
+<dt><b>string/nil</b></dt>
+<dd>true</dd>
+<dt><b>titlecategory</b></dt>
+<dd>true</dd>
+<dt><b>variant</b></dt>
+<dd>true</dd>
+<dt><b>RiftCheckbox</b></dt>
+<dd>true</dd>
+<dt><b>handleEventFrame</b></dt>
+<dd>true</dd>
+<dt><b>quest</b></dt>
+<dd>true</dd>
+<dt><b>function/string</b></dt>
+<dd>true</dd>
+<dt><b>nil</b></dt>
+<dd>true</dd>
+<dt><b>dimensionitem</b></dt>
+<dd>true</dd>
+<dt><b>guildrank</b></dt>
+<dd>true</dd>
+<dt><b>slot</b></dt>
+<dd>true</dd>
+<dt><b>minionadventure</b></dt>
+<dd>true</dd>
+<dt><b>function/nil</b></dt>
+<dd>true</dd>
+<dt><b>RiftWindow</b></dt>
+<dd>true</dd>
+<dt><b>item</b></dt>
+<dd>true</dd>
+<dt><b>guildwall</b></dt>
+<dd>true</dd>
+<dt><b>itemtype</b></dt>
+<dd>true</dd>
+<dt><b>function/string/nil</b></dt>
+<dd>true</dd>
+<dt><b>faction</b></dt>
+<dd>true</dd>
+<dt><b>mail</b></dt>
+<dd>true</dd>
+<dt><b>RiftSlider</b></dt>
+<dd>true</dd>
+<dt><b>error</b></dt>
+<dd>true</dd>
+<dt><b>frameEventTable</b></dt>
+<dd>true</dd>
+<h2><a name="unit">unit</a></h2>
+<p><i></i> A unit, represented by either a standard identifier with a 'u' prefix or by a unit specifier. Unit specifiers start with any of "player", "focus", "mouseover", "group01" through "group20", or a standard identifier with a 'u' prefix, and are followed by a chain of any number of ".target", ".pet", or ".owner" modifiers.</p>
+<h2><a name="variant">variant</a></h2>
+<p><i></i> A value of any type.</p>
+<h2><a name="zone">zone</a></h2>
+<p><i></i> A zone, represented by a standard identifier with a 'z' prefix.</p>
+<h4><a href='index.html'>Back to index...</a></h4>

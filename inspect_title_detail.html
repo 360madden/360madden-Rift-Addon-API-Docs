@@ -1,0 +1,51 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Title.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Title.Detail">Inspect.Title.Detail</a> </h2>
+    <p><i></i> Provides detailed information about a title.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Title.Detail(<i>title</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Title.Detail(<i>titles</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>title</i></td><td>parameter</td><td><i>title</i></td><td>The title ID to retrieve detail for.</td></tr>
+      <tr><td><i>titles</i></td><td>parameter</td><td><i>table</i></td><td>A table of title IDs to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single title.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested titles.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>gameFemale</th>
+            <td>The title as seen ingame and applied to female characters.</th>
+          </tr>
+          <tr>
+            <th>gameMale</th>
+            <td>The title as seen ingame and applied to male characters.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>nameFemale</th>
+            <td>The title as seen in menus and applied to female characters.</th>
+          </tr>
+          <tr>
+            <th>nameMale</th>
+            <td>The title as seen in menus and applied to male characters.</th>
+          </tr>
+          <tr>
+            <th>prefix</th>
+            <td>Signals that the title is a prefix title.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

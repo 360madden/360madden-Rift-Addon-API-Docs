@@ -1,0 +1,35 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Pvp.Prestige</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Pvp.Prestige">Inspect.Pvp.Prestige</a> </h2>
+    <p><i></i> Returns information on your PVP prestige.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>result</i> = Inspect.Pvp.Prestige()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>result</i></td><td>result</td><td><i>table</i></td><td>Table containing information on prestige.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>accumulated</th>
+            <td>Prestige accumulated so far in this rank.</th>
+          </tr>
+          <tr>
+            <th>needed</th>
+            <td>Quantity of prestige needed to gain a rank.</th>
+          </tr>
+          <tr>
+            <th>rank</th>
+            <td>Current prestige rank.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

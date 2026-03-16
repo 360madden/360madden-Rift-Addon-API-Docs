@@ -1,0 +1,23 @@
+<html>
+  <head><title>API Docs (live) -- Command.Storage.Set</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Command.Storage.Set">Command.Storage.Set</a> </h2>
+    <p><i></i> Sets a storage element.  If accessing guild storage, you will need the Write to Guild Addon Storage permission. If replacing an existing element, you will also need write access to that element as well as the Delete from Guild Addon Storage permission. You cannot create an element that you cannot read, nor can you create an element with Officer write permissions if you are not an Officer. This command is throttled by the "storage" throttle type.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Storage.Set(<i>segment</i>, <i>identifier</i>, <i>read</i>, <i>write</i>, <i>data</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>data</i></td><td>parameter</td><td><i>string</i></td><td>The data to store. This parameter is binary-safe.</td></tr>
+      <tr><td><i>identifier</i></td><td>parameter</td><td><i>string</i></td><td>The identifier of the storage bucket. Must be at least three characters long.</td></tr>
+      <tr><td><i>read</i></td><td>parameter</td><td><i>string</i></td><td>Read permissions for this element. If the segment is "player", this may be "public", "guild", or "private", where public is readable by anyone, guild is readable by your guildmembers only, and private is readable by the player only. If the segment is "guild", this may be "public", "guild", or "officer", where public is readable by anyone, guild is readable by guildmembers with the Listen permission, and officer is readable by guildmembers with the Officer Chat permission.</td></tr>
+      <tr><td><i>segment</i></td><td>parameter</td><td><i>string</i></td><td>The storage segment to access. "player" will access the target's per-player storage, "guild" will access the target's guild's per-guild storage. If this function has no target parameter, then the player will be targeted.</td></tr>
+      <tr><td><i>write</i></td><td>parameter</td><td><i>string</i></td><td>Write permissions for this element. If the segment is "player", this must be "private", as only you may modify your own storage. If the segment is "guild", this may be "guild" or "officer", where guild is changeable by guildmembers with the Delete from Guild Addon Storage permission, and officer is changeable by guildmembers with the Delete from Guild Addon Storage permission and the Officer Chat permission. The write permission must be "officer" if the read permission is "officer".</td></tr>
+    </table>
+    <dl>
+    </dl>

@@ -1,0 +1,115 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Quest.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Quest.Detail">Inspect.Quest.Detail</a> </h2>
+    <p><i></i> Provides detailed information about a quest.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Quest.Detail(<i>quest</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Quest.Detail(<i>quests</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>quest</i></td><td>parameter</td><td><i>quest</i></td><td>The quest to retrieve detail for.</td></tr>
+      <tr><td><i>quests</i></td><td>parameter</td><td><i>table</i></td><td>A table of quests to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single quest.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested quests.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>categoryName</th>
+            <td>The name of the category this quest is placed under.</th>
+          </tr>
+          <tr>
+            <th>complete</th>
+            <td>Signals that this quest is complete.</th>
+          </tr>
+          <tr>
+            <th>description</th>
+            <td>The long description for this quest.</th>
+          </tr>
+          <tr>
+            <th>domain</th>
+            <td>The quest's domain. May be "area", "guild", "instant", or "zone". Personal quests are signaled with nil.</th>
+          </tr>
+          <tr>
+            <th>failed</th>
+            <td>Signals that this quest has failed.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>mode</th>
+            <td>This quest's mode, if it has a special mode. May be "story" or "soul".</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The name of this quest.</th>
+          </tr>
+          <tr>
+            <th>objective</th>
+            <td>A table of objectives. Each objective is a table that may contain the following members: "description", representing the quest's full description. "count", representing how many elements must be completed to finish this quest. "countDone", representing how many elements have been completed. "complete", indicating that this objective is complete. "indicator", listing all the map indicators that can be used to complete this quest.</th>
+          </tr>
+          <tr>
+            <th>rewardChoose</th>
+            <td>Lists the possible reward choices for the player. The key is the item type, the value is the count.</th>
+          </tr>
+          <tr>
+            <th>rewardCoin</th>
+            <td>The amount of silver this quest's completion will award.</th>
+          </tr>
+          <tr>
+            <th>rewardExperience</th>
+            <td>The amount of experience this quest's completion will award.</th>
+          </tr>
+          <tr>
+            <th>rewardExperienceGuild</th>
+            <td>The amount of guild experience this quest's completion will award.</th>
+          </tr>
+          <tr>
+            <th>rewardFavor</th>
+            <td>The amount of favor this quest's completion will award.</th>
+          </tr>
+          <tr>
+            <th>rewardGuaranteed</th>
+            <td>Lists the guaranteed rewards for the player. The key is the item type, the value is the count.</th>
+          </tr>
+          <tr>
+            <th>rewardNotoriety</th>
+            <td>The amount of notoriety this quest's completion will award, represented as a table. The key is the faction ID, the value is the amount.</th>
+          </tr>
+          <tr>
+            <th>rewardPrestige</th>
+            <td>The amount of prestige this quest's completion will award.</th>
+          </tr>
+          <tr>
+            <th>summary</th>
+            <td>The short summary for this quest.</th>
+          </tr>
+          <tr>
+            <th>tag</th>
+            <td>The quest's tags, space-separated.</th>
+          </tr>
+          <tr>
+            <th>tagName</th>
+            <td>The quest's tags, localized.</th>
+          </tr>
+          <tr>
+            <th>track</th>
+            <td>Signals that this quest is being manually tracked.</th>
+          </tr>
+          <tr>
+            <th>watch</th>
+            <td>Signals that this quest is being watched.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

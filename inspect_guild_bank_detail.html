@@ -1,0 +1,35 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Guild.Bank.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Guild.Bank.Detail">Inspect.Guild.Bank.Detail</a> </h2>
+    <p><i></i> Provides detailed information about guild bank vaults.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Guild.Bank.Detail(<i>guildvault</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Guild.Bank.Detail(<i>guildvaults</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>guildvault</i></td><td>parameter</td><td><i>slot</i></td><td>A slot specifier representing the entire guild bank vault to retrieve information for.</td></tr>
+      <tr><td><i>guildvaults</i></td><td>parameter</td><td><i>table</i></td><td>A table of slot specifiers, each representing an entire guild bank vault, to retrieve information for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a guild bank vault.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested guild bank vault. The key is the vault specifier, the value is the vault's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The name of the vault.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

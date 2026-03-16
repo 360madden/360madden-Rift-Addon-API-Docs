@@ -1,0 +1,39 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Achievement.Category.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Achievement.Category.Detail">Inspect.Achievement.Category.Detail</a> </h2>
+    <p><i></i> Returns information about achievement categories.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Achievement.Category.Detail(<i>category</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Achievement.Category.Detail(<i>categories</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>categories</i></td><td>parameter</td><td><i>table</i></td><td>A table of identifiers of achievement categories to retrieve detail for.</td></tr>
+      <tr><td><i>category</i></td><td>parameter</td><td><i>achievementcategory</i></td><td>The identifier of the achievement category to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single achievement category.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested achievement categories. The key is the category ID, the value is the category's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The name of the achievement category.</th>
+          </tr>
+          <tr>
+            <th>parent</th>
+            <td>The category's parent, if it has one.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

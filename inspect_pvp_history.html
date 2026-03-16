@@ -1,0 +1,43 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Pvp.History</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Pvp.History">Inspect.Pvp.History</a> </h2>
+    <p><i></i> Returns information on your PVP history.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>result</i> = Inspect.Pvp.History()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>result</i></td><td>result</td><td><i>table</i></td><td>Table containing information on PVP history.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>favorLifetime</th>
+            <td>Amount of lifetime favor accumulated.</th>
+          </tr>
+          <tr>
+            <th>killLifetime</th>
+            <td>Amount of kills made on this character.</th>
+          </tr>
+          <tr>
+            <th>killMonth</th>
+            <td>Amount of kills made on this character within the last month.</th>
+          </tr>
+          <tr>
+            <th>killToday</th>
+            <td>Amount of kills made on this character within the last day.</th>
+          </tr>
+          <tr>
+            <th>killWeek</th>
+            <td>Amount of kills made on this character within the last week.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

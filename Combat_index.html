@@ -1,0 +1,371 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Event.Combat.Damage">Event.Combat.Damage</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals damage done to a unit. All units referenced by this event will be accessible within this ...</td></tr>
+      <tr><td><a href="#Event.Combat.Death">Event.Combat.Death</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals the death of a unit. All units referenced by this event will be accessible within this ev...</td></tr>
+      <tr><td><a href="#Event.Combat.Dodge">Event.Combat.Dodge</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit dodging an ability. All units referenced by this event will be accessible within t...</td></tr>
+      <tr><td><a href="#Event.Combat.Heal">Event.Combat.Heal</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals healing done to a unit. All units referenced by this event will be accessible within this...</td></tr>
+      <tr><td><a href="#Event.Combat.Immune">Event.Combat.Immune</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit resisting an ability through immunity. All units referenced by this event will be ...</td></tr>
+      <tr><td><a href="#Event.Combat.Miss">Event.Combat.Miss</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals an ability's effect missing a unit. All units referenced by this event will be accessible...</td></tr>
+      <tr><td><a href="#Event.Combat.Parry">Event.Combat.Parry</a></td><td><i></i></td><td><i>deprecated</i></td><td></td><td>Signals a unit parrying an ability. All units referenced by this event will be accessible within ...</td></tr>
+      <tr><td><a href="#Event.Combat.Resist">Event.Combat.Resist</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals a unit resisting an ability. All units referenced by this event will be accessible within...</td></tr>
+    </table>
+    <h2><a name="Event.Combat.Damage">Event.Combat.Damage</a></h2>
+    <p><i></i> Signals damage done to a unit. All units referenced by this event will be accessible within this event's handlers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Combat.Damage(<i>info</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>info</i></td><td>parameter</td><td><i>variant</i></td><td>Detailed information table about this event, containing several named parameters.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>ability</th>
+            <td>The ability ID for the ability used, if available.</th>
+          </tr>
+          <tr>
+            <th>abilityName</th>
+            <td>The name of the ability used.</th>
+          </tr>
+          <tr>
+            <th>caster</th>
+            <td>The unit ID for this event's initiator, if one exists.</th>
+          </tr>
+          <tr>
+            <th>casterName</th>
+            <td>The name of this event's initiator, if available.</th>
+          </tr>
+          <tr>
+            <th>crit</th>
+            <td>Whether this was the result of a critical hit.</th>
+          </tr>
+          <tr>
+            <th>damage</th>
+            <td>The amount of damage actually done.</th>
+          </tr>
+          <tr>
+            <th>damageAbsorbed</th>
+            <td>The amount of damage absorbed.</th>
+          </tr>
+          <tr>
+            <th>damageBlocked</th>
+            <td>The amount of damage blocked.</th>
+          </tr>
+          <tr>
+            <th>damageIntercepted</th>
+            <td>The amount of damage intercepted.</th>
+          </tr>
+          <tr>
+            <th>damageModified</th>
+            <td>The amount of damage modified.</th>
+          </tr>
+          <tr>
+            <th>overkill</th>
+            <td>The amount of overkill done.</th>
+          </tr>
+          <tr>
+            <th>target</th>
+            <td>The unit ID for the target.</th>
+          </tr>
+          <tr>
+            <th>targetName</th>
+            <td>The name of the target, if available.</th>
+          </tr>
+          <tr>
+            <th>type</th>
+            <td>The damage type. Values include "life", "death", "air", "earth", "fire", "water".</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Event.Combat.Death">Event.Combat.Death</a></h2>
+    <p><i></i> Signals the death of a unit. All units referenced by this event will be accessible within this event's handlers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Combat.Death(<i>info</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>info</i></td><td>parameter</td><td><i>variant</i></td><td>Detailed information table about this event, containing several named parameters.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>caster</th>
+            <td>The unit ID for this event's initiator, if one exists.</th>
+          </tr>
+          <tr>
+            <th>casterName</th>
+            <td>The name of this event's initiator, if available.</th>
+          </tr>
+          <tr>
+            <th>target</th>
+            <td>The unit ID for the target.</th>
+          </tr>
+          <tr>
+            <th>targetName</th>
+            <td>The name of the target, if available.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Event.Combat.Dodge">Event.Combat.Dodge</a></h2>
+    <p><i></i> Signals a unit dodging an ability. All units referenced by this event will be accessible within this event's handlers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Combat.Dodge(<i>info</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>info</i></td><td>parameter</td><td><i>variant</i></td><td>Detailed information table about this event, containing several named parameters.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>ability</th>
+            <td>The ability ID for the ability used, if available.</th>
+          </tr>
+          <tr>
+            <th>abilityName</th>
+            <td>The name of the ability used.</th>
+          </tr>
+          <tr>
+            <th>caster</th>
+            <td>The unit ID for this event's initiator, if one exists.</th>
+          </tr>
+          <tr>
+            <th>casterName</th>
+            <td>The name of this event's initiator, if available.</th>
+          </tr>
+          <tr>
+            <th>target</th>
+            <td>The unit ID for the target.</th>
+          </tr>
+          <tr>
+            <th>targetName</th>
+            <td>The name of the target, if available.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Event.Combat.Heal">Event.Combat.Heal</a></h2>
+    <p><i></i> Signals healing done to a unit. All units referenced by this event will be accessible within this event's handlers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Combat.Heal(<i>info</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>info</i></td><td>parameter</td><td><i>variant</i></td><td>Detailed information table about this event, containing several named parameters.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>ability</th>
+            <td>The ability ID for the ability used, if available.</th>
+          </tr>
+          <tr>
+            <th>abilityName</th>
+            <td>The name of the ability used.</th>
+          </tr>
+          <tr>
+            <th>caster</th>
+            <td>The unit ID for this event's initiator, if one exists.</th>
+          </tr>
+          <tr>
+            <th>casterName</th>
+            <td>The name of this event's initiator, if available.</th>
+          </tr>
+          <tr>
+            <th>crit</th>
+            <td>Whether this was the result of a critical hit.</th>
+          </tr>
+          <tr>
+            <th>heal</th>
+            <td>The amount healed.</th>
+          </tr>
+          <tr>
+            <th>overheal</th>
+            <td>The amount of healing past maximum health wasted.</th>
+          </tr>
+          <tr>
+            <th>target</th>
+            <td>The unit ID for the target.</th>
+          </tr>
+          <tr>
+            <th>targetName</th>
+            <td>The name of the target, if available.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Event.Combat.Immune">Event.Combat.Immune</a></h2>
+    <p><i></i> Signals a unit resisting an ability through immunity. All units referenced by this event will be accessible within this event's handlers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Combat.Immune(<i>info</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>info</i></td><td>parameter</td><td><i>variant</i></td><td>Detailed information table about this event, containing several named parameters.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>ability</th>
+            <td>The ability ID for the ability used, if available.</th>
+          </tr>
+          <tr>
+            <th>abilityName</th>
+            <td>The name of the ability used.</th>
+          </tr>
+          <tr>
+            <th>caster</th>
+            <td>The unit ID for this event's initiator, if one exists.</th>
+          </tr>
+          <tr>
+            <th>casterName</th>
+            <td>The name of this event's initiator, if available.</th>
+          </tr>
+          <tr>
+            <th>target</th>
+            <td>The unit ID for the target.</th>
+          </tr>
+          <tr>
+            <th>targetName</th>
+            <td>The name of the target, if available.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Event.Combat.Miss">Event.Combat.Miss</a></h2>
+    <p><i></i> Signals an ability's effect missing a unit. All units referenced by this event will be accessible within this event's handlers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Combat.Miss(<i>info</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>info</i></td><td>parameter</td><td><i>variant</i></td><td>Detailed information table about this event, containing several named parameters.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>ability</th>
+            <td>The ability ID for the ability used, if available.</th>
+          </tr>
+          <tr>
+            <th>abilityName</th>
+            <td>The name of the ability used.</th>
+          </tr>
+          <tr>
+            <th>caster</th>
+            <td>The unit ID for this event's initiator, if one exists.</th>
+          </tr>
+          <tr>
+            <th>casterName</th>
+            <td>The name of this event's initiator, if available.</th>
+          </tr>
+          <tr>
+            <th>target</th>
+            <td>The unit ID for the target.</th>
+          </tr>
+          <tr>
+            <th>targetName</th>
+            <td>The name of the target, if available.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Event.Combat.Parry">Event.Combat.Parry</a></h2>
+    <p><i></i> Signals a unit parrying an ability. All units referenced by this event will be accessible within this event's handlers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Combat.Parry(<i>info</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>info</i></td><td>parameter</td><td><i>variant</i></td><td>Detailed information table about this event, containing several named parameters.</td></tr>
+    </table>
+    <dl>
+      <dt><b>deprecated</b></dt>
+      <dd>standard</dd>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>ability</th>
+            <td>The ability ID for the ability used, if available.</th>
+          </tr>
+          <tr>
+            <th>abilityName</th>
+            <td>The name of the ability used.</th>
+          </tr>
+          <tr>
+            <th>caster</th>
+            <td>The unit ID for this event's initiator, if one exists.</th>
+          </tr>
+          <tr>
+            <th>casterName</th>
+            <td>The name of this event's initiator, if available.</th>
+          </tr>
+          <tr>
+            <th>target</th>
+            <td>The unit ID for the target.</th>
+          </tr>
+          <tr>
+            <th>targetName</th>
+            <td>The name of the target, if available.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Event.Combat.Resist">Event.Combat.Resist</a></h2>
+    <p><i></i> Signals a unit resisting an ability. All units referenced by this event will be accessible within this event's handlers.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Combat.Resist(<i>info</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>info</i></td><td>parameter</td><td><i>variant</i></td><td>Detailed information table about this event, containing several named parameters.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>ability</th>
+            <td>The ability ID for the ability used, if available.</th>
+          </tr>
+          <tr>
+            <th>abilityName</th>
+            <td>The name of the ability used.</th>
+          </tr>
+          <tr>
+            <th>caster</th>
+            <td>The unit ID for this event's initiator, if one exists.</th>
+          </tr>
+          <tr>
+            <th>casterName</th>
+            <td>The name of this event's initiator, if available.</th>
+          </tr>
+          <tr>
+            <th>target</th>
+            <td>The unit ID for the target.</th>
+          </tr>
+          <tr>
+            <th>targetName</th>
+            <td>The name of the target, if available.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

@@ -1,0 +1,48 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Cursor">Command.Cursor</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Changes the contents of the cursor. Ability cursors may be set only if the environment is not in ...</td></tr>
+      <tr><td><a href="#Event.Cursor">Event.Cursor</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals that the cursor has changed.</td></tr>
+      <tr><td><a href="#Inspect.Cursor">Inspect.Cursor</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Returns the current contents of the cursor.</td></tr>
+    </table>
+    <h2><a name="Command.Cursor">Command.Cursor</a></h2>
+    <p><i></i> Changes the contents of the cursor. Ability cursors may be set only if the environment is not in secure mode.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Command.Cursor(<i>hold</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>hold</i></td><td>parameter</td><td><i>variant</i></td><td>The new cursor. Currently accepts ability, item, itemtype, or non-empty non-wildcard slot IDs. Pass nil to clear the cursor.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Cursor">Event.Cursor</a></h2>
+    <p><i></i> Signals that the cursor has changed.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Cursor(<i>type</i>, <i>held</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>held</i></td><td>parameter</td><td><i>&lt;nope&gt;</i></td><td>The blob describing the new element held. Generally, some kind of identifier used in another part of the addon system.</td></tr>
+      <tr><td><i>type</i></td><td>parameter</td><td><i>variant</i></td><td>The current cursor type. Valid values include "ability", "item", and "itemtype".</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Cursor">Inspect.Cursor</a></h2>
+    <p><i></i> Returns the current contents of the cursor.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>type, held</i> = Inspect.Cursor()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>held</i></td><td>result</td><td><i>variant, nil</i></td><td>The blob describing what is currently held. Generally, some kind of identifier used in another part of the addon system.</td></tr>
+      <tr><td><i>type</i></td><td>result</td><td><i>string, nil</i></td><td>The current cursor type. Valid values include "ability", "item", "itemtype", and nil.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

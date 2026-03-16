@@ -1,0 +1,39 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Zone.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Zone.Detail">Inspect.Zone.Detail</a> </h2>
+    <p><i></i> Returns information about zones.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Zone.Detail(<i>zone</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Zone.Detail(<i>zones</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>zone</i></td><td>parameter</td><td><i>zone</i></td><td>The identifier of the zone to retrieve detail for.</td></tr>
+      <tr><td><i>zones</i></td><td>parameter</td><td><i>table</i></td><td>A table of identifiers of zones to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single zone.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested zones. The key is the zone ID, the value is the zone's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The name of the zone.</th>
+          </tr>
+          <tr>
+            <th>type</th>
+            <td>The type of this zone. May be either "instance", "warfront", or nil.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

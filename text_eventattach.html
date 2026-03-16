@@ -1,0 +1,24 @@
+<html>
+  <head><title>API Docs (live) -- Text:EventAttach</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Text:EventAttach">Text:EventAttach</a> </h2>
+    <p><i></i> Attaches an event handler to an event.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Layout:EventAttach(<i>handle</i>, <i>callback</i>, <i>label</i>)</td></tr>
+      <tr><td colspan=4>Layout:EventAttach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>function</i></td><td>A global event handler function. This will be called when the event fires. The first parameter will be the frame that the event is called on, the second parameter will be the standard frame event handle, any other parameters will follow that.</td></tr>
+      <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+      <tr><td><i>label</i></td><td>parameter</td><td><i>string</i></td><td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</td></tr>
+      <tr><td><i>priority</i></td><td>parameter</td><td><i>number</i></td><td>Priority of the event handler. Higher numbers trigger first.</td></tr>
+    </table>
+    <dl>
+      <dt><b>noSecureFrameAndEnvironment</b></dt>
+      <dd>true</dd>
+    </dl>

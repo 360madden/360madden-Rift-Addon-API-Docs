@@ -1,0 +1,25 @@
+<html>
+  <head><title>API Docs (live) -- Command.Auction.Order</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Command.Auction.Order">Command.Auction.Order</a> </h2>
+    <p><i></i> Posts a new buy order.</p>
+    <h3>Usage:   </h3>
+    <p>Interaction category: auction</p>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Auction.Order(<i>itemtype</i>, <i>quantity</i>, <i>time</i>, <i>buyout</i>)</td></tr>
+      <tr><td colspan=4>Command.Auction.Order(<i>itemtype</i>, <i>quantity</i>, <i>time</i>, <i>buyout</i>, <i>callback</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>buyout</i></td><td>parameter</td><td><i>number</i></td><td>The total buyout for the new auction, in silver. Must be evenly divisible by quantity.</td></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>callbackfunction</i></td><td>A standard command callback, used for detecting success or failure. See the "callbackfunction" documentation for more details.</td></tr>
+      <tr><td><i>itemtype</i></td><td>parameter</td><td><i>itemtype</i></td><td>The item type to be ordered.</td></tr>
+      <tr><td><i>quantity</i></td><td>parameter</td><td><i>number</i></td><td>The number of items to be ordered.</td></tr>
+      <tr><td><i>time</i></td><td>parameter</td><td><i>number</i></td><td>The duration that the order should last, in hours. Valid values are limited to 12, 24, and 48.</td></tr>
+    </table>
+    <dl>
+    </dl>

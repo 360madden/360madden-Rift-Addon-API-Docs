@@ -1,0 +1,142 @@
+<html>
+  <head><title>API Docs (live)</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h4><a href='index.html'>Back to index...</a></h4>
+    <table>
+      <tr><th>Name</th><th>Type</th><th>Deprecated</th><th>Secure</th><th>Description</th></tr>
+      <tr><td><a href="#Command.Title.Prefix">Command.Title.Prefix</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Changes the player's prefix title.</td></tr>
+      <tr><td><a href="#Command.Title.Suffix">Command.Title.Suffix</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Changes the player's suffix title.</td></tr>
+      <tr><td><a href="#Event.Title.Add">Event.Title.Add</a></td><td><i></i></td><td><i></i></td><td></td><td>Signals the addition of a new title.</td></tr>
+      <tr><td><a href="#Inspect.Title.Category.Detail">Inspect.Title.Category.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about a title category.</td></tr>
+      <tr><td><a href="#Inspect.Title.Category.List">Inspect.Title.Category.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists known title categories.</td></tr>
+      <tr><td><a href="#Inspect.Title.Detail">Inspect.Title.Detail</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Provides detailed information about a title.</td></tr>
+      <tr><td><a href="#Inspect.Title.List">Inspect.Title.List</a></td><td><i>function</i></td><td><i></i></td><td></td><td>Lists the player's currently available titles.</td></tr>
+    </table>
+    <h2><a name="Command.Title.Prefix">Command.Title.Prefix</a></h2>
+    <p><i></i> Changes the player's prefix title.</p>
+    <h3>Usage:   </h3>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Title.Prefix(<i>title</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>title</i></td><td>parameter</td><td><i>title, nil</i></td><td>The ID of the new title to set, or "nil" for no title.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Command.Title.Suffix">Command.Title.Suffix</a></h2>
+    <p><i></i> Changes the player's suffix title.</p>
+    <h3>Usage:   </h3>
+    <p>Throttled.</p>
+    <table>
+      <tr><td colspan=4>Command.Title.Suffix(<i>title</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>title</i></td><td>parameter</td><td><i>title, nil</i></td><td>The ID of the new title to set, or "nil" for no title.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Event.Title.Add">Event.Title.Add</a></h2>
+    <p><i></i> Signals the addition of a new title.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Event.Title.Add(<i>titles</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>titles</i></td><td>parameter</td><td><i>variant</i></td><td>A lookup table of newly available titles.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Title.Category.Detail">Inspect.Title.Category.Detail</a></h2>
+    <p><i></i> Provides detailed information about a title category.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Title.Category.Detail(<i>titlecategory</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Title.Category.Detail(<i>titlecategories</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>titlecategories</i></td><td>parameter</td><td><i>table</i></td><td>A table of title categories to retrieve details for.</td></tr>
+      <tr><td><i>titlecategory</i></td><td>parameter</td><td><i>titlecategory</i></td><td>The title category to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single title category.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested title categories.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>id</th>
+            <td>The ID of the required element.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The name of the title category.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Title.Category.List">Inspect.Title.Category.List</a></h2>
+    <p><i></i> Lists known title categories.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>titlecategories</i> = Inspect.Title.Category.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>titlecategories</i></td><td>result</td><td><i>table</i></td><td>A lookup table of known title categories.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h2><a name="Inspect.Title.Detail">Inspect.Title.Detail</a></h2>
+    <p><i></i> Provides detailed information about a title.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Title.Detail(<i>title</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Title.Detail(<i>titles</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>title</i></td><td>parameter</td><td><i>title</i></td><td>The title ID to retrieve detail for.</td></tr>
+      <tr><td><i>titles</i></td><td>parameter</td><td><i>table</i></td><td>A table of title IDs to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single title.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested titles.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>gameFemale</th>
+            <td>The title as seen ingame and applied to female characters.</th>
+          </tr>
+          <tr>
+            <th>gameMale</th>
+            <td>The title as seen ingame and applied to male characters.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>nameFemale</th>
+            <td>The title as seen in menus and applied to female characters.</th>
+          </tr>
+          <tr>
+            <th>nameMale</th>
+            <td>The title as seen in menus and applied to male characters.</th>
+          </tr>
+          <tr>
+            <th>prefix</th>
+            <td>Signals that the title is a prefix title.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>
+    <h2><a name="Inspect.Title.List">Inspect.Title.List</a></h2>
+    <p><i></i> Lists the player's currently available titles.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>titles</i> = Inspect.Title.List()</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>titles</i></td><td>result</td><td><i>table</i></td><td>A lookup table of all available titles.</td></tr>
+    </table>
+    <dl>
+    </dl>
+    <h4><a href='index.html'>Back to index...</a></h4>

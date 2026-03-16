@@ -1,0 +1,39 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Social.Ignore.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Social.Ignore.Detail">Inspect.Social.Ignore.Detail</a> </h2>
+    <p><i></i> Provides detailed information about an ignored player.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Social.Ignore.Detail(<i>ignore</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Social.Ignore.Detail(<i>ignores</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>ignore</i></td><td>parameter</td><td><i>string</i></td><td>The name of an ignored player to retrieve detail for.</td></tr>
+      <tr><td><i>ignores</i></td><td>parameter</td><td><i>table</i></td><td>A table of names of ignored players to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single ignored player.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail tables for all requested ignored players.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The ignored player's name.</th>
+          </tr>
+          <tr>
+            <th>note</th>
+            <td>The ignored player's personal note.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

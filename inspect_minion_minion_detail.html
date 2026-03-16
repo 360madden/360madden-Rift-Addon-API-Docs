@@ -1,0 +1,115 @@
+<html>
+  <head><title>API Docs (live) -- Inspect.Minion.Minion.Detail</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="Inspect.Minion.Minion.Detail">Inspect.Minion.Minion.Detail</a> </h2>
+    <p><i></i> Provides detailed information about minions.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4><i>detail</i> = Inspect.Minion.Minion.Detail(<i>minion</i>)</td></tr>
+      <tr><td colspan=4><i>details</i> = Inspect.Minion.Minion.Detail(<i>minions</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>minion</i></td><td>parameter</td><td><i>minionminion</i></td><td>The identifier of the minion to retrieve detail for.</td></tr>
+      <tr><td><i>minions</i></td><td>parameter</td><td><i>table</i></td><td>A table of identifiers of minions to retrieve detail for.</td></tr>
+      <tr><td><i>detail</i></td><td>result</td><td><i>table</i></td><td>Detail table for a single minion.</td></tr>
+      <tr><td><i>details</i></td><td>result</td><td><i>table</i></td><td>Detail table for all requested minions. The key is the minion ID, the value is the minion's detail table.</td></tr>
+    </table>
+    <dl>
+      <dt><b>members</b></dt>
+      <dd>
+        <table>
+          <tr>
+            <th>description</th>
+            <td>The description of this minion.</th>
+          </tr>
+          <tr>
+            <th>experienceAccumulated</th>
+            <td>If not at max level, this minion's accumulated experience in their current level.</th>
+          </tr>
+          <tr>
+            <th>experienceNeeded</th>
+            <td>If not at max level, the amount of experience required to gain a level.</th>
+          </tr>
+          <tr>
+            <th>id</th>
+            <td>The ID of the requested element.</th>
+          </tr>
+          <tr>
+            <th>level</th>
+            <td>The current level of this minion.</th>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td>The name of this minion.</th>
+          </tr>
+          <tr>
+            <th>rarity</th>
+            <td>The rarity of this minion. "common", "uncommon", "rare", or "epic".</th>
+          </tr>
+          <tr>
+            <th>stamina</th>
+            <td>The current stamina of this minion.</th>
+          </tr>
+          <tr>
+            <th>staminaMax</th>
+            <td>The maximum stamina of this minion.</th>
+          </tr>
+          <tr>
+            <th>statAir</th>
+            <td>This minion's Air stat.</th>
+          </tr>
+          <tr>
+            <th>statArtifact</th>
+            <td>This minion's Artifact stat.</th>
+          </tr>
+          <tr>
+            <th>statAssassination</th>
+            <td>This minion's Assassination stat.</th>
+          </tr>
+          <tr>
+            <th>statDeath</th>
+            <td>This minion's Death stat.</th>
+          </tr>
+          <tr>
+            <th>statDimension</th>
+            <td>This minion's Dimension stat.</th>
+          </tr>
+          <tr>
+            <th>statDiplomacy</th>
+            <td>This minion's Diplomacy stat.</th>
+          </tr>
+          <tr>
+            <th>statEarth</th>
+            <td>This minion's Earth stat.</th>
+          </tr>
+          <tr>
+            <th>statExploration</th>
+            <td>This minion's Exploration stat.</th>
+          </tr>
+          <tr>
+            <th>statFire</th>
+            <td>This minion's Fire stat.</th>
+          </tr>
+          <tr>
+            <th>statHarvesting</th>
+            <td>This minion's Harvesting stat.</th>
+          </tr>
+          <tr>
+            <th>statHunting</th>
+            <td>This minion's Hunting stat.</th>
+          </tr>
+          <tr>
+            <th>statLife</th>
+            <td>This minion's Life stat.</th>
+          </tr>
+          <tr>
+            <th>statWater</th>
+            <td>This minion's Water stat.</th>
+          </tr>
+        </table>
+      </dd>
+    </dl>

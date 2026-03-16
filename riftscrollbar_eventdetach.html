@@ -1,0 +1,25 @@
+<html>
+  <head><title>API Docs (live) -- RiftScrollbar:EventDetach</title><link rel="stylesheet" href="//s.prancingturtle.com/lightsout.css"></head>
+  <body>
+    <style>
+      table { border-style: solid; border-collapse: collapse; }
+      th { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+      td { border-bottom-style: solid; padding: 3pt; text-align: left; vertical-align: top; }
+    </style>
+    <h2><a name="RiftScrollbar:EventDetach">RiftScrollbar:EventDetach</a> </h2>
+    <p><i></i> Detaches an event handler from an event. Any parameter can be 'nil', and this is interpreted as a wildcard. If multiple events match the constraints, only one will be detached.</p>
+    <h3>Usage:   </h3>
+    <table>
+      <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>)</td></tr>
+      <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>)</td></tr>
+      <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>)</td></tr>
+      <tr><td colspan=4>Layout:EventDetach(<i>handle</i>, <i>callback</i>, <i>label</i>, <i>priority</i>, <i>owner</i>)</td></tr>
+      <tr><th>Parameter</th><th>Type</th><th>Datatype</th><th>Description</th></tr>
+      <tr><td><i>callback</i></td><td>parameter</td><td><i>function/nil</i></td><td>A callback function to search for.</td></tr>
+      <tr><td><i>handle</i></td><td>parameter</td><td><i>eventFrame</i></td><td>A handle to a frame event, usually pulled out of the "Event.UI." hierarchy.</td></tr>
+      <tr><td><i>label</i></td><td>parameter</td><td><i>string/nil</i></td><td>Human-readable label used to identify the handler in error reports, performance reports, and for later detaching.</td></tr>
+      <tr><td><i>owner</i></td><td>parameter</td><td><i>string/nil</i></td><td>Owner to search for.</td></tr>
+      <tr><td><i>priority</i></td><td>parameter</td><td><i>number/nil</i></td><td>Priority of the event handler. Higher numbers trigger first.</td></tr>
+    </table>
+    <dl>
+    </dl>
